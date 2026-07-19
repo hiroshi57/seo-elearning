@@ -1,0 +1,44 @@
+{
+  "course": {
+    "title": "SEO Eラーニング",
+    "description": "検索エンジン最適化の基礎から、AI検索時代の実践スキルまでを体系的に学ぶ全19章のコース"
+  },
+  "phases": [
+    {
+      "id": "basic",
+      "title": "基礎編",
+      "chapters": [1, 2, 3, 4, 5, 6, 7]
+    },
+    {
+      "id": "practice",
+      "title": "実践編",
+      "chapters": [8, 9, 10, 11, 12, 13]
+    },
+    {
+      "id": "ai",
+      "title": "AI時代編",
+      "chapters": [14, 15, 16, 17, 18, 19]
+    }
+  ],
+  "chapters": [
+    { "no": 1, "phase": "basic", "slug": "01-seo-basics", "title": "SEO概要", "sections": ["SEOとは", "SEOの目的", "企業の課題", "SEOでできること"] },
+    { "no": 2, "phase": "basic", "slug": "02-google-search-mechanism", "title": "Googleの検索の仕組み", "sections": ["検索エンジン：クローリング", "インデックス", "ランキング", "検索意図"] },
+    { "no": 3, "phase": "basic", "slug": "03-google-algorithm", "title": "Googleアルゴリズム", "sections": ["評価情報：コアアップデート", "品質評価の考え方"] },
+    { "no": 4, "phase": "basic", "slug": "04-keyword-strategy", "title": "キーワード戦略", "sections": ["調査：検索キーワード", "検索意図", "設計：トピック設計", "分析：競合分析"] },
+    { "no": 5, "phase": "basic", "slug": "05-writing-seo", "title": "ライティングSEO", "sections": ["記事設計：タイトル", "見出し", "内部リンク", "FAQ"] },
+    { "no": 6, "phase": "basic", "slug": "06-technical-seo", "title": "テクニカルSEO", "sections": ["サイト構造：URL", "内部リンク", "XMLサイトマップ", "canonical", "表示速度：Core Web Vitals"] },
+    { "no": 7, "phase": "basic", "slug": "07-eeat", "title": "E-E-A-T", "sections": ["品質：経験・専門性・権威性・信頼性"] },
+    { "no": 8, "phase": "practice", "slug": "08-ga4-basics", "title": "GA4（基礎）", "sections": ["基本：イベント", "コンバージョン"] },
+    { "no": 9, "phase": "practice", "slug": "09-ga4-seo-analysis", "title": "GA4（SEO分析）", "sections": ["分析：自然検索", "ランディングページ", "連携：Search Console連携"] },
+    { "no": 10, "phase": "practice", "slug": "10-search-console-basics", "title": "Search Console（基礎）", "sections": ["登録：所有権確認", "インデックス：URL検査"] },
+    { "no": 11, "phase": "practice", "slug": "11-search-console-analysis", "title": "Search Console（分析）", "sections": ["検索パフォーマンス：クリック・表示回数・CTR・順位", "改善：順位分析", "インデックス未登録調査"] },
+    { "no": 12, "phase": "practice", "slug": "12-seo-analysis-kpi", "title": "SEO分析・KPI", "sections": ["KPI：重要指標", "改善：優先順位"] },
+    { "no": 13, "phase": "practice", "slug": "13-seo-improvement-practice", "title": "SEO改善実践", "sections": ["改善：タイトル・見出し・内部リンク"] },
+    { "no": 14, "phase": "ai", "slug": "14-ai-overview-mode", "title": "AI OverviewとAI Mode", "sections": ["AI検索：AI検索の仕組み"] },
+    { "no": 15, "phase": "ai", "slug": "15-llmo", "title": "LLMO", "sections": ["基本：LLMOとは", "実践：SEOとの違い"] },
+    { "no": 16, "phase": "ai", "slug": "16-ai-friendly-content-design", "title": "AIに引用される記事設計", "sections": ["設計：一次情報", "引用されやすい文章", "更新頻度"] },
+    { "no": 17, "phase": "ai", "slug": "17-entity-seo", "title": "エンティティSEO", "sections": ["基本：Googleが「人・企業・商品」を認識する仕組み", "実践：企業・人物・商品情報の整備"] },
+    { "no": 18, "phase": "ai", "slug": "18-structured-data", "title": "構造化データ", "sections": ["基本：構造化データとは", "実践：Article・FAQ・Organization・Breadcrumb"] },
+    { "no": 19, "phase": "ai", "slug": "19-brand-seo", "title": "ブランドSEO", "sections": ["ブランド：指名検索", "レビュー・SNS・サイテーション"] }
+  ]
+}
