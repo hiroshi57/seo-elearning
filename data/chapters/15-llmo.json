@@ -1,0 +1,103 @@
+{
+  "no": 15,
+  "phase": "ai",
+  "slug": "15-llmo",
+  "title": "LLMO",
+  "subtitle": "LLMO（大規模言語モデル最適化）とは何か、従来のSEOとの違いを理解する",
+  "topicsLabel": "基本：LLMOとは、実践：SEOとの違い",
+  "estimateMinutes": 12,
+  "goals": [
+    "LLMOの意味と、対象となるAIサービスの例を理解する",
+    "LLMOとSEOの目的の違いを説明できる",
+    "LLMOとSEOが対象とする「評価の単位」の違いを理解する",
+    "LLMOとSEOが排他的な関係ではないことを理解する"
+  ],
+  "sections": [
+    {
+      "heading": "基本：LLMOとは",
+      "bodyHtml": "<p><mark>LLMO（Large Language Model Optimization／大規模言語モデル最適化）</mark>とは、ChatGPTやGemini、Perplexityなど、生成AIサービスの回答の中で、自社の情報が引用・言及されやすくなるように、コンテンツを最適化する考え方です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>LLMO（大規模言語モデル最適化）</strong><br>ChatGPT・Gemini・Perplexityなどの大規模言語モデル（LLM）ベースのAIサービスが、ユーザーへの回答を生成する際に、自社のコンテンツを参照・引用しやすくするための最適化の考え方。「AIに正しく理解され、引用される」ことを目指す点が特徴です。</p></div><p>生成AIサービスには、Web検索と連動して最新情報を参照するもの（Perplexityなど、回答に引用元URLを明示するタイプ）と、主に学習済みの情報をベースに回答するものなど、いくつかのタイプがあります。LLMOは、こうしたAIサービスに自社の情報が正しく認識され、引用される状態を目指す取り組みです。</p>"
+    },
+    {
+      "heading": "実践：SEOとの違い",
+      "bodyHtml": "<p>LLMOと従来のSEOは、目指すゴールも、評価される単位も異なります。</p><div class=\"table-wrap\"><table><thead><tr><th></th><th>SEO</th><th>LLMO</th></tr></thead><tbody><tr><td>主な目的</td><td>検索結果でページの<strong>順位</strong>を上げる</td><td>AIの回答の中で<strong>引用・言及</strong>される</td></tr><tr><td>評価される単位</td><td>ページ単位</td><td>文章の一節（パッセージ）や、事実・情報の単位</td></tr><tr><td>ユーザーとの接点</td><td>検索結果一覧からサイトへ訪問してもらう</td><td>AIの回答の中で、情報の出典として名前が出る</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>SEOが「<span class=\"text-primary\">検索結果の一覧にページを載せる</span>」ことを目指すのに対し、LLMOは「<span class=\"text-primary\">AIが生成する回答そのものの中に、自社の情報を組み込んでもらう</span>」ことを目指す取り組みだと整理できます。</p></div></div><p>ただし、LLMOはSEOと対立するものではありません。第14章で学んだとおり、Google自身もAI検索機能への対応において「これまでのSEOの基本（クロールのしやすさ・独自性のあるコンテンツ・E-E-A-Tなど）」が引き続き重要だとしています。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>LLMOは、SEOの基本を土台としながら、<strong>AIに理解・引用されやすい形で情報を整理する</strong>という視点を加えるものと捉えると分かりやすくなります。次章では、AIに引用されやすい記事設計の具体的な考え方を学びます。</p></div></div>"
+    }
+  ],
+  "summary": [
+    "LLMOとは、ChatGPT・Gemini・Perplexityなどの生成AIの回答の中で、自社の情報が引用・言及されやすくなるよう最適化する考え方である",
+    "SEOはページ単位で検索結果の順位を上げることを目指すのに対し、LLMOは文章の一節や情報単位でAIの回答に引用されることを目指す",
+    "SEOが検索結果一覧への掲載を目指すのに対し、LLMOはAIの回答そのものに情報が組み込まれることを目指す",
+    "LLMOはSEOと対立するものではなく、クロールのしやすさ・独自性・E-E-A-Tといった従来のSEOの基本を土台とする"
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "LLMOの説明として、最も適切なものはどれか。",
+      "options": [
+        "サイトの表示速度だけを高速化する技術",
+        "生成AIサービスの回答の中で、自社の情報が引用・言及されやすくなるよう最適化する考え方",
+        "広告の入札額を自動的に最適化するツール",
+        "検索エンジンのクローラーを完全にブロックする技術"
+      ],
+      "correct": [1],
+      "explain": "LLMOは、ChatGPTやGeminiなどの生成AIサービスの回答の中で、自社の情報が引用・言及されやすくなるように最適化する考え方です。"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "SEOとLLMOの主な目的の違いとして、最も適切なものはどれか。",
+      "options": [
+        "SEOは検索結果でページの順位を上げることを目指し、LLMOはAIの回答の中で引用・言及されることを目指す",
+        "SEOとLLMOは、目的も評価される単位もすべて同じである",
+        "SEOはAIの回答に引用されることを目指し、LLMOはページの順位を上げることを目指す",
+        "SEOとLLMOはどちらも広告の出稿を目的としている"
+      ],
+      "correct": [0],
+      "explain": "SEOは検索結果でページの順位を上げることを目指すのに対し、LLMOはAIの回答の中で自社の情報が引用・言及されることを目指します。"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "SEOとLLMOで「評価される単位」の違いとして、最も適切なものはどれか。",
+      "options": [
+        "SEOはページ単位で評価されることが多く、LLMOは文章の一節や情報の単位で評価されることが多い",
+        "SEOとLLMOは、どちらも1つのサイト全体だけを単位として評価される",
+        "SEOは秒単位で評価され、LLMOは分単位で評価される",
+        "評価の単位という考え方は、SEOにもLLMOにも存在しない"
+      ],
+      "correct": [0],
+      "explain": "SEOは主にページ単位で評価されるのに対し、LLMOは文章の一節（パッセージ）や情報単位で評価される点が異なります。"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "LLMOとSEOの関係についての説明として、最も適切なものはどれか。",
+      "options": [
+        "LLMOとSEOは完全に対立する、互いに矛盾する取り組みである",
+        "LLMOはSEOの基本を土台としながら、AIに理解・引用されやすい形で情報を整理する視点を加えるものである",
+        "LLMOに取り組むと、SEOの効果は必ず失われる",
+        "LLMOとSEOは無関係で、片方だけを選ばなければならない"
+      ],
+      "correct": [1],
+      "explain": "LLMOはSEOと対立するものではなく、クロールのしやすさや独自性、E-E-A-Tといった従来のSEOの基本を土台としながら、AIに理解・引用されやすい形で情報を整理する視点を加えるものです。"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "生成AIサービスの中で、回答に引用元URLを明示する仕様が特徴とされているものの例として、本章で紹介されているものはどれか。",
+      "options": [
+        "Perplexity",
+        "検索エンジンには存在しない架空のサービス",
+        "GA4",
+        "Search Console"
+      ],
+      "correct": [0],
+      "explain": "Perplexityは、検索エンジンと生成AIのハイブリッド型とされ、回答に引用元URLを明示する仕様が特徴とされています。"
+    }
+  ]
+}

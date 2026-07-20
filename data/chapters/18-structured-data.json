@@ -1,0 +1,103 @@
+{
+  "no": 18,
+  "phase": "ai",
+  "slug": "18-structured-data",
+  "title": "構造化データ",
+  "subtitle": "構造化データの基本的な考え方と、Article・FAQ・Organization・Breadcrumbの役割を理解する",
+  "topicsLabel": "基本：構造化データとは、実践：Article・FAQ・Organization・Breadcrumb",
+  "estimateMinutes": 12,
+  "goals": [
+    "構造化データの基本的な考え方を理解する",
+    "構造化データとリッチリザルトの関係を理解する",
+    "Article・FAQ・Organization・Breadcrumbが、それぞれ何を表す構造化データかを理解する",
+    "構造化データの主なフォーマット（JSON-LD）を理解する"
+  ],
+  "sections": [
+    {
+      "heading": "基本：構造化データとは",
+      "bodyHtml": "<p><mark>構造化データ</mark>とは、ページ内の情報が「何を意味しているか」を、検索エンジンにも分かる形式で明示するためのマークアップです。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>構造化データ</strong><br>検索エンジンやクローラーがコンテンツの内容を理解しやすくするための、決められた形式のデータ。例えば「これは記事のタイトルである」「これは著者名である」といった情報の意味を、機械にも分かる形で伝えます。</p><p style=\"margin:8px 0 0;\"><strong>リッチリザルト</strong><br>構造化データを実装することで、検索結果に表示される可能性がある拡張表示。星評価やFAQの折りたたみ表示など、通常のテキストリンクより多くの情報を表示できます。</p></div><p>Google Search Central（公式ドキュメント）は、構造化データの主なフォーマットとして<strong>JSON-LD</strong>を推奨しています。JSON-LDは、HTMLの本文とは別に、ページの意味情報だけをまとめて記述できる形式です。</p>"
+    },
+    {
+      "heading": "実践：主な構造化データの種類",
+      "bodyHtml": "<p>構造化データにはさまざまな種類（タイプ）がありますが、本コースに関連する代表的なものを紹介します。</p><div class=\"table-wrap\"><table><thead><tr><th>種類</th><th>表す内容</th><th>関連する章</th></tr></thead><tbody><tr><td><strong>Article</strong></td><td>記事ページのタイトル・公開日・著者などの情報</td><td>第5章（ライティングSEO）</td></tr><tr><td><strong>FAQ</strong></td><td>よくある質問とその回答のセット</td><td>第5章（FAQの活用）</td></tr><tr><td><strong>Organization</strong></td><td>企業・組織に関する基本情報。ナレッジパネルへの情報提供に使われる</td><td>第17章（エンティティSEO）</td></tr><tr><td><strong>BreadcrumbList</strong></td><td>サイト内でのページの階層位置（パンくずリスト）</td><td>第6章（テクニカルSEO）</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>構造化データは、これまでの章で学んだ内容（記事のタイトルや見出し、FAQ、企業情報、サイト構造）を、<span class=\"text-primary\">「検索エンジンが誤解なく読み取れる形」に変換する橋渡し役</span>と捉えると理解しやすくなります。</p></div></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>構造化データを実装したからといって、必ずリッチリザルトとして表示されるとは限りません。Googleは実装内容を検証した上で、表示するかどうかを判断します。実装後は、Search Consoleの「リッチリザルトレポート」などで、正しく認識されているかを確認できます。</p></div></div>"
+    }
+  ],
+  "summary": [
+    "構造化データは、ページ内の情報の意味を検索エンジンにも分かる形式で明示するマークアップであり、JSON-LDが主な推奨フォーマットである",
+    "構造化データを実装すると、リッチリザルト（検索結果での拡張表示）の対象になる可能性がある",
+    "Articleは記事情報、FAQはよくある質問、Organizationは企業情報、BreadcrumbListはサイトの階層構造を表す構造化データである",
+    "構造化データを実装しても必ずリッチリザルトとして表示されるとは限らず、Search Consoleで認識状況を確認できる"
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "構造化データの説明として、最も適切なものはどれか。",
+      "options": [
+        "ページのデザインを自動生成するツール",
+        "ページ内の情報の意味を、検索エンジンにも分かる形式で明示するマークアップ",
+        "サイトの表示速度を計測する指標",
+        "広告の出稿費用を管理するシステム"
+      ],
+      "correct": [1],
+      "explain": "構造化データは、ページ内の情報が何を意味しているかを検索エンジンにも分かる形式で明示するためのマークアップです。"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "Google Search Centralが推奨している構造化データの主なフォーマットはどれか。",
+      "options": [
+        "JSON-LD",
+        "CSV",
+        "PDF",
+        "MP3"
+      ],
+      "correct": [0],
+      "explain": "Google Search Centralは、構造化データの主なフォーマットとしてJSON-LDを推奨しています。"
+    },
+    {
+      "id": "q3",
+      "type": "multi",
+      "sectionIndex": 1,
+      "question": "本章で紹介された構造化データの種類として、正しいものをすべて選べ。",
+      "options": [
+        "Article（記事情報）",
+        "FAQ（よくある質問）",
+        "Organization（企業・組織情報）",
+        "Password（パスワード情報）"
+      ],
+      "correct": [0, 1, 2],
+      "explain": "本章ではArticle・FAQ・Organization・BreadcrumbListの構造化データを紹介しました。パスワード情報を表す構造化データは存在しません。"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "BreadcrumbList構造化データが表す内容として、最も適切なものはどれか。",
+      "options": [
+        "サイトの表示速度",
+        "サイト内でのページの階層位置（パンくずリスト）",
+        "広告の掲載順位",
+        "ユーザーの個人情報"
+      ],
+      "correct": [1],
+      "explain": "BreadcrumbListは、サイト内でのページの階層位置（パンくずリスト）を表す構造化データです。"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "構造化データを実装した場合の効果についての説明として、最も適切なものはどれか。",
+      "options": [
+        "実装すれば、必ずリッチリザルトとして表示される",
+        "実装してもリッチリザルトとして必ず表示されるとは限らず、Googleが実装内容を検証した上で判断する",
+        "構造化データは検索結果の表示には一切関係しない",
+        "構造化データを実装すると、サイトの表示速度が自動的に向上する"
+      ],
+      "correct": [1],
+      "explain": "構造化データを実装しても、必ずリッチリザルトとして表示されるとは限りません。Googleが実装内容を検証した上で表示するかどうかを判断します。"
+    }
+  ]
+}

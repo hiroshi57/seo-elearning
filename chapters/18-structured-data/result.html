@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>構造化データ（採点結果） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/ai/index.html" class="breadcrumb-back">← 構造化データ</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約12分</span>
+    <h1 class="wizard-header__title">構造化データ</h1>
+    <p class="wizard-header__topics">基本：構造化データとは、実践：Article・FAQ・Organization・Breadcrumb</p>
+  </div>
+
+  <div class="result-summary" data-result-summary>
+    <div class="result-summary__icon" data-result-icon>🏆</div>
+    <div class="result-summary__title">確認テスト結果</div>
+    <div class="result-summary__score" data-result-score>--%</div>
+    <div class="result-summary__sub" data-result-sub></div>
+    <div class="result-status" data-result-status></div>
+  </div>
+
+  <div class="result-review">
+    <div class="result-review__head">
+      <div class="result-review__title">回答一覧と解説</div>
+      <div class="result-review__hint">間違えた問題は「関連する教材を見直す」から該当ページを確認できます</div>
+    </div>
+    <div data-result-list></div>
+  </div>
+
+  <div class="result-actions">
+    <button class="btn btn--primary" data-result-retry>↻ テストを再受験</button>
+    <a href="step-1.html" class="btn btn--ghost">📖 教材から見直す</a>
+    <a href="../../phases/ai/index.html" class="btn btn--muted">一覧に戻る</a>
+  </div>
+
+  <script type="application/json" data-quiz-data>
+[{"id":"q1","type":"single","sectionIndex":0,"question":"構造化データの説明として、最も適切なものはどれか。","options":["ページのデザインを自動生成するツール","ページ内の情報の意味を、検索エンジンにも分かる形式で明示するマークアップ","サイトの表示速度を計測する指標","広告の出稿費用を管理するシステム"],"correct":[1],"explain":"構造化データは、ページ内の情報が何を意味しているかを検索エンジンにも分かる形式で明示するためのマークアップです。"},{"id":"q2","type":"single","sectionIndex":0,"question":"Google Search Centralが推奨している構造化データの主なフォーマットはどれか。","options":["JSON-LD","CSV","PDF","MP3"],"correct":[0],"explain":"Google Search Centralは、構造化データの主なフォーマットとしてJSON-LDを推奨しています。"},{"id":"q3","type":"multi","sectionIndex":1,"question":"本章で紹介された構造化データの種類として、正しいものをすべて選べ。","options":["Article（記事情報）","FAQ（よくある質問）","Organization（企業・組織情報）","Password（パスワード情報）"],"correct":[0,1,2],"explain":"本章ではArticle・FAQ・Organization・BreadcrumbListの構造化データを紹介しました。パスワード情報を表す構造化データは存在しません。"},{"id":"q4","type":"single","sectionIndex":1,"question":"BreadcrumbList構造化データが表す内容として、最も適切なものはどれか。","options":["サイトの表示速度","サイト内でのページの階層位置（パンくずリスト）","広告の掲載順位","ユーザーの個人情報"],"correct":[1],"explain":"BreadcrumbListは、サイト内でのページの階層位置（パンくずリスト）を表す構造化データです。"},{"id":"q5","type":"single","sectionIndex":1,"question":"構造化データを実装した場合の効果についての説明として、最も適切なものはどれか。","options":["実装すれば、必ずリッチリザルトとして表示される","実装してもリッチリザルトとして必ず表示されるとは限らず、Googleが実装内容を検証した上で判断する","構造化データは検索結果の表示には一切関係しない","構造化データを実装すると、サイトの表示速度が自動的に向上する"],"correct":[1],"explain":"構造化データを実装しても、必ずリッチリザルトとして表示されるとは限りません。Googleが実装内容を検証した上で表示するかどうかを判断します。"}]
+  </script>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = 4;</script>
+<script src="../../assets/js/result.js"></script>
+</body>
+</html>

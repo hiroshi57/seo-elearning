@@ -1,0 +1,107 @@
+{
+  "no": 14,
+  "phase": "ai",
+  "slug": "14-ai-overview-mode",
+  "title": "AI OverviewとAI Mode",
+  "subtitle": "GoogleのAI検索機能（AI Overview・AI Mode）の基本的な仕組みと、サイト運営者が取るべき基本方針を理解する",
+  "topicsLabel": "AI検索：AI検索の仕組み",
+  "estimateMinutes": 12,
+  "goals": [
+    "AI Overviewの基本的な仕組みを説明できる",
+    "AI Modeの基本的な仕組みと、AI Overviewとの違いを理解する",
+    "AI検索機能に表示されるための要件についてのGoogle公式の見解を理解する",
+    "AI検索時代においても、これまで学んだSEOの基本が重要である理由を理解する"
+  ],
+  "sections": [
+    {
+      "heading": "AI検索：AI Overviewとは",
+      "bodyHtml": "<p><mark>AI Overview</mark>は、Google検索の結果画面において、通常の検索結果一覧の上部にAIが生成した要約回答を表示する機能です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>AI Overview</strong><br>ユーザーの検索クエリに対して、複数のWebページの情報をもとにAIが要約した回答を、検索結果の上部に表示するGoogleの機能。回答には、参照元となったサイトへのリンクが表示されます。</p></div><p>Google公式の説明によれば、AI OverviewやAI Modeは<strong>「クエリファンアウト」</strong>と呼ばれる手法を用いることがあるとされています。これは、1つの検索クエリに対して複数の関連する検索を内部的に実行し、さまざまな情報源から回答を組み立てる仕組みです。</p>"
+    },
+    {
+      "heading": "AI検索：AI Modeとの違い",
+      "bodyHtml": "<p><mark>AI Mode</mark>は、Google検索に統合されたAIによる対話的な検索体験です。AI Overviewが検索結果の一部として要約を表示するのに対し、AI Modeはより複雑な質問や、複数の検索を要するような比較・深掘りを1つの対話の中で行える点が特徴とされています。</p><div class=\"table-wrap\"><table><thead><tr><th></th><th>AI Overview</th><th>AI Mode</th></tr></thead><tbody><tr><td>表示のされ方</td><td>通常の検索結果の一部として、要約が表示される</td><td>専用の検索体験として、対話形式で利用する</td></tr><tr><td>向いている用途</td><td>比較的シンプルな質問への要約</td><td>複雑な比較・深掘りが必要な質問</td></tr></tbody></table></div>"
+    },
+    {
+      "heading": "AI検索：表示されるための要件",
+      "bodyHtml": "<p>AI検索機能への表示を狙って、特別な対策をすべきかどうかは多くのサイト運営者の関心事です。この点について、Google Search Central（公式ドキュメント）は明確な方針を示しています。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>Google公式は、<span class=\"text-primary\">AI OverviewやAI Modeに表示されるための「追加の要件」や「特別な最適化」は存在しない</span>と明言しています。新たに専用のファイルやマークアップを作成する必要もありません。</p></div></div><p>Google公式ドキュメントが示す基本方針は次のとおりです。</p><ul><li>ページが<strong>インデックスされ、通常の検索結果にスニペット付きで表示される資格</strong>を満たしていることが前提となる</li><li>クロールのしやすさ、サイト構造、モバイル対応、表示速度、内部リンクといった<strong>これまで学んできたSEOの基本</strong>がそのまま重要になる</li><li>独自性があり、訪問者にとって満足度の高いコンテンツであることが重視される</li><li>第7章で学んだ<strong>E-E-A-T</strong>（経験・専門性・権威性・信頼性）の考え方が、AI検索機能でも引き続き重視される</li></ul><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>つまり、AI検索時代だからといって、これまで学んできたSEOの基本が不要になるわけではありません。むしろ<strong>基本を丁寧に積み重ねることが、AI検索機能への対応にもつながる</strong>というのがGoogle公式の立場です。次章以降では、この前提を踏まえた上で、AI検索時代に特有の考え方（LLMO・エンティティSEOなど）を学んでいきます。</p></div></div>"
+    }
+  ],
+  "summary": [
+    "AI Overviewは、検索結果の上部にAIが複数のWebページから要約した回答を表示する機能で、参照元サイトへのリンクも表示される",
+    "AI Modeは、より複雑な比較・深掘りを対話形式で行えるGoogleのAI検索体験である",
+    "Google公式は、AI Overview・AI Modeに表示されるための特別な追加要件や最適化は存在しないと明言している",
+    "AI検索機能への対応は、インデックス・クロールのしやすさ・独自性・E-E-A-Tなど、これまで学んだSEOの基本の延長線上にある"
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "AI Overviewの説明として、最も適切なものはどれか。",
+      "options": [
+        "検索結果の広告枠を自動的に非表示にする機能",
+        "検索結果の上部に、複数のWebページをもとにAIが生成した要約回答を表示する機能",
+        "サイトの表示速度を自動的に高速化する機能",
+        "ユーザーの個人情報を検索結果に表示する機能"
+      ],
+      "correct": [1],
+      "explain": "AI Overviewは、ユーザーの検索クエリに対して複数のWebページの情報をもとにAIが要約した回答を、検索結果の上部に表示する機能です。"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "AI ModeとAI Overviewの違いに関する説明として、最も適切なものはどれか。",
+      "options": [
+        "AI ModeとAI Overviewは全く同じ機能であり、違いはない",
+        "AI Modeは、複雑な比較・深掘りを対話形式で行える検索体験であり、AI Overviewは検索結果の一部として要約を表示する",
+        "AI Modeは広告専用の機能であり、検索結果には一切関係しない",
+        "AI Overviewの方がAI Modeより後に登場した、より新しい機能である"
+      ],
+      "correct": [1],
+      "explain": "AI Modeはより複雑な質問や比較・深掘りを対話形式で行える検索体験であり、AI Overviewは通常の検索結果の一部として要約を表示する機能です。"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "sectionIndex": 2,
+      "question": "AI Overview・AI Modeに表示されるための要件について、Google公式が示している見解として、最も適切なものはどれか。",
+      "options": [
+        "専用の新しいファイルやマークアップを追加しなければ、絶対に表示されない",
+        "表示されるための特別な追加要件や最適化は存在しないとしている",
+        "AI検索機能への表示には、追加費用の支払いが必要である",
+        "従来のSEO対策は、AI検索機能には一切関係しない"
+      ],
+      "correct": [1],
+      "explain": "Google公式は、AI OverviewやAI Modeに表示されるための追加の要件や特別な最適化は存在しないと明言しています。"
+    },
+    {
+      "id": "q4",
+      "type": "multi",
+      "sectionIndex": 2,
+      "question": "AI検索機能への対応として、Google公式が重要だとしている要素をすべて選べ。",
+      "options": [
+        "クロールのしやすさ・サイト構造・モバイル対応・表示速度",
+        "独自性があり、訪問者にとって満足度の高いコンテンツ",
+        "E-E-A-T（経験・専門性・権威性・信頼性）",
+        "サイトのドメイン名の文字数をできるだけ短くすること"
+      ],
+      "correct": [0, 1, 2],
+      "explain": "クロールのしやすさ・サイト構造・独自性のあるコンテンツ・E-E-A-Tは、Google公式がAI検索機能への対応でも重要だとしている要素です。ドメイン名の文字数は関係ありません。"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "sectionIndex": 2,
+      "question": "AI検索時代におけるSEOの基本の位置づけについて、最も適切なものはどれか。",
+      "options": [
+        "AI検索の登場により、これまでのSEOの基本はすべて無意味になった",
+        "AI検索機能への対応は、これまで学んだSEOの基本の延長線上にある",
+        "AI検索対策とSEO対策は、完全に別々の、無関係な取り組みである",
+        "AI検索が普及したため、コンテンツの品質はもはや評価に関係しない"
+      ],
+      "correct": [1],
+      "explain": "Google公式の方針によれば、AI検索機能への対応は、クロール・サイト構造・独自性・E-E-A-Tといった、これまで学んだSEOの基本の延長線上にあります。"
+    }
+  ]
+}

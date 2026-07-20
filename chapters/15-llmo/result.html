@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLMO（採点結果） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/ai/index.html" class="breadcrumb-back">← LLMO</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約12分</span>
+    <h1 class="wizard-header__title">LLMO</h1>
+    <p class="wizard-header__topics">基本：LLMOとは、実践：SEOとの違い</p>
+  </div>
+
+  <div class="result-summary" data-result-summary>
+    <div class="result-summary__icon" data-result-icon>🏆</div>
+    <div class="result-summary__title">確認テスト結果</div>
+    <div class="result-summary__score" data-result-score>--%</div>
+    <div class="result-summary__sub" data-result-sub></div>
+    <div class="result-status" data-result-status></div>
+  </div>
+
+  <div class="result-review">
+    <div class="result-review__head">
+      <div class="result-review__title">回答一覧と解説</div>
+      <div class="result-review__hint">間違えた問題は「関連する教材を見直す」から該当ページを確認できます</div>
+    </div>
+    <div data-result-list></div>
+  </div>
+
+  <div class="result-actions">
+    <button class="btn btn--primary" data-result-retry>↻ テストを再受験</button>
+    <a href="step-1.html" class="btn btn--ghost">📖 教材から見直す</a>
+    <a href="../../phases/ai/index.html" class="btn btn--muted">一覧に戻る</a>
+  </div>
+
+  <script type="application/json" data-quiz-data>
+[{"id":"q1","type":"single","sectionIndex":0,"question":"LLMOの説明として、最も適切なものはどれか。","options":["サイトの表示速度だけを高速化する技術","生成AIサービスの回答の中で、自社の情報が引用・言及されやすくなるよう最適化する考え方","広告の入札額を自動的に最適化するツール","検索エンジンのクローラーを完全にブロックする技術"],"correct":[1],"explain":"LLMOは、ChatGPTやGeminiなどの生成AIサービスの回答の中で、自社の情報が引用・言及されやすくなるように最適化する考え方です。"},{"id":"q2","type":"single","sectionIndex":1,"question":"SEOとLLMOの主な目的の違いとして、最も適切なものはどれか。","options":["SEOは検索結果でページの順位を上げることを目指し、LLMOはAIの回答の中で引用・言及されることを目指す","SEOとLLMOは、目的も評価される単位もすべて同じである","SEOはAIの回答に引用されることを目指し、LLMOはページの順位を上げることを目指す","SEOとLLMOはどちらも広告の出稿を目的としている"],"correct":[0],"explain":"SEOは検索結果でページの順位を上げることを目指すのに対し、LLMOはAIの回答の中で自社の情報が引用・言及されることを目指します。"},{"id":"q3","type":"single","sectionIndex":1,"question":"SEOとLLMOで「評価される単位」の違いとして、最も適切なものはどれか。","options":["SEOはページ単位で評価されることが多く、LLMOは文章の一節や情報の単位で評価されることが多い","SEOとLLMOは、どちらも1つのサイト全体だけを単位として評価される","SEOは秒単位で評価され、LLMOは分単位で評価される","評価の単位という考え方は、SEOにもLLMOにも存在しない"],"correct":[0],"explain":"SEOは主にページ単位で評価されるのに対し、LLMOは文章の一節（パッセージ）や情報単位で評価される点が異なります。"},{"id":"q4","type":"single","sectionIndex":1,"question":"LLMOとSEOの関係についての説明として、最も適切なものはどれか。","options":["LLMOとSEOは完全に対立する、互いに矛盾する取り組みである","LLMOはSEOの基本を土台としながら、AIに理解・引用されやすい形で情報を整理する視点を加えるものである","LLMOに取り組むと、SEOの効果は必ず失われる","LLMOとSEOは無関係で、片方だけを選ばなければならない"],"correct":[1],"explain":"LLMOはSEOと対立するものではなく、クロールのしやすさや独自性、E-E-A-Tといった従来のSEOの基本を土台としながら、AIに理解・引用されやすい形で情報を整理する視点を加えるものです。"},{"id":"q5","type":"single","sectionIndex":0,"question":"生成AIサービスの中で、回答に引用元URLを明示する仕様が特徴とされているものの例として、本章で紹介されているものはどれか。","options":["Perplexity","検索エンジンには存在しない架空のサービス","GA4","Search Console"],"correct":[0],"explain":"Perplexityは、検索エンジンと生成AIのハイブリッド型とされ、回答に引用元URLを明示する仕様が特徴とされています。"}]
+  </script>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = 4;</script>
+<script src="../../assets/js/result.js"></script>
+</body>
+</html>
