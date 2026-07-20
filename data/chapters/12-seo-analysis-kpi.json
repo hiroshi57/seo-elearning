@@ -1,0 +1,103 @@
+{
+  "no": 12,
+  "phase": "practice",
+  "slug": "12-seo-analysis-kpi",
+  "title": "SEO分析・KPI",
+  "subtitle": "KGIとKPIの関係を理解し、SEOにおける重要指標の選び方と改善の優先順位のつけ方を学ぶ",
+  "topicsLabel": "KPI：重要指標、改善：優先順位",
+  "estimateMinutes": 12,
+  "goals": [
+    "KGI（重要目標達成指標）とKPI（重要業績評価指標）の違いと関係性を理解する",
+    "SEOでよく使われるKPIの例を理解する",
+    "KPIを絞り込むことが重要な理由を理解する",
+    "SEO改善施策に優先順位をつける考え方を理解する"
+  ],
+  "sections": [
+    {
+      "heading": "KPI：重要指標",
+      "bodyHtml": "<p>SEOの成果を評価する際は、GA4やSearch Consoleで確認できる数値の中から、<mark>何を重要指標（KPI）として追うか</mark>をあらかじめ決めておくことが重要です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>KGI（Key Goal Indicator／重要目標達成指標）</strong><br>組織やプロジェクトが最終的に達成したい目標を示す指標。「問い合わせ数を月間◯件にする」など、ビジネス上のゴールに近いもの。</p><p style=\"margin:8px 0 0;\"><strong>KPI（Key Performance Indicator／重要業績評価指標）</strong><br>KGIを達成するための中間指標。KGIという大きな目標に向けて、日々の施策の進捗を測るために設定します。</p></div><p>SEOにおいて、KPIとKGIの関係は次のような階層で捉えられます。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🎯</div><div class=\"flow__step-title\">KGI</div><div class=\"flow__step-desc\">問い合わせ数・売上など、最終目標</div></div><div class=\"flow__arrow\">←</div><div class=\"flow__step\"><div class=\"flow__step-icon\">📈</div><div class=\"flow__step-title\">KPI（成果指標）</div><div class=\"flow__step-desc\">自然検索経由のCV数・CV率</div></div><div class=\"flow__arrow\">←</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🔍</div><div class=\"flow__step-title\">KPI（プロセス指標）</div><div class=\"flow__step-desc\">流入数・掲載順位・表示回数</div></div></div></div><div class=\"figure__caption\">図1：KGIとKPIの階層関係（KPIツリーの一例）</div></div><p>SEOでよく使われるKPIの例には、次のようなものがあります。</p><ul><li><strong>自然検索経由のセッション数・ユーザー数：</strong>そもそもの流入規模</li><li><strong>主要キーワードの掲載順位：</strong>狙ったキーワードでの検索結果での位置</li><li><strong>自然検索経由のキーイベント（CV）数・CV率：</strong>流入がどれだけ成果につながっているか</li></ul>"
+    },
+    {
+      "heading": "改善：優先順位のつけ方",
+      "bodyHtml": "<p>KPIを設定する際は、<mark>指標を絞り込む</mark>ことが重要とされています。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>追いかけるKPIが多すぎると、<span class=\"text-primary\">どの数値の変化に注目すべきか</span>が分かりにくくなります。事業のフェーズや目的に応じて、主要なKPIを3〜5個程度に絞り込むことが実務上の一つの目安とされています。</p></div></div><p>また、事業のフェーズによって重視すべきKPIも変わってきます。</p><table><thead><tr><th>フェーズ</th><th>重視されやすいKPI</th></tr></thead><tbody><tr><td>集客の立ち上げ期</td><td>流入数、掲載順位、表示回数など、まずは「知ってもらう」ための指標</td></tr><tr><td>一定の集客が確保できた時期</td><td>CV数・CV率など、KGIに直結する指標</td></tr></tbody></table><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>GA4・Search Consoleで得られる数値をもとに、「流入は多いがCVにつながっていないページ」「順位が僅差で2ページ目に留まっているキーワード」など、<strong>改善の余地が大きい箇所から優先的に着手する</strong>ことが、限られたリソースを効果的に使うための考え方です。</p></div></div>"
+    }
+  ],
+  "summary": [
+    "KGIは最終的なビジネス目標、KPIはKGI達成のための中間指標であり、両者は階層構造で関係している",
+    "SEOのKPIには自然検索経由のセッション数、掲載順位、CV数・CV率などがある",
+    "追いかけるKPIは3〜5個程度に絞り込むことで、注目すべき変化が見えやすくなる",
+    "事業のフェーズに応じて重視すべきKPIは変わり、GA4・Search Consoleのデータから改善余地の大きい箇所を優先する"
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "KGIとKPIの関係についての説明として、最も適切なものはどれか。",
+      "options": [
+        "KGIとKPIは全く同じ意味で、使い分ける必要はない",
+        "KGIは最終的な目標を示し、KPIはKGIを達成するための中間指標である",
+        "KPIは最終目標で、KGIはその中間指標である",
+        "KGIとKPIはSEOには一切関係のない用語である"
+      ],
+      "correct": [1],
+      "explain": "KGI（重要目標達成指標）は最終目標を示し、KPI（重要業績評価指標）はKGIを達成するための中間指標という関係にあります。"
+    },
+    {
+      "id": "q2",
+      "type": "multi",
+      "sectionIndex": 0,
+      "question": "SEOでよく使われるKPIの例として、正しいものをすべて選べ。",
+      "options": [
+        "自然検索経由のセッション数・ユーザー数",
+        "主要キーワードの掲載順位",
+        "自然検索経由のキーイベント（CV）数・CV率",
+        "社員の有給休暇取得率"
+      ],
+      "correct": [0, 1, 2],
+      "explain": "自然検索の流入数、掲載順位、CV数・CV率はSEOでよく使われるKPIの例です。有給休暇取得率はSEOのKPIとは関係ありません。"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "KPIを設定する際の考え方として、最も適切なものはどれか。",
+      "options": [
+        "追いかけるKPIはできるだけ多く、20個以上設定すべきである",
+        "主要なKPIを3〜5個程度に絞り込むことで、注目すべき変化が見えやすくなる",
+        "KPIは一度設定したら、事業フェーズが変わっても変更してはならない",
+        "KPIはGA4やSearch Consoleとは無関係に決めるべきである"
+      ],
+      "correct": [1],
+      "explain": "追いかけるKPIが多すぎると重要な変化を見失いやすくなるため、主要なKPIを3〜5個程度に絞り込むことが実務上の目安とされています。"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "事業フェーズとKPIの関係についての説明として、最も適切なものはどれか。",
+      "options": [
+        "集客の立ち上げ期でも、一定の集客確保後でも、重視すべきKPIは常に同じである",
+        "集客の立ち上げ期は流入数や掲載順位、一定の集客確保後はCV数・CV率が重視されやすい",
+        "事業フェーズはSEOのKPI設定には一切関係しない",
+        "KPIは事業開始時に一度決めたら、二度と見直してはいけない"
+      ],
+      "correct": [1],
+      "explain": "集客の立ち上げ期は流入数・掲載順位などが重視されやすく、一定の集客が確保できた後はCV数・CV率などKGIに直結する指標が重視される傾向にあります。"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "SEO改善施策の優先順位をつける際の考え方として、最も適切なものはどれか。",
+      "options": [
+        "すべてのページを同時に、同じ優先度で改善する",
+        "GA4・Search Consoleのデータをもとに、改善余地が大きい箇所から優先的に着手する",
+        "優先順位は考えず、思いついた順にランダムに改善する",
+        "改善の優先順位づけにはデータを使わない方がよい"
+      ],
+      "correct": [1],
+      "explain": "GA4・Search Consoleのデータから、流入は多いがCVにつながっていないページなど、改善余地の大きい箇所を特定し、優先的に着手することが効果的なアプローチです。"
+    }
+  ]
+}

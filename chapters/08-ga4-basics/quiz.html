@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GA4（基礎）（確認テスト） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/practice/index.html" class="breadcrumb-back">← GA4（基礎）</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">📋 確認テスト</span>
+    <h1 class="wizard-header__title">GA4（基礎）</h1>
+    <p class="wizard-header__topics">基本：イベント、コンバージョン</p>
+  </div>
+
+  <section class="section-card" data-quiz-root data-chapter="08-ga4-basics" data-total-steps="4">
+    <div class="quiz-intro"><span class="quiz-intro__icon">📋</span>確認テスト</div>
+    <p class="quiz-sub">全5問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
+
+    <script type="application/json" data-quiz-data>
+[{"id":"q1","type":"single","sectionIndex":0,"question":"GA4における「イベント」の説明として、最も適切なものはどれか。","options":["広告出稿のスケジュールを管理する機能","ページ閲覧やクリックなど、ユーザーの行動を計測する基本単位","サイトのデザインテンプレートの名称","検索エンジンのクローラーの巡回記録"],"correct":[1],"explain":"GA4では、ページの閲覧やクリックなど、ユーザーのあらゆる行動を「イベント」という基本単位で統一的に計測します。"},{"id":"q2","type":"multi","sectionIndex":0,"question":"GA4のイベントの種類として、正しいものをすべて選べ。","options":["自動収集イベント","拡張計測機能イベント","推奨イベント","広告専用イベント"],"correct":[0,1,2],"explain":"GA4のイベントは自動収集・拡張計測機能・推奨・カスタムの4種類に分類されます。「広告専用イベント」という分類はありません。"},{"id":"q3","type":"single","sectionIndex":0,"question":"「page_view（ページ表示）」が属するイベントの種類として、最も適切なものはどれか。","options":["カスタムイベント（独自に実装が必要）","自動収集イベント（タグ設置だけで収集される）","推奨イベント（実装が必要）","GA4では計測できないイベント"],"correct":[1],"explain":"page_view（ページ表示）は、GA4のタグを設置するだけで自動的に収集される自動収集イベントの代表例です。"},{"id":"q4","type":"single","sectionIndex":1,"question":"GA4における「キーイベント」の説明として、最も適切なものはどれか。","options":["サイトのすべてのアクセスを指す言葉","ビジネス上特に重要だと指定したイベント（旧コンバージョン）","クローラーがインデックスしたページ数","広告費の消化額を示す指標"],"correct":[1],"explain":"キーイベントは、問い合わせ完了や購入など、サイトの目的達成にとって重要なイベントを指定したものです。Googleは混同を避けるため「コンバージョン」から呼び方を変更しています。"},{"id":"q5","type":"single","sectionIndex":1,"question":"GA4のキーイベントのカウント方法に関する注意点として、最も適切なものはどれか。","options":["1人のユーザーにつき、1日1回しかカウントされない","イベントが発生するたびにカウントされるため、セッション数・ユーザー数との違いを意識する必要がある","キーイベントは自動的にはカウントされず、手作業で集計する必要がある","キーイベントの数値は常にセッション数と完全に一致する"],"correct":[1],"explain":"GA4のキーイベントはイベントが発生するたびにカウントされるため、同じユーザーが同じ行動を複数回行うとカウントが増えることがあります。セッション数・ユーザー数との違いを意識することが重要です。"}]
+    </script>
+
+    <div data-quiz-item="q1" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q1 / 5</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q1-question">GA4における「イベント」の説明として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q1-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>広告出稿のスケジュールを管理する機能</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>ページ閲覧やクリックなど、ユーザーの行動を計測する基本単位</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>サイトのデザインテンプレートの名称</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>検索エンジンのクローラーの巡回記録</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q2" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q2 / 5</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type quiz-item__type--multi">複数選択（すべて選択）</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q2-question">GA4のイベントの種類として、正しいものをすべて選べ。</div>
+      <div class="quiz-options" role="group" aria-labelledby="q2-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>自動収集イベント</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>拡張計測機能イベント</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>推奨イベント</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>広告専用イベント</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q3" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q3 / 5</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q3-question">「page_view（ページ表示）」が属するイベントの種類として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q3-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>カスタムイベント（独自に実装が必要）</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>自動収集イベント（タグ設置だけで収集される）</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>推奨イベント（実装が必要）</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>GA4では計測できないイベント</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q4" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q4 / 5</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q4-question">GA4における「キーイベント」の説明として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q4-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>サイトのすべてのアクセスを指す言葉</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>ビジネス上特に重要だと指定したイベント（旧コンバージョン）</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>クローラーがインデックスしたページ数</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>広告費の消化額を示す指標</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q5" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q5 / 5</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q5-question">GA4のキーイベントのカウント方法に関する注意点として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q5-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>1人のユーザーにつき、1日1回しかカウントされない</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>イベントが発生するたびにカウントされるため、セッション数・ユーザー数との違いを意識する必要がある</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>キーイベントは自動的にはカウントされず、手作業で集計する必要がある</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>キーイベントの数値は常にセッション数と完全に一致する</span></div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-4.html" class="btn btn--ghost">← 教材に戻る</a>
+    <div class="wizard-footer__spacer"></div>
+    <div class="quiz-unanswered-note" data-quiz-unanswered-note></div>
+    <button class="btn btn--primary" data-quiz-grade disabled>📋 採点する</button>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+</body>
+</html>
