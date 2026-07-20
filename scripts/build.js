@@ -278,10 +278,13 @@ function buildQuizPage(chapter, chData) {
         )
         .join("\n");
 
-      return `    <div data-quiz-item="${q.id}" class="quiz-item">
+      return `    <div data-quiz-item="${q.id}" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
         <span class="quiz-item__no">Q${qi + 1} / ${chData.quiz.length}</span>
-        <span class="${typeClass}">${typeLabel}</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="${typeClass}">${typeLabel}</span>
+        </div>
       </div>
       <div class="quiz-item__question" id="${questionId}">${escapeHtml(q.question)}</div>
       <div class="quiz-options" role="${isMulti ? "group" : "radiogroup"}" aria-labelledby="${questionId}">
@@ -313,6 +316,7 @@ ${itemsHtml}
   <div class="wizard-footer">
     <a href="step-${chData.sections.length + 2}.html" class="btn btn--ghost">← 教材に戻る</a>
     <div class="wizard-footer__spacer"></div>
+    <div class="quiz-unanswered-note" data-quiz-unanswered-note></div>
     <button class="btn btn--primary" data-quiz-grade disabled>📋 採点する</button>
   </div>
 `;

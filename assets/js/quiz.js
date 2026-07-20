@@ -30,6 +30,12 @@
 
     const answers = {}; // { questionId: [selectedIndices] }
     const gradeBtn = root.querySelector("[data-quiz-grade]");
+    const unansweredNote = root.querySelector("[data-quiz-unanswered-note]");
+
+    function updateUnansweredBadge(q, itemEl) {
+      const answered = answers[q.id] && answers[q.id].length > 0;
+      itemEl.classList.toggle("is-unanswered", !answered);
+    }
 
     questions.forEach((q) => {
       answers[q.id] = [];
@@ -68,6 +74,7 @@
             optEl.setAttribute("aria-checked", "true");
           }
 
+          updateUnansweredBadge(q, itemEl);
           updateGradeButtonState();
         };
 
@@ -81,12 +88,20 @@
       });
     });
 
+    function unansweredCount() {
+      return questions.filter((q) => !answers[q.id] || answers[q.id].length === 0).length;
+    }
+
     function allAnswered() {
-      return questions.every((q) => answers[q.id] && answers[q.id].length > 0);
+      return unansweredCount() === 0;
     }
 
     function updateGradeButtonState() {
-      if (gradeBtn) gradeBtn.disabled = !allAnswered();
+      const remaining = unansweredCount();
+      if (gradeBtn) gradeBtn.disabled = remaining > 0;
+      if (unansweredNote) {
+        unansweredNote.textContent = remaining > 0 ? `あと${remaining}問、未回答の設問があります` : "";
+      }
     }
 
     function submit() {
@@ -105,9 +120,9 @@
     }
 
     if (gradeBtn) {
-      gradeBtn.disabled = true;
       gradeBtn.addEventListener("click", submit);
     }
+    updateGradeButtonState();
   }
 
   document.addEventListener("DOMContentLoaded", () => {

@@ -511,6 +511,34 @@ tbody tr:nth-child(even) { background: #fafafa; }
   border-radius: 999px;
 }
 
+.quiz-item__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quiz-item__unanswered {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--color-warning-light);
+  color: #b45309;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.quiz-item.is-unanswered {
+  border-color: #fde68a;
+}
+
+.quiz-unanswered-note {
+  font-size: 0.82rem;
+  color: #b45309;
+  font-weight: 600;
+}
+
 .quiz-item__type--multi {
   background: #ede9fe;
   color: #6d28d9;
