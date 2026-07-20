@@ -7,16 +7,25 @@
     {
       "id": "basic",
       "title": "基礎編",
+      "subtitle": "SEOの基本",
+      "icon": "📘",
+      "description": "SEOの基本概念、検索エンジンの仕組み、キーワード戦略、ライティング、テクニカルSEO、E-E-A-Tを学ぶ",
       "chapters": [1, 2, 3, 4, 5, 6, 7]
     },
     {
       "id": "practice",
       "title": "実践編",
+      "subtitle": "分析ツールの実務",
+      "icon": "📊",
+      "description": "GA4・Search Consoleを使った分析、KPI設計、改善施策の実践を学ぶ",
       "chapters": [8, 9, 10, 11, 12, 13]
     },
     {
       "id": "ai",
       "title": "AI時代編",
+      "subtitle": "AI検索への対応",
+      "icon": "🤖",
+      "description": "AI Overview・AI Mode、LLMO、エンティティSEO、構造化データ、ブランドSEOを学ぶ",
       "chapters": [14, 15, 16, 17, 18, 19]
     }
   ],
