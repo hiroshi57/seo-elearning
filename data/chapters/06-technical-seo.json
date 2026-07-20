@@ -1,0 +1,111 @@
+{
+  "no": 6,
+  "phase": "basic",
+  "slug": "06-technical-seo",
+  "title": "テクニカルSEO",
+  "subtitle": "URL構造・内部リンク・XMLサイトマップ・canonical・表示速度など、サイトの技術的な基盤を理解する",
+  "topicsLabel": "サイト構造：URL、内部リンク、XMLサイトマップ、canonical、表示速度：Core Web Vitals",
+  "estimateMinutes": 14,
+  "goals": [
+    "検索エンジンに配慮したURL構造の基本的な考え方を理解する",
+    "XMLサイトマップの役割と、正規URLとの関係を理解する",
+    "canonicalタグによるURL正規化の考え方を理解する",
+    "Core Web Vitals（LCP・INP・CLS）の3指標とその目安を理解する"
+  ],
+  "sections": [
+    {
+      "heading": "サイト構造：わかりやすいURL",
+      "bodyHtml": "<p>Googleは公式のSEOスターターガイドで、<mark>わかりやすく予測可能で、人間にも理解しやすいURL構造</mark>を推奨しています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>URL構造</strong><br>Webページのアドレス（URL）の組み立て方。サイト内のディレクトリ構成やページの位置関係が、URLを見ただけである程度推測できる状態が望ましいとされています。</p></div><ul><li>サイトの構造を反映した、短く明確なURLにする</li><li>意味の分からないランダムな文字列・数字の羅列を避ける</li><li>可能であれば、ページの内容が推測できる単語を含める</li></ul><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>URL構造は、一度決めて公開した後に大きく変更すると、リダイレクト設定などの追加対応が必要になります。サイト設計の初期段階で、将来のページ追加も見据えた構造を検討しておくことが望ましいとされています。</p></div></div>"
+    },
+    {
+      "heading": "内部リンクとクロールのしやすさ",
+      "bodyHtml": "<p>第5章でも触れたとおり、内部リンクはユーザーの回遊性だけでなく、<mark>クローラーがサイト内のページを発見する手がかり</mark>としても機能します。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>どのページからもリンクされていない「孤立したページ」は、クローラーが発見しにくくなります。<span class=\"text-primary\">重要なページほど、サイト内の複数箇所からリンクされている状態</span>が望ましいとされています。</p></div></div><p>テクニカルSEOの観点では、次のような点も内部リンクの巡回性に影響します。</p><ul><li>ナビゲーションメニューやパンくずリストで、サイト全体の階層を分かりやすくする</li><li>関連コンテンツへのリンクを、記事の文脈に沿って適切に設置する</li><li>リンク切れ（存在しないページへのリンク）を放置しない</li></ul>"
+    },
+    {
+      "heading": "XMLサイトマップとcanonical",
+      "bodyHtml": "<p><mark>XMLサイトマップ</mark>は、サイト内のどのページをクロール・インデックスしてほしいかをGoogleに伝えるためのファイルです。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>XMLサイトマップ</strong><br>サイト内のURL一覧をXML形式でまとめたファイル。Search Console（第10章で学びます）を通じてGoogleに送信することで、クロールの手がかりとして活用してもらえます。</p><p style=\"margin:8px 0 0;\"><strong>canonicalタグ（rel=&quot;canonical&quot;）</strong><br>同じ内容、または似た内容のページが複数のURLで存在する場合に、「正規のURLはこちらです」とGoogleに伝えるためのタグ。URLの正規化（重複コンテンツの整理）に使われます。</p></div><p>Google公式のガイドラインでは、XMLサイトマップには<strong>正規URL（canonicalで指定したURL）のみ</strong>を含めることが推奨されています。重複しているURLや、canonicalの指定と矛盾するURLをサイトマップに含めると、Googleに対して矛盾したシグナルを送ることになるためです。</p><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>同じ内容のページが、パラメータ違いなどで複数のURLからアクセスできる状態を放置すると、<strong>重複コンテンツ</strong>として扱われ、評価が分散してしまう可能性があります。canonicalタグやリダイレクトで、優先すべきURLを明示することが重要です。</p></div></div>"
+    },
+    {
+      "heading": "表示速度：Core Web Vitals",
+      "bodyHtml": "<p><mark>Core Web Vitals</mark>は、Googleが定めるページ体験に関する指標群で、読み込み速度・操作の反応性・視覚的な安定性を数値で評価します。</p><div class=\"table-wrap\"><table><thead><tr><th>指標</th><th>何を測るか</th><th>良好とされる目安</th></tr></thead><tbody><tr><td><strong>LCP</strong>（Largest Contentful Paint）</td><td>ページ内で最も大きな要素が表示されるまでの時間</td><td>2.5秒以内</td></tr><tr><td><strong>INP</strong>（Interaction to Next Paint）</td><td>ユーザーの操作に対する応答性</td><td>200ミリ秒未満</td></tr><tr><td><strong>CLS</strong>（Cumulative Layout Shift）</td><td>読み込み中のレイアウトのズレ（視覚的な安定性）</td><td>0.1未満</td></tr></tbody></table></div><p>Google公式の説明によれば、これらの指標は<strong>実際のユーザーの利用データ（フィールドデータ）</strong>をもとに評価され、あるページが「合格」と判定されるには、訪問の75パーセンタイル（多くのユーザー）で良好な体験が実現されている必要があります。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>Google自身も、良好なCore Web Vitalsは<span class=\"text-primary\">ユーザー体験の向上に役立つものであり、コアとなるランキングシステムが評価しようとする方向性とも合致する</span>と説明しています。Core Web Vitalsの実際の数値は、Search Console（後の章で学びます）で確認できます。</p></div></div>"
+    }
+  ],
+  "summary": [
+    "GoogleはわかりやすくPredictableなURL構造を推奨しており、サイトの構成を反映した短く明確なURLが望ましい",
+    "内部リンクはクローラーがページを発見する手がかりにもなり、孤立したページを作らないことが重要",
+    "XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めるべきで、canonicalタグは重複コンテンツの整理に使う",
+    "Core Web Vitalsは読み込み速度（LCP）・応答性（INP）・視覚的安定性（CLS）の3指標で構成され、実際のユーザーデータをもとに評価される"
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "Googleが推奨するURL構造の考え方として、最も適切なものはどれか。",
+      "options": [
+        "意味の分からないランダムな文字列・数字の羅列にする",
+        "わかりやすく予測可能で、人間にも理解しやすい構造にする",
+        "URLの長さは検索順位に一切関係しないため、何でもよい",
+        "サイトの構造とURLは無関係にすべきである"
+      ],
+      "correct": [1],
+      "explain": "Googleは公式のSEOスターターガイドで、わかりやすく予測可能で、人間にも理解しやすいURL構造を推奨しています。"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "内部リンクとクロールのしやすさに関する説明として、最も適切なものはどれか。",
+      "options": [
+        "どのページからもリンクされていないページは、クローラーが発見しにくくなる",
+        "内部リンクはクローラーの巡回には一切関係しない",
+        "重要なページほど、他のページからリンクしない方がよい",
+        "内部リンクはユーザー体験にのみ影響し、検索エンジンには影響しない"
+      ],
+      "correct": [0],
+      "explain": "どのページからもリンクされていない「孤立したページ」はクローラーが発見しにくくなります。重要なページほど複数箇所からリンクされている状態が望ましいとされています。"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "sectionIndex": 2,
+      "question": "XMLサイトマップに含めるべきURLとして、Google公式ガイドラインが推奨しているものはどれか。",
+      "options": [
+        "重複しているURLも含め、サイト内のすべてのURLをできる限り含める",
+        "canonicalで指定した正規URLのみを含める",
+        "アクセス数が少ないURLだけを含める",
+        "XMLサイトマップにはURLを1つも含めない方がよい"
+      ],
+      "correct": [1],
+      "explain": "Google公式のガイドラインでは、XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めることが推奨されています。"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "sectionIndex": 2,
+      "question": "canonicalタグ（rel=\"canonical\"）の役割として、最も適切なものはどれか。",
+      "options": [
+        "ページの表示速度を向上させるためのタグ",
+        "同じ内容・似た内容のページが複数ある場合に、正規のURLを指定するためのタグ",
+        "検索結果の順位を強制的に固定するためのタグ",
+        "広告の表示を制御するためのタグ"
+      ],
+      "correct": [1],
+      "explain": "canonicalタグは、重複または類似する複数のURLの中から「正規のURLはこちらです」とGoogleに伝え、URLの正規化を行うためのタグです。"
+    },
+    {
+      "id": "q5",
+      "type": "multi",
+      "sectionIndex": 3,
+      "question": "Core Web Vitalsを構成する3つの指標として、正しいものをすべて選べ。",
+      "options": [
+        "LCP（Largest Contentful Paint）：読み込み速度",
+        "INP（Interaction to Next Paint）：操作への応答性",
+        "CLS（Cumulative Layout Shift）：視覚的な安定性",
+        "CTR（Click Through Rate）：クリック率"
+      ],
+      "correct": [0, 1, 2],
+      "explain": "Core Web VitalsはLCP（読み込み速度）・INP（応答性）・CLS（視覚的安定性）の3指標で構成されます。CTR（クリック率）はCore Web Vitalsには含まれません。"
+    }
+  ]
+}

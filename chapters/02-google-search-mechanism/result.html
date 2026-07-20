@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Googleの検索の仕組み（採点結果） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← Googleの検索の仕組み</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約12分</span>
+    <h1 class="wizard-header__title">Googleの検索の仕組み</h1>
+    <p class="wizard-header__topics">クローリング、インデックス、ランキング、検索意図</p>
+  </div>
+
+  <div class="result-summary" data-result-summary>
+    <div class="result-summary__icon" data-result-icon>🏆</div>
+    <div class="result-summary__title">確認テスト結果</div>
+    <div class="result-summary__score" data-result-score>--%</div>
+    <div class="result-summary__sub" data-result-sub></div>
+    <div class="result-status" data-result-status></div>
+  </div>
+
+  <div class="result-review">
+    <div class="result-review__head">
+      <div class="result-review__title">回答一覧と解説</div>
+      <div class="result-review__hint">間違えた問題は「関連する教材を見直す」から該当ページを確認できます</div>
+    </div>
+    <div data-result-list></div>
+  </div>
+
+  <div class="result-actions">
+    <button class="btn btn--primary" data-result-retry>↻ テストを再受験</button>
+    <a href="step-1.html" class="btn btn--ghost">📖 教材から見直す</a>
+    <a href="../../phases/basic/index.html" class="btn btn--muted">一覧に戻る</a>
+  </div>
+
+  <script type="application/json" data-quiz-data>
+[{"id":"q1","type":"single","sectionIndex":0,"question":"クローリング（Crawling）の説明として、最も適切なものはどれか。","options":["検索結果に表示するページの順位を決めるプロセス","検索エンジンのロボットがWebページを発見・巡回し、内容を収集するプロセス","ユーザーが入力した検索キーワードを解析するプロセス","ページの表示速度を計測するプロセス"],"correct":[1],"explain":"クローリングは検索エンジン（クローラー）がWebページを発見・巡回し、内容を収集する最初のプロセスです。"},{"id":"q2","type":"single","sectionIndex":1,"question":"「クロールはされたが、インデックスはされていない」ページについての説明として、正しいものはどれか。","options":["検索結果には表示されない","検索結果に必ず1位で表示される","クロールされていないページより優先的に表示される","インデックスの有無は検索結果の表示に影響しない"],"correct":[0],"explain":"インデックスに登録されて初めて検索結果に表示される対象になります。クロールされてもインデックスされなければ表示されません。"},{"id":"q3","type":"single","sectionIndex":2,"question":"Googleのランキングの仕組みに関する説明として、最も適切なものはどれか。","options":["たった1つの指標だけで検索順位がすべて決まる","関連性・品質・有用性など、数多くのシグナルを組み合わせて順位が決まる","ページの公開日が新しいページが常に最上位に表示される","広告費を支払ったページが自動的に自然検索結果の1位になる"],"correct":[1],"explain":"Googleのランキングは単一の指標ではなく、関連性・品質・ユーザーにとっての有用性など多数のシグナルを組み合わせて決定される仕組みです。"},{"id":"q4","type":"multi","sectionIndex":3,"question":"検索意図の分類として、一般的に使われているものをすべて選べ。","options":["Know（知りたい）","Do（したい）","Go（行きたい）","Sell（売りたい）"],"correct":[0,1,2],"explain":"検索意図はKnow（知りたい）・Do（したい）・Go（行きたい）・Buy（買いたい）の4分類で考えるのが一般的です。「Sell（売りたい）」はユーザー側ではなく提供者側の意図であり、検索意図の分類には含まれません。"},{"id":"q5","type":"single","sectionIndex":3,"question":"「〇〇株式会社 公式サイト」という検索クエリが該当する検索意図の分類として、最も適切なものはどれか。","options":["Know（知りたい）","Do（したい）","Go（行きたい）","Buy（買いたい）"],"correct":[2],"explain":"特定のサイトや場所に到達したいという指名検索は「Go（行きたい）」クエリに分類されます。"}]
+  </script>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = 6;</script>
+<script src="../../assets/js/result.js"></script>
+</body>
+</html>

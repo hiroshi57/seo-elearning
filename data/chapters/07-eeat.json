@@ -1,0 +1,103 @@
+{
+  "no": 7,
+  "phase": "basic",
+  "slug": "07-eeat",
+  "title": "E-E-A-T",
+  "subtitle": "Googleが品質評価で重視するE-E-A-T（経験・専門性・権威性・信頼性）と、YMYL領域での重要性を理解する",
+  "topicsLabel": "品質：経験・専門性・権威性・信頼性",
+  "estimateMinutes": 12,
+  "goals": [
+    "E-E-A-Tを構成する4つの要素をそれぞれ説明できる",
+    "E-E-A-Tの中で「信頼性」が中心的な位置づけにある理由を理解する",
+    "YMYL（Your Money or Your Life）領域とは何かを理解する",
+    "なぜYMYL領域でE-E-A-Tが特に重視されるのかを説明できる"
+  ],
+  "sections": [
+    {
+      "heading": "品質：E-E-A-Tとは何か",
+      "bodyHtml": "<p><mark>E-E-A-T</mark>とは、Googleの検索品質評価ガイドラインで使われている、ページ・コンテンツの品質を評価する際の考え方です。次の4つの単語の頭文字から成り立っています。</p><div class=\"table-wrap\"><table><thead><tr><th>要素</th><th>英語</th><th>意味</th></tr></thead><tbody><tr><td><strong>Experience</strong></td><td>経験</td><td>実際にその物事を経験した人物による情報かどうか</td></tr><tr><td><strong>Expertise</strong></td><td>専門性</td><td>その分野に必要な知識・スキルを持っているかどうか</td></tr><tr><td><strong>Authoritativeness</strong></td><td>権威性</td><td>その分野の情報源として、周囲から権威があると認められているかどうか</td></tr><tr><td><strong>Trust</strong></td><td>信頼性</td><td>掲載されている情報が正確で、安心して読めるかどうか</td></tr></tbody></table></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>E-E-A-T</strong><br>Experience（経験）・Expertise（専門性）・Authoritativeness（権威性）・Trust（信頼性）の頭文字を取った略称。もともとはE-A-T（経験を除く3要素）と呼ばれていましたが、「実際の経験に基づく情報かどうか」という観点が加わり、Experienceが追加されました。</p></div>"
+    },
+    {
+      "heading": "品質：信頼性が中心にある理由",
+      "bodyHtml": "<p>E-E-A-Tの4要素は並列の関係ではなく、<mark>信頼性（Trust）</mark>が他の3要素を支える中心的な位置づけにあるとされています。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>どれほど豊富な経験や高い専門性、権威性を示すコンテンツであっても、<span class=\"text-primary\">情報が不正確だったり、意図的にユーザーを誤解させるような内容だったりすれば、信頼性は損なわれます</span>。信頼性が欠けていると、経験・専門性・権威性がいくら高くても、E-E-A-T全体の評価は低くなるという考え方です。</p></div></div><p>実務でE-E-A-Tを意識する際は、次のような観点が手がかりになります。</p><ul><li>情報の出典や根拠が明示されているか</li><li>コンテンツの執筆者・監修者が誰なのかが分かるようになっているか</li><li>誤った情報や古い情報を放置していないか</li><li>サイト運営者の情報（会社概要・連絡先など）が明確か</li></ul>"
+    }
+  ],
+  "summary": [
+    "E-E-A-Tは、Experience（経験）・Expertise（専門性）・Authoritativeness（権威性）・Trust（信頼性）の4要素からなる、Googleの品質評価の考え方である",
+    "4要素の中でも信頼性（Trust）が中心的な位置づけにあり、他の3要素がどれだけ高くても信頼性が欠けると評価は下がる",
+    "YMYL（Your Money or Your Life）とは、お金・健康・安全など人の生活に直接影響する領域を指すGoogleの用語である",
+    "YMYL領域のコンテンツは、人の生活への影響が大きいため、特にE-E-A-Tが重視される傾向にある"
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "multi",
+      "sectionIndex": 0,
+      "question": "E-E-A-Tを構成する要素として、正しいものをすべて選べ。",
+      "options": [
+        "Experience（経験）",
+        "Expertise（専門性）",
+        "Authoritativeness（権威性）",
+        "Efficiency（効率性）"
+      ],
+      "correct": [0, 1, 2],
+      "explain": "E-E-A-Tは Experience（経験）・Expertise（専門性）・Authoritativeness（権威性）・Trust（信頼性）の4要素から構成されます。Efficiency（効率性）は含まれません。"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "E-E-A-TのExperience（経験）が示す内容として、最も適切なものはどれか。",
+      "options": [
+        "コンテンツの文字数が多いこと",
+        "実際にその物事を経験した人物による情報であること",
+        "サイトの表示速度が速いこと",
+        "検索結果で1位に表示された実績があること"
+      ],
+      "correct": [1],
+      "explain": "Experience（経験）は、実際にその物事を経験した人物による情報かどうかを示す要素です。"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "E-E-A-Tの4要素の関係性についての説明として、最も適切なものはどれか。",
+      "options": [
+        "4要素はすべて独立していて、互いに影響しない",
+        "信頼性（Trust）が中心的な位置づけにあり、他の要素が高くても信頼性が欠けると評価が下がる",
+        "権威性（Authoritativeness）が最も重要で、他の3要素は無視してよい",
+        "経験（Experience）だけがあれば、他の3要素は不要である"
+      ],
+      "correct": [1],
+      "explain": "信頼性（Trust）は他の3要素を支える中心的な位置づけにあり、経験・専門性・権威性が高くても信頼性が欠けるとE-E-A-T全体の評価は低くなるとされています。"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "YMYL（Your Money or Your Life）の説明として、最も適切なものはどれか。",
+      "options": [
+        "お金や健康、安全、幸福に直接影響する可能性がある領域を指すGoogleの用語",
+        "検索エンジンの表示速度を測定する専門用語",
+        "特定のSEOツールの名称",
+        "SNSでのシェア数を評価する指標"
+      ],
+      "correct": [0],
+      "explain": "YMYLは「Your Money or Your Life」の略で、お金・健康・安全・幸福など、人の生活に直接影響する可能性がある領域を指すGoogleの用語です。"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "YMYL領域でE-E-A-Tが特に重視される理由として、最も適切なものはどれか。",
+      "options": [
+        "YMYL領域は検索されることが少ないため、逆に評価が甘くなるから",
+        "お金や健康など、人の生活に大きな影響を与える可能性がある情報だから",
+        "YMYL領域はGoogleの評価対象外だから",
+        "YMYLはE-E-A-Tと全く関係のない、別の評価基準だから"
+      ],
+      "correct": [1],
+      "explain": "YMYL領域はお金や健康など人の生活に大きな影響を与える可能性があるため、誤った情報や信頼性の低い情報が与えるリスクが大きく、E-E-A-Tが特に重視されます。"
+    }
+  ]
+}
