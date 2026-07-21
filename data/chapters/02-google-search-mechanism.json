@@ -26,6 +26,10 @@
       "bodyHtml": "<p>ユーザーが検索キーワードを入力すると、Googleはインデックスの中から関連性の高いページを抽出し、<mark>ランキング（Ranking）</mark>という順位付けの処理を行います。</p><p>Google自身の説明によれば、ランキングは単一の指標ではなく、<strong>検索クエリとの関連性、コンテンツの品質、ユーザーにとっての有用性</strong>など、数多くの要素（シグナル）を組み合わせて決定される仕組みです。個々のシグナルの正確な計算式や重み付けは公開されていません。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🕷️</div><div class=\"flow__step-title\">クローリング</div><div class=\"flow__step-desc\">ページを発見する</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🗂️</div><div class=\"flow__step-title\">インデックス</div><div class=\"flow__step-desc\">内容を解析・登録する</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🏆</div><div class=\"flow__step-title\">ランキング</div><div class=\"flow__step-desc\">関連性・品質で順位付け</div></div></div></div><div class=\"figure__caption\">図1：検索結果が表示されるまでの3段階</div></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>「ランキング要因を1つハックすれば上位表示される」という単純な仕組みではありません。<span class=\"text-primary\">ユーザーの検索意図に合致した、質の高いコンテンツを提供すること</span>が、遠回りに見えて最も確実なアプローチです。</p></div></div>"
     },
     {
+      "heading": "検索クエリの意図を理解する仕組み",
+      "bodyHtml": "<p>Googleは、検索クエリの背後にある意図をより正確に理解するため、機械学習を活用したシステムを検索に組み込んでいます。Google Search Central（公式ドキュメント）では、代表的なものとして次のシステムが紹介されています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>RankBrain</strong><br>単語同士がどのような概念と関連しているかを理解する助けとなるAIシステム。検索クエリに含まれる単語が完全に一致していなくても、関連性の高いコンテンツを返せるようにする役割を持ちます。</p><p style=\"margin:8px 0 0;\"><strong>BERT</strong><br>単語の組み合わせが表す意味や意図の違いを理解するために使われるAIシステム。文中の単語同士の関係性を踏まえて、文脈に沿った意図の理解を助けます。</p></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>これらはGoogleが検索クエリの意図を理解するために活用している技術の一例であり、検索ランキングの仕組み全体からすればごく一部です。個別の技術名を覚えることよりも、<strong>「Googleは単語の完全一致だけでなく、意図や文脈を理解しようとしている」</strong>という方向性を理解しておくことが実務では重要です。</p></div></div>"
+    },
+    {
       "heading": "検索意図：ユーザーが何を求めているか",
       "bodyHtml": "<p>同じキーワードで検索しても、ユーザーが本当に求めているもの（<mark>検索意図</mark>）はさまざまです。SEO・コンテンツ設計の実務では、検索クエリを次の4種類に分類して考える方法がよく使われます。</p><div class=\"table-wrap\"><table><thead><tr><th>分類</th><th>ユーザーの意図</th><th>クエリ例</th></tr></thead><tbody><tr><td><strong>Know（知りたい）</strong></td><td>特定のトピックについて知識や情報を得たい</td><td>「SEO とは」「クローリング 意味」</td></tr><tr><td><strong>Do（したい）</strong></td><td>特定の行動・作業を行いたい</td><td>「画像 圧縮 方法」「確定申告 やり方」</td></tr><tr><td><strong>Go（行きたい）</strong></td><td>特定のサイト・場所に到達したい（指名検索）</td><td>「〇〇株式会社 公式サイト」「〇〇駅 カフェ」</td></tr><tr><td><strong>Buy（買いたい）</strong></td><td>商品・サービスを購入・申し込みしたい</td><td>「〇〇 料金」「〇〇 申し込み」</td></tr></tbody></table></div><p>この分類は業界で広く使われている考え方であり、Google自身が公式にこの4分類を定義しているわけではありませんが、<strong>コンテンツを作る前に「このキーワードで検索する人は何を求めているか」を具体的に想像するための実務的な枠組み</strong>として役立ちます。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>検索意図とズレたコンテンツ（例：Knowクエリに対して商品購入ページだけを用意する）は、たとえ文章の質が高くても評価されにくい傾向があります。次章以降のキーワード戦略・ライティングSEOでも、この検索意図の考え方が土台になります。</p></div></div>"
     }
@@ -34,6 +38,7 @@
     "Googleの検索結果は「クローリング（発見）→インデックス（登録）→ランキング（順位付け）」という3段階のプロセスを経て表示される",
     "クロールされていない、またはインデックスされていないページは検索結果に表示されない",
     "ランキングは単一の指標ではなく、関連性・品質・有用性など多数のシグナルの組み合わせで決まる",
+    "GoogleはRankBrainやBERTなどのAIシステムを活用し、単語の完全一致だけでなく検索クエリの意図や文脈を理解しようとしている",
     "検索意図はKnow・Do・Go・Buyの4種類に分類して考えることができ、コンテンツ設計の出発点になる"
   ],
   "quiz": [
@@ -80,9 +85,23 @@
       "explain": "Googleのランキングは単一の指標ではなく、関連性・品質・ユーザーにとっての有用性など多数のシグナルを組み合わせて決定される仕組みです。"
     },
     {
-      "id": "q4",
+      "id": "q3b",
       "type": "multi",
       "sectionIndex": 3,
+      "question": "Google Search Centralで紹介されている、検索クエリの意図理解に使われるシステムとして、正しいものをすべて選べ。",
+      "options": [
+        "RankBrain",
+        "BERT",
+        "Core Web Vitals",
+        "XMLサイトマップ"
+      ],
+      "correct": [0, 1],
+      "explain": "RankBrainとBERTは、検索クエリの意図や文脈の理解を助けるAIシステムです。Core Web VitalsとXMLサイトマップは意図理解の仕組みとは異なります。"
+    },
+    {
+      "id": "q4",
+      "type": "multi",
+      "sectionIndex": 4,
       "question": "検索意図の分類として、一般的に使われているものをすべて選べ。",
       "options": [
         "Know（知りたい）",
@@ -96,7 +115,7 @@
     {
       "id": "q5",
       "type": "single",
-      "sectionIndex": 3,
+      "sectionIndex": 4,
       "question": "「〇〇株式会社 公式サイト」という検索クエリが該当する検索意図の分類として、最も適切なものはどれか。",
       "options": [
         "Know（知りたい）",

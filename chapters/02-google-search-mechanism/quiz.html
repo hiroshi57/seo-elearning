@@ -29,17 +29,17 @@
     <p class="wizard-header__topics">クローリング、インデックス、ランキング、検索意図</p>
   </div>
 
-  <section class="section-card" data-quiz-root data-chapter="02-google-search-mechanism" data-total-steps="6">
+  <section class="section-card" data-quiz-root data-chapter="02-google-search-mechanism" data-total-steps="7">
     <div class="quiz-intro"><span class="quiz-intro__icon">📋</span>確認テスト</div>
-    <p class="quiz-sub">全5問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
+    <p class="quiz-sub">全6問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
 
     <script type="application/json" data-quiz-data>
-[{"id":"q1","type":"single","sectionIndex":0,"question":"クローリング（Crawling）の説明として、最も適切なものはどれか。","options":["検索結果に表示するページの順位を決めるプロセス","検索エンジンのロボットがWebページを発見・巡回し、内容を収集するプロセス","ユーザーが入力した検索キーワードを解析するプロセス","ページの表示速度を計測するプロセス"],"correct":[1],"explain":"クローリングは検索エンジン（クローラー）がWebページを発見・巡回し、内容を収集する最初のプロセスです。"},{"id":"q2","type":"single","sectionIndex":1,"question":"「クロールはされたが、インデックスはされていない」ページについての説明として、正しいものはどれか。","options":["検索結果には表示されない","検索結果に必ず1位で表示される","クロールされていないページより優先的に表示される","インデックスの有無は検索結果の表示に影響しない"],"correct":[0],"explain":"インデックスに登録されて初めて検索結果に表示される対象になります。クロールされてもインデックスされなければ表示されません。"},{"id":"q3","type":"single","sectionIndex":2,"question":"Googleのランキングの仕組みに関する説明として、最も適切なものはどれか。","options":["たった1つの指標だけで検索順位がすべて決まる","関連性・品質・有用性など、数多くのシグナルを組み合わせて順位が決まる","ページの公開日が新しいページが常に最上位に表示される","広告費を支払ったページが自動的に自然検索結果の1位になる"],"correct":[1],"explain":"Googleのランキングは単一の指標ではなく、関連性・品質・ユーザーにとっての有用性など多数のシグナルを組み合わせて決定される仕組みです。"},{"id":"q4","type":"multi","sectionIndex":3,"question":"検索意図の分類として、一般的に使われているものをすべて選べ。","options":["Know（知りたい）","Do（したい）","Go（行きたい）","Sell（売りたい）"],"correct":[0,1,2],"explain":"検索意図はKnow（知りたい）・Do（したい）・Go（行きたい）・Buy（買いたい）の4分類で考えるのが一般的です。「Sell（売りたい）」はユーザー側ではなく提供者側の意図であり、検索意図の分類には含まれません。"},{"id":"q5","type":"single","sectionIndex":3,"question":"「〇〇株式会社 公式サイト」という検索クエリが該当する検索意図の分類として、最も適切なものはどれか。","options":["Know（知りたい）","Do（したい）","Go（行きたい）","Buy（買いたい）"],"correct":[2],"explain":"特定のサイトや場所に到達したいという指名検索は「Go（行きたい）」クエリに分類されます。"}]
+[{"id":"q1","type":"single","sectionIndex":0,"question":"クローリング（Crawling）の説明として、最も適切なものはどれか。","options":["検索結果に表示するページの順位を決めるプロセス","検索エンジンのロボットがWebページを発見・巡回し、内容を収集するプロセス","ユーザーが入力した検索キーワードを解析するプロセス","ページの表示速度を計測するプロセス"],"correct":[1],"explain":"クローリングは検索エンジン（クローラー）がWebページを発見・巡回し、内容を収集する最初のプロセスです。"},{"id":"q2","type":"single","sectionIndex":1,"question":"「クロールはされたが、インデックスはされていない」ページについての説明として、正しいものはどれか。","options":["検索結果には表示されない","検索結果に必ず1位で表示される","クロールされていないページより優先的に表示される","インデックスの有無は検索結果の表示に影響しない"],"correct":[0],"explain":"インデックスに登録されて初めて検索結果に表示される対象になります。クロールされてもインデックスされなければ表示されません。"},{"id":"q3","type":"single","sectionIndex":2,"question":"Googleのランキングの仕組みに関する説明として、最も適切なものはどれか。","options":["たった1つの指標だけで検索順位がすべて決まる","関連性・品質・有用性など、数多くのシグナルを組み合わせて順位が決まる","ページの公開日が新しいページが常に最上位に表示される","広告費を支払ったページが自動的に自然検索結果の1位になる"],"correct":[1],"explain":"Googleのランキングは単一の指標ではなく、関連性・品質・ユーザーにとっての有用性など多数のシグナルを組み合わせて決定される仕組みです。"},{"id":"q3b","type":"multi","sectionIndex":3,"question":"Google Search Centralで紹介されている、検索クエリの意図理解に使われるシステムとして、正しいものをすべて選べ。","options":["RankBrain","BERT","Core Web Vitals","XMLサイトマップ"],"correct":[0,1],"explain":"RankBrainとBERTは、検索クエリの意図や文脈の理解を助けるAIシステムです。Core Web VitalsとXMLサイトマップは意図理解の仕組みとは異なります。"},{"id":"q4","type":"multi","sectionIndex":4,"question":"検索意図の分類として、一般的に使われているものをすべて選べ。","options":["Know（知りたい）","Do（したい）","Go（行きたい）","Sell（売りたい）"],"correct":[0,1,2],"explain":"検索意図はKnow（知りたい）・Do（したい）・Go（行きたい）・Buy（買いたい）の4分類で考えるのが一般的です。「Sell（売りたい）」はユーザー側ではなく提供者側の意図であり、検索意図の分類には含まれません。"},{"id":"q5","type":"single","sectionIndex":4,"question":"「〇〇株式会社 公式サイト」という検索クエリが該当する検索意図の分類として、最も適切なものはどれか。","options":["Know（知りたい）","Do（したい）","Go（行きたい）","Buy（買いたい）"],"correct":[2],"explain":"特定のサイトや場所に到達したいという指名検索は「Go（行きたい）」クエリに分類されます。"}]
     </script>
 
     <div data-quiz-item="q1" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q1 / 5</span>
+        <span class="quiz-item__no">Q1 / 6</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -56,7 +56,7 @@
 
     <div data-quiz-item="q2" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q2 / 5</span>
+        <span class="quiz-item__no">Q2 / 6</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -73,7 +73,7 @@
 
     <div data-quiz-item="q3" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q3 / 5</span>
+        <span class="quiz-item__no">Q3 / 6</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -88,9 +88,26 @@
       </div>
     </div>
 
+    <div data-quiz-item="q3b" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q4 / 6</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type quiz-item__type--multi">複数選択（すべて選択）</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q3b-question">Google Search Centralで紹介されている、検索クエリの意図理解に使われるシステムとして、正しいものをすべて選べ。</div>
+      <div class="quiz-options" role="group" aria-labelledby="q3b-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>RankBrain</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>BERT</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>Core Web Vitals</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>XMLサイトマップ</span></div>
+      </div>
+    </div>
+
     <div data-quiz-item="q4" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q4 / 5</span>
+        <span class="quiz-item__no">Q5 / 6</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type quiz-item__type--multi">複数選択（すべて選択）</span>
@@ -107,7 +124,7 @@
 
     <div data-quiz-item="q5" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q5 / 5</span>
+        <span class="quiz-item__no">Q6 / 6</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -125,7 +142,7 @@
   </section>
 
   <div class="wizard-footer">
-    <a href="step-6.html" class="btn btn--ghost">← 教材に戻る</a>
+    <a href="step-7.html" class="btn btn--ghost">← 教材に戻る</a>
     <div class="wizard-footer__spacer"></div>
     <div class="quiz-unanswered-note" data-quiz-unanswered-note></div>
     <button class="btn btn--primary" data-quiz-grade disabled>📋 採点する</button>
