@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>テクニカルSEO（まとめ） | SEO Eラーニング</title>
+<title>テクニカルSEO（表示速度：Core Web Vitals） | SEO Eラーニング</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -24,29 +24,24 @@
   <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
 
   <div class="wizard-header">
-    <span class="time-badge">🕒 学習目安 約14分</span>
+    <span class="time-badge">🕒 学習目安 約16分</span>
     <h1 class="wizard-header__title">テクニカルSEO</h1>
-    <p class="wizard-header__topics">サイト構造：URL、内部リンク、XMLサイトマップ、canonical、表示速度：Core Web Vitals</p>
+    <p class="wizard-header__topics">サイト構造：URL、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals</p>
     <div class="wizard-progress">
-      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div></div>
-      <div class="wizard-progress__count">6 / 6</div>
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">6 / 7</div>
     </div>
   </div>
 
   <section class="section-card">
-    <h2>まとめ</h2>
-    <ul class="goals-list">
-      <li>GoogleはわかりやすくPredictableなURL構造を推奨しており、サイトの構成を反映した短く明確なURLが望ましい</li>
-      <li>内部リンクはクローラーがページを発見する手がかりにもなり、孤立したページを作らないことが重要</li>
-      <li>XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めるべきで、canonicalタグは重複コンテンツの整理に使う</li>
-      <li>Core Web Vitalsは読み込み速度（LCP）・応答性（INP）・視覚的安定性（CLS）の3指標で構成され、実際のユーザーデータをもとに評価される</li>
-    </ul>
+    <h2>表示速度：Core Web Vitals</h2>
+    <p><mark>Core Web Vitals</mark>は、Googleが定めるページ体験に関する指標群で、読み込み速度・操作の反応性・視覚的な安定性を数値で評価します。</p><div class="table-wrap"><table><thead><tr><th>指標</th><th>何を測るか</th><th>良好とされる目安</th></tr></thead><tbody><tr><td><strong>LCP</strong>（Largest Contentful Paint）</td><td>ページ内で最も大きな要素が表示されるまでの時間</td><td>2.5秒以内</td></tr><tr><td><strong>INP</strong>（Interaction to Next Paint）</td><td>ユーザーの操作に対する応答性</td><td>200ミリ秒未満</td></tr><tr><td><strong>CLS</strong>（Cumulative Layout Shift）</td><td>読み込み中のレイアウトのズレ（視覚的な安定性）</td><td>0.1未満</td></tr></tbody></table></div><p>Google公式の説明によれば、これらの指標は<strong>実際のユーザーの利用データ（フィールドデータ）</strong>をもとに評価され、あるページが「合格」と判定されるには、訪問の75パーセンタイル（多くのユーザー）で良好な体験が実現されている必要があります。</p><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>Google自身も、良好なCore Web Vitalsは<span class="text-primary">ユーザー体験の向上に役立つものであり、コアとなるランキングシステムが評価しようとする方向性とも合致する</span>と説明しています。Core Web Vitalsの実際の数値は、Search Console（後の章で学びます）で確認できます。</p></div></div>
   </section>
 
   <div class="wizard-footer">
     <a href="step-5.html" class="btn btn--ghost">← 前へ</a>
     <div class="wizard-footer__spacer"></div>
-    <a href="quiz.html" class="btn btn--primary">📋 確認テストへ進む</a>
+    <a href="step-7.html" class="btn btn--primary">次へ →</a>
   </div>
 
 </main>
