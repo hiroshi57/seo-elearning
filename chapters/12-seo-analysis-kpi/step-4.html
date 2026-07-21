@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEO分析・KPI（まとめ） | SEO Eラーニング</title>
+<title>SEO分析・KPI（記録：長期的なデータ保存とBigQuery連携） | SEO Eラーニング</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -24,29 +24,24 @@
   <a href="../../phases/practice/index.html" class="breadcrumb-back">← SEO分析・KPI</a>
 
   <div class="wizard-header">
-    <span class="time-badge">🕒 学習目安 約12分</span>
+    <span class="time-badge">🕒 学習目安 約20分</span>
     <h1 class="wizard-header__title">SEO分析・KPI</h1>
-    <p class="wizard-header__topics">KPI：重要指標、改善：優先順位</p>
+    <p class="wizard-header__topics">KPI：重要指標、改善：優先順位、記録：長期データ保存とBigQuery連携、モニタリング：被リンク・異常検知</p>
     <div class="wizard-progress">
-      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div></div>
-      <div class="wizard-progress__count">4 / 4</div>
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">4 / 6</div>
     </div>
   </div>
 
   <section class="section-card">
-    <h2>まとめ</h2>
-    <ul class="goals-list">
-      <li>KGIは最終的なビジネス目標、KPIはKGI達成のための中間指標であり、両者は階層構造で関係している</li>
-      <li>SEOのKPIには自然検索経由のセッション数、掲載順位、CV数・CV率などがある</li>
-      <li>追いかけるKPIは3〜5個程度に絞り込むことで、注目すべき変化が見えやすくなる</li>
-      <li>事業のフェーズに応じて重視すべきKPIは変わり、GA4・Search Consoleのデータから改善余地の大きい箇所を優先する</li>
-    </ul>
+    <h2>記録：長期的なデータ保存とBigQuery連携</h2>
+    <p>KPIを正しく評価するには、指標を選ぶだけでなく、<mark>データを長期間にわたって記録・保存する仕組み</mark>を整えることも欠かせません。Search Consoleの標準データ保持期間は<strong>16か月</strong>に制限されているため、「直近1年間のクリック数を前年と比較する」といった分析は、標準機能だけでは実現できません。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>BigQuery</strong><br>Googleが提供する大規模データ分析基盤。Search Consoleの「一括データエクスポート」機能を使うと、検索クエリ・ページ・国・デバイスなどのデータを毎日自動でBigQueryへエクスポートでき、行数無制限かつ長期間のデータを蓄積できます。GA4や広告、CRMなど他のデータと統合した分析も可能になります。</p></div><p>Search Consoleのデータ保存方法には、主に次の3つがあります。</p><div class="table-wrap"><table><thead><tr><th>方法</th><th>エクスポート可能な行数</th><th>特徴</th></tr></thead><tbody><tr><td>Search Consoleの管理画面</td><td>最大1,000行</td><td>手軽だが、フィルタ機能が弱く行数も少ない</td></tr><tr><td>Search Analytics API</td><td>最大50,000行</td><td>比較的手軽に自動化できるが、上限がある</td></tr><tr><td>一括データエクスポート機能（BigQuery）</td><td>無制限</td><td>大規模サイトや他データとの統合分析に向くが、費用や学習コストがかかる</td></tr></tbody></table></div><p>サイト全体のクリック数が月数千〜数万程度であれば、管理画面やAPIでの取得でも十分なケースが多いとされています。しかし、大規模サイトや、GA4・CRMなど他のデータと統合して分析したい場合は、BigQueryへの一括エクスポートが有効です。設定後は毎日自動でデータが蓄積されるため、早めに導入しておくと、後からアルゴリズムアップデート時の検証や、長期トレンドの比較がしやすくなります。</p><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>保存したデータは、そのままでは活用しにくいため、<span class="text-primary">Looker Studioなどのダッシュボードツールと連携</span>し、テンプレート化しておくと、必要なときにすぐ取り出して分析できます。継続的な記録は、サイトが「いつ」「なぜ」「どう変化したか」を読み解くための資産になります。</p></div></div>
   </section>
 
   <div class="wizard-footer">
     <a href="step-3.html" class="btn btn--ghost">← 前へ</a>
     <div class="wizard-footer__spacer"></div>
-    <a href="quiz.html" class="btn btn--primary">📋 確認テストへ進む</a>
+    <a href="step-5.html" class="btn btn--primary">次へ →</a>
   </div>
 
 </main>

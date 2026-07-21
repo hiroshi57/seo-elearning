@@ -26,20 +26,20 @@
   <div class="wizard-header">
     <span class="time-badge">📋 確認テスト</span>
     <h1 class="wizard-header__title">SEO分析・KPI</h1>
-    <p class="wizard-header__topics">KPI：重要指標、改善：優先順位</p>
+    <p class="wizard-header__topics">KPI：重要指標、改善：優先順位、記録：長期データ保存とBigQuery連携、モニタリング：被リンク・異常検知</p>
   </div>
 
-  <section class="section-card" data-quiz-root data-chapter="12-seo-analysis-kpi" data-total-steps="4">
+  <section class="section-card" data-quiz-root data-chapter="12-seo-analysis-kpi" data-total-steps="6">
     <div class="quiz-intro"><span class="quiz-intro__icon">📋</span>確認テスト</div>
-    <p class="quiz-sub">全5問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
+    <p class="quiz-sub">全8問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
 
     <script type="application/json" data-quiz-data>
-[{"id":"q1","type":"single","sectionIndex":0,"question":"KGIとKPIの関係についての説明として、最も適切なものはどれか。","options":["KGIとKPIは全く同じ意味で、使い分ける必要はない","KGIは最終的な目標を示し、KPIはKGIを達成するための中間指標である","KPIは最終目標で、KGIはその中間指標である","KGIとKPIはSEOには一切関係のない用語である"],"correct":[1],"explain":"KGI（重要目標達成指標）は最終目標を示し、KPI（重要業績評価指標）はKGIを達成するための中間指標という関係にあります。"},{"id":"q2","type":"multi","sectionIndex":0,"question":"SEOでよく使われるKPIの例として、正しいものをすべて選べ。","options":["自然検索経由のセッション数・ユーザー数","主要キーワードの掲載順位","自然検索経由のキーイベント（CV）数・CV率","社員の有給休暇取得率"],"correct":[0,1,2],"explain":"自然検索の流入数、掲載順位、CV数・CV率はSEOでよく使われるKPIの例です。有給休暇取得率はSEOのKPIとは関係ありません。"},{"id":"q3","type":"single","sectionIndex":1,"question":"KPIを設定する際の考え方として、最も適切なものはどれか。","options":["追いかけるKPIはできるだけ多く、20個以上設定すべきである","主要なKPIを3〜5個程度に絞り込むことで、注目すべき変化が見えやすくなる","KPIは一度設定したら、事業フェーズが変わっても変更してはならない","KPIはGA4やSearch Consoleとは無関係に決めるべきである"],"correct":[1],"explain":"追いかけるKPIが多すぎると重要な変化を見失いやすくなるため、主要なKPIを3〜5個程度に絞り込むことが実務上の目安とされています。"},{"id":"q4","type":"single","sectionIndex":1,"question":"事業フェーズとKPIの関係についての説明として、最も適切なものはどれか。","options":["集客の立ち上げ期でも、一定の集客確保後でも、重視すべきKPIは常に同じである","集客の立ち上げ期は流入数や掲載順位、一定の集客確保後はCV数・CV率が重視されやすい","事業フェーズはSEOのKPI設定には一切関係しない","KPIは事業開始時に一度決めたら、二度と見直してはいけない"],"correct":[1],"explain":"集客の立ち上げ期は流入数・掲載順位などが重視されやすく、一定の集客が確保できた後はCV数・CV率などKGIに直結する指標が重視される傾向にあります。"},{"id":"q5","type":"single","sectionIndex":1,"question":"SEO改善施策の優先順位をつける際の考え方として、最も適切なものはどれか。","options":["すべてのページを同時に、同じ優先度で改善する","GA4・Search Consoleのデータをもとに、改善余地が大きい箇所から優先的に着手する","優先順位は考えず、思いついた順にランダムに改善する","改善の優先順位づけにはデータを使わない方がよい"],"correct":[1],"explain":"GA4・Search Consoleのデータから、流入は多いがCVにつながっていないページなど、改善余地の大きい箇所を特定し、優先的に着手することが効果的なアプローチです。"}]
+[{"id":"q1","type":"single","sectionIndex":0,"question":"KGIとKPIの関係についての説明として、最も適切なものはどれか。","options":["KGIとKPIは全く同じ意味で、使い分ける必要はない","KGIは最終的な目標を示し、KPIはKGIを達成するための中間指標である","KPIは最終目標で、KGIはその中間指標である","KGIとKPIはSEOには一切関係のない用語である"],"correct":[1],"explain":"KGI（重要目標達成指標）は最終目標を示し、KPI（重要業績評価指標）はKGIを達成するための中間指標という関係にあります。"},{"id":"q2","type":"multi","sectionIndex":0,"question":"SEOでよく使われるKPIの例として、正しいものをすべて選べ。","options":["自然検索経由のセッション数・ユーザー数","主要キーワードの掲載順位","自然検索経由のキーイベント（CV）数・CV率","社員の有給休暇取得率"],"correct":[0,1,2],"explain":"自然検索の流入数、掲載順位、CV数・CV率はSEOでよく使われるKPIの例です。有給休暇取得率はSEOのKPIとは関係ありません。"},{"id":"q3","type":"single","sectionIndex":1,"question":"KPIを設定する際の考え方として、最も適切なものはどれか。","options":["追いかけるKPIはできるだけ多く、20個以上設定すべきである","主要なKPIを3〜5個程度に絞り込むことで、注目すべき変化が見えやすくなる","KPIは一度設定したら、事業フェーズが変わっても変更してはならない","KPIはGA4やSearch Consoleとは無関係に決めるべきである"],"correct":[1],"explain":"追いかけるKPIが多すぎると重要な変化を見失いやすくなるため、主要なKPIを3〜5個程度に絞り込むことが実務上の目安とされています。"},{"id":"q4","type":"single","sectionIndex":1,"question":"事業フェーズとKPIの関係についての説明として、最も適切なものはどれか。","options":["集客の立ち上げ期でも、一定の集客確保後でも、重視すべきKPIは常に同じである","集客の立ち上げ期は流入数や掲載順位、一定の集客確保後はCV数・CV率が重視されやすい","事業フェーズはSEOのKPI設定には一切関係しない","KPIは事業開始時に一度決めたら、二度と見直してはいけない"],"correct":[1],"explain":"集客の立ち上げ期は流入数・掲載順位などが重視されやすく、一定の集客が確保できた後はCV数・CV率などKGIに直結する指標が重視される傾向にあります。"},{"id":"q5","type":"single","sectionIndex":2,"question":"Search Consoleの標準的なデータ保持期間として、最も適切なものはどれか。","options":["1週間","16か月","無期限に保存される","1時間"],"correct":[1],"explain":"Search Consoleの標準データ保持期間は16か月に制限されているため、それを超える長期分析にはBigQueryなど別のデータ保存基盤が必要になります。"},{"id":"q6","type":"single","sectionIndex":2,"question":"Search Consoleの「一括データエクスポート」機能でBigQueryにデータを送る利点として、最も適切なものはどれか。","options":["行数無制限でデータを蓄積でき、GA4など他データとの統合分析もしやすくなる","エクスポートできる行数が最大1,000行に制限される","分析にかかる費用が必ず無料になる","Search Consoleの管理画面が使えなくなる"],"correct":[0],"explain":"BigQueryへの一括データエクスポートは行数無制限で毎日自動的に蓄積でき、GA4や広告、CRMなど他のデータと統合した分析も可能になります。"},{"id":"q7","type":"single","sectionIndex":3,"question":"被リンクのモニタリングに関する説明として、最も適切なものはどれか。","options":["被リンクは一度獲得すれば永久に価値が保証されるため、確認は不要である","被リンクは現時点での外部評価を映す指標であり、継続的な確認が必要とされる","被リンクはSEOの評価にまったく関係しない","被リンクの確認にはSearch Consoleは一切使えない"],"correct":[1],"explain":"被リンクは蓄積される資産というより現時点での外部評価を表す性質を持つため、Search Consoleなどを使って継続的にモニタリングすることが推奨されます。"},{"id":"q8","type":"single","sectionIndex":3,"question":"順位や流入の異常を早期に検知する仕組みとして、最も適切なものはどれか。","options":["毎日手作業ですべてのページを目視確認する以外に方法はない","GA4のカスタムインサイトやLooker Studioのアラート機能を使い、条件に合致した際に通知を受け取る","異常検知の仕組みを作ることは、SEO業務には不要である","アラート機能は、順位や流入のデータには対応していない"],"correct":[1],"explain":"GA4のカスタムインサイトやLooker Studioのグラフのアラート機能を使うことで、指定した条件に合致した際に通知を受け取り、異常を早期に検知できます。"}]
     </script>
 
     <div data-quiz-item="q1" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q1 / 5</span>
+        <span class="quiz-item__no">Q1 / 8</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -56,7 +56,7 @@
 
     <div data-quiz-item="q2" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q2 / 5</span>
+        <span class="quiz-item__no">Q2 / 8</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type quiz-item__type--multi">複数選択（すべて選択）</span>
@@ -73,7 +73,7 @@
 
     <div data-quiz-item="q3" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q3 / 5</span>
+        <span class="quiz-item__no">Q3 / 8</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -90,7 +90,7 @@
 
     <div data-quiz-item="q4" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q4 / 5</span>
+        <span class="quiz-item__no">Q4 / 8</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -107,25 +107,76 @@
 
     <div data-quiz-item="q5" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q5 / 5</span>
+        <span class="quiz-item__no">Q5 / 8</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
         </div>
       </div>
-      <div class="quiz-item__question" id="q5-question">SEO改善施策の優先順位をつける際の考え方として、最も適切なものはどれか。</div>
+      <div class="quiz-item__question" id="q5-question">Search Consoleの標準的なデータ保持期間として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q5-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>すべてのページを同時に、同じ優先度で改善する</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>GA4・Search Consoleのデータをもとに、改善余地が大きい箇所から優先的に着手する</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>優先順位は考えず、思いついた順にランダムに改善する</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>改善の優先順位づけにはデータを使わない方がよい</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>1週間</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>16か月</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>無期限に保存される</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>1時間</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q6" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q6 / 8</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q6-question">Search Consoleの「一括データエクスポート」機能でBigQueryにデータを送る利点として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q6-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>行数無制限でデータを蓄積でき、GA4など他データとの統合分析もしやすくなる</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>エクスポートできる行数が最大1,000行に制限される</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>分析にかかる費用が必ず無料になる</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>Search Consoleの管理画面が使えなくなる</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q7" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q7 / 8</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q7-question">被リンクのモニタリングに関する説明として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q7-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>被リンクは一度獲得すれば永久に価値が保証されるため、確認は不要である</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>被リンクは現時点での外部評価を映す指標であり、継続的な確認が必要とされる</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>被リンクはSEOの評価にまったく関係しない</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>被リンクの確認にはSearch Consoleは一切使えない</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q8" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q8 / 8</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q8-question">順位や流入の異常を早期に検知する仕組みとして、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q8-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>毎日手作業ですべてのページを目視確認する以外に方法はない</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>GA4のカスタムインサイトやLooker Studioのアラート機能を使い、条件に合致した際に通知を受け取る</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>異常検知の仕組みを作ることは、SEO業務には不要である</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>アラート機能は、順位や流入のデータには対応していない</span></div>
       </div>
     </div>
 
   </section>
 
   <div class="wizard-footer">
-    <a href="step-4.html" class="btn btn--ghost">← 教材に戻る</a>
+    <a href="step-6.html" class="btn btn--ghost">← 教材に戻る</a>
     <div class="wizard-footer__spacer"></div>
     <div class="quiz-unanswered-note" data-quiz-unanswered-note></div>
     <button class="btn btn--primary" data-quiz-grade disabled>📋 採点する</button>

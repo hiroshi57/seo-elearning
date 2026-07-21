@@ -26,20 +26,54 @@
   <div class="wizard-header">
     <span class="time-badge">📋 確認テスト</span>
     <h1 class="wizard-header__title">AI OverviewとAI Mode</h1>
-    <p class="wizard-header__topics">AI検索：AI検索の仕組み</p>
+    <p class="wizard-header__topics">生成AIと検索体験の変化、AI Overview、AI Mode</p>
   </div>
 
-  <section class="section-card" data-quiz-root data-chapter="14-ai-overview-mode" data-total-steps="5">
+  <section class="section-card" data-quiz-root data-chapter="14-ai-overview-mode" data-total-steps="6">
     <div class="quiz-intro"><span class="quiz-intro__icon">📋</span>確認テスト</div>
-    <p class="quiz-sub">全5問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
+    <p class="quiz-sub">全8問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
 
     <script type="application/json" data-quiz-data>
-[{"id":"q1","type":"single","sectionIndex":0,"question":"AI Overviewの説明として、最も適切なものはどれか。","options":["検索結果の広告枠を自動的に非表示にする機能","検索結果の上部に、複数のWebページをもとにAIが生成した要約回答を表示する機能","サイトの表示速度を自動的に高速化する機能","ユーザーの個人情報を検索結果に表示する機能"],"correct":[1],"explain":"AI Overviewは、ユーザーの検索クエリに対して複数のWebページの情報をもとにAIが要約した回答を、検索結果の上部に表示する機能です。"},{"id":"q2","type":"single","sectionIndex":1,"question":"AI ModeとAI Overviewの違いに関する説明として、最も適切なものはどれか。","options":["AI ModeとAI Overviewは全く同じ機能であり、違いはない","AI Modeは、複雑な比較・深掘りを対話形式で行える検索体験であり、AI Overviewは検索結果の一部として要約を表示する","AI Modeは広告専用の機能であり、検索結果には一切関係しない","AI Overviewの方がAI Modeより後に登場した、より新しい機能である"],"correct":[1],"explain":"AI Modeはより複雑な質問や比較・深掘りを対話形式で行える検索体験であり、AI Overviewは通常の検索結果の一部として要約を表示する機能です。"},{"id":"q3","type":"single","sectionIndex":2,"question":"AI Overview・AI Modeに表示されるための要件について、Google公式が示している見解として、最も適切なものはどれか。","options":["専用の新しいファイルやマークアップを追加しなければ、絶対に表示されない","表示されるための特別な追加要件や最適化は存在しないとしている","AI検索機能への表示には、追加費用の支払いが必要である","従来のSEO対策は、AI検索機能には一切関係しない"],"correct":[1],"explain":"Google公式は、AI OverviewやAI Modeに表示されるための追加の要件や特別な最適化は存在しないと明言しています。"},{"id":"q4","type":"multi","sectionIndex":2,"question":"AI検索機能への対応として、Google公式が重要だとしている要素をすべて選べ。","options":["クロールのしやすさ・サイト構造・モバイル対応・表示速度","独自性があり、訪問者にとって満足度の高いコンテンツ","E-E-A-T（経験・専門性・権威性・信頼性）","サイトのドメイン名の文字数をできるだけ短くすること"],"correct":[0,1,2],"explain":"クロールのしやすさ・サイト構造・独自性のあるコンテンツ・E-E-A-Tは、Google公式がAI検索機能への対応でも重要だとしている要素です。ドメイン名の文字数は関係ありません。"},{"id":"q5","type":"single","sectionIndex":2,"question":"AI検索時代におけるSEOの基本の位置づけについて、最も適切なものはどれか。","options":["AI検索の登場により、これまでのSEOの基本はすべて無意味になった","AI検索機能への対応は、これまで学んだSEOの基本の延長線上にある","AI検索対策とSEO対策は、完全に別々の、無関係な取り組みである","AI検索が普及したため、コンテンツの品質はもはや評価に関係しない"],"correct":[1],"explain":"Google公式の方針によれば、AI検索機能への対応は、クロール・サイト構造・独自性・E-E-A-Tといった、これまで学んだSEOの基本の延長線上にあります。"}]
+[{"id":"q0a","type":"single","sectionIndex":0,"question":"生成AIと検索エンジンの技術的な関係についての説明として、最も適切なものはどれか。","options":["生成AIと検索エンジンは、技術的にまったく無関係な別々の技術である","生成AIは、検索エンジンが培ってきた自然言語処理技術の延長線上で生まれた技術であり、両者は地続きの関係にある","検索エンジンは今後、生成AIに完全に置き換えられてなくなる","生成AIはランキングや検索意図の理解には一切関わっていない"],"correct":[1],"explain":"検索エンジンで培われてきた言語理解モデルと生成AIのモデルは、共通してトランスフォーマー構造を基盤とした言語モデルの進化の延長線上にあり、検索と生成は技術的に分断されたものではありません。"},{"id":"q0b","type":"single","sectionIndex":0,"question":"LLM（大規模言語モデル）の基本的な仕組みの説明として、最も適切なものはどれか。","options":["あらかじめ人間が定義した文法規則のみに基づいて動作する","大量のテキストデータを学習し、文脈に応じて次に現れる単語を予測する仕組みを基本とする","検索結果の広告枠の入札額を自動計算する仕組みである","Webページの表示速度を計測するための仕組みである"],"correct":[1],"explain":"LLMは大量のテキストデータを学習し、文脈に応じて次に現れる単語を予測する自己回帰型の仕組みを基本としており、これが文章生成や要約、対話能力の基盤になっています。"},{"id":"q1","type":"single","sectionIndex":1,"question":"AI Overviewの説明として、最も適切なものはどれか。","options":["検索結果の広告枠を自動的に非表示にする機能","検索結果の上部に、複数のWebページをもとにAIが生成した要約回答を表示する機能","サイトの表示速度を自動的に高速化する機能","ユーザーの個人情報を検索結果に表示する機能"],"correct":[1],"explain":"AI Overviewは、ユーザーの検索クエリに対して複数のWebページの情報をもとにAIが要約した回答を、検索結果の上部に表示する機能です。"},{"id":"q1b","type":"single","sectionIndex":1,"question":"AI Overviewの普及にともなう検索行動の変化についての説明として、最も適切なものはどれか。","options":["検索結果からのクリック率は、AI Overviewの導入によって一切変化していない","検索結果ページ上で疑問が解決し、サイトへのクリックが発生しない「ゼロクリック検索」が増加しているとされる","AI Overviewが表示されると、必ず全ユーザーがリンクをクリックするようになる","ゼロクリック検索はAI Overviewの登場以前には存在しなかった概念である"],"correct":[1],"explain":"AI Overviewの普及にともない、検索結果ページ上で要点を把握してサイトへ遷移しない「ゼロクリック検索」が増加しているとされ、従来の「上位表示されれば流入が増える」という前提が崩れつつあります。"},{"id":"q2","type":"single","sectionIndex":2,"question":"AI ModeとAI Overviewの違いに関する説明として、最も適切なものはどれか。","options":["AI ModeとAI Overviewは全く同じ機能であり、違いはない","AI Modeは、複雑な比較・深掘りを対話形式で行える検索体験であり、AI Overviewは検索結果の一部として要約を表示する","AI Modeは広告専用の機能であり、検索結果には一切関係しない","AI Overviewの方がAI Modeより後に登場した、より新しい機能である"],"correct":[1],"explain":"AI Modeはより複雑な質問や比較・深掘りを対話形式で行える検索体験であり、AI Overviewは通常の検索結果の一部として要約を表示する機能です。"},{"id":"q3","type":"single","sectionIndex":3,"question":"AI Overview・AI Modeに表示されるための要件について、Google公式が示している見解として、最も適切なものはどれか。","options":["専用の新しいファイルやマークアップを追加しなければ、絶対に表示されない","表示されるための特別な追加要件や最適化は存在しないとしている","AI検索機能への表示には、追加費用の支払いが必要である","従来のSEO対策は、AI検索機能には一切関係しない"],"correct":[1],"explain":"Google公式は、AI OverviewやAI Modeに表示されるための追加の要件や特別な最適化は存在しないと明言しています。"},{"id":"q4","type":"multi","sectionIndex":3,"question":"AI検索機能への対応として、Google公式が重要だとしている要素をすべて選べ。","options":["クロールのしやすさ・サイト構造・モバイル対応・表示速度","独自性があり、訪問者にとって満足度の高いコンテンツ","E-E-A-T（経験・専門性・権威性・信頼性）","サイトのドメイン名の文字数をできるだけ短くすること"],"correct":[0,1,2],"explain":"クロールのしやすさ・サイト構造・独自性のあるコンテンツ・E-E-A-Tは、Google公式がAI検索機能への対応でも重要だとしている要素です。ドメイン名の文字数は関係ありません。"},{"id":"q5","type":"single","sectionIndex":3,"question":"AI検索時代におけるSEOの基本の位置づけについて、最も適切なものはどれか。","options":["AI検索の登場により、これまでのSEOの基本はすべて無意味になった","AI検索機能への対応は、これまで学んだSEOの基本の延長線上にある","AI検索対策とSEO対策は、完全に別々の、無関係な取り組みである","AI検索が普及したため、コンテンツの品質はもはや評価に関係しない"],"correct":[1],"explain":"Google公式の方針によれば、AI検索機能への対応は、クロール・サイト構造・独自性・E-E-A-Tといった、これまで学んだSEOの基本の延長線上にあります。"}]
     </script>
+
+    <div data-quiz-item="q0a" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q1 / 8</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q0a-question">生成AIと検索エンジンの技術的な関係についての説明として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q0a-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>生成AIと検索エンジンは、技術的にまったく無関係な別々の技術である</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>生成AIは、検索エンジンが培ってきた自然言語処理技術の延長線上で生まれた技術であり、両者は地続きの関係にある</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>検索エンジンは今後、生成AIに完全に置き換えられてなくなる</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>生成AIはランキングや検索意図の理解には一切関わっていない</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q0b" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q2 / 8</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q0b-question">LLM（大規模言語モデル）の基本的な仕組みの説明として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q0b-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>あらかじめ人間が定義した文法規則のみに基づいて動作する</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>大量のテキストデータを学習し、文脈に応じて次に現れる単語を予測する仕組みを基本とする</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>検索結果の広告枠の入札額を自動計算する仕組みである</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>Webページの表示速度を計測するための仕組みである</span></div>
+      </div>
+    </div>
 
     <div data-quiz-item="q1" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q1 / 5</span>
+        <span class="quiz-item__no">Q3 / 8</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -54,9 +88,26 @@
       </div>
     </div>
 
+    <div data-quiz-item="q1b" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q4 / 8</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q1b-question">AI Overviewの普及にともなう検索行動の変化についての説明として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q1b-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>検索結果からのクリック率は、AI Overviewの導入によって一切変化していない</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>検索結果ページ上で疑問が解決し、サイトへのクリックが発生しない「ゼロクリック検索」が増加しているとされる</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>AI Overviewが表示されると、必ず全ユーザーがリンクをクリックするようになる</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>ゼロクリック検索はAI Overviewの登場以前には存在しなかった概念である</span></div>
+      </div>
+    </div>
+
     <div data-quiz-item="q2" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q2 / 5</span>
+        <span class="quiz-item__no">Q5 / 8</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -73,7 +124,7 @@
 
     <div data-quiz-item="q3" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q3 / 5</span>
+        <span class="quiz-item__no">Q6 / 8</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -90,7 +141,7 @@
 
     <div data-quiz-item="q4" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q4 / 5</span>
+        <span class="quiz-item__no">Q7 / 8</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type quiz-item__type--multi">複数選択（すべて選択）</span>
@@ -107,7 +158,7 @@
 
     <div data-quiz-item="q5" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q5 / 5</span>
+        <span class="quiz-item__no">Q8 / 8</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -125,7 +176,7 @@
   </section>
 
   <div class="wizard-footer">
-    <a href="step-5.html" class="btn btn--ghost">← 教材に戻る</a>
+    <a href="step-6.html" class="btn btn--ghost">← 教材に戻る</a>
     <div class="wizard-footer__spacer"></div>
     <div class="quiz-unanswered-note" data-quiz-unanswered-note></div>
     <button class="btn btn--primary" data-quiz-grade disabled>📋 採点する</button>
