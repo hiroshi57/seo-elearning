@@ -4,13 +4,14 @@
   "slug": "06-technical-seo",
   "title": "テクニカルSEO",
   "subtitle": "URL構造・内部リンク・XMLサイトマップ・canonical・クローラ制御・表示速度など、サイトの技術的な基盤を理解する",
-  "topicsLabel": "サイト構造：URL、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals",
-  "estimateMinutes": 16,
+  "topicsLabel": "サイト構造：URL、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS",
+  "estimateMinutes": 18,
   "goals": [
     "検索エンジンに配慮したURL構造の基本的な考え方を理解する",
     "XMLサイトマップの役割と、正規URLとの関係を理解する",
     "meta robotsやrobots.txtによるクローラ制御の基本的な考え方を理解する",
-    "Core Web Vitals（LCP・INP・CLS）の3指標とその目安を理解する"
+    "Core Web Vitals（LCP・INP・CLS）の3指標とその目安を理解する",
+    "HTTPS化がSEOに与える影響について、Google公式の見解を理解する"
   ],
   "sections": [
     {
@@ -32,6 +33,10 @@
     {
       "heading": "表示速度：Core Web Vitals",
       "bodyHtml": "<p><mark>Core Web Vitals</mark>は、Googleが2020年5月に発表した、Webページのユーザーエクスペリエンス（UX）を評価するための指標群です。読み込み速度・操作の反応性・視覚的な安定性を数値で評価します。</p><div class=\"table-wrap\"><table><thead><tr><th>指標</th><th>何を測るか</th><th>良好とされる目安</th></tr></thead><tbody><tr><td><strong>LCP</strong>（Largest Contentful Paint）</td><td>ページ内で最も大きな要素（画像・テキストなど）が表示されるまでの時間</td><td>2.5秒以内</td></tr><tr><td><strong>INP</strong>（Interaction to Next Paint）</td><td>クリック・タップ・キー入力など、ユーザーの操作に対する応答性</td><td>200ミリ秒未満</td></tr><tr><td><strong>CLS</strong>（Cumulative Layout Shift）</td><td>読み込み中に要素が予期せず動く、レイアウトのズレ</td><td>0.1未満</td></tr></tbody></table></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>Core Web Vitalsは、Googleが2021年6月から検索のランキングシグナルの一つとして使用しています。指標自体も更新されており、当初採用されていた「FID（初回入力遅延）」は2024年3月に「INP」へと置き換えられました。ただし、Core Web Vitalsのスコアを満点にしたからといって、必ずしも順位が大きく改善するわけではない点には留意が必要です。</p></div></div><p>Google公式の説明によれば、これらの指標は<strong>実際のユーザーの利用データ（フィールドデータ）</strong>をもとに評価され、あるページが「合格」と判定されるには、訪問の75パーセンタイル（多くのユーザー）で良好な体験が実現されている必要があります。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>Google自身も、良好なCore Web Vitalsは<span class=\"text-primary\">ユーザー体験の向上に役立つものであり、コアとなるランキングシステムが評価しようとする方向性とも合致する</span>と説明しています。</p></div></div><p>Core Web Vitalsを測定するツールには、それぞれ異なる特徴があります。</p><div class=\"table-wrap\"><table><thead><tr><th>ツール</th><th>特徴</th></tr></thead><tbody><tr><td><strong>Search Console</strong></td><td>自社の公開ページを対象に、実際のユーザーデータをもとにサイト全体の傾向を把握できる</td></tr><tr><td><strong>PageSpeed Insights</strong></td><td>公開ページのURLを入力するだけで、実ユーザーデータと計測環境データの両方を即座に確認できる</td></tr><tr><td><strong>Lighthouse</strong></td><td>非公開ページも含めて計測でき、開発環境での詳細なデバッグに向いている</td></tr></tbody></table></div>"
+    },
+    {
+      "heading": "セキュリティ：HTTPS化",
+      "bodyHtml": "<p>URLの先頭にある<mark>HTTPS</mark>は、ブラウザとWebサーバー間の通信を暗号化する仕組みです。通信内容の盗聴・改ざんを防ぐHTTP（Hypertext Transfer Protocol）の安全版として普及しました。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>HTTPS（HTTP Secure）</strong><br>SSL/TLSプロトコルによる暗号化の上でHTTP通信を行う仕組み。通信データの暗号化、改ざんの検知、通信相手（サーバー）の認証という3つのセキュリティ上の役割を持ちます。</p></div><p>Google Search Central（公式ブログ、2014年）は、<strong>HTTPS化を検索のランキングシグナルとして使用する</strong>と発表しました。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>ただしGoogle自身の説明によれば、HTTPSは<span class=\"text-primary\">全体の検索クエリの1%未満にしか影響しない軽量なシグナル</span>であり、質の高いコンテンツなど他の評価要素と比べると影響は小さいとされています。とはいえ、HTTPSはユーザーの通信を保護する基本的な仕組みであり、現在ではほぼすべてのサイトで標準的に導入されています。</p></div></div><p>HTTPS化は、ランキングシグナルとしての意味だけでなく、次のような点でもサイト運営に関わります。</p><ul><li>多くのブラウザで、HTTP接続のページに「保護されていません」といった警告が表示されるため、HTTPS化はユーザーの信頼確保につながる</li><li>通信を高速化する新しいプロトコル（HTTP/2やHTTP/3）は、HTTPS接続が前提となっている</li><li>フォームでの個人情報送信など、ユーザーの信頼が特に重要なページでは必須の対応とされている</li></ul>"
     }
   ],
   "summary": [
@@ -40,7 +45,8 @@
     "XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めるべきで、canonicalタグは重複コンテンツの整理に使う",
     "meta robotsやrobots.txtでクローラの動きを制御できるが、すべてのAIbotが指示に従う保証はない",
     "Core Web Vitalsは読み込み速度（LCP）・応答性（INP）・視覚的安定性（CLS）の3指標で構成され、実際のユーザーデータをもとに評価される",
-    "Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新される（2024年3月にFIDがINPへ置き換え）"
+    "Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新される（2024年3月にFIDがINPへ置き換え）",
+    "GoogleはHTTPS化を2014年からランキングシグナルとして使用しているが、コンテンツの品質などと比べると影響は軽微な、軽量シグナルである"
   ],
   "quiz": [
     {
@@ -140,6 +146,34 @@
       ],
       "correct": [1],
       "explain": "Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新されています。2024年3月には、それまでのFID（初回入力遅延）がINPに置き換えられました。"
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "sectionIndex": 5,
+      "question": "HTTPS化とGoogleのランキングシグナルの関係について、公式ブログが示している見解として、最も適切なものはどれか。",
+      "options": [
+        "HTTPS化は検索順位に一切影響しない",
+        "HTTPS化はランキングシグナルとして使用されているが、コンテンツの品質など他の要素と比べると影響は軽微である",
+        "HTTPS化さえすれば、他の要素に関わらず必ず1位になれる",
+        "HTTPS化はセキュリティ上の意味しかなく、SEOとは無関係な施策である"
+      ],
+      "correct": [1],
+      "explain": "Google公式は2014年にHTTPS化をランキングシグナルとして使用すると発表しましたが、全体のクエリの1%未満にしか影響しない軽量なシグナルであり、コンテンツの品質などと比べると影響は小さいとしています。"
+    },
+    {
+      "id": "q9",
+      "type": "multi",
+      "sectionIndex": 5,
+      "question": "HTTPSが持つセキュリティ上の役割として、正しいものをすべて選べ。",
+      "options": [
+        "通信データの暗号化",
+        "データ改ざんの検知",
+        "通信相手（サーバー）の認証",
+        "ページの表示速度を自動的に2倍にすること"
+      ],
+      "correct": [0, 1, 2],
+      "explain": "HTTPSは通信データの暗号化・改ざんの検知・通信相手の認証という3つのセキュリティ上の役割を持ちます。表示速度を「自動的に2倍にする」機能ではありません。"
     }
   ]
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>テクニカルSEO（まとめ） | SEO Eラーニング</title>
+<title>テクニカルSEO（セキュリティ：HTTPS化） | SEO Eラーニング</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -24,31 +24,24 @@
   <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
 
   <div class="wizard-header">
-    <span class="time-badge">🕒 学習目安 約16分</span>
+    <span class="time-badge">🕒 学習目安 約18分</span>
     <h1 class="wizard-header__title">テクニカルSEO</h1>
-    <p class="wizard-header__topics">サイト構造：URL、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals</p>
+    <p class="wizard-header__topics">サイト構造：URL、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS</p>
     <div class="wizard-progress">
-      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div></div>
-      <div class="wizard-progress__count">7 / 7</div>
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">7 / 8</div>
     </div>
   </div>
 
   <section class="section-card">
-    <h2>まとめ</h2>
-    <ul class="goals-list">
-      <li>GoogleはわかりやすくPredictableなURL構造を推奨しており、サイトの構成を反映した短く明確なURLが望ましい</li>
-      <li>内部リンクはクローラーがページを発見する手がかりにもなり、孤立したページを作らないことが重要</li>
-      <li>XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めるべきで、canonicalタグは重複コンテンツの整理に使う</li>
-      <li>meta robotsやrobots.txtでクローラの動きを制御できるが、すべてのAIbotが指示に従う保証はない</li>
-      <li>Core Web Vitalsは読み込み速度（LCP）・応答性（INP）・視覚的安定性（CLS）の3指標で構成され、実際のユーザーデータをもとに評価される</li>
-      <li>Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新される（2024年3月にFIDがINPへ置き換え）</li>
-    </ul>
+    <h2>セキュリティ：HTTPS化</h2>
+    <p>URLの先頭にある<mark>HTTPS</mark>は、ブラウザとWebサーバー間の通信を暗号化する仕組みです。通信内容の盗聴・改ざんを防ぐHTTP（Hypertext Transfer Protocol）の安全版として普及しました。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>HTTPS（HTTP Secure）</strong><br>SSL/TLSプロトコルによる暗号化の上でHTTP通信を行う仕組み。通信データの暗号化、改ざんの検知、通信相手（サーバー）の認証という3つのセキュリティ上の役割を持ちます。</p></div><p>Google Search Central（公式ブログ、2014年）は、<strong>HTTPS化を検索のランキングシグナルとして使用する</strong>と発表しました。</p><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>ただしGoogle自身の説明によれば、HTTPSは<span class="text-primary">全体の検索クエリの1%未満にしか影響しない軽量なシグナル</span>であり、質の高いコンテンツなど他の評価要素と比べると影響は小さいとされています。とはいえ、HTTPSはユーザーの通信を保護する基本的な仕組みであり、現在ではほぼすべてのサイトで標準的に導入されています。</p></div></div><p>HTTPS化は、ランキングシグナルとしての意味だけでなく、次のような点でもサイト運営に関わります。</p><ul><li>多くのブラウザで、HTTP接続のページに「保護されていません」といった警告が表示されるため、HTTPS化はユーザーの信頼確保につながる</li><li>通信を高速化する新しいプロトコル（HTTP/2やHTTP/3）は、HTTPS接続が前提となっている</li><li>フォームでの個人情報送信など、ユーザーの信頼が特に重要なページでは必須の対応とされている</li></ul>
   </section>
 
   <div class="wizard-footer">
     <a href="step-6.html" class="btn btn--ghost">← 前へ</a>
     <div class="wizard-footer__spacer"></div>
-    <a href="quiz.html" class="btn btn--primary">📋 確認テストへ進む</a>
+    <a href="step-8.html" class="btn btn--primary">次へ →</a>
   </div>
 
 </main>
