@@ -1,0 +1,111 @@
+{
+  "no": 4,
+  "phase": "basic",
+  "slug": "04-keyword-strategy",
+  "title": "キーワード戦略",
+  "subtitle": "検索キーワードの調査方法、検索意図の読み解き方、トピック設計、競合分析の基本を理解する",
+  "topicsLabel": "調査：検索キーワード、検索意図、設計：トピック設計、分析：競合分析",
+  "estimateMinutes": 12,
+  "goals": [
+    "検索ボリュームとキーワード調査の基本的な進め方を理解する",
+    "メインキーワードとロングテールキーワードの違いを説明できる",
+    "トピッククラスター（ピラーページとクラスターページ）の考え方を理解する",
+    "競合分析・コンテンツギャップ分析の基本的な考え方を理解する"
+  ],
+  "sections": [
+    {
+      "heading": "調査：検索キーワードの調べ方",
+      "bodyHtml": "<p>SEOのコンテンツ設計は、まず「どんなキーワードで検索されているか」を調べることから始まります。この際によく使われる指標が<mark>検索ボリューム</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>検索ボリューム</strong><br>特定のキーワードが、一定期間（多くの場合1ヶ月）に検索エンジンで検索された回数の目安。GoogleキーワードプランナーなどのツールでGoogle広告のデータをもとに確認できます。</p></div><p>キーワード調査は、一般的に次のような手順で進められます。</p><ol><li><strong>メインキーワードの選定：</strong>サイトやコンテンツのテーマと関連性の高い、軸となるキーワードを決める</li><li><strong>複合キーワードの洗い出し：</strong>メインキーワードに関連する複数語の組み合わせ（サジェストキーワードなど）を広げる</li><li><strong>検索ボリューム・競合性の確認：</strong>ツールを使って、それぞれのキーワードがどの程度検索されているか、上位表示の難易度はどうかを確認する</li></ol><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>検索ボリュームが大きいキーワードほど流入のポテンシャルは大きい一方、競合も多く上位表示の難易度が上がる傾向があります。ボリュームと難易度のバランスを見ながら狙うキーワードを選ぶことが重要です。</p></div></div><div class=\"figure\"><div class=\"figure__frame\"><p style=\"margin:0 0 14px; font-size:0.85rem; color:var(--color-text-muted);\">例：あるユーザーが「近くのカフェを探す」ために、検索する言葉をだんだん具体的にしていく様子</p><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🔍</div><div class=\"flow__step-title\">カフェ</div><div class=\"flow__step-desc\">検索回数：多い<br>競合：強い</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🔍</div><div class=\"flow__step-title\">カフェ 新宿</div><div class=\"flow__step-desc\">場所を追加<br>検索回数：中くらい</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🔍</div><div class=\"flow__step-title\">カフェ 新宿 深夜営業</div><div class=\"flow__step-desc\">条件を追加<br>検索回数：少ない＝狙い目</div></div></div></div><div class=\"figure__caption\">図1：検索する人は「カフェ」→「カフェ 新宿」→「カフェ 新宿 深夜営業」のように、自分の状況（場所・条件）を言葉に足しながら絞り込んでいく。言葉が増えるほど検索回数は減るが、競合も弱くなり上位表示を狙いやすくなる</div></div>"
+    },
+    {
+      "heading": "検索意図をキーワード調査に活かす",
+      "bodyHtml": "<p>第2章で学んだ検索意図（Know・Do・Go・Buy）の考え方は、キーワード調査の段階でも重要です。同じ検索ボリュームのキーワードでも、検索意図が異なれば用意すべきコンテンツは変わります。</p><table><thead><tr><th>キーワード例</th><th>推定される検索意図</th><th>用意すべきコンテンツの方向性</th></tr></thead><tbody><tr><td>「SEO とは」</td><td>Know（知りたい）</td><td>基礎知識を解説する記事</td></tr><tr><td>「SEO 対策 やり方」</td><td>Do（したい）</td><td>手順を示すハウツー記事</td></tr><tr><td>「SEO ツール 比較」</td><td>Buyに近いDo</td><td>比較・検討を助けるコンテンツ</td></tr></tbody></table><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>キーワード単体の検索ボリュームだけでなく、<span class=\"text-primary\">「そのキーワードで検索する人が本当は何を求めているか」</span>を合わせて考えることで、狙うべきコンテンツの形が明確になります。</p></div></div>"
+    },
+    {
+      "heading": "設計：トピック設計（トピッククラスター）",
+      "bodyHtml": "<p>個別のキーワードごとにバラバラに記事を作るのではなく、関連するテーマをまとめて設計する考え方に<mark>トピッククラスター</mark>があります。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>ピラーページ</strong><br>あるトピックを網羅的に扱う中心となるページ。比較的広いキーワード（ビッグキーワード）を対象にすることが多い。</p><p style=\"margin:8px 0 0;\"><strong>クラスターページ</strong><br>ピラーページの中の1トピックを深掘りする、より具体的なページ。検索意図がはっきりしたロングテールキーワードを狙うことが多く、ピラーページと内部リンクでつなげる。</p><p style=\"margin:8px 0 0;\"><strong>ロングテールキーワード</strong><br>2語・3語以上を組み合わせた、より具体的で検索ボリュームが比較的小さいキーワード。検索意図が明確で、競合が少ない傾向がある。</p></div><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">📄</div><div class=\"flow__step-title\">ピラーページ</div><div class=\"flow__step-desc\">トピック全体を網羅</div></div><div class=\"flow__arrow\">⇄</div><div class=\"flow__step\"><div class=\"flow__step-icon\">📝</div><div class=\"flow__step-title\">クラスターページA</div><div class=\"flow__step-desc\">具体的なサブテーマ</div></div><div class=\"flow__arrow\">⇄</div><div class=\"flow__step\"><div class=\"flow__step-icon\">📝</div><div class=\"flow__step-title\">クラスターページB</div><div class=\"flow__step-desc\">具体的なサブテーマ</div></div></div></div><div class=\"figure__caption\">図1：ピラーページとクラスターページを内部リンクでつなぐ構造</div></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>この構造により、サイト全体としてテーマへの網羅性・専門性を示しやすくなり、クローラーの巡回のしやすさにもつながるとされています。</p></div></div>"
+    },
+    {
+      "heading": "分析：競合分析",
+      "bodyHtml": "<p>キーワード戦略を立てる際は、自社だけでなく<mark>競合サイトの状況</mark>も合わせて確認します。ここでの「競合」は、必ずしもビジネス上の競合企業とは限りません。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>SEOにおける競合分析では、<span class=\"text-primary\">「対策したいキーワードで実際に上位表示されているサイト」</span>を競合として見るのが基本的な考え方です。ビジネス上のライバル企業とは限らず、比較サイトやメディアが競合になっていることもあります。</p></div></div><p>競合分析でよく行われるのが<strong>コンテンツギャップ分析</strong>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>コンテンツギャップ</strong><br>競合サイトが上位表示されているにもかかわらず、自社サイトがカバーできていないキーワード・トピックのこと。ツールを使って競合ドメインと自社ドメインを比較し、差分を洗い出す方法が一般的です。</p></div><p>洗い出したギャップは、検索ボリューム・競合性・自社の検索意図との合致度などを基準に優先順位をつけ、コンテンツ制作計画に反映していきます。</p>"
+    }
+  ],
+  "summary": [
+    "キーワード調査は、メインキーワードの選定 → 複合キーワードの洗い出し → 検索ボリューム・競合性の確認という手順で進める",
+    "同じキーワードでも検索意図（Know・Do・Go・Buy）によって用意すべきコンテンツの方向性は変わる",
+    "トピッククラスターは、ピラーページとクラスターページを内部リンクでつなぎ、テーマへの網羅性・専門性を示す設計手法である",
+    "競合分析では「対策キーワードで実際に上位表示されているサイト」を競合と捉え、コンテンツギャップを洗い出して優先順位をつける"
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "検索ボリュームの説明として、最も適切なものはどれか。",
+      "options": [
+        "特定のキーワードが一定期間に検索された回数の目安",
+        "そのキーワードで上位表示されているサイトの数",
+        "検索結果ページに表示される広告の数",
+        "サイトの表示速度を数値化した指標"
+      ],
+      "correct": [0],
+      "explain": "検索ボリュームは、特定のキーワードが一定期間（多くの場合1ヶ月）に検索された回数の目安を示す指標です。"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "「SEO 対策 やり方」というキーワードに対応する検索意図として、最も適切なものはどれか。",
+      "options": [
+        "Know（知りたい）",
+        "Do（したい）",
+        "Go（行きたい）",
+        "検索意図は考える必要がない"
+      ],
+      "correct": [1],
+      "explain": "「やり方」は特定の行動・作業を行いたいという意図を示すため、Do（したい）クエリに該当します。"
+    },
+    {
+      "id": "q3",
+      "type": "multi",
+      "sectionIndex": 2,
+      "question": "トピッククラスターの考え方として、正しいものをすべて選べ。",
+      "options": [
+        "ピラーページはトピック全体を網羅的に扱う中心的なページである",
+        "クラスターページはピラーページの中の具体的なサブテーマを扱う",
+        "ピラーページとクラスターページは内部リンクでつなげる",
+        "クラスターページはピラーページと一切関連付けてはならない"
+      ],
+      "correct": [0, 1, 2],
+      "explain": "トピッククラスターは、ピラーページ（網羅的な中心ページ）とクラスターページ（具体的なサブテーマのページ）を内部リンクでつなげる設計手法です。"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "sectionIndex": 2,
+      "question": "ロングテールキーワードの特徴として、最も適切なものはどれか。",
+      "options": [
+        "1語のみで構成され、検索ボリュームが非常に大きい",
+        "2語・3語以上を組み合わせた具体的なキーワードで、検索意図が明確な傾向がある",
+        "検索エンジンには一切認識されないキーワード",
+        "必ず商品名だけで構成されるキーワード"
+      ],
+      "correct": [1],
+      "explain": "ロングテールキーワードは複数語を組み合わせた具体的なキーワードで、検索意図が明確になりやすく、競合が少ない傾向があります。"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "sectionIndex": 3,
+      "question": "SEOにおける「競合」の考え方として、最も適切なものはどれか。",
+      "options": [
+        "常に自社と同じ業界・業種の企業のみが競合になる",
+        "対策したいキーワードで実際に上位表示されているサイトを競合として捉える",
+        "競合は分析する必要がなく、自社の施策だけを考えればよい",
+        "検索結果に表示されないサイトほど強い競合である"
+      ],
+      "correct": [1],
+      "explain": "SEOの競合分析では、ビジネス上のライバル企業とは限らず、「対策したいキーワードで実際に上位表示されているサイト」を競合として見るのが基本的な考え方です。"
+    }
+  ]
+}
