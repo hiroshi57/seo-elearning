@@ -24,18 +24,18 @@
   <a href="../../phases/basic/index.html" class="breadcrumb-back">← Googleの検索の仕組み</a>
 
   <div class="wizard-header">
-    <span class="time-badge">🕒 学習目安 約12分</span>
+    <span class="time-badge">🕒 学習目安 約16分</span>
     <h1 class="wizard-header__title">Googleの検索の仕組み</h1>
-    <p class="wizard-header__topics">クローリング、インデックス、ランキング、検索意図</p>
+    <p class="wizard-header__topics">クローリング、インデックス、ランキング、検索意図、検索クエリの分類</p>
     <div class="wizard-progress">
-      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
-      <div class="wizard-progress__count">5 / 7</div>
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">5 / 8</div>
     </div>
   </div>
 
   <section class="section-card">
     <h2>検索クエリの意図を理解する仕組み</h2>
-    <p>Googleは、検索クエリの背後にある意図をより正確に理解するため、機械学習を活用したシステムを検索に組み込んでいます。Google Search Central（公式ドキュメント）では、代表的なものとして次のシステムが紹介されています。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>RankBrain</strong><br>単語同士がどのような概念と関連しているかを理解する助けとなるAIシステム。検索クエリに含まれる単語が完全に一致していなくても、関連性の高いコンテンツを返せるようにする役割を持ちます。</p><p style="margin:8px 0 0;"><strong>BERT</strong><br>単語の組み合わせが表す意味や意図の違いを理解するために使われるAIシステム。文中の単語同士の関係性を踏まえて、文脈に沿った意図の理解を助けます。</p></div><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>これらはGoogleが検索クエリの意図を理解するために活用している技術の一例であり、検索ランキングの仕組み全体からすればごく一部です。個別の技術名を覚えることよりも、<strong>「Googleは単語の完全一致だけでなく、意図や文脈を理解しようとしている」</strong>という方向性を理解しておくことが実務では重要です。</p></div></div>
+    <p>Googleは、検索クエリの背後にある意図をより正確に理解するため、機械学習を活用したシステムを検索に組み込んでいます。Google Search Central（公式ドキュメント）では、代表的なものとして次のシステムが紹介されています。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>RankBrain</strong><br>2015年に導入された機械学習ベースのシステム。検索クエリに含まれる単語をそのまま一致させるのではなく、クエリ全体の意味や文脈を解釈し、単語同士がどのような概念と関連しているかを理解する助けとなります。過去に例が少ない、新規・珍しい検索クエリの処理に強みを持ちます。</p><p style="margin:8px 0 0;"><strong>BERT</strong><br>2018年に導入された双方向の言語モデル。単語の組み合わせが表す意味や意図の違いを理解するために使われます。文中の単語同士の関係性を踏まえて文脈に沿った意図の理解を助け、特に長文や会話的な検索クエリの解釈に強みを持ちます。</p><p style="margin:8px 0 0;"><strong>ニューラルマッチング</strong><br>2018年に導入された、検索クエリとWebページの内容を意味的に関連付ける仕組み。クエリに含まれる語句とページ内の表現が完全に一致していなくても、概念的に近い内容であれば関連性を見いだせる点が特徴です。</p><p style="margin:8px 0 0;"><strong>MUM（Multitask Unified Model）</strong><br>2021年に発表された、複数の言語や情報形式（テキスト・画像・動画など）を横断して理解できるモデル。より複雑な検索意図の解釈に活用されています。</p><p style="margin:8px 0 0;"><strong>パッセージランキングシステム</strong><br>2021年に導入された仕組みで、長文記事や解説記事の中から、検索クエリに最も関連性の高い一部分（パッセージ）を評価・抽出します。ページ全体ではなく、内容の一部を単位として関連性を判断できる点が特徴です。</p></div><p>この他にも、Googleは災害時の情報提供に関わるシステムや、重複コンテンツの整理、最新情報の優先表示、独自性の高いコンテンツの優遇、低品質コンテンツの排除など、目的に応じた多数の検索システムを組み合わせて運用しているとされています。</p><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>これらはGoogleが検索クエリの意図を理解するために活用している技術の一例であり、検索ランキングの仕組み全体からすればごく一部です。個別の技術名を覚えることよりも、<strong>「Googleは単語の完全一致だけでなく、意図や文脈を理解しようとしている」</strong>という方向性を理解しておくことが実務では重要です。これらのシステムはいずれも機械学習・深層学習といったAI技術を前提としており、後の章で学ぶ生成AIとも技術的に地続きの延長線上にあります。</p></div></div>
   </section>
 
   <div class="wizard-footer">

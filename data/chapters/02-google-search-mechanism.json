@@ -4,42 +4,49 @@
   "slug": "02-google-search-mechanism",
   "title": "Googleの検索の仕組み",
   "subtitle": "検索エンジンがWebページを発見し、ユーザーに届けるまでの3つのプロセスと、検索意図の考え方を理解する",
-  "topicsLabel": "クローリング、インデックス、ランキング、検索意図",
-  "estimateMinutes": 12,
+  "topicsLabel": "クローリング、インデックス、ランキング、検索意図、検索クエリの分類",
+  "estimateMinutes": 16,
   "goals": [
     "クローリング・インデックス・ランキングという3段階のプロセスをそれぞれ説明できる",
     "クローラーがサイトを発見・巡回する仕組みの基本を理解する",
     "インデックスされないとどうなるかを理解する",
-    "検索意図（Know・Do・Go・Buyクエリ）の考え方を理解し、コンテンツ設計に活かせる"
+    "検索意図（Know・Do・Go・Buyクエリ）の考え方を理解し、コンテンツ設計に活かせる",
+    "検索クエリのより詳細な分類（Website・Visit-in-Person・Commercial query）とゼロクリック検索の考え方を理解する"
   ],
   "sections": [
     {
       "heading": "クローリング：サイトを発見・巡回する",
-      "bodyHtml": "<p>Googleが新しいページを検索結果に表示するには、まずそのページの存在を<strong>発見</strong>する必要があります。この最初のプロセスが<mark>クローリング（Crawling）</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>クローラー（Crawler）</strong><br>Webページを自動的に巡回し、内容を収集するプログラム。Googleのクローラーは「Googlebot」と呼ばれます。既知のページに含まれるリンクをたどったり、サイト運営者が送信したXMLサイトマップを手がかりにしたりして、新しいページを発見します。</p></div><p>クローラーは発見したページのHTML・画像・動画などのコンテンツを取得し、次のインデックスの工程に渡します。ただし、<code>robots.txt</code>で明示的にブロックされたページや、サーバーエラーが頻発するページはクロールされない、または後回しにされることがあります。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>新しく公開したページがすぐにクロールされるとは限りません。サイトの更新頻度や規模、他のページからのリンク状況などによってクロールされるタイミングは変わります。</p></div></div>"
+      "bodyHtml": "<p>Googleが新しいページを検索結果に表示するには、まずそのページの存在を<strong>発見</strong>する必要があります。この最初のプロセスが<mark>クローリング（Crawling）</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>クローラー（Crawler）</strong><br>Webページを自動的に巡回し、内容を収集するプログラム。Googleのクローラーは「Googlebot」と呼ばれます。既知のページに含まれるリンクをたどったり、サイト運営者が送信したXMLサイトマップを手がかりにしたりして、新しいページを発見します。</p></div><p>クローラーは発見したページのHTML・画像・動画などのコンテンツを取得し、次のインデックスの工程に渡します。ただし、<code>robots.txt</code>で明示的にブロックされたページや、サーバーエラーが頻発するページはクロールされない、または後回しにされることがあります。</p><p>Webサイトは新しいページの追加や更新など常に変化しているため、クロール処理はGoogleによって常時実行されています。Googleは、過去にクロールしたページがどのくらいの頻度で更新されているかを学習し、更新頻度の高いサイトはより頻繁に、更新の少ないサイトはやや間隔を空けてクロールするなど、<strong>クロールの頻度を対象ごとに調整している</strong>とされています。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>新しく公開したページがすぐにクロールされるとは限りません。サイトの更新頻度や規模、他のページからのリンク状況などによってクロールされるタイミングは変わります。</p></div></div>"
     },
     {
       "heading": "インデックス：内容を理解し登録する",
-      "bodyHtml": "<p>クロールされたページは、その内容が解析され、Googleの巨大なデータベースに登録されます。このプロセスを<mark>インデックス（Indexing）</mark>と呼びます。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>インデックス（索引）</strong><br>Googleがクロールしたページの内容を解析し、「このページはどんなキーワードに関連する、どんな内容か」を検索用データベースに登録すること。インデックスに登録されて初めて、そのページは検索結果に表示される対象になります。</p></div><table><thead><tr><th>状態</th><th>検索結果への影響</th></tr></thead><tbody><tr><td>クロールされ、インデックスされている</td><td>検索結果に表示される可能性がある</td></tr><tr><td>クロールされたが、インデックスされていない</td><td>検索結果には表示されない（重複コンテンツ、低品質と判断された場合など）</td></tr><tr><td>そもそもクロールされていない</td><td>検索結果には表示されない</td></tr></tbody></table><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>ページを作成しただけでは検索結果に表示されません。<strong>インデックスに登録されているかどうか</strong>は、後の章で学ぶSearch Consoleの「URL検査」ツールで確認できます。</p></div></div>"
+      "bodyHtml": "<p>クロールされたページは、その内容が解析され、Googleの巨大なデータベースに登録されます。このプロセスを<mark>インデックス（Indexing）</mark>と呼びます。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>インデックス（索引）</strong><br>Googleがクロールしたページの内容を解析し、「このページはどんなキーワードに関連する、どんな内容か」を検索用データベースに登録すること。インデックスに登録されて初めて、そのページは検索結果に表示される対象になります。</p></div><table><thead><tr><th>状態</th><th>検索結果への影響</th></tr></thead><tbody><tr><td>クロールされ、インデックスされている</td><td>検索結果に表示される可能性がある</td></tr><tr><td>クロールされたが、インデックスされていない</td><td>検索結果には表示されない（重複コンテンツ、低品質と判断された場合など）</td></tr><tr><td>そもそもクロールされていない</td><td>検索結果には表示されない</td></tr></tbody></table><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>Googleのインデックスには数千億ページ規模のWebページが登録されているといわれます。このような膨大な情報を素早く検索結果に反映するため、Googleは2010年に「Caffeine」と呼ばれるインデックスシステムを構築し、検索結果の鮮度と更新速度を大きく向上させました。現在の検索エンジンは、新しい情報をより早く検索結果に反映できる仕組みの上に成り立っています。</p></div></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>ページを作成しただけでは検索結果に表示されません。<strong>インデックスに登録されているかどうか</strong>は、後の章で学ぶSearch Consoleの「URL検査」ツールで確認できます。</p></div></div>"
     },
     {
       "heading": "ランキング：検索意図に沿って順位付け",
-      "bodyHtml": "<p>ユーザーが検索キーワードを入力すると、Googleはインデックスの中から関連性の高いページを抽出し、<mark>ランキング（Ranking）</mark>という順位付けの処理を行います。</p><p>Google自身の説明によれば、ランキングは単一の指標ではなく、<strong>検索クエリとの関連性、コンテンツの品質、ユーザーにとっての有用性</strong>など、数多くの要素（シグナル）を組み合わせて決定される仕組みです。個々のシグナルの正確な計算式や重み付けは公開されていません。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🕷️</div><div class=\"flow__step-title\">クローリング</div><div class=\"flow__step-desc\">ページを発見する</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🗂️</div><div class=\"flow__step-title\">インデックス</div><div class=\"flow__step-desc\">内容を解析・登録する</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🏆</div><div class=\"flow__step-title\">ランキング</div><div class=\"flow__step-desc\">関連性・品質で順位付け</div></div></div></div><div class=\"figure__caption\">図1：検索結果が表示されるまでの3段階</div></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>「ランキング要因を1つハックすれば上位表示される」という単純な仕組みではありません。<span class=\"text-primary\">ユーザーの検索意図に合致した、質の高いコンテンツを提供すること</span>が、遠回りに見えて最も確実なアプローチです。</p></div></div>"
+      "bodyHtml": "<p>ユーザーが検索キーワードを入力すると、Googleはインデックスの中から関連性の高いページを抽出し、<mark>ランキング（Ranking）</mark>という順位付けの処理を行います。この処理は、大きく分けると次の3つのステップで構成されているとされています。</p><ol><li><strong>検索クエリの分析：</strong>機械学習モデルを用いて、入力された検索クエリの意味や意図を解釈する</li><li><strong>検索意図に基づく情報の抽出：</strong>文脈や関連性、過去の検索傾向などを考慮しながら、インデックスの中から候補となるページを絞り込む</li><li><strong>ページのランキング：</strong>絞り込まれたページ群を、検索クエリに対して有益である可能性が高いと推定される順に並び替える</li></ol><p>Google自身の説明によれば、ランキングは単一の指標ではなく、<strong>検索クエリとの関連性、コンテンツの品質、ユーザーにとっての有用性</strong>など、数多くの要素（シグナル）を組み合わせて決定される仕組みです。個々のシグナルの正確な計算式や重み付けは公開されていません。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🕷️</div><div class=\"flow__step-title\">クローリング</div><div class=\"flow__step-desc\">ページを発見する</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🗂️</div><div class=\"flow__step-title\">インデックス</div><div class=\"flow__step-desc\">内容を解析・登録する</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🏆</div><div class=\"flow__step-title\">ランキング</div><div class=\"flow__step-desc\">関連性・品質で順位付け</div></div></div></div><div class=\"figure__caption\">図1：検索結果が表示されるまでの3段階</div></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>「ランキング要因を1つハックすれば上位表示される」という単純な仕組みではありません。<span class=\"text-primary\">ユーザーの検索意図に合致した、質の高いコンテンツを提供すること</span>が、遠回りに見えて最も確実なアプローチです。</p></div></div>"
     },
     {
       "heading": "検索クエリの意図を理解する仕組み",
-      "bodyHtml": "<p>Googleは、検索クエリの背後にある意図をより正確に理解するため、機械学習を活用したシステムを検索に組み込んでいます。Google Search Central（公式ドキュメント）では、代表的なものとして次のシステムが紹介されています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>RankBrain</strong><br>単語同士がどのような概念と関連しているかを理解する助けとなるAIシステム。検索クエリに含まれる単語が完全に一致していなくても、関連性の高いコンテンツを返せるようにする役割を持ちます。</p><p style=\"margin:8px 0 0;\"><strong>BERT</strong><br>単語の組み合わせが表す意味や意図の違いを理解するために使われるAIシステム。文中の単語同士の関係性を踏まえて、文脈に沿った意図の理解を助けます。</p></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>これらはGoogleが検索クエリの意図を理解するために活用している技術の一例であり、検索ランキングの仕組み全体からすればごく一部です。個別の技術名を覚えることよりも、<strong>「Googleは単語の完全一致だけでなく、意図や文脈を理解しようとしている」</strong>という方向性を理解しておくことが実務では重要です。</p></div></div>"
+      "bodyHtml": "<p>Googleは、検索クエリの背後にある意図をより正確に理解するため、機械学習を活用したシステムを検索に組み込んでいます。Google Search Central（公式ドキュメント）では、代表的なものとして次のシステムが紹介されています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>RankBrain</strong><br>2015年に導入された機械学習ベースのシステム。検索クエリに含まれる単語をそのまま一致させるのではなく、クエリ全体の意味や文脈を解釈し、単語同士がどのような概念と関連しているかを理解する助けとなります。過去に例が少ない、新規・珍しい検索クエリの処理に強みを持ちます。</p><p style=\"margin:8px 0 0;\"><strong>BERT</strong><br>2018年に導入された双方向の言語モデル。単語の組み合わせが表す意味や意図の違いを理解するために使われます。文中の単語同士の関係性を踏まえて文脈に沿った意図の理解を助け、特に長文や会話的な検索クエリの解釈に強みを持ちます。</p><p style=\"margin:8px 0 0;\"><strong>ニューラルマッチング</strong><br>2018年に導入された、検索クエリとWebページの内容を意味的に関連付ける仕組み。クエリに含まれる語句とページ内の表現が完全に一致していなくても、概念的に近い内容であれば関連性を見いだせる点が特徴です。</p><p style=\"margin:8px 0 0;\"><strong>MUM（Multitask Unified Model）</strong><br>2021年に発表された、複数の言語や情報形式（テキスト・画像・動画など）を横断して理解できるモデル。より複雑な検索意図の解釈に活用されています。</p><p style=\"margin:8px 0 0;\"><strong>パッセージランキングシステム</strong><br>2021年に導入された仕組みで、長文記事や解説記事の中から、検索クエリに最も関連性の高い一部分（パッセージ）を評価・抽出します。ページ全体ではなく、内容の一部を単位として関連性を判断できる点が特徴です。</p></div><p>この他にも、Googleは災害時の情報提供に関わるシステムや、重複コンテンツの整理、最新情報の優先表示、独自性の高いコンテンツの優遇、低品質コンテンツの排除など、目的に応じた多数の検索システムを組み合わせて運用しているとされています。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>これらはGoogleが検索クエリの意図を理解するために活用している技術の一例であり、検索ランキングの仕組み全体からすればごく一部です。個別の技術名を覚えることよりも、<strong>「Googleは単語の完全一致だけでなく、意図や文脈を理解しようとしている」</strong>という方向性を理解しておくことが実務では重要です。これらのシステムはいずれも機械学習・深層学習といったAI技術を前提としており、後の章で学ぶ生成AIとも技術的に地続きの延長線上にあります。</p></div></div>"
     },
     {
       "heading": "検索意図：ユーザーが何を求めているか",
       "bodyHtml": "<p>同じキーワードで検索しても、ユーザーが本当に求めているもの（<mark>検索意図</mark>）はさまざまです。SEO・コンテンツ設計の実務では、検索クエリを次の4種類に分類して考える方法がよく使われます。</p><div class=\"table-wrap\"><table><thead><tr><th>分類</th><th>ユーザーの意図</th><th>クエリ例</th></tr></thead><tbody><tr><td><strong>Know（知りたい）</strong></td><td>特定のトピックについて知識や情報を得たい</td><td>「SEO とは」「クローリング 意味」</td></tr><tr><td><strong>Do（したい）</strong></td><td>特定の行動・作業を行いたい</td><td>「画像 圧縮 方法」「確定申告 やり方」</td></tr><tr><td><strong>Go（行きたい）</strong></td><td>特定のサイト・場所に到達したい（指名検索）</td><td>「〇〇株式会社 公式サイト」「〇〇駅 カフェ」</td></tr><tr><td><strong>Buy（買いたい）</strong></td><td>商品・サービスを購入・申し込みしたい</td><td>「〇〇 料金」「〇〇 申し込み」</td></tr></tbody></table></div><p>この分類は業界で広く使われている考え方であり、Google自身が公式にこの4分類を定義しているわけではありませんが、<strong>コンテンツを作る前に「このキーワードで検索する人は何を求めているか」を具体的に想像するための実務的な枠組み</strong>として役立ちます。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>検索意図とズレたコンテンツ（例：Knowクエリに対して商品購入ページだけを用意する）は、たとえ文章の質が高くても評価されにくい傾向があります。次章以降のキーワード戦略・ライティングSEOでも、この検索意図の考え方が土台になります。</p></div></div>"
+    },
+    {
+      "heading": "検索クエリのさらに詳しい分類と、ゼロクリック検索",
+      "bodyHtml": "<p>Know・Do・Go・Buyの4分類は実務でよく使われる大まかな枠組みですが、より詳細に検索クエリを捉える考え方も知っておくと、コンテンツ設計の精度が上がります。特に「Go（行きたい）」クエリは、実務上さらに2つに分けて考えられることがあります。</p><div class=\"table-wrap\"><table><thead><tr><th>分類</th><th>ユーザーの意図</th><th>クエリ例</th></tr></thead><tbody><tr><td>Website query（ナビゲーションクエリ）</td><td>特定の1つのWebサイト・ページに到達したい</td><td>「Amazon」「〇〇株式会社」</td></tr><tr><td>Visit-in-Person query（訪問目的クエリ）</td><td>自分の近くにある、特定ジャンルの店舗・施設を探したい</td><td>「ラーメン屋」「歯科医」「ガソリンスタンド」</td></tr></tbody></table></div><p>Website queryが「1つに特定されるサイト」を探しているのに対し、Visit-in-Person queryは「近くにある複数の候補」を探している点が異なります。モバイル検索の普及にともない、外出先での「近くの〇〇」というローカル検索が増えたことを背景に、このように細分化して捉える考え方が広まりました。</p><p>また、購入を検討している段階で比較・レビューなどの情報を探す<mark>Commercial query（比較検討クエリ）</mark>という分類も、SEO業界でよく使われます。「ノートパソコン 比較」「〇〇 評判」のように、単純な情報収集（Know）よりも購買意欲が高く、Knowと購買行動（Do・Buy）の中間に位置するクエリです。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>ゼロクリック検索（Zero-click Search）</strong><br>検索結果ページ上で強調スニペットやナレッジパネル、AI Overviewなどによって疑問が解決し、ユーザーがどのサイトもクリックしないまま検索行動が完結すること。特に「富士山 標高」のような一文で答えが出る簡潔な質問（Know Simple Query）で発生しやすいとされています。</p></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>ゼロクリック検索が増えている背景には、モバイル検索や音声検索、AI検索の普及があります。<span class=\"text-primary\">「上位表示させて終わり」ではなく、「検索結果上でどう信頼される答えを示すか」「クリックして訪れたユーザーにどんな付加価値を提供できるか」</span>まで考えることが、これからのコンテンツ設計では重要になります。この視点は第14章（AI OverviewとAI Mode）でさらに詳しく扱います。</p></div></div>"
     }
   ],
   "summary": [
     "Googleの検索結果は「クローリング（発見）→インデックス（登録）→ランキング（順位付け）」という3段階のプロセスを経て表示される",
     "クロールされていない、またはインデックスされていないページは検索結果に表示されない",
     "ランキングは単一の指標ではなく、関連性・品質・有用性など多数のシグナルの組み合わせで決まる",
-    "GoogleはRankBrainやBERTなどのAIシステムを活用し、単語の完全一致だけでなく検索クエリの意図や文脈を理解しようとしている",
-    "検索意図はKnow・Do・Go・Buyの4種類に分類して考えることができ、コンテンツ設計の出発点になる"
+    "GoogleはRankBrain・BERT・ニューラルマッチング・MUMなどのAIシステムを活用し、単語の完全一致だけでなく検索クエリの意図や文脈を理解しようとしている",
+    "検索意図はKnow・Do・Go・Buyの4種類に分類して考えることができ、コンテンツ設計の出発点になる",
+    "Go（行きたい）クエリはWebsite query（指名検索）とVisit-in-Person query（近くの店舗を探す検索）に細分化でき、購入検討段階のCommercial queryという分類もある",
+    "ゼロクリック検索の増加を踏まえ、検索結果上での信頼される見え方と、訪問後の付加価値の両方を意識したコンテンツ設計が重要になっている"
   ],
   "quiz": [
     {
@@ -93,10 +100,10 @@
         "RankBrain",
         "BERT",
         "Core Web Vitals",
-        "XMLサイトマップ"
+        "ニューラルマッチング"
       ],
-      "correct": [0, 1],
-      "explain": "RankBrainとBERTは、検索クエリの意図や文脈の理解を助けるAIシステムです。Core Web VitalsとXMLサイトマップは意図理解の仕組みとは異なります。"
+      "correct": [0, 1, 3],
+      "explain": "RankBrain・BERT・ニューラルマッチングはいずれも、検索クエリの意図や文脈の理解を助けるAIシステムです。Core Web Vitalsはページ体験の指標であり、意図理解の仕組みとは異なります。"
     },
     {
       "id": "q5",
@@ -125,6 +132,34 @@
       ],
       "correct": [2],
       "explain": "特定のサイトや場所に到達したいという指名検索は「Go（行きたい）」クエリに分類されます。"
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "sectionIndex": 5,
+      "question": "Website queryとVisit-in-Person queryの違いに関する説明として、最も適切なものはどれか。",
+      "options": [
+        "両者に違いはなく、完全に同じ意味である",
+        "Website queryは1つに特定されるサイトを探しており、Visit-in-Person queryは近くにある特定ジャンルの複数の店舗・施設を探している",
+        "Website queryはモバイル検索専用の分類であり、PCでは発生しない",
+        "Visit-in-Person queryは購入意欲が最も高いクエリに分類される"
+      ],
+      "correct": [1],
+      "explain": "Website queryは「Amazon」のように1つに特定されるサイトへの到達を目的とするのに対し、Visit-in-Person queryは「近くのラーメン屋」のように特定ジャンルに属する複数の候補を探すクエリです。"
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "sectionIndex": 5,
+      "question": "ゼロクリック検索（Zero-click Search）の説明として、最も適切なものはどれか。",
+      "options": [
+        "検索結果に一切ページが表示されない状態のこと",
+        "検索結果ページ上で疑問が解決し、ユーザーがどのサイトもクリックしないまま検索行動が完結すること",
+        "検索エンジンがクロールを一切行わなくなる現象のこと",
+        "広告費がゼロで検索結果に表示される仕組みのこと"
+      ],
+      "correct": [1],
+      "explain": "ゼロクリック検索とは、強調スニペットやナレッジパネル、AI Overviewなどによって検索結果ページ上で疑問が解決し、サイトへのクリックが発生しないまま検索が完結する行動を指します。"
     }
   ]
 }

@@ -24,9 +24,9 @@
   <a href="../../phases/basic/index.html" class="breadcrumb-back">← Googleの検索の仕組み</a>
 
   <div class="wizard-header">
-    <span class="time-badge">🕒 学習目安 約12分</span>
+    <span class="time-badge">🕒 学習目安 約16分</span>
     <h1 class="wizard-header__title">Googleの検索の仕組み</h1>
-    <p class="wizard-header__topics">クローリング、インデックス、ランキング、検索意図</p>
+    <p class="wizard-header__topics">クローリング、インデックス、ランキング、検索意図、検索クエリの分類</p>
   </div>
 
   <div class="result-summary" data-result-summary>
@@ -52,13 +52,13 @@
   </div>
 
   <script type="application/json" data-quiz-data>
-[{"id":"q1","type":"single","sectionIndex":0,"question":"クローリング（Crawling）の説明として、最も適切なものはどれか。","options":["検索結果に表示するページの順位を決めるプロセス","検索エンジンのロボットがWebページを発見・巡回し、内容を収集するプロセス","ユーザーが入力した検索キーワードを解析するプロセス","ページの表示速度を計測するプロセス"],"correct":[1],"explain":"クローリングは検索エンジン（クローラー）がWebページを発見・巡回し、内容を収集する最初のプロセスです。"},{"id":"q2","type":"single","sectionIndex":1,"question":"「クロールはされたが、インデックスはされていない」ページについての説明として、正しいものはどれか。","options":["検索結果には表示されない","検索結果に必ず1位で表示される","クロールされていないページより優先的に表示される","インデックスの有無は検索結果の表示に影響しない"],"correct":[0],"explain":"インデックスに登録されて初めて検索結果に表示される対象になります。クロールされてもインデックスされなければ表示されません。"},{"id":"q3","type":"single","sectionIndex":2,"question":"Googleのランキングの仕組みに関する説明として、最も適切なものはどれか。","options":["たった1つの指標だけで検索順位がすべて決まる","関連性・品質・有用性など、数多くのシグナルを組み合わせて順位が決まる","ページの公開日が新しいページが常に最上位に表示される","広告費を支払ったページが自動的に自然検索結果の1位になる"],"correct":[1],"explain":"Googleのランキングは単一の指標ではなく、関連性・品質・ユーザーにとっての有用性など多数のシグナルを組み合わせて決定される仕組みです。"},{"id":"q4","type":"multi","sectionIndex":3,"question":"Google Search Centralで紹介されている、検索クエリの意図理解に使われるシステムとして、正しいものをすべて選べ。","options":["RankBrain","BERT","Core Web Vitals","XMLサイトマップ"],"correct":[0,1],"explain":"RankBrainとBERTは、検索クエリの意図や文脈の理解を助けるAIシステムです。Core Web VitalsとXMLサイトマップは意図理解の仕組みとは異なります。"},{"id":"q5","type":"multi","sectionIndex":4,"question":"検索意図の分類として、一般的に使われているものをすべて選べ。","options":["Know（知りたい）","Do（したい）","Go（行きたい）","Sell（売りたい）"],"correct":[0,1,2],"explain":"検索意図はKnow（知りたい）・Do（したい）・Go（行きたい）・Buy（買いたい）の4分類で考えるのが一般的です。「Sell（売りたい）」はユーザー側ではなく提供者側の意図であり、検索意図の分類には含まれません。"},{"id":"q6","type":"single","sectionIndex":4,"question":"「〇〇株式会社 公式サイト」という検索クエリが該当する検索意図の分類として、最も適切なものはどれか。","options":["Know（知りたい）","Do（したい）","Go（行きたい）","Buy（買いたい）"],"correct":[2],"explain":"特定のサイトや場所に到達したいという指名検索は「Go（行きたい）」クエリに分類されます。"}]
+[{"id":"q1","type":"single","sectionIndex":0,"question":"クローリング（Crawling）の説明として、最も適切なものはどれか。","options":["検索結果に表示するページの順位を決めるプロセス","検索エンジンのロボットがWebページを発見・巡回し、内容を収集するプロセス","ユーザーが入力した検索キーワードを解析するプロセス","ページの表示速度を計測するプロセス"],"correct":[1],"explain":"クローリングは検索エンジン（クローラー）がWebページを発見・巡回し、内容を収集する最初のプロセスです。"},{"id":"q2","type":"single","sectionIndex":1,"question":"「クロールはされたが、インデックスはされていない」ページについての説明として、正しいものはどれか。","options":["検索結果には表示されない","検索結果に必ず1位で表示される","クロールされていないページより優先的に表示される","インデックスの有無は検索結果の表示に影響しない"],"correct":[0],"explain":"インデックスに登録されて初めて検索結果に表示される対象になります。クロールされてもインデックスされなければ表示されません。"},{"id":"q3","type":"single","sectionIndex":2,"question":"Googleのランキングの仕組みに関する説明として、最も適切なものはどれか。","options":["たった1つの指標だけで検索順位がすべて決まる","関連性・品質・有用性など、数多くのシグナルを組み合わせて順位が決まる","ページの公開日が新しいページが常に最上位に表示される","広告費を支払ったページが自動的に自然検索結果の1位になる"],"correct":[1],"explain":"Googleのランキングは単一の指標ではなく、関連性・品質・ユーザーにとっての有用性など多数のシグナルを組み合わせて決定される仕組みです。"},{"id":"q4","type":"multi","sectionIndex":3,"question":"Google Search Centralで紹介されている、検索クエリの意図理解に使われるシステムとして、正しいものをすべて選べ。","options":["RankBrain","BERT","Core Web Vitals","ニューラルマッチング"],"correct":[0,1,3],"explain":"RankBrain・BERT・ニューラルマッチングはいずれも、検索クエリの意図や文脈の理解を助けるAIシステムです。Core Web Vitalsはページ体験の指標であり、意図理解の仕組みとは異なります。"},{"id":"q5","type":"multi","sectionIndex":4,"question":"検索意図の分類として、一般的に使われているものをすべて選べ。","options":["Know（知りたい）","Do（したい）","Go（行きたい）","Sell（売りたい）"],"correct":[0,1,2],"explain":"検索意図はKnow（知りたい）・Do（したい）・Go（行きたい）・Buy（買いたい）の4分類で考えるのが一般的です。「Sell（売りたい）」はユーザー側ではなく提供者側の意図であり、検索意図の分類には含まれません。"},{"id":"q6","type":"single","sectionIndex":4,"question":"「〇〇株式会社 公式サイト」という検索クエリが該当する検索意図の分類として、最も適切なものはどれか。","options":["Know（知りたい）","Do（したい）","Go（行きたい）","Buy（買いたい）"],"correct":[2],"explain":"特定のサイトや場所に到達したいという指名検索は「Go（行きたい）」クエリに分類されます。"},{"id":"q7","type":"single","sectionIndex":5,"question":"Website queryとVisit-in-Person queryの違いに関する説明として、最も適切なものはどれか。","options":["両者に違いはなく、完全に同じ意味である","Website queryは1つに特定されるサイトを探しており、Visit-in-Person queryは近くにある特定ジャンルの複数の店舗・施設を探している","Website queryはモバイル検索専用の分類であり、PCでは発生しない","Visit-in-Person queryは購入意欲が最も高いクエリに分類される"],"correct":[1],"explain":"Website queryは「Amazon」のように1つに特定されるサイトへの到達を目的とするのに対し、Visit-in-Person queryは「近くのラーメン屋」のように特定ジャンルに属する複数の候補を探すクエリです。"},{"id":"q8","type":"single","sectionIndex":5,"question":"ゼロクリック検索（Zero-click Search）の説明として、最も適切なものはどれか。","options":["検索結果に一切ページが表示されない状態のこと","検索結果ページ上で疑問が解決し、ユーザーがどのサイトもクリックしないまま検索行動が完結すること","検索エンジンがクロールを一切行わなくなる現象のこと","広告費がゼロで検索結果に表示される仕組みのこと"],"correct":[1],"explain":"ゼロクリック検索とは、強調スニペットやナレッジパネル、AI Overviewなどによって検索結果ページ上で疑問が解決し、サイトへのクリックが発生しないまま検索が完結する行動を指します。"}]
   </script>
 
 </main>
 
 <script src="../../assets/js/progress.js"></script>
-<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = 7;</script>
+<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = 8;</script>
 <script src="../../assets/js/result.js"></script>
 </body>
 </html>
