@@ -33,7 +33,7 @@
     },
     {
       "heading": "クローラの制御：robots.txtとmeta robots",
-      "bodyHtml": "<p>クローラー（<mark>bot</mark>）は、サイト内のあらゆるページを無制限にクロールするわけではありません。サイトごとに<mark>クロールバジェット</mark>（クロールに割り当てられる量の目安）が存在するため、価値の低いページのクロールを抑え、重要なページに巡回を集中させる工夫が必要になります。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>bot（クローラー）</strong><br>Webサイトを自動的に巡回するプログラムの総称。GoogleやBingの検索エンジンクローラーのほか、生成AIサービスが使う専用クローラー（OpenAIのGPTBotなど）も含まれます。</p><p style=\"margin:8px 0 0;\"><strong>meta robots</strong><br>HTMLの<code>&lt;head&gt;</code>内に記述し、そのページ単位でクロール・インデックスの可否を指定するタグ。「noindex」（インデックスさせない）や「nofollow」（リンクを辿らせない）などを指定できます。</p><p style=\"margin:8px 0 0;\"><strong>robots.txt</strong><br>サイトのルート直下に置く、サイト全体・ディレクトリ単位でクロールの可否をクローラーに伝えるテキストファイル。</p></div><div class=\"table-wrap\"><table><thead><tr><th>content属性の値</th><th>制御内容</th></tr></thead><tbody><tr><td>noindex</td><td>ページをインデックスさせない</td></tr><tr><td>nofollow</td><td>ページ上のリンクを辿らせない</td></tr><tr><td>none</td><td>noindex, nofollowと同じ意味</td></tr></tbody></table></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>meta robotsとrobots.txtは、GoogleのクローラーだけでなくAIbot（生成AIの学習・回答生成用クローラー）にも基本的には有効ですが、<span class=\"text-danger\">すべてのAIbotが指示に従うことを保証するものではありません</span>。機密性の高い情報の保護策としては過信せず、必要に応じてアクセス制限など別の対策も検討することが望ましいとされています。</p></div></div>"
+      "bodyHtml": "<p>クローラー（<mark>bot</mark>）は、サイト内のあらゆるページを無制限にクロールするわけではありません。サイトごとに<mark>クロールバジェット</mark>（クロールに割り当てられる量の目安）が存在するため、価値の低いページのクロールを抑え、重要なページに巡回を集中させる工夫が必要になります。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>bot（クローラー）</strong><br>Webサイトを自動的に巡回するプログラムの総称。GoogleやBingの検索エンジンクローラーのほか、生成AIサービスが使う専用クローラー（OpenAIのGPTBotなど）も含まれます。</p><p style=\"margin:8px 0 0;\"><strong>meta robots</strong><br>HTMLの<code>&lt;head&gt;</code>内に記述し、そのページ単位でクロール・インデックスの可否を指定するタグ。「noindex」（インデックスさせない）や「nofollow」（リンクを辿らせない）などを指定できます。</p><p style=\"margin:8px 0 0;\"><strong>robots.txt</strong><br>サイトのルート直下に置く、サイト全体・ディレクトリ単位でクロールの可否をクローラーに伝えるテキストファイル。</p></div><div class=\"table-wrap\"><table><thead><tr><th>content属性の値</th><th>制御内容</th></tr></thead><tbody><tr><td>noindex</td><td>ページをインデックスさせない</td></tr><tr><td>nofollow</td><td>ページ上のリンクを辿らせない</td></tr><tr><td>none</td><td>noindex, nofollowと同じ意味</td></tr></tbody></table></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>X-Robots-Tag</strong><br>PDFや画像など、meta robotsを記述できない非HTMLファイルに対して、クロール・インデックスの制御を行うためのHTTPヘッダー。Google Search Central（公式ドキュメント）によれば、meta robotsで指定できるものと同じルールを、サーバーの設定でHTTPレスポンスに追加する形で指定します。</p></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>meta robotsとrobots.txtは、GoogleのクローラーだけでなくAIbot（生成AIの学習・回答生成用クローラー）にも基本的には有効ですが、<span class=\"text-danger\">すべてのAIbotが指示に従うことを保証するものではありません</span>。機密性の高い情報の保護策としては過信せず、必要に応じてアクセス制限など別の対策も検討することが望ましいとされています。</p></div></div>"
     },
     {
       "heading": "表示速度：Core Web Vitals",
@@ -50,6 +50,7 @@
     "内部リンクはクローラーがページを発見する手がかりにもなり、孤立したページを作らないことが重要",
     "XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めるべきで、canonicalタグは重複コンテンツの整理に使う",
     "meta robotsやrobots.txtでクローラの動きを制御できるが、すべてのAIbotが指示に従う保証はない",
+    "X-Robots-Tagは、PDFや画像などmeta robotsを記述できない非HTMLファイルに対して、HTTPヘッダーでクロール・インデックスを制御する仕組み",
     "表示速度はネットワーク処理・サーバー処理・レンダリング処理の3領域で決まり、実装の詳細はエンジニアリングの領域だが、SEO担当者は全体像を理解しておくとよい",
     "Core Web Vitalsは読み込み速度（LCP）・応答性（INP）・視覚的安定性（CLS）の3指標で構成され、実際のユーザーデータをもとに評価される",
     "Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新される（2024年3月にFIDがINPへ置き換え）",
@@ -156,6 +157,20 @@
     },
     {
       "id": "q8",
+      "type": "single",
+      "sectionIndex": 4,
+      "question": "X-Robots-Tagの説明として、最も適切なものはどれか。",
+      "options": [
+        "HTMLページにのみ使用できる、meta robotsの別名",
+        "PDFや画像などmeta robotsを記述できない非HTMLファイルに対して、HTTPヘッダーでクロール・インデックスを制御する仕組み",
+        "クロールバジェットを自動的に増やすための申請フォーム",
+        "XMLサイトマップの別の呼び方"
+      ],
+      "correct": [1],
+      "explain": "X-Robots-Tagは、PDFや画像など、meta robotsを記述できない非HTMLファイルに対して、HTTPヘッダーでクロール・インデックスの制御を行う仕組みです。"
+    },
+    {
+      "id": "q9",
       "type": "multi",
       "sectionIndex": 5,
       "question": "Webページの表示速度に関わる3つの処理領域として、正しいものをすべて選べ。",
@@ -169,7 +184,7 @@
       "explain": "表示速度はネットワーク処理・サーバー処理・レンダリング処理の3領域に分けて捉えられます。インデックス処理は検索エンジン側の仕組みであり、表示速度の3領域には含まれません。"
     },
     {
-      "id": "q9",
+      "id": "q10",
       "type": "multi",
       "sectionIndex": 5,
       "question": "Core Web Vitalsを構成する3つの指標として、正しいものをすべて選べ。",
@@ -183,7 +198,7 @@
       "explain": "Core Web VitalsはLCP（読み込み速度）・INP（応答性）・CLS（視覚的安定性）の3指標で構成されます。CTR（クリック率）はCore Web Vitalsには含まれません。"
     },
     {
-      "id": "q10",
+      "id": "q11",
       "type": "single",
       "sectionIndex": 5,
       "question": "Core Web Vitalsの指標の変遷についての説明として、正しいものはどれか。",
@@ -197,7 +212,7 @@
       "explain": "Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新されています。2024年3月には、それまでのFID（初回入力遅延）がINPに置き換えられました。"
     },
     {
-      "id": "q11",
+      "id": "q12",
       "type": "single",
       "sectionIndex": 6,
       "question": "HTTPS化とGoogleのランキングシグナルの関係について、公式ブログが示している見解として、最も適切なものはどれか。",
@@ -211,7 +226,7 @@
       "explain": "Google公式は2014年にHTTPS化をランキングシグナルとして使用すると発表しましたが、全体のクエリの1%未満にしか影響しない軽量なシグナルであり、コンテンツの品質などと比べると影響は小さいとしています。"
     },
     {
-      "id": "q12",
+      "id": "q13",
       "type": "multi",
       "sectionIndex": 6,
       "question": "HTTPSが持つセキュリティ上の役割として、正しいものをすべて選べ。",
