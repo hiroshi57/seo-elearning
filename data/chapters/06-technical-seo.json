@@ -4,10 +4,11 @@
   "slug": "06-technical-seo",
   "title": "テクニカルSEO",
   "subtitle": "URL構造・内部リンク・XMLサイトマップ・canonical・クローラ制御・表示速度など、サイトの技術的な基盤を理解する",
-  "topicsLabel": "サイト構造：URL、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS",
-  "estimateMinutes": 18,
+  "topicsLabel": "サイト構造：URL、URLの永続化、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS",
+  "estimateMinutes": 20,
   "goals": [
     "検索エンジンに配慮したURL構造の基本的な考え方を理解する",
+    "URLの永続化がなぜ重要なのかを理解する",
     "XMLサイトマップの役割と、正規URLとの関係を理解する",
     "meta robotsやrobots.txtによるクローラ制御の基本的な考え方を理解する",
     "Core Web Vitals（LCP・INP・CLS）の3指標とその目安を理解する",
@@ -17,6 +18,10 @@
     {
       "heading": "サイト構造：わかりやすいURL",
       "bodyHtml": "<p>Googleは公式のSEOスターターガイドで、<mark>わかりやすく予測可能で、人間にも理解しやすいURL構造</mark>を推奨しています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>サイト構造</strong><br>Webサイトの内容を分類し、階層構造で整理したもの。図書館が書籍をジャンル・テーマごとに分類して並べるのと同じように、Webサイトも「ユーザーが目的の情報を探しやすい形」にページを分類・整理する必要があります。</p></div><p>整理されたサイト構造を作る上で重要な考え方が<mark>MECE（ミーシー）</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>MECE（Mutually Exclusive and Collectively Exhaustive）</strong><br>「重複なく、抜け漏れなく」分類されている状態を指す言葉。カテゴリ設計がMECEになっていないと、ユーザーが「知りたい情報がサイト内で見つからない」（抜け漏れ）、「同じような内容のページが複数存在してしまう」（重複）といった問題が起こりやすくなります。</p></div><p>また、URLの階層は、このカテゴリ構造をそのまま反映させるのが基本です。</p><ul><li>サイトの構造を反映した、短く明確なURLにする</li><li>意味の分からないランダムな文字列・数字の羅列を避ける</li><li>可能であれば、ページの内容が推測できる単語を含める</li></ul><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>URL構造は、一度決めて公開した後に大きく変更すると、リダイレクト設定などの追加対応が必要になります。サイト設計の初期段階で、カテゴリ構造とURL階層を一致させ、将来のページ追加も見据えた構造を検討しておくことが望ましいとされています。なお、記事メディアやニュースサイトなど、1つのページが複数カテゴリに属するようなサイトでは、カテゴリ構造とURL階層を一致させるのが難しい例外もあります。</p></div></div>"
+    },
+    {
+      "heading": "URLの永続化：Cool URIs don't change",
+      "bodyHtml": "<p>URL構造を適切に設計したら、次に重要なのが<mark>URLの永続化</mark>という考え方です。一度公開してインデックスされたページのURLは、そのページが存在し続ける限り、できるだけ変更しないことが望ましいとされています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>URLの永続化</strong><br>公開・インデックス済みのページのURLを、内容が存在する限り変更せずに使い続けること。Webの標準化を推進するW3C（World Wide Web Consortium）の創設者ティム・バーナーズ=リー氏は、1998年の論文で「Cool URIs don’t change（クールなURIは変わらない）」と述べています。</p></div><p>URLを変更すると、次のようなデメリットが生じます。</p><ul><li>それまで蓄積された被リンクの評価が引き継がれない、または大きく減少する</li><li>外部サイトやSNSからのリンクがリンク切れになる</li><li>ユーザーがブックマークした情報にアクセスできなくなる</li></ul><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>ブランド名の変更やサイトリニューアルなど、<span class=\"text-danger\">やむを得ずURLを変更する場合</span>は、旧URLから新URLへ301リダイレクトを設定し、評価をできる限り引き継ぐようにします。意味もなくページを削除・URL変更することは、それまで蓄積したSEO評価を手放すことにつながるため、避けるべきとされています。</p></div></div>"
     },
     {
       "heading": "内部リンクとクロールのしやすさ",
@@ -41,6 +46,7 @@
   ],
   "summary": [
     "GoogleはわかりやすくPredictableなURL構造を推奨しており、サイトの構成を反映した短く明確なURLが望ましい",
+    "URLの永続化とは、公開・インデックス済みのURLを変更せずに使い続けることで、やむを得ず変更する場合は301リダイレクトで評価を引き継ぐ",
     "内部リンクはクローラーがページを発見する手がかりにもなり、孤立したページを作らないことが重要",
     "XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めるべきで、canonicalタグは重複コンテンツの整理に使う",
     "meta robotsやrobots.txtでクローラの動きを制御できるが、すべてのAIbotが指示に従う保証はない",
@@ -66,8 +72,36 @@
     },
     {
       "id": "q2",
-      "type": "multi",
+      "type": "single",
       "sectionIndex": 1,
+      "question": "「URLの永続化」の考え方として、最も適切なものはどれか。",
+      "options": [
+        "公開・インデックス済みのページのURLは、内容が存在する限りできるだけ変更しない",
+        "URLはSEO評価のリセットのために定期的に変更すべきである",
+        "URLの永続化はSNSでの拡散には一切関係しない",
+        "ブランド名を変更した場合、URLも即座に変更しなければならない"
+      ],
+      "correct": [0],
+      "explain": "URLの永続化とは、公開・インデックス済みのページのURLを、内容が存在する限り変更せずに使い続けるという考え方です。W3C創設者のティム・バーナーズ=リー氏も「Cool URIs don’t change」と述べています。"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "やむを得ずページのURLを変更する場合の対応として、最も適切なものはどれか。",
+      "options": [
+        "旧URLは放置し、新URLだけを新たに公開する",
+        "旧URLから新URLへ301リダイレクトを設定し、評価をできる限り引き継ぐ",
+        "URLを変更する際は、必ずページも削除しなければならない",
+        "リダイレクトを設定すると、かえって評価が下がるため避けるべきである"
+      ],
+      "correct": [1],
+      "explain": "やむを得ずURLを変更する場合は、旧URLから新URLへ301リダイレクトを設定し、それまで蓄積された評価をできる限り引き継ぐことが望ましいとされています。"
+    },
+    {
+      "id": "q4",
+      "type": "multi",
+      "sectionIndex": 2,
       "question": "内部リンクの設計で重要とされる観点として、正しいものをすべて選べ。",
       "options": [
         "どのページからも他のページへ辿れる、双方向のリンク構造にする",
@@ -79,9 +113,9 @@
       "explain": "内部リンクの設計では、双方向リンク・関連ページへのリンク・上位階層への復帰リンクの3点が重要とされています。行き止まりになる一方向のリンクは避けるべきとされています。"
     },
     {
-      "id": "q3",
+      "id": "q5",
       "type": "single",
-      "sectionIndex": 2,
+      "sectionIndex": 3,
       "question": "XMLサイトマップに含めるべきURLとして、Google公式ガイドラインが推奨しているものはどれか。",
       "options": [
         "重複しているURLも含め、サイト内のすべてのURLをできる限り含める",
@@ -93,9 +127,9 @@
       "explain": "Google公式のガイドラインでは、XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めることが推奨されています。"
     },
     {
-      "id": "q4",
+      "id": "q6",
       "type": "single",
-      "sectionIndex": 2,
+      "sectionIndex": 3,
       "question": "canonicalタグ（rel=\"canonical\"）の役割として、最も適切なものはどれか。",
       "options": [
         "ページの表示速度を向上させるためのタグ",
@@ -107,9 +141,9 @@
       "explain": "canonicalタグは、重複または類似する複数のURLの中から「正規のURLはこちらです」とGoogleに伝え、URLの正規化を行うためのタグです。"
     },
     {
-      "id": "q5",
+      "id": "q7",
       "type": "single",
-      "sectionIndex": 3,
+      "sectionIndex": 4,
       "question": "meta robotsのcontent属性に「noindex」を指定した場合の効果として、最も適切なものはどれか。",
       "options": [
         "そのページの表示速度が向上する",
@@ -121,9 +155,9 @@
       "explain": "meta robotsのcontent属性に「noindex」を指定すると、そのページはインデックスされないようになります。"
     },
     {
-      "id": "q6",
+      "id": "q8",
       "type": "multi",
-      "sectionIndex": 4,
+      "sectionIndex": 5,
       "question": "Webページの表示速度に関わる3つの処理領域として、正しいものをすべて選べ。",
       "options": [
         "ネットワーク処理（ブラウザとサーバー間のデータの送受信）",
@@ -135,9 +169,9 @@
       "explain": "表示速度はネットワーク処理・サーバー処理・レンダリング処理の3領域に分けて捉えられます。インデックス処理は検索エンジン側の仕組みであり、表示速度の3領域には含まれません。"
     },
     {
-      "id": "q7",
+      "id": "q9",
       "type": "multi",
-      "sectionIndex": 4,
+      "sectionIndex": 5,
       "question": "Core Web Vitalsを構成する3つの指標として、正しいものをすべて選べ。",
       "options": [
         "LCP（Largest Contentful Paint）：読み込み速度",
@@ -149,9 +183,9 @@
       "explain": "Core Web VitalsはLCP（読み込み速度）・INP（応答性）・CLS（視覚的安定性）の3指標で構成されます。CTR（クリック率）はCore Web Vitalsには含まれません。"
     },
     {
-      "id": "q8",
+      "id": "q10",
       "type": "single",
-      "sectionIndex": 4,
+      "sectionIndex": 5,
       "question": "Core Web Vitalsの指標の変遷についての説明として、正しいものはどれか。",
       "options": [
         "Core Web Vitalsの指標は発表以来、一度も変更されていない",
@@ -163,9 +197,9 @@
       "explain": "Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新されています。2024年3月には、それまでのFID（初回入力遅延）がINPに置き換えられました。"
     },
     {
-      "id": "q9",
+      "id": "q11",
       "type": "single",
-      "sectionIndex": 5,
+      "sectionIndex": 6,
       "question": "HTTPS化とGoogleのランキングシグナルの関係について、公式ブログが示している見解として、最も適切なものはどれか。",
       "options": [
         "HTTPS化は検索順位に一切影響しない",
@@ -177,9 +211,9 @@
       "explain": "Google公式は2014年にHTTPS化をランキングシグナルとして使用すると発表しましたが、全体のクエリの1%未満にしか影響しない軽量なシグナルであり、コンテンツの品質などと比べると影響は小さいとしています。"
     },
     {
-      "id": "q10",
+      "id": "q12",
       "type": "multi",
-      "sectionIndex": 5,
+      "sectionIndex": 6,
       "question": "HTTPSが持つセキュリティ上の役割として、正しいものをすべて選べ。",
       "options": [
         "通信データの暗号化",

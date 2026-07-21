@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>テクニカルSEO（XMLサイトマップとcanonical） | SEO Eラーニング</title>
+<title>テクニカルSEO（内部リンクとクロールのしやすさ） | SEO Eラーニング</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -24,18 +24,18 @@
   <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
 
   <div class="wizard-header">
-    <span class="time-badge">🕒 学習目安 約18分</span>
+    <span class="time-badge">🕒 学習目安 約20分</span>
     <h1 class="wizard-header__title">テクニカルSEO</h1>
-    <p class="wizard-header__topics">サイト構造：URL、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS</p>
+    <p class="wizard-header__topics">サイト構造：URL、URLの永続化、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS</p>
     <div class="wizard-progress">
-      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
-      <div class="wizard-progress__count">4 / 8</div>
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">4 / 9</div>
     </div>
   </div>
 
   <section class="section-card">
-    <h2>XMLサイトマップとcanonical</h2>
-    <p><mark>XMLサイトマップ</mark>は、サイト内のどのページをクロール・インデックスしてほしいかをGoogleに伝えるためのファイルです。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>XMLサイトマップ</strong><br>サイト内のURL一覧をXML形式でまとめたファイル。Search Console（第10章で学びます）を通じてGoogleに送信することで、クロールの手がかりとして活用してもらえます。</p><p style="margin:8px 0 0;"><strong>canonicalタグ（rel=&quot;canonical&quot;）</strong><br>同じ内容、または似た内容のページが複数のURLで存在する場合に、「正規のURLはこちらです」とGoogleに伝えるためのタグ。URLの正規化（重複コンテンツの整理）に使われます。</p></div><p>Google公式のガイドラインでは、XMLサイトマップには<strong>正規URL（canonicalで指定したURL）のみ</strong>を含めることが推奨されています。重複しているURLや、canonicalの指定と矛盾するURLをサイトマップに含めると、Googleに対して矛盾したシグナルを送ることになるためです。</p><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>同じ内容のページが、パラメータ違いなどで複数のURLからアクセスできる状態を放置すると、<strong>重複コンテンツ</strong>として扱われ、評価が分散してしまう可能性があります。canonicalタグやリダイレクトで、優先すべきURLを明示することが重要です。</p></div></div>
+    <h2>内部リンクとクロールのしやすさ</h2>
+    <p>サイト構造をどれだけきれいに設計しても、実際にページ同士がリンクでつながっていなければ、ユーザーもクローラーも目的のページにたどり着けません。<mark>内部リンク</mark>の設計では、次の3点が重要とされています。</p><div class="figure"><div class="figure__frame"><div class="flow"><div class="flow__step"><div class="flow__step-icon">🔗</div><div class="flow__step-title">双方向リンク</div><div class="flow__step-desc">どのページからも他のページへ辿れる状態にする</div></div><div class="flow__arrow">＋</div><div class="flow__step"><div class="flow__step-icon">🧩</div><div class="flow__step-title">関連ページへのリンク</div><div class="flow__step-desc">同じカテゴリ・上位カテゴリへリンクする</div></div><div class="flow__arrow">＋</div><div class="flow__step"><div class="flow__step-icon">🏠</div><div class="flow__step-title">上位階層へのリンク</div><div class="flow__step-desc">常にトップページ・最上位カテゴリに戻れるようにする</div></div></div></div><div class="figure__caption">図1：内部リンク設計で重要とされる3つの観点</div></div><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>どのページからもリンクされていない「孤立したページ」や、リンクをたどった先が行き止まりになる構造は、<span class="text-primary">クローラーにもユーザーにも発見・到達されにくくなります</span>。重要なページほど、サイト内の複数箇所からリンクされている状態が望ましいとされています。</p></div></div><p>また、多くのページからリンクを受けているページ（一般的にはトップページや上位カテゴリ）は、検索エンジンから「サイト内で特に重要なページ」として認識されやすくなるとされています。テクニカルSEOの観点では、次のような点も内部リンクの巡回性に影響します。</p><ul><li>ナビゲーションメニューやパンくずリストで、サイト全体の階層を分かりやすくする</li><li>関連コンテンツへのリンクを、記事の文脈に沿って適切に設置する</li><li>リンク切れ（存在しないページへのリンク）を放置しない</li></ul>
   </section>
 
   <div class="wizard-footer">

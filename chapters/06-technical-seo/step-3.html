@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>テクニカルSEO（内部リンクとクロールのしやすさ） | SEO Eラーニング</title>
+<title>テクニカルSEO（URLの永続化：Cool URIs don&#39;t change） | SEO Eラーニング</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -24,18 +24,18 @@
   <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
 
   <div class="wizard-header">
-    <span class="time-badge">🕒 学習目安 約18分</span>
+    <span class="time-badge">🕒 学習目安 約20分</span>
     <h1 class="wizard-header__title">テクニカルSEO</h1>
-    <p class="wizard-header__topics">サイト構造：URL、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS</p>
+    <p class="wizard-header__topics">サイト構造：URL、URLの永続化、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS</p>
     <div class="wizard-progress">
-      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
-      <div class="wizard-progress__count">3 / 8</div>
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">3 / 9</div>
     </div>
   </div>
 
   <section class="section-card">
-    <h2>内部リンクとクロールのしやすさ</h2>
-    <p>サイト構造をどれだけきれいに設計しても、実際にページ同士がリンクでつながっていなければ、ユーザーもクローラーも目的のページにたどり着けません。<mark>内部リンク</mark>の設計では、次の3点が重要とされています。</p><div class="figure"><div class="figure__frame"><div class="flow"><div class="flow__step"><div class="flow__step-icon">🔗</div><div class="flow__step-title">双方向リンク</div><div class="flow__step-desc">どのページからも他のページへ辿れる状態にする</div></div><div class="flow__arrow">＋</div><div class="flow__step"><div class="flow__step-icon">🧩</div><div class="flow__step-title">関連ページへのリンク</div><div class="flow__step-desc">同じカテゴリ・上位カテゴリへリンクする</div></div><div class="flow__arrow">＋</div><div class="flow__step"><div class="flow__step-icon">🏠</div><div class="flow__step-title">上位階層へのリンク</div><div class="flow__step-desc">常にトップページ・最上位カテゴリに戻れるようにする</div></div></div></div><div class="figure__caption">図1：内部リンク設計で重要とされる3つの観点</div></div><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>どのページからもリンクされていない「孤立したページ」や、リンクをたどった先が行き止まりになる構造は、<span class="text-primary">クローラーにもユーザーにも発見・到達されにくくなります</span>。重要なページほど、サイト内の複数箇所からリンクされている状態が望ましいとされています。</p></div></div><p>また、多くのページからリンクを受けているページ（一般的にはトップページや上位カテゴリ）は、検索エンジンから「サイト内で特に重要なページ」として認識されやすくなるとされています。テクニカルSEOの観点では、次のような点も内部リンクの巡回性に影響します。</p><ul><li>ナビゲーションメニューやパンくずリストで、サイト全体の階層を分かりやすくする</li><li>関連コンテンツへのリンクを、記事の文脈に沿って適切に設置する</li><li>リンク切れ（存在しないページへのリンク）を放置しない</li></ul>
+    <h2>URLの永続化：Cool URIs don&#39;t change</h2>
+    <p>URL構造を適切に設計したら、次に重要なのが<mark>URLの永続化</mark>という考え方です。一度公開してインデックスされたページのURLは、そのページが存在し続ける限り、できるだけ変更しないことが望ましいとされています。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>URLの永続化</strong><br>公開・インデックス済みのページのURLを、内容が存在する限り変更せずに使い続けること。Webの標準化を推進するW3C（World Wide Web Consortium）の創設者ティム・バーナーズ=リー氏は、1998年の論文で「Cool URIs don’t change（クールなURIは変わらない）」と述べています。</p></div><p>URLを変更すると、次のようなデメリットが生じます。</p><ul><li>それまで蓄積された被リンクの評価が引き継がれない、または大きく減少する</li><li>外部サイトやSNSからのリンクがリンク切れになる</li><li>ユーザーがブックマークした情報にアクセスできなくなる</li></ul><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>ブランド名の変更やサイトリニューアルなど、<span class="text-danger">やむを得ずURLを変更する場合</span>は、旧URLから新URLへ301リダイレクトを設定し、評価をできる限り引き継ぐようにします。意味もなくページを削除・URL変更することは、それまで蓄積したSEO評価を手放すことにつながるため、避けるべきとされています。</p></div></div>
   </section>
 
   <div class="wizard-footer">

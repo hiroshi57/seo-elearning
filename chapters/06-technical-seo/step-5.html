@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>テクニカルSEO（クローラの制御：robots.txtとmeta robots） | SEO Eラーニング</title>
+<title>テクニカルSEO（XMLサイトマップとcanonical） | SEO Eラーニング</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -24,18 +24,18 @@
   <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
 
   <div class="wizard-header">
-    <span class="time-badge">🕒 学習目安 約18分</span>
+    <span class="time-badge">🕒 学習目安 約20分</span>
     <h1 class="wizard-header__title">テクニカルSEO</h1>
-    <p class="wizard-header__topics">サイト構造：URL、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS</p>
+    <p class="wizard-header__topics">サイト構造：URL、URLの永続化、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS</p>
     <div class="wizard-progress">
-      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
-      <div class="wizard-progress__count">5 / 8</div>
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">5 / 9</div>
     </div>
   </div>
 
   <section class="section-card">
-    <h2>クローラの制御：robots.txtとmeta robots</h2>
-    <p>クローラー（<mark>bot</mark>）は、サイト内のあらゆるページを無制限にクロールするわけではありません。サイトごとに<mark>クロールバジェット</mark>（クロールに割り当てられる量の目安）が存在するため、価値の低いページのクロールを抑え、重要なページに巡回を集中させる工夫が必要になります。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>bot（クローラー）</strong><br>Webサイトを自動的に巡回するプログラムの総称。GoogleやBingの検索エンジンクローラーのほか、生成AIサービスが使う専用クローラー（OpenAIのGPTBotなど）も含まれます。</p><p style="margin:8px 0 0;"><strong>meta robots</strong><br>HTMLの<code>&lt;head&gt;</code>内に記述し、そのページ単位でクロール・インデックスの可否を指定するタグ。「noindex」（インデックスさせない）や「nofollow」（リンクを辿らせない）などを指定できます。</p><p style="margin:8px 0 0;"><strong>robots.txt</strong><br>サイトのルート直下に置く、サイト全体・ディレクトリ単位でクロールの可否をクローラーに伝えるテキストファイル。</p></div><div class="table-wrap"><table><thead><tr><th>content属性の値</th><th>制御内容</th></tr></thead><tbody><tr><td>noindex</td><td>ページをインデックスさせない</td></tr><tr><td>nofollow</td><td>ページ上のリンクを辿らせない</td></tr><tr><td>none</td><td>noindex, nofollowと同じ意味</td></tr></tbody></table></div><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>meta robotsとrobots.txtは、GoogleのクローラーだけでなくAIbot（生成AIの学習・回答生成用クローラー）にも基本的には有効ですが、<span class="text-danger">すべてのAIbotが指示に従うことを保証するものではありません</span>。機密性の高い情報の保護策としては過信せず、必要に応じてアクセス制限など別の対策も検討することが望ましいとされています。</p></div></div>
+    <h2>XMLサイトマップとcanonical</h2>
+    <p><mark>XMLサイトマップ</mark>は、サイト内のどのページをクロール・インデックスしてほしいかをGoogleに伝えるためのファイルです。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>XMLサイトマップ</strong><br>サイト内のURL一覧をXML形式でまとめたファイル。Search Console（第10章で学びます）を通じてGoogleに送信することで、クロールの手がかりとして活用してもらえます。</p><p style="margin:8px 0 0;"><strong>canonicalタグ（rel=&quot;canonical&quot;）</strong><br>同じ内容、または似た内容のページが複数のURLで存在する場合に、「正規のURLはこちらです」とGoogleに伝えるためのタグ。URLの正規化（重複コンテンツの整理）に使われます。</p></div><p>Google公式のガイドラインでは、XMLサイトマップには<strong>正規URL（canonicalで指定したURL）のみ</strong>を含めることが推奨されています。重複しているURLや、canonicalの指定と矛盾するURLをサイトマップに含めると、Googleに対して矛盾したシグナルを送ることになるためです。</p><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>同じ内容のページが、パラメータ違いなどで複数のURLからアクセスできる状態を放置すると、<strong>重複コンテンツ</strong>として扱われ、評価が分散してしまう可能性があります。canonicalタグやリダイレクトで、優先すべきURLを明示することが重要です。</p></div></div>
   </section>
 
   <div class="wizard-footer">

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>テクニカルSEO（表示速度：Core Web Vitals） | SEO Eラーニング</title>
+<title>テクニカルSEO（クローラの制御：robots.txtとmeta robots） | SEO Eラーニング</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -24,18 +24,18 @@
   <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
 
   <div class="wizard-header">
-    <span class="time-badge">🕒 学習目安 約18分</span>
+    <span class="time-badge">🕒 学習目安 約20分</span>
     <h1 class="wizard-header__title">テクニカルSEO</h1>
-    <p class="wizard-header__topics">サイト構造：URL、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS</p>
+    <p class="wizard-header__topics">サイト構造：URL、URLの永続化、内部リンク、XMLサイトマップ、canonical、クローラの制御、表示速度：Core Web Vitals、セキュリティ：HTTPS</p>
     <div class="wizard-progress">
-      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
-      <div class="wizard-progress__count">6 / 8</div>
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">6 / 9</div>
     </div>
   </div>
 
   <section class="section-card">
-    <h2>表示速度：Core Web Vitals</h2>
-    <p><mark>Core Web Vitals</mark>は、Googleが2020年5月に発表した、Webページのユーザーエクスペリエンス（UX）を評価するための指標群です。読み込み速度・操作の反応性・視覚的な安定性を数値で評価します。</p><p>表示速度は、ブラウザがサーバーへリクエストを送ってから画面に表示されるまでの一連の処理によって決まります。この処理は大きく3つの領域に分けて捉えられます。</p><div class="figure"><div class="figure__frame"><div class="flow"><div class="flow__step"><div class="flow__step-icon">📡</div><div class="flow__step-title">ネットワーク処理</div><div class="flow__step-desc">ブラウザとサーバー間のデータの送受信</div></div><div class="flow__arrow">→</div><div class="flow__step"><div class="flow__step-icon">🖥️</div><div class="flow__step-title">サーバー処理</div><div class="flow__step-desc">リクエストを受けてHTMLを組み立てる</div></div><div class="flow__arrow">→</div><div class="flow__step"><div class="flow__step-icon">🎨</div><div class="flow__step-title">レンダリング処理</div><div class="flow__step-desc">受け取ったデータを画面に描画する</div></div></div></div><div class="figure__caption">図3：表示速度に関わる3つの処理領域</div></div><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>この3領域それぞれに専門的な高速化技術（画像・コードの圧縮、キャッシュの活用、サーバー構成の見直しなど）が存在しますが、実装の詳細はエンジニアリングの領域です。SEO担当者としては、まず次に紹介するCore Web Vitalsの指標で自社サイトの現状を把握し、改善が必要な場合にエンジニアと連携する、という進め方が現実的です。</p></div></div><div class="table-wrap"><table><thead><tr><th>指標</th><th>何を測るか</th><th>良好とされる目安</th></tr></thead><tbody><tr><td><strong>LCP</strong>（Largest Contentful Paint）</td><td>ページ内で最も大きな要素（画像・テキストなど）が表示されるまでの時間</td><td>2.5秒以内</td></tr><tr><td><strong>INP</strong>（Interaction to Next Paint）</td><td>クリック・タップ・キー入力など、ユーザーの操作に対する応答性</td><td>200ミリ秒未満</td></tr><tr><td><strong>CLS</strong>（Cumulative Layout Shift）</td><td>読み込み中に要素が予期せず動く、レイアウトのズレ</td><td>0.1未満</td></tr></tbody></table></div><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>Core Web Vitalsは、Googleが2021年6月から検索のランキングシグナルの一つとして使用しています。指標自体も更新されており、当初採用されていた「FID（初回入力遅延）」は2024年3月に「INP」へと置き換えられました。ただし、Core Web Vitalsのスコアを満点にしたからといって、必ずしも順位が大きく改善するわけではない点には留意が必要です。</p></div></div><p>Google公式の説明によれば、これらの指標は<strong>実際のユーザーの利用データ（フィールドデータ）</strong>をもとに評価され、あるページが「合格」と判定されるには、訪問の75パーセンタイル（多くのユーザー）で良好な体験が実現されている必要があります。</p><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>Google自身も、良好なCore Web Vitalsは<span class="text-primary">ユーザー体験の向上に役立つものであり、コアとなるランキングシステムが評価しようとする方向性とも合致する</span>と説明しています。</p></div></div><p>Core Web Vitalsを測定するツールには、それぞれ異なる特徴があります。</p><div class="table-wrap"><table><thead><tr><th>ツール</th><th>特徴</th></tr></thead><tbody><tr><td><strong>Search Console</strong></td><td>自社の公開ページを対象に、実際のユーザーデータをもとにサイト全体の傾向を把握できる</td></tr><tr><td><strong>PageSpeed Insights</strong></td><td>公開ページのURLを入力するだけで、実ユーザーデータと計測環境データの両方を即座に確認できる</td></tr><tr><td><strong>Lighthouse</strong></td><td>非公開ページも含めて計測でき、開発環境での詳細なデバッグに向いている</td></tr></tbody></table></div>
+    <h2>クローラの制御：robots.txtとmeta robots</h2>
+    <p>クローラー（<mark>bot</mark>）は、サイト内のあらゆるページを無制限にクロールするわけではありません。サイトごとに<mark>クロールバジェット</mark>（クロールに割り当てられる量の目安）が存在するため、価値の低いページのクロールを抑え、重要なページに巡回を集中させる工夫が必要になります。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>bot（クローラー）</strong><br>Webサイトを自動的に巡回するプログラムの総称。GoogleやBingの検索エンジンクローラーのほか、生成AIサービスが使う専用クローラー（OpenAIのGPTBotなど）も含まれます。</p><p style="margin:8px 0 0;"><strong>meta robots</strong><br>HTMLの<code>&lt;head&gt;</code>内に記述し、そのページ単位でクロール・インデックスの可否を指定するタグ。「noindex」（インデックスさせない）や「nofollow」（リンクを辿らせない）などを指定できます。</p><p style="margin:8px 0 0;"><strong>robots.txt</strong><br>サイトのルート直下に置く、サイト全体・ディレクトリ単位でクロールの可否をクローラーに伝えるテキストファイル。</p></div><div class="table-wrap"><table><thead><tr><th>content属性の値</th><th>制御内容</th></tr></thead><tbody><tr><td>noindex</td><td>ページをインデックスさせない</td></tr><tr><td>nofollow</td><td>ページ上のリンクを辿らせない</td></tr><tr><td>none</td><td>noindex, nofollowと同じ意味</td></tr></tbody></table></div><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>meta robotsとrobots.txtは、GoogleのクローラーだけでなくAIbot（生成AIの学習・回答生成用クローラー）にも基本的には有効ですが、<span class="text-danger">すべてのAIbotが指示に従うことを保証するものではありません</span>。機密性の高い情報の保護策としては過信せず、必要に応じてアクセス制限など別の対策も検討することが望ましいとされています。</p></div></div>
   </section>
 
   <div class="wizard-footer">
