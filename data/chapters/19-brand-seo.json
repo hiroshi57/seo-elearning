@@ -4,11 +4,12 @@
   "slug": "19-brand-seo",
   "title": "ブランドSEO",
   "subtitle": "指名検索の重要性、レビュー・SNS・サイテーションがブランドの認識に与える影響、地域ビジネスにおけるローカルSEOを理解する",
-  "topicsLabel": "ブランド：指名検索、レビュー・SNS・サイテーション、ローカルSEO",
-  "estimateMinutes": 14,
+  "topicsLabel": "ブランド：指名検索、被リンク、レビュー・SNS・サイテーション、ローカルSEO",
+  "estimateMinutes": 16,
   "goals": [
     "指名検索とは何かを理解する",
     "指名検索が増えることの意味を理解する",
+    "被リンク（バックリンク）の基本的な考え方とリンクスキームのリスクを理解する",
     "サイテーション（言及）と被リンクの違いを理解する",
     "ローカルSEOの評価指標（関連性・距離・知名度）とGoogleビジネスプロフィールの役割を理解する"
   ],
@@ -18,8 +19,12 @@
       "bodyHtml": "<p><mark>指名検索</mark>とは、企業名やブランド名、商品名など特定の固有名詞で検索されることです。第2章で学んだ検索意図の分類でいえば、多くの場合「Go（行きたい）」クエリに該当します。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>指名検索</strong><br>「〇〇株式会社」「〇〇（商品名）」のように、固有名詞そのものを使って検索されること。すでにその企業・ブランドを知っているユーザーによる検索であるため、認知度の高さを反映する指標の一つと考えられています。</p></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>指名検索が増えることは、<span class=\"text-primary\">単にアクセスが増えるだけでなく、ブランドの認知度が広がっていることの表れ</span>と捉えられます。これはSEOの数値だけで完結するものではなく、広告・PR・SNSなど、さまざまな活動の積み重ねの結果として表れるものです。</p></div></div>"
     },
     {
+      "heading": "被リンク（バックリンク）の基本",
+      "bodyHtml": "<p>サイテーションと対比して理解すべき重要な概念が<mark>被リンク（バックリンク）</mark>です。Googleは創業当初から、被リンクをページの重要性・信頼性を判断する手がかりの一つとして活用してきました。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>被リンク（バックリンク）</strong><br>他サイトから自サイトへ向けて設置された、クリック可能なリンクのこと。Google Search Central（公式ドキュメント）では、被リンクは現在もランキングに関わる重要な要素の一つとして扱われていると説明されています。ただし、リンクの数そのものよりも、<strong>どのような文脈・信頼性を持つサイトからのリンクか</strong>という質が重視されます。</p></div><p>被リンクを増やす方法として、Google公式が推奨しているのは次のような自然な形での獲得です。</p><ul><li>他サイトが思わず紹介・引用したくなるような、独自性の高いコンテンツを作成する</li><li>業界内で信頼される情報・データ・調査結果を発信する</li><li>プレスリリースやニュース性のある情報発信を行う</li></ul><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>Google Search Central（公式ブログ）は、リンクを売買する、リンク交換だけを目的とした提携をする、自動生成されたコンテンツにリンクを埋め込むといった<span class=\"text-danger\">「リンクスキーム」をガイドライン違反として明確に禁止</span>しています。こうした不自然なリンクは、発覚した場合に評価を落とすリスクがあります。</p></div></div><p>次のセクションで学ぶ<strong>サイテーション</strong>は、この被リンクと似て非なる概念です。両者の違いを理解しておくことで、ブランドの露出をどう評価すればよいかが整理しやすくなります。</p>"
+    },
+    {
       "heading": "レビュー・SNS・サイテーション",
-      "bodyHtml": "<p>ブランドに関する情報は、自社サイトの外でも広がっていきます。その中で重要な概念が<mark>サイテーション</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>サイテーション（Citation）</strong><br>Web上で、自社名やブランド名、商品名などが言及されている状態のこと。第6章で学んだ「被リンク（バックリンク）」との決定的な違いは、<strong>クリックできるリンクが付いていなくても成立する</strong>点です。SNSでの言及や、レビューサイトでの評価なども、サイテーションの一種です。</p></div><table><thead><tr><th></th><th>被リンク（バックリンク）</th><th>サイテーション</th></tr></thead><tbody><tr><td>成立条件</td><td>クリック可能なリンクが必要</td><td>リンクがなくても、名前の言及だけで成立</td></tr><tr><td>SEOにおける位置づけ</td><td>Google自身がランキング要因として位置づけている</td><td>ウェブ検索のランキング要因かどうかをGoogleは明確にしていない</td></tr></tbody></table><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>サイテーションがウェブ検索の順位に直接影響するかどうかについて、Googleは明確な見解を示していません。<span class=\"text-danger\">「サイテーションを増やせば必ず順位が上がる」と断定することはできません</span>が、ブランドが多くの場所で言及される状態は、指名検索の増加やユーザーの信頼にはつながりやすいと考えられます。</p></div></div><p>レビューやSNSでの言及は、第7章で学んだE-E-A-T（特に信頼性）にも関わってきます。多くのユーザーから言及・評価されている企業・商品は、第三者による評価という点で、信頼性の材料の一つになりうると考えられます。</p><p>なお、多くのSNS（X、Facebookなど）に投稿されるリンクには、<code>nofollow</code>属性が付与されており、通常の被リンクとしては扱われません。ただし、SNSでの拡散は、他のサイトやメディアから紹介・言及される（サイテーションや被リンクを獲得する）きっかけになりやすいという点で、間接的な意味を持ちます。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>OGP（Open Graph Protocol）</strong><br>SNSでURLが共有された際に表示されるタイトル・説明文・画像を、サイト側で指定できる仕組み。HTMLの<code>&lt;head&gt;</code>内に<code>og:title</code>や<code>og:image</code>などのmetaタグを記述します。OGPを設定していないと、SNS側が自動生成した意図しない表示になることがあります。</p></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>Google公式は2019年9月、nofollowが付いたリンクについて「評価対象から完全に除外するのではなく、あくまで判断材料の一つ（ヒント）として扱う」方針に変更したと発表しています。nofollowが付いていても、文脈によっては評価の手がかりとして参照される場合があるとされています。</p></div></div>"
+      "bodyHtml": "<p>ブランドに関する情報は、自社サイトの外でも広がっていきます。その中で重要な概念が<mark>サイテーション</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>サイテーション（Citation）</strong><br>Web上で、自社名やブランド名、商品名などが言及されている状態のこと。前セクションで学んだ「被リンク（バックリンク）」との決定的な違いは、<strong>クリックできるリンクが付いていなくても成立する</strong>点です。SNSでの言及や、レビューサイトでの評価なども、サイテーションの一種です。</p></div><table><thead><tr><th></th><th>被リンク（バックリンク）</th><th>サイテーション</th></tr></thead><tbody><tr><td>成立条件</td><td>クリック可能なリンクが必要</td><td>リンクがなくても、名前の言及だけで成立</td></tr><tr><td>SEOにおける位置づけ</td><td>Google自身がランキング要因として位置づけている</td><td>ウェブ検索のランキング要因かどうかをGoogleは明確にしていない</td></tr></tbody></table><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>サイテーションがウェブ検索の順位に直接影響するかどうかについて、Googleは明確な見解を示していません。<span class=\"text-danger\">「サイテーションを増やせば必ず順位が上がる」と断定することはできません</span>が、ブランドが多くの場所で言及される状態は、指名検索の増加やユーザーの信頼にはつながりやすいと考えられます。</p></div></div><p>レビューやSNSでの言及は、第7章で学んだE-E-A-T（特に信頼性）にも関わってきます。多くのユーザーから言及・評価されている企業・商品は、第三者による評価という点で、信頼性の材料の一つになりうると考えられます。</p><p>なお、多くのSNS（X、Facebookなど）に投稿されるリンクには、<code>nofollow</code>属性が付与されており、通常の被リンクとしては扱われません。ただし、SNSでの拡散は、他のサイトやメディアから紹介・言及される（サイテーションや被リンクを獲得する）きっかけになりやすいという点で、間接的な意味を持ちます。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>OGP（Open Graph Protocol）</strong><br>SNSでURLが共有された際に表示されるタイトル・説明文・画像を、サイト側で指定できる仕組み。HTMLの<code>&lt;head&gt;</code>内に<code>og:title</code>や<code>og:image</code>などのmetaタグを記述します。OGPを設定していないと、SNS側が自動生成した意図しない表示になることがあります。</p></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>Google公式は2019年9月、nofollowが付いたリンクについて「評価対象から完全に除外するのではなく、あくまで判断材料の一つ（ヒント）として扱う」方針に変更したと発表しています。nofollowが付いていても、文脈によっては評価の手がかりとして参照される場合があるとされています。</p></div></div>"
     },
     {
       "heading": "ローカルSEO：地域ビジネスのブランド接点",
@@ -29,6 +34,7 @@
   "summary": [
     "指名検索とは、企業名やブランド名など固有名詞での検索であり、ブランドの認知度を反映する指標の一つと考えられている",
     "指名検索が増えることは、SEO施策だけでなく広告・PR・SNSなど幅広い活動の結果として表れるものである",
+    "被リンクは他サイトから設置されるリンクで重要なランキング要因の一つだが、リンクの売買など不自然な獲得（リンクスキーム）はガイドライン違反となる",
     "サイテーションはWeb上での名前の言及であり、被リンクと異なりクリック可能なリンクがなくても成立する",
     "Googleはサイテーションをウェブ検索のランキング要因と明確にはしていないが、ブランドへの信頼や指名検索の増加にはつながりやすいと考えられる",
     "SNSのリンクにはnofollowが付与されることが多いが、拡散が他サイトからの言及・被リンクのきっかけになる。Googleは2019年9月からnofollowを完全な除外ではなく判断材料の一つとして扱う方針に変更した",
@@ -67,6 +73,34 @@
       "id": "q3",
       "type": "single",
       "sectionIndex": 1,
+      "question": "被リンク（バックリンク）の説明として、最も適切なものはどれか。",
+      "options": [
+        "他サイトから自サイトへ向けて設置された、クリック可能なリンクのこと",
+        "サイト内の異なるページ同士をつなぐリンクのこと",
+        "リンクがなくても名前が言及されているだけの状態のこと",
+        "検索結果の広告枠に表示されるリンクのこと"
+      ],
+      "correct": [0],
+      "explain": "被リンク（バックリンク）とは、他サイトから自サイトへ向けて設置された、クリック可能なリンクのことです。"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "Google公式が「リンクスキーム」としてガイドライン違反にあたるとしている行為はどれか。",
+      "options": [
+        "独自性の高いコンテンツを作成し、自然に引用・紹介されること",
+        "リンクを売買したり、リンク交換だけを目的とした提携をすること",
+        "業界内で信頼される調査データを発信すること",
+        "プレスリリースでニュース性のある情報を発信すること"
+      ],
+      "correct": [1],
+      "explain": "Google公式は、リンクの売買やリンク交換だけを目的とした提携を「リンクスキーム」としてガイドライン違反に定めています。独自性の高いコンテンツによる自然な被リンク獲得が推奨されています。"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "sectionIndex": 2,
       "question": "サイテーションと被リンクの違いとして、最も適切なものはどれか。",
       "options": [
         "サイテーションと被リンクは全く同じものである",
@@ -78,9 +112,9 @@
       "explain": "サイテーションは、クリック可能なリンクが付いていなくても、名前の言及だけで成立する点が被リンクとの決定的な違いです。"
     },
     {
-      "id": "q4",
+      "id": "q6",
       "type": "single",
-      "sectionIndex": 1,
+      "sectionIndex": 2,
       "question": "サイテーションとウェブ検索のランキングの関係について、最も適切な説明はどれか。",
       "options": [
         "Googleはサイテーションをウェブ検索の正式なランキング要因であると明確に公言している",
@@ -92,9 +126,9 @@
       "explain": "Googleは被リンクをランキング要因として位置づけていますが、サイテーションについてはウェブ検索のランキング要因であると明確にはしていません。"
     },
     {
-      "id": "q5",
+      "id": "q7",
       "type": "single",
-      "sectionIndex": 1,
+      "sectionIndex": 2,
       "question": "レビューやSNSでの言及とE-E-A-Tの関係についての説明として、最も適切なものはどれか。",
       "options": [
         "レビューやSNSでの言及は、E-E-A-Tとは一切関係がない",
@@ -106,9 +140,9 @@
       "explain": "多くのユーザーから言及・評価されている企業・商品は、第三者による評価という点で、E-E-A-Tの信頼性の材料の一つになりうると考えられます。"
     },
     {
-      "id": "q5b",
+      "id": "q8",
       "type": "single",
-      "sectionIndex": 1,
+      "sectionIndex": 2,
       "question": "OGP（Open Graph Protocol）の役割として、最も適切なものはどれか。",
       "options": [
         "サイトの表示速度を向上させる技術",
@@ -120,9 +154,9 @@
       "explain": "OGPは、SNSでURLが共有された際に表示されるタイトル・説明文・画像などを、サイト側のmetaタグで指定できる仕組みです。"
     },
     {
-      "id": "q6",
+      "id": "q9",
       "type": "multi",
-      "sectionIndex": 2,
+      "sectionIndex": 3,
       "question": "Googleがローカル検索の評価要素として公式に挙げている3つとして、正しいものをすべて選べ。",
       "options": [
         "関連性（Relevance）",
@@ -134,9 +168,9 @@
       "explain": "Googleはローカル検索の評価要素として、関連性・距離・知名度の3つを公式に挙げています。従業員数は評価要素ではありません。"
     },
     {
-      "id": "q7",
+      "id": "q10",
       "type": "single",
-      "sectionIndex": 2,
+      "sectionIndex": 3,
       "question": "「MEO」という言葉についての説明として、最も適切なものはどれか。",
       "options": [
         "Google公式が定めた正式な専門用語である",
