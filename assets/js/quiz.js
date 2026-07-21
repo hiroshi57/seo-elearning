@@ -29,8 +29,10 @@
     }
 
     const answers = {}; // { questionId: [selectedIndices] }
-    const gradeBtn = root.querySelector("[data-quiz-grade]");
-    const unansweredNote = root.querySelector("[data-quiz-unanswered-note]");
+    // 採点ボタン・未回答メッセージはbuild.js側でroot（section.section-card）の外、
+    // .wizard-footer内に配置されるため、root起点ではなくdocument起点で取得する。
+    const gradeBtn = document.querySelector("[data-quiz-grade]");
+    const unansweredNote = document.querySelector("[data-quiz-unanswered-note]");
 
     function updateUnansweredBadge(q, itemEl) {
       const answered = answers[q.id] && answers[q.id].length > 0;
