@@ -36,7 +36,7 @@
   ],
   "quiz": [
     {
-      "id": "q0",
+      "id": "q1",
       "type": "single",
       "sectionIndex": 0,
       "question": "Googleの検索品質評価ガイドラインが示す、ページ評価の2つの軸として、最も適切な組み合わせはどれか。",
@@ -50,7 +50,7 @@
       "explain": "検索品質評価ガイドラインでは、ページの評価をPage Quality評価（ページ自体の品質）とNeeds Met評価（検索意図との一致度）の2軸で捉えています。E-E-A-Tは、このうちPage Quality評価の中心的な考え方です。"
     },
     {
-      "id": "q1",
+      "id": "q2",
       "type": "multi",
       "sectionIndex": 1,
       "question": "E-E-A-Tを構成する要素として、正しいものをすべて選べ。",
@@ -64,7 +64,7 @@
       "explain": "E-E-A-Tは Experience（経験）・Expertise（専門性）・Authoritativeness（権威性）・Trust（信頼性）の4要素から構成されます。Efficiency（効率性）は含まれません。"
     },
     {
-      "id": "q2",
+      "id": "q3",
       "type": "single",
       "sectionIndex": 1,
       "question": "E-E-A-TのExperience（経験）が示す内容として、最も適切なものはどれか。",
@@ -78,7 +78,7 @@
       "explain": "Experience（経験）は、実際にその物事を経験した人物による情報かどうかを示す要素です。"
     },
     {
-      "id": "q3",
+      "id": "q4",
       "type": "single",
       "sectionIndex": 2,
       "question": "E-E-A-Tの4要素の関係性についての説明として、最も適切なものはどれか。",
@@ -92,7 +92,7 @@
       "explain": "信頼性（Trust）は他の3要素を支える中心的な位置づけにあり、経験・専門性・権威性が高くても信頼性が欠けるとE-E-A-T全体の評価は低くなるとされています。"
     },
     {
-      "id": "q4",
+      "id": "q5",
       "type": "single",
       "sectionIndex": 2,
       "question": "YMYL（Your Money or Your Life）の説明として、最も適切なものはどれか。",
@@ -106,7 +106,7 @@
       "explain": "YMYLは「Your Money or Your Life」の略で、お金・健康・安全・幸福など、人の生活に直接影響する可能性がある領域を指すGoogleの用語です。"
     },
     {
-      "id": "q5",
+      "id": "q6",
       "type": "single",
       "sectionIndex": 2,
       "question": "YMYL領域でE-E-A-Tが特に重視される理由として、最も適切なものはどれか。",
