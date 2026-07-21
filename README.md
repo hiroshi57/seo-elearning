@@ -8,25 +8,37 @@ SEO（検索エンジン最適化）を基礎からAI検索時代の実践まで
 - **実践編**（第8〜13章）: GA4、Search Console、KPI分析、改善実践
 - **AI時代編**（第14〜19章）: AI Overview/AI Mode、LLMO、エンティティSEO、構造化データ、ブランドSEO
 
-各章は「この章で学べること」「本文解説」「確認テスト（4択・80%合格基準）」の3構成。
+各章は「フェーズトップ（Moduleタイムライン）」→「章内ステップウィザード（学ぶこと→本文セクション→まとめ）」→「確認テスト（5問・80%合格基準）」→「採点結果ページ」の構成。
 
 ## 技術構成
 
-- 静的サイト（HTML / CSS / Vanilla JS、ビルド不要）
-- `assets/css/style.css`: 共通スタイル（強調表現・図解・確認テストUIなど）
-- `assets/js/quiz.js`: 確認テストの採点ロジック（localStorageに結果保存）
+- 静的サイト（HTML / CSS / Vanilla JS、ビルド不要で閲覧可）
+- `data/curriculum.json`: 全19章・3フェーズのカリキュラム定義
+- `data/chapters/*.json`: 各章のコンテンツ本体（goals/sections/summary/quiz）。編集の単一ソース
+- `scripts/build.js`: `data/`のJSONから`phases/`・`chapters/`配下のHTMLを自動生成するビルドスクリプト（`node scripts/build.js`で再生成）
+- `assets/css/style.css`: 共通スタイル（グラデーションCTA・タイムライン・ウィザード進捗バー・採点結果画面など）
+- `assets/js/quiz.js`: 確認テスト回答画面のロジック（回答収集、sessionStorageへの一時保存）
+- `assets/js/result.js`: 採点結果ページのロジック（採点・正誤解説・localStorageへの進捗保存）
 - `assets/js/progress.js`: コース全体の進捗表示
-- `data/curriculum.json`: 全19章のカリキュラム定義
+
+コンテンツを修正する場合は `data/chapters/*.json` を編集し、`node scripts/build.js` で全HTMLを再生成する。HTMLを直接編集しない。
 
 ## ローカルでの閲覧方法
 
-`index.html` をブラウザで直接開くか、ローカルサーバーを起動してください。
-
-```
+```bash
 npx serve .
 ```
 
+## デプロイ
+
+GitHub（Private）→ Vercel（Public URL: https://seo-elearning.vercel.app）。
+コンテンツ更新後は `node scripts/build.js` → `git add -A && git commit` → `git push` → `npx vercel --prod --yes` の順で反映する。
+
 ## 開発状況
 
-- [x] 第1章「SEO概要」サンプル作成
-- [ ] 第2〜19章 作成中
+- [x] 全19章のコンテンツ作成・ビルド・デプロイ完了
+- [ ] 1. README.mdの更新（本更新で対応中）
+- [ ] 2. 添付予定のPDF書籍の内容を該当章に反映（PDF未着手・未着）
+- [ ] 3. 全19章を通しての最終レビュー（内容の一貫性・レベル感統一・誤字脱字）
+- [ ] 4. ビジュアル面の追加（散布図など、キーワード戦略・エンティティSEO等への図解追加）
+- [ ] 5. 確認テストのブラウザ実機動作確認（全19章分、正解・不正解パターンの通し確認）
