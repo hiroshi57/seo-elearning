@@ -27,14 +27,15 @@
     },
     {
       "heading": "FAQ（よくある質問）の活用",
-      "bodyHtml": "<p><mark>FAQ（よくある質問）</mark>コンテンツは、ユーザーの疑問に直接答える形式のため、検索意図に応えやすいコンテンツ形式の一つです。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>FAQを作る際は、実際にユーザーがどんな疑問を持っているかを調べることが出発点になります。検索エンジンのサジェスト機能や、関連する質問の一覧、Search Console（第10・11章で学びます）で確認できる実際の検索クエリなどが手がかりになります。</p></div></div><ul><li><strong>ユーザーの自己解決を助ける：</strong>疑問がその場で解消されることで、サイトへの満足度や信頼につながる</li><li><strong>ロングテールキーワードに対応しやすい：</strong>「〇〇 とは」「〇〇 いくら」のような、具体的な疑問形のキーワードを自然にカバーできる</li></ul><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>FAQには専用の構造化データ（マークアップ）を付与できる場合があり、検索結果でリッチリザルトとして表示されることもあります。構造化データの具体的な実装方法は、第18章「構造化データ」で扱います。</p></div></div>"
+      "bodyHtml": "<p><mark>FAQ（よくある質問）</mark>コンテンツは、ユーザーの疑問に直接答える形式のため、検索意図に応えやすいコンテンツ形式の一つです。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>FAQを作る際は、実際にユーザーがどんな疑問を持っているかを調べることが出発点になります。検索エンジンのサジェスト機能や、関連する質問の一覧、Search Console（第10・11章で学びます）で確認できる実際の検索クエリなどが手がかりになります。</p></div></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>PAA（People Also Ask）</strong><br>Googleの検索結果に「他の人はこちらも質問」として表示される、関連する質問の一覧。ユーザーが同じテーマで抱きやすい疑問を反映しているため、FAQコンテンツを作成する際に、どのような質問を盛り込むべきかを知る手がかりになります。</p></div><ul><li><strong>ユーザーの自己解決を助ける：</strong>疑問がその場で解消されることで、サイトへの満足度や信頼につながる</li><li><strong>ロングテールキーワードに対応しやすい：</strong>「〇〇 とは」「〇〇 いくら」のような、具体的な疑問形のキーワードを自然にカバーできる</li></ul><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>FAQには専用の構造化データ（マークアップ）を付与できる場合があり、検索結果でリッチリザルトとして表示されることもあります。構造化データの具体的な実装方法は、第18章「構造化データ」で扱います。</p></div></div>"
     }
   ],
   "summary": [
     "タイトルタグはページの内容と一致させ、対策キーワードを含め、サイト内で重複させないことが基本",
     "見出し（h1→h2→h3）は階層構造を保ち、見出しだけで記事の流れが分かるように設計する",
     "内部リンクは具体的なアンカーテキストで、関連性の高いページ同士をつなぐことが基本",
-    "FAQコンテンツはユーザーの疑問に直接答え、ロングテールキーワードへの対応にも役立つ"
+    "FAQコンテンツはユーザーの疑問に直接答え、ロングテールキーワードへの対応にも役立つ",
+    "PAA（People Also Ask）は検索結果に表示される関連質問の一覧で、FAQに盛り込むべき質問を知る手がかりになる"
   ],
   "quiz": [
     {
@@ -106,6 +107,20 @@
       ],
       "correct": [0],
       "explain": "FAQはユーザーの疑問に直接答える形式のため検索意図に応えやすく、具体的な疑問形のロングテールキーワードにも対応しやすいコンテンツ形式です。"
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "sectionIndex": 3,
+      "question": "PAA（People Also Ask）の説明として、最も適切なものはどれか。",
+      "options": [
+        "Googleの検索結果に「他の人はこちらも質問」として表示される、関連する質問の一覧",
+        "サイトの表示速度を測定するGoogleのツール",
+        "有料広告の入札額を決めるGoogleの機能",
+        "ページの構造化データを検証するツール"
+      ],
+      "correct": [0],
+      "explain": "PAAは検索結果に表示される「他の人はこちらも質問」という関連質問の一覧で、FAQコンテンツにどのような質問を盛り込むべきかを知る手がかりになります。"
     }
   ]
 }
