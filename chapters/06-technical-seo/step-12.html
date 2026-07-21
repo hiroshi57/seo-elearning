@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テクニカルSEO（表示速度の基本：Webページが表示されるまで） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約55分</span>
+    <h1 class="wizard-header__title">テクニカルSEO</h1>
+    <p class="wizard-header__topics">基礎：HTML構造、1URL1コンテンツ、サイト構造：URL設計、内部リンク、クロール制御：robots.txt、サイトマップ、エラー・スパム対応、表示速度：ネットワーク／レンダリング／サーバー、Core Web Vitals、測定ツール、HTTPS</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">12 / 18</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>表示速度の基本：Webページが表示されるまで</h2>
+    <p><mark>Core Web Vitals</mark>は、Googleが2020年5月に発表した、Webページのユーザーエクスペリエンス（UX）を評価するための指標群です。詳しくは後述しますが、まずはその土台となる「表示速度がなぜ重要か」「表示までにどんな処理が起きているか」を理解しましょう。</p><p>表示速度がビジネスに与える影響は、さまざまな調査で報告されています。例えば、表示に3秒以上かかると過半数のユーザーが離脱する、表示が1秒遅れるごとにコンバージョン率が最大20%減少するといった傾向が知られています。</p><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>読み込みが1秒から3秒に伸びると直帰率は約32%上昇し、1秒から10秒まで伸びると123%上昇するという調査結果も報告されています。表示速度は、単なる技術指標ではなく、<span class="text-primary">売上やコンバージョンに直結するビジネス指標</span>として捉えることが重要です。</p></div></div><p>ブラウザがURLをリクエストしてから画面に表示されるまでの流れは、大きく3つの処理領域に分けて捉えられます。</p><div class="figure"><div class="figure__frame"><div class="flow"><div class="flow__step"><div class="flow__step-icon">📡</div><div class="flow__step-title">ネットワーク処理</div><div class="flow__step-desc">ブラウザとサーバー間のデータの送受信</div></div><div class="flow__arrow">→</div><div class="flow__step"><div class="flow__step-icon">🖥️</div><div class="flow__step-title">サーバー処理</div><div class="flow__step-desc">リクエストを受けてHTMLを組み立てる</div></div><div class="flow__arrow">→</div><div class="flow__step"><div class="flow__step-icon">🎨</div><div class="flow__step-title">レンダリング処理</div><div class="flow__step-desc">受け取ったデータを画面に描画する</div></div></div></div><div class="figure__caption">図1：表示速度に関わる3つの処理領域</div></div><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>TTFB（Time To First Byte）</strong><br>ブラウザがサーバーにリクエストを送ってから、最初の1バイトが返ってくるまでの時間。Googleは200ミリ秒以内に収めることを推奨しています。この後、ブラウザはHTMLを解析し、CSSや画像など必要なファイルを追加でリクエストし、すべて揃った時点でページを画面に組み立てて表示します。</p></div><p>ブラウザは受け取ったHTMLを解析し、<code>&lt;title&gt;</code>や<code>&lt;p&gt;</code>のようにHTML内に直接書かれた情報はそのまま処理する一方、<code>&lt;link&gt;</code>（CSS）、<code>&lt;script&gt;</code>（JavaScript）、<code>&lt;img&gt;</code>（画像）のように外部データを参照する要素に出会うたびに、追加のリクエストをサーバーへ送ります。この一連の流れのどこにボトルネックがあるかを見極めることが、高速化の出発点です。</p><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>3領域それぞれに専門的な高速化技術（画像・コードの圧縮、キャッシュの活用、サーバー構成の見直しなど）が存在します。実装の詳細はエンジニアリングの領域ですが、次のセクションでは、SEO担当者がエンジニアと技術的な会話ができるレベルを目安に、代表的な高速化手法を掘り下げて解説します。難易度はやや上がりますが、要件定義や課題の切り分けに役立つ知識です。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-11.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-13.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

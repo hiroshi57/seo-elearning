@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テクニカルSEO（Core Web Vitals：LCP・INP・CLSを深く理解する） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約55分</span>
+    <h1 class="wizard-header__title">テクニカルSEO</h1>
+    <p class="wizard-header__topics">基礎：HTML構造、1URL1コンテンツ、サイト構造：URL設計、内部リンク、クロール制御：robots.txt、サイトマップ、エラー・スパム対応、表示速度：ネットワーク／レンダリング／サーバー、Core Web Vitals、測定ツール、HTTPS</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">15 / 18</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>Core Web Vitals：LCP・INP・CLSを深く理解する</h2>
+    <p><mark>Core Web Vitals</mark>は、Googleが2020年5月に発表した、Webページのユーザーエクスペリエンス（UX）を評価するための指標群です。読み込み速度・操作の反応性・視覚的な安定性を、専門知識がなくても扱えるようスコア化したものです。</p><div class="table-wrap"><table><thead><tr><th>指標</th><th>何を測るか</th><th>良好とされる目安</th></tr></thead><tbody><tr><td><strong>LCP</strong>（Largest Contentful Paint）</td><td>ページ内で最も大きな要素（画像・テキストなど）が表示されるまでの時間</td><td>2.5秒以内</td></tr><tr><td><strong>INP</strong>（Interaction to Next Paint）</td><td>クリック・タップ・キー入力など、ユーザーの操作に対する応答性</td><td>200ミリ秒未満</td></tr><tr><td><strong>CLS</strong>（Cumulative Layout Shift）</td><td>読み込み中に要素が予期せず動く、レイアウトのズレ</td><td>0.1未満</td></tr></tbody></table></div><p>Google公式の説明によれば、これらの指標は<strong>実際のユーザーの利用データ（フィールドデータ）</strong>をもとに評価され、あるページが「合格」と判定されるには、訪問の75パーセンタイル（多くのユーザー）で良好な体験が実現されている必要があります。Core Web Vitalsは2021年6月からランキングシグナルとして使用されていますが、当初の指標「FID（初回入力遅延）」は2024年3月に「INP」へ置き換えられるなど、指標自体も更新され続けています。</p><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>Google自身も、良好なCore Web Vitalsは<span class="text-primary">ユーザー体験の向上に役立つものであり、コアとなるランキングシステムが評価しようとする方向性とも合致する</span>と説明しています。ただし、<span class="text-primary">関連性の高い優れたコンテンツに、優れたページエクスペリエンスが勝ることはない</span>ともGoogleは明言しており、コンテンツの質がまだ磨けていない段階では、Core Web Vitalsの改善よりコンテンツの質向上を優先すべきとされています。楽天やYahoo!ニュースなど、Core Web Vitals改善が収益向上につながった事例も報告されています。</p></div></div><p><strong>LCP</strong>は、ビューポート内で最も大きい画像・動画・背景画像・テキストブロックなどが表示されるまでの時間です。LCPは4つの構成要素（サブパート）に分解でき、それぞれ目安となる時間配分が示されています。</p><div class="table-wrap"><table><thead><tr><th>LCPの構成要素</th><th>内容</th><th>目安の割合</th></tr></thead><tbody><tr><td>TTFB</td><td>リクエストから最初のバイトが届くまで</td><td>約40%</td></tr><tr><td>リソース読み込みの遅延</td><td>LCP要素の読み込みが始まるまでの遅延</td><td>10%未満</td></tr><tr><td>リソースの読み込み時間</td><td>LCP要素そのものの読み込みにかかる時間</td><td>約40%</td></tr><tr><td>要素のレンダリング遅延</td><td>読み込み完了から画面に描画されるまで</td><td>10%未満</td></tr></tbody></table></div><p>代表的な改善策には、LCP要素をJavaScriptで動的に追加せず初期HTMLに含める、画像に<code>fetchpriority="high"</code>を付与する、レンダリングを妨げるCSSを削減・インライン化する、といった方法があります。</p><p><strong>INP</strong>は、ページ滞在中に行われたすべてのクリック・タップ・キー入力のうち、最も応答が遅かったものを評価する指標です（ホバーやスクロールは対象外）。旧指標のFIDが「最初の操作」だけを測っていたのに対し、INPは<strong>滞在中のすべての操作</strong>を評価するため、より実態に近いUX評価ができるとされています。</p><div class="table-wrap"><table><thead><tr><th>INPの構成要素</th><th>内容</th></tr></thead><tbody><tr><td>入力遅延</td><td>操作からブラウザが処理を開始するまでの時間。他の重い処理でメインスレッドが塞がれていると悪化する</td></tr><tr><td>処理期間</td><td>イベントコールバック（操作に応じて実行されるJavaScript）の実行時間。INP全体の約40%を占めるとされる</td></tr><tr><td>表示の遅延</td><td>処理完了後、実際に画面が新しい表示に切り替わるまでの時間</td></tr></tbody></table></div><p>INPの改善策としては、不要なJavaScriptの削減、重い処理を細かいタスクに分割する（<code>setTimeout</code>・<code>scheduler.yield()</code>・<code>requestIdleCallback</code>などを利用）、DOM操作を伴わない処理をWeb Workerに逃がす、DOMツリーを小さく保つ（Lighthouseはbody内ノード数が800を超えると警告）といった方法が挙げられます。タグマネージャー（GTM）が肥大化しているケースも、INP悪化の原因になりやすいため、不要なタグの棚卸しが有効です。</p><p><strong>CLS</strong>は、読み込み中に要素が予期せず動く「レイアウトシフト」の合計をスコア化した指標です。CLSスコアは次の計算式で求められます。</p><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>CLSスコア＝「インパクトの割合」（画面のうち動いた範囲の割合）×「距離の割合」（要素が移動した距離の割合）。例えば、画面の50%を占める要素が画面高さの14%分movementした場合、0.5×0.14＝0.07がそのシフトのスコアになります。値が大きいほど、視覚的な安定性が損なわれていることを意味します。</p></div></div><p>CLSは他の2指標に比べて原因が特定しやすく、改善もしやすい指標とされています。代表的な原因と対策は次の通りです。</p><div class="table-wrap"><table><thead><tr><th>よくある原因</th><th>改善策</th></tr></thead><tbody><tr><td>画像・動画の高さ未指定</td><td><code>width</code>・<code>height</code>属性、またはCSSの<code>aspect-ratio</code>で領域を確保する</td></tr><tr><td>サイズ可変の広告枠</td><td>広告コンテナに<code>min-height</code>などでサイズを明示する</td></tr><tr><td>アニメーションによる要素移動</td><td>レイアウトに影響する<code>margin</code>等ではなく、<code>transform</code>・<code>opacity</code>を使う</td></tr><tr><td>Webフォントの読み込み時のサイズ差（FOUT/FOIT）</td><td>類似のフォールバックフォントを指定する、<code>&lt;link rel="preload"&gt;</code>で先読みする</td></tr></tbody></table></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-14.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-16.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

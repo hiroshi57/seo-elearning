@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>構造化データ（実践：Product・Article・FAQの実装） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/ai/index.html" class="breadcrumb-back">← 構造化データ</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約24分</span>
+    <h1 class="wizard-header__title">構造化データ</h1>
+    <p class="wizard-header__topics">基本：構造化タグと構造化マークアップの違い、実践：JSON-LDによるOrganization・WebSite・Breadcrumb・Product・Article等の実装、検証ツール</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">8 / 10</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>実践：Product・Article・FAQの実装</h2>
+    <p><strong>商品・クチコミ情報（Product / AggregateRating）</strong></p><p>商品名・画像・価格などを構造化マークアップすると、検索結果に評価や価格帯が表示されることがあります。商品情報には<code>Product</code>タイプ、口コミの集計には<code>AggregateRating</code>タイプを使用します。</p><div class="table-wrap"><table><thead><tr><th>コード例：Product（JSON-LD、一部抜粋）</th></tr></thead><tbody><tr><td><pre style="white-space:pre-wrap; margin:0; font-size:0.82rem;">{
+  "@type": "Product",
+  "name": "商品名",
+  "image": ["https://example.com/img1.png"],
+  "description": "商品の説明文",
+  "sku": "item-001",
+  "brand": { "@type": "Brand", "name": "ブランド名" },
+  "offers": {
+    "@type": "Offer",
+    "price": "8000",
+    "priceCurrency": "JPY",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": "144",
+    "ratingValue": "4.5"
+  }
+}</pre></td></tr></tbody></table></div><p>価格が幅を持つ場合は、<code>Offer</code>の代わりに<code>AggregateOffer</code>を使い、<code>lowPrice</code>・<code>highPrice</code>で価格帯を表現できます。</p><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>クチコミ情報の構造化マークアップには注意点があります。<span class="text-danger">評価対象となる商品・店舗の構造化マークアップと1対1で記載すること、カテゴリ単位ではなく特定の製品・サービスを対象とすること、マークアップした評価は必ずページ本文にも表示すること</span>が求められます。ページに表示されていないクチコミ評価をマークアップすると、検索エンジンに無視されたり、スパムと判断される可能性があります。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-7.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-9.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

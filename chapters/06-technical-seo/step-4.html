@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テクニカルSEO（HTMLの基本構造と検索エンジンへの伝え方） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約55分</span>
+    <h1 class="wizard-header__title">テクニカルSEO</h1>
+    <p class="wizard-header__topics">基礎：HTML構造、1URL1コンテンツ、サイト構造：URL設計、内部リンク、クロール制御：robots.txt、サイトマップ、エラー・スパム対応、表示速度：ネットワーク／レンダリング／サーバー、Core Web Vitals、測定ツール、HTTPS</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">4 / 18</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>HTMLの基本構造と検索エンジンへの伝え方</h2>
+    <p>SEOの内部施策で土台となるのが「検索エンジンに情報を適切に伝える」ことです。これを実現するには、<mark>HTML（Hyper Text Markup Language）</mark>の基礎知識が欠かせません。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>HTML Living Standard</strong><br>Webページを記述するマークアップ言語の現行標準規格。策定団体WHATWGにより「生きた仕様」として継続的に更新されています。かつて標準化を担っていたW3CのHTML関連仕様（XHTML・HTML5など）は2021年1月にすべて廃止され、現在はHTML Living Standardに一本化されています。</p></div><p>HTMLファイルは、大きく分けると<strong>DOCTYPE宣言</strong>・<strong>head要素</strong>・<strong>body要素</strong>の3つで構成されます。書籍にたとえると、head要素は「表紙」、body要素は「本の中身」に相当します。head要素には、ユーザーには見えないものの検索エンジンがページ内容を理解する手がかりになる情報が多く含まれます。</p><div class="table-wrap"><table><thead><tr><th>要素</th><th>役割</th><th>SEO上のポイント</th></tr></thead><tbody><tr><td><code>&lt;title&gt;</code></td><td>ページタイトルを指定する。検索結果のリンクテキストやブラウザのタイトルバーに使われる</td><td>ページ内容を端的に表し、全角30文字程度に収め、サイト内でユニークにする</td></tr><tr><td><code>&lt;meta name="description"&gt;</code></td><td>ページ内容の要約。検索結果のスニペット（説明文）に使われることがある</td><td>検索キーワードを含め、90文字程度に収め、ページごとにユニークにする</td></tr><tr><td><code>&lt;meta name="keywords"&gt;</code></td><td>ページの主要キーワードをカンマ区切りで指定する</td><td>現在は検索順位に直接影響しないとされるが、乱用は評価を下げる要因になり得る</td></tr><tr><td><code>&lt;h1&gt;〜&lt;h6&gt;</code></td><td>見出し。文章の階層構造を表す</td><td>階層（<code>h1</code>→<code>h2</code>→<code>h3</code>…）を飛ばさず、装飾目的で使わない</td></tr><tr><td><code>&lt;a&gt;</code></td><td>他ページへのリンク（アンカー）を設置する</td><td>アンカーテキストはリンク先の内容を想起できる文言にする</td></tr><tr><td><code>&lt;img&gt;</code>のalt属性</td><td>画像の代替テキスト。画像が表示できない場合やスクリーンリーダーで使われる</td><td>画像の内容を具体的に記述し、装飾目的の画像は空でよい</td></tr></tbody></table></div><p><strong>title要素</strong>は「本のタイトル」に相当する最重要要素です。検索キーワードによっては検索エンジン側で表示テキストが調整されることもありますが、ページ内容を端的に表す独自のタイトルを付けることが基本です。</p><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>title・descriptionともに、文字数の上限は正確には決まっておらず、Googleは文字数ではなくピクセル幅で表示可否を判断しています。目安としてtitleは全角30文字程度、descriptionは90文字程度に収めると、検索結果で末尾が省略されにくくなります。</p></div></div><p><strong>h要素（見出し）</strong>は、<code>&lt;h1&gt;</code>が最上位で<code>&lt;h6&gt;</code>まで6段階あり、文章の階層構造を表します。Googleは見出しの数や順序が多少崩れていても大きな問題にはならないと説明していますが、次の点には注意しましょう。</p><ul><li>階層構造を守る（<code>h2</code>の前に<code>h3</code>が来る、などを避ける）</li><li>見出しを多用しすぎない（段落のまとまりを意識する）</li><li><code>h1</code>はページごとにユニークな内容にする（ロゴ画像の使い回しなどは避ける）</li><li>フォントサイズや太さを変えたいだけの目的で使わない（デザインはCSSで行う）</li></ul><p><strong>a要素（アンカーテキスト）</strong>は、ユーザーや検索エンジンにリンク先の内容を伝える役割を持ちます。「こちら」「詳細へ」のような抽象的な文言や、URLそのものをアンカーテキストにするのではなく、リンク先の内容を想起できる具体的な文言が推奨されます。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>alt属性</strong><br>画像が表示されない場合の代替テキストとして定義されている&lt;img&gt;タグの属性。スクリーンリーダーの読み上げにも使われます。検索エンジンも画像内容を理解する手がかりとしてalt属性を利用しており、画像掲載ページのtitle・meta要素、画像周辺のテキスト、リンクのアンカーテキスト、画像ファイル名なども合わせて画像の意味を判断しています。</p></div><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>alt属性やアンカーテキストにキーワードを大量に詰め込むと、<span class="text-danger">検索結果を不正操作するスパム行為</span>と判断される可能性があります（詳しくは「エラー対応とスパムへの対策」で解説します）。あくまで内容を的確に説明することを目的に記述しましょう。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-3.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-5.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

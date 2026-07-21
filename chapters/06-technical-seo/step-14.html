@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テクニカルSEO（キャッシュ活用とサーバー処理） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約55分</span>
+    <h1 class="wizard-header__title">テクニカルSEO</h1>
+    <p class="wizard-header__topics">基礎：HTML構造、1URL1コンテンツ、サイト構造：URL設計、内部リンク、クロール制御：robots.txt、サイトマップ、エラー・スパム対応、表示速度：ネットワーク／レンダリング／サーバー、Core Web Vitals、測定ツール、HTTPS</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">14 / 18</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>キャッシュ活用とサーバー処理</h2>
+    <p>基本的な高速化に続いて、それを補完・省略しながら表示を高速化する技術として<mark>キャッシュ</mark>と、SEO担当者が概要を知っておくべき<mark>サーバー処理</mark>の高速化を扱います。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>キャッシュ</strong><br>過去に利用したデータを一定期間保存し、再利用する仕組み。フランス語のcaché（隠された）が語源です。保存場所によって「ブラウザキャッシュ」（ユーザーの端末に保存）と「サーバーキャッシュ」（サーバー側に保存）の2種類に分けられます。</p></div><p>ブラウザキャッシュは、サーバー側でファイル形式ごとにキャッシュの保持期間を指定して有効化します。Googleは、キャッシュ期間を少なくとも1週間、更新頻度の低い静的ファイルは最大1年間にすることを推奨しています。</p><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>更新頻度の高いファイルに長いキャッシュ期間を設定すると、<span class="text-danger">ユーザーに古い内容が表示され続けるリスク</span>があります。この問題を避けるには、ファイル更新のたびにファイル名にハッシュ値（フィンガープリント）を埋め込み、ファイル名が変わることでキャッシュを強制的に更新させる方法が一般的です（例：<code>style.css</code>→<code>style-28f2c4….css</code>）。</p></div></div><p>ブラウザが必要なリソースを検知する前に先読みしておく仕組みとして、<strong>Resource Hints</strong>があります。</p><div class="table-wrap"><table><thead><tr><th>種類</th><th>処理内容</th></tr></thead><tbody><tr><td>dns-prefetch</td><td>ドメイン名からIPアドレスを割り出すDNSルックアップだけを事前に行う</td></tr><tr><td>preconnect</td><td>DNSルックアップに加え、TCP接続まで事前に行う</td></tr><tr><td>prefetch</td><td>画像やJavaScriptなど、特定リソースを事前にダウンロードする</td></tr><tr><td>prerender</td><td>次に遷移する可能性の高いページをレンダリングまで事前に行う（1ページのみ指定可、負荷が高いため利用は慎重に）</td></tr></tbody></table></div><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>prerenderは非推奨の方向にあり、後継としてページ内にJSON形式でルールを記述する「Speculation Rules API」への移行が進んでいます（2025年時点ではGoogle Chromeが先行対応）。dns-prefetchは負荷が非常に軽く、外部ドメインへのリンクが多いページでは積極的に活用しやすい施策です。</p></div></div><p>Googleは「PageSpeed Module」というHTTPソフトウェア用の拡張モジュールも提供しており、ファイルの結合・圧縮・画像最適化・キャッシュ活用などをまとめて自動化できます。ただし初回レスポンス時にサーバーのCPU・メモリを消費するため、低スペックなサーバーでは逆効果になる場合もあります。</p><p>最後に<strong>サーバー処理の高速化</strong>です。サーバー処理はプログラミングやデータベースの専門知識が求められる領域ですが、概要を理解しておくとエンジニアとの会話がスムーズになります。</p><div class="table-wrap"><table><thead><tr><th>高速化の方向性</th><th>内容</th></tr></thead><tbody><tr><td>処理を分離する</td><td>画像配信用サーバー、データベース専用サーバーなどに役割を分割し、1台あたりの負荷を下げる</td></tr><tr><td>処理マシンを増強する</td><td>サーバーの台数を増やす、またはスペック（CPU・メモリ）を上げる</td></tr><tr><td>プログラム処理を高速化する</td><td>データベースへの問い合わせ回数の削減、SQLの最適化、テーブル設計の見直し</td></tr><tr><td>ミドルウェアの設定を見直す</td><td>同時処理プロセス数、キャッシュ設定などのパラメータ調整</td></tr><tr><td>バージョンを最新化する</td><td>PHP・データベース・Webサーバーソフトなどのバージョンアップによる性能向上</td></tr></tbody></table></div><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>サーバー処理の高速化はインフラコストや専門知識を要するため、<span class="text-primary">SEO担当者単独で完結させる領域ではありません</span>。ただし、「なぜ遅いのか」の切り分け（ネットワークかレンダリングかサーバーか）ができるだけでも、エンジニアとの連携における提案の質が大きく変わります。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-13.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-15.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

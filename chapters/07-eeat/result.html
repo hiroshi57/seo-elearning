@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-E-A-T（採点結果） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← E-E-A-T</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約14分</span>
+    <h1 class="wizard-header__title">E-E-A-T</h1>
+    <p class="wizard-header__topics">品質：Page Quality、Needs Met、経験・専門性・権威性・信頼性</p>
+  </div>
+
+  <div class="result-summary" data-result-summary>
+    <div class="result-summary__icon" data-result-icon>🏆</div>
+    <div class="result-summary__title">確認テスト結果</div>
+    <div class="result-summary__score" data-result-score>--%</div>
+    <div class="result-summary__sub" data-result-sub></div>
+    <div class="result-status" data-result-status></div>
+  </div>
+
+  <div class="result-review">
+    <div class="result-review__head">
+      <div class="result-review__title">回答一覧と解説</div>
+      <div class="result-review__hint">間違えた問題は「関連する教材を見直す」から該当ページを確認できます</div>
+    </div>
+    <div data-result-list></div>
+  </div>
+
+  <div class="result-actions">
+    <button class="btn btn--primary" data-result-retry>↻ テストを再受験</button>
+    <a href="step-1.html" class="btn btn--ghost">📖 教材から見直す</a>
+    <a href="../../phases/basic/index.html" class="btn btn--muted">一覧に戻る</a>
+  </div>
+
+  <script type="application/json" data-quiz-data>
+[{"id":"q1","type":"single","sectionIndex":0,"question":"Googleの検索品質評価ガイドラインが示す、ページ評価の2つの軸として、最も適切な組み合わせはどれか。","options":["Page Quality評価（ページ自体の品質）と、Needs Met評価（検索意図との一致度）","表示速度評価と、デザイン評価","被リンク数評価と、SNSシェア数評価","広告収益評価と、訪問者数評価"],"correct":[0],"explain":"検索品質評価ガイドラインでは、ページの評価をPage Quality評価（ページ自体の品質）とNeeds Met評価（検索意図との一致度）の2軸で捉えています。E-E-A-Tは、このうちPage Quality評価の中心的な考え方です。"},{"id":"q2","type":"multi","sectionIndex":1,"question":"E-E-A-Tを構成する要素として、正しいものをすべて選べ。","options":["Experience（経験）","Expertise（専門性）","Authoritativeness（権威性）","Efficiency（効率性）"],"correct":[0,1,2],"explain":"E-E-A-Tは Experience（経験）・Expertise（専門性）・Authoritativeness（権威性）・Trust（信頼性）の4要素から構成されます。Efficiency（効率性）は含まれません。"},{"id":"q3","type":"single","sectionIndex":1,"question":"E-E-A-TのExperience（経験）が示す内容として、最も適切なものはどれか。","options":["コンテンツの文字数が多いこと","実際にその物事を経験した人物による情報であること","サイトの表示速度が速いこと","検索結果で1位に表示された実績があること"],"correct":[1],"explain":"Experience（経験）は、実際にその物事を経験した人物による情報かどうかを示す要素です。"},{"id":"q4","type":"single","sectionIndex":2,"question":"E-E-A-Tの4要素の関係性についての説明として、最も適切なものはどれか。","options":["4要素はすべて独立していて、互いに影響しない","信頼性（Trust）が中心的な位置づけにあり、他の要素が高くても信頼性が欠けると評価が下がる","権威性（Authoritativeness）が最も重要で、他の3要素は無視してよい","経験（Experience）だけがあれば、他の3要素は不要である"],"correct":[1],"explain":"信頼性（Trust）は他の3要素を支える中心的な位置づけにあり、経験・専門性・権威性が高くても信頼性が欠けるとE-E-A-T全体の評価は低くなるとされています。"},{"id":"q5","type":"single","sectionIndex":2,"question":"YMYL（Your Money or Your Life）の説明として、最も適切なものはどれか。","options":["お金や健康、安全、幸福に直接影響する可能性がある領域を指すGoogleの用語","検索エンジンの表示速度を測定する専門用語","特定のSEOツールの名称","SNSでのシェア数を評価する指標"],"correct":[0],"explain":"YMYLは「Your Money or Your Life」の略で、お金・健康・安全・幸福など、人の生活に直接影響する可能性がある領域を指すGoogleの用語です。"},{"id":"q6","type":"single","sectionIndex":2,"question":"YMYL領域でE-E-A-Tが特に重視される理由として、最も適切なものはどれか。","options":["YMYL領域は検索されることが少ないため、逆に評価が甘くなるから","お金や健康など、人の生活に大きな影響を与える可能性がある情報だから","YMYL領域はGoogleの評価対象外だから","YMYLはE-E-A-Tと全く関係のない、別の評価基準だから"],"correct":[1],"explain":"YMYL領域はお金や健康など人の生活に大きな影響を与える可能性があるため、誤った情報や信頼性の低い情報が与えるリスクが大きく、E-E-A-Tが特に重視されます。"}]
+  </script>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = 5;</script>
+<script src="../../assets/js/result.js"></script>
+</body>
+</html>

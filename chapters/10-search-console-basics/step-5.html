@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Console（基礎）（把握：サイト全体のURLを取得・整理する） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/practice/index.html" class="breadcrumb-back">← Search Console（基礎）</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約18分</span>
+    <h1 class="wizard-header__title">Search Console（基礎）</h1>
+    <p class="wizard-header__topics">登録：所有権確認、インデックス：URL検査、把握：全URLリストの作成、クロール・レンダリングの健全性確認</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">5 / 7</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>把握：サイト全体のURLを取得・整理する</h2>
+    <p>SEOの第一歩は、サイト内にどのようなページが存在しているかを正確に把握することです。個別のページの問題を見つけて改善することは比較的容易ですが、<mark>サイトの全容を把握しないまま</mark>その場しのぎの対応を続けても、本質的な改善にはつながりにくいとされています。</p><p>まず、サイトに存在する全URLを一覧化し、次のような視点で構造を確認・整理します。</p><ul><li><strong>URLの階層：</strong>トップ→カテゴリ→詳細ページといった階層構造になっているか</li><li><strong>URLの規則性：</strong>命名ルールが統一されているか</li><li><strong>URLの表記ゆれ：</strong>末尾のスラッシュ有無、index.htmlなどファイル名の有無</li><li><strong>title・descriptionの規則性：</strong>空欄や重複、記述ミスがないか</li><li><strong>不要なURL：</strong>並び替え用や、テスト用など、インデックスすべきでないURLがないか</li><li><strong>パラメータURL：</strong>無限に生成されうるパラメータ付きURL（例：<code>?sort=asc</code>）がないか</li></ul><p>URLの取得には、クロールツール（Screaming Frogなど）に加え、Search Consoleやsitemap.xmlで取得できるURLもあわせて集めます。クロールツールでは動的に生成されるページなど、URLが欠損する場合があるためです。取得したURLは、title・description・h1・ステータスコード・canonical・meta robotsなどのページ情報とあわせて、Excelやスプレッドシートで一覧化すると、サイト全体の傾向や違和感（命名ルールの不統一など）に気付きやすくなります。</p><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>sitemap.xmlは、検索エンジンに対して「どのページをクロール・インデックスしてほしいか」を明示するファイルです。必要なページが漏れなく記述されているか、逆に不要なページが混ざっていないかの確認にも役立ちます。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-4.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-6.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>構造化データ（実践：構造化タグの種類と記述方法） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/ai/index.html" class="breadcrumb-back">← 構造化データ</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約24分</span>
+    <h1 class="wizard-header__title">構造化データ</h1>
+    <p class="wizard-header__topics">基本：構造化タグと構造化マークアップの違い、実践：JSON-LDによるOrganization・WebSite・Breadcrumb・Product・Article等の実装、検証ツール</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">3 / 10</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>実践：構造化タグの種類と記述方法</h2>
+    <p>HTML文書のbody要素では、検索エンジンに正しい情報を伝えられるよう、適切なアウトライン（文書構造）を形成することが大切です。構造化タグを使えば、この文書構造を検索エンジンに明示的に伝えられます。</p><div class="table-wrap"><table><thead><tr><th>構造化タグ</th><th>意味と解説</th><th>本にたとえると</th></tr></thead><tbody><tr><td><code>&lt;section&gt;</code></td><td>見出しを付けられる文章のまとまり。1つの見出し（h要素）＋本文＋補足情報で構成される</td><td>「章」</td></tr><tr><td><code>&lt;article&gt;</code></td><td>独立した記事・コンテンツであることを示す。ブログでは記事全体、ニュースサイトでは個々のニュースが該当する</td><td>本「全体」</td></tr><tr><td><code>&lt;aside&gt;</code></td><td>本文と関連するが区別すべき補足情報。サイドバーにも使われる</td><td>「コラム」</td></tr><tr><td><code>&lt;nav&gt;</code></td><td>グローバルナビゲーションやパンくずリストなど、主要ページへのリンク集</td><td>「目次」</td></tr><tr><td><code>&lt;header&gt;</code></td><td>導入やナビゲーションの補助。文書のヘッダー情報を表す<code>&lt;head&gt;</code>タグとは別物</td><td>「表紙」</td></tr><tr><td><code>&lt;footer&gt;</code></td><td>作成者情報や著作権表示（Copyright）、関連文書へのリンクなど</td><td>「裏表紙」</td></tr></tbody></table></div><p>この中で基本となるのが<code>&lt;section&gt;</code>です。見出しを付けられる文章のまとまりを「セクション」と呼び、セクションを区分するタグを「セクショニングコンテンツ」と呼びます。<code>&lt;section&gt;</code>を基本形として、そのうち「記事」「補足情報」「ナビゲーション」という特別な役割を持つものに、それぞれ<code>&lt;article&gt;</code><code>&lt;aside&gt;</code><code>&lt;nav&gt;</code>が定義されています。一方、<code>&lt;header&gt;</code>と<code>&lt;footer&gt;</code>は単体で成り立つセクションではなく、セクションに付属する要素であり、セクショニングコンテンツには含まれません。</p><div class="figure"><div class="figure__frame"><p style="margin:0 0 14px; font-size:0.85rem; color:var(--color-text-muted);">例：1つの記事ページを構造化タグでマークアップする場合</p><div class="flow"><div class="flow__step"><div class="flow__step-icon">🗂️</div><div class="flow__step-title">&lt;header&gt;</div><div class="flow__step-desc">記事タイトル・日時</div></div><div class="flow__arrow">↓</div><div class="flow__step"><div class="flow__step-icon">📄</div><div class="flow__step-title">&lt;section&gt;</div><div class="flow__step-desc">本文の段落</div></div><div class="flow__arrow">↓</div><div class="flow__step"><div class="flow__step-icon">💬</div><div class="flow__step-title">&lt;aside&gt;</div><div class="flow__step-desc">補足情報</div></div><div class="flow__arrow">↓</div><div class="flow__step"><div class="flow__step-icon">✍️</div><div class="flow__step-title">&lt;footer&gt;</div><div class="flow__step-desc">著者情報</div></div></div></div><div class="figure__caption">図1：&lt;article&gt;全体の中に、&lt;header&gt;（タイトル・日時）・&lt;section&gt;（本文）・&lt;aside&gt;（補足）・&lt;footer&gt;（著者情報）を入れ子にして配置する例。この&lt;header&gt;と&lt;footer&gt;は、&lt;article&gt;に付属する文章のまとまりであり、ページ全体のheader/footerとは別物</div></div><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>このように構造化タグでマークアップしても、<span class="text-primary">ブラウザの見た目そのものは変化しません</span>。あくまで、文書構造と各文章のまとまりの意味を検索エンジンに明示する役割を持ちます。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-2.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-4.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

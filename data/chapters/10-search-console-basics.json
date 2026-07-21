@@ -1,0 +1,175 @@
+{
+  "no": 10,
+  "phase": "practice",
+  "slug": "10-search-console-basics",
+  "title": "Search Console（基礎）",
+  "subtitle": "Google Search Consoleへのサイト登録（所有権確認）、URL検査ツールの使い方、そしてサイト全体の構造・インデックス状況を把握する基本を理解する",
+  "topicsLabel": "登録：所有権確認、インデックス：URL検査、把握：全URLリストの作成、クロール・レンダリングの健全性確認",
+  "estimateMinutes": 18,
+  "goals": [
+    "Search Consoleがどのようなツールかを説明できる",
+    "「ドメインプロパティ」と「URLプレフィックスプロパティ」の違いを理解する",
+    "サイトの所有権確認が必要な理由を理解する",
+    "URL検査ツールでできることを理解する",
+    "サイト全体のURLを取得・整理し、全体を把握することの重要性を理解する",
+    "クロールとレンダリングの健全性を確認する基本的な観点を理解する"
+  ],
+  "sections": [
+    {
+      "heading": "登録：Search Consoleとは",
+      "bodyHtml": "<p><mark>Google Search Console</mark>は、Googleが無料で提供している、サイト運営者向けのツールです。自分のサイトがGoogle検索でどのように扱われているかを確認・管理できます。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>Search Console</strong><br>Googleが提供する、Webサイト運営者向けの無料ツール。検索結果での表示状況、クロール・インデックスの状態、検索パフォーマンス（クリック数・表示回数など）を確認できます。GA4がサイト<strong>訪問後</strong>の行動を計測するのに対し、Search Consoleは<strong>検索結果に表示される前後</strong>の情報を扱う点が特徴です。</p></div><p>Search Consoleを利用するには、まず自分のサイトを<mark>プロパティ</mark>として登録する必要があります。登録方法には大きく2種類あります。</p><table><thead><tr><th>プロパティタイプ</th><th>対象範囲</th><th>所有権確認の方法</th></tr></thead><tbody><tr><td><strong>ドメインプロパティ</strong></td><td>サブドメインを含む、ドメイン全体（http/https/wwwの有無を問わない）</td><td>DNSレコードへの追記が必要</td></tr><tr><td><strong>URLプレフィックスプロパティ</strong></td><td>指定したURL（例：https://www.example.com/）配下のみ</td><td>HTMLファイルのアップロード、HTMLタグの追加など複数の方法から選択可能</td></tr></tbody></table><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>Googleはドメイン全体のデータを包括的に管理できる<span class=\"text-primary\">ドメインプロパティの利用を推奨</span>していますが、サブドメインで運営するブログなど、特定の範囲だけを個別に分析したい場合はURLプレフィックスプロパティが適しています。</p></div></div>"
+    },
+    {
+      "heading": "登録：所有権確認",
+      "bodyHtml": "<p>Search Consoleにサイトを登録する際は、<mark>そのサイトの管理者本人であること</mark>を証明する「所有権の確認」が必要です。</p><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>所有権が確認される前でも、プロパティを追加した時点からデータの収集自体は始まりますが、<span class=\"text-danger\">所有権が確認されるまでは、詳細な情報の閲覧や各種機能の利用はできません</span>。登録したら早めに所有権確認を完了させることが重要です。</p></div></div><p>所有権確認の主な方法には、次のようなものがあります。</p><ul><li>指定されたHTMLファイルをサイトのサーバーにアップロードする</li><li>指定されたHTMLタグをサイトの<code>&lt;head&gt;</code>内に追加する</li><li>ドメインのDNS設定にTXTレコードを追加する</li><li>連携しているGoogleアナリティクスのアカウントを利用する</li></ul>"
+    },
+    {
+      "heading": "インデックス：URL検査ツール",
+      "bodyHtml": "<p>Search Consoleの<mark>URL検査ツール</mark>を使うと、特定のURLが現在Googleにどう認識されているかを個別に確認できます。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>URL検査ツール</strong><br>指定したURLについて、インデックス登録されているか、登録されていない場合はその理由、モバイル対応の状況、構造化データの検出状況などを確認できるSearch Consoleの機能。</p></div><p>URL検査ツールで確認できる主な情報は次のとおりです。</p><ul><li>そのページが現在インデックスに登録されているかどうか</li><li>インデックスされていない場合、その原因（クロールされていない、robots.txtでブロックされている等）</li><li>最後にGooglebotがそのページをクロールした日時</li><li>ページで検出された構造化データ（後の章で学びます）の有無</li></ul><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>新しく公開したページや、大きく内容を更新したページについて、URL検査ツールから「インデックス登録をリクエスト」することもできます。ただし、リクエストしたからといって必ずすぐにクロール・インデックスされるとは限りません。</p></div></div>"
+    },
+    {
+      "heading": "把握：サイト全体のURLを取得・整理する",
+      "bodyHtml": "<p>SEOの第一歩は、サイト内にどのようなページが存在しているかを正確に把握することです。個別のページの問題を見つけて改善することは比較的容易ですが、<mark>サイトの全容を把握しないまま</mark>その場しのぎの対応を続けても、本質的な改善にはつながりにくいとされています。</p><p>まず、サイトに存在する全URLを一覧化し、次のような視点で構造を確認・整理します。</p><ul><li><strong>URLの階層：</strong>トップ→カテゴリ→詳細ページといった階層構造になっているか</li><li><strong>URLの規則性：</strong>命名ルールが統一されているか</li><li><strong>URLの表記ゆれ：</strong>末尾のスラッシュ有無、index.htmlなどファイル名の有無</li><li><strong>title・descriptionの規則性：</strong>空欄や重複、記述ミスがないか</li><li><strong>不要なURL：</strong>並び替え用や、テスト用など、インデックスすべきでないURLがないか</li><li><strong>パラメータURL：</strong>無限に生成されうるパラメータ付きURL（例：<code>?sort=asc</code>）がないか</li></ul><p>URLの取得には、クロールツール（Screaming Frogなど）に加え、Search Consoleやsitemap.xmlで取得できるURLもあわせて集めます。クロールツールでは動的に生成されるページなど、URLが欠損する場合があるためです。取得したURLは、title・description・h1・ステータスコード・canonical・meta robotsなどのページ情報とあわせて、Excelやスプレッドシートで一覧化すると、サイト全体の傾向や違和感（命名ルールの不統一など）に気付きやすくなります。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>sitemap.xmlは、検索エンジンに対して「どのページをクロール・インデックスしてほしいか」を明示するファイルです。必要なページが漏れなく記述されているか、逆に不要なページが混ざっていないかの確認にも役立ちます。</p></div></div>"
+    },
+    {
+      "heading": "把握：クロールとレンダリングの健全性確認",
+      "bodyHtml": "<p>検索エンジンがページを評価・インデックスするためには、クローラーがURLに<mark>アクセス（クロール）</mark>し、さらにページの内容を<mark>レンダリング</mark>して把握する必要があります。このどちらかに問題があると、内容がどれだけ優れていても検索結果に正しく反映されません。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>クロールの統計情報</strong><br>Googlebotが自サイトをどのようにクロールしているか、その履歴と傾向を確認できるSearch Consoleのレポート。クロールリクエストの合計数、レスポンスコード別のリクエスト数、ファイルタイプ別のクロール状況、クロールの目的（新規ページの検出か既存ページの更新か）などを確認できる。</p></div><p>クロール健全性を確認する主な観点は次のとおりです。</p><ul><li>robots.txtで重要ページが誤ってブロックされていないか</li><li>意図しないnoindexがページに付与されていないか</li><li>404エラーや500エラーが多発していないか</li><li>クロール頻度・対象に急激な増減がないか</li></ul><p>特に大規模サイトでは、動的に不要ページが生成されやすく、クロールバジェット（Googlebotがサイトに割り当てるクロールの量）が無駄に消費されているケースもあるため、定期的な確認が推奨されます。ページ数が1,000未満程度の小規模サイトであれば、リニューアルやCMS変更などのタイミングで確認すれば十分とされています。</p><p>レンダリングの健全性は、Search Consoleの<mark>URL検査ツール</mark>から「クロール済みページを表示」を選択することで確認できます。Googlebotが解釈したHTMLソースやスクリーンショットが表示され、JavaScriptで生成されるコンテンツが正しく認識されているか、意図しないリソースがブロックされていないかをチェックできます。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>インデックス状況は、コンテンツの追加・削除やアルゴリズムの変化によって<span class=\"text-primary\">日々変動</span>します。「一度整理して終わり」にせず、定期的にモニタリングする体制を整えることが、場当たり的な対応にならないための土台になります。継続的なモニタリングの具体的な方法は、第11・12章で詳しく学びます。</p></div></div>"
+    }
+  ],
+  "summary": [
+    "Search ConsoleはGoogleが無料で提供する、自サイトの検索結果での扱われ方を確認・管理するためのツールである",
+    "プロパティにはドメイン全体を対象にする「ドメインプロパティ」と、特定URL配下のみを対象にする「URLプレフィックスプロパティ」がある",
+    "サイトの管理者であることを証明する「所有権確認」を行わないと、Search Consoleの詳細機能は利用できない",
+    "URL検査ツールでは、特定のURLのインデックス状況やクロール履歴、構造化データの検出状況を確認できる",
+    "サイト全体のURLをクロールツールやSearch Console、sitemap.xmlから取得・整理することが、SEO戦略を立てる土台になる",
+    "クロールの統計情報やURL検査ツールを使い、クロール・レンダリングの健全性を定期的に確認することが重要である"
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "Search Consoleの説明として、最も適切なものはどれか。",
+      "options": [
+        "サイト訪問後のユーザー行動だけを計測するツール",
+        "Googleが提供する、自サイトが検索結果でどう扱われているかを確認・管理できる無料ツール",
+        "有料広告の入札単価を自動調整するツール",
+        "サイトのデザインテンプレートを提供するツール"
+      ],
+      "correct": [1],
+      "explain": "Search Consoleは、自分のサイトがGoogle検索でどのように扱われているかを確認・管理できる、Googleが提供する無料のツールです。"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "「ドメインプロパティ」の特徴として、最も適切なものはどれか。",
+      "options": [
+        "特定のURL配下のみを対象とする",
+        "サブドメインを含むドメイン全体を対象とし、http/https/wwwの有無を問わずまとめて扱う",
+        "所有権確認の方法はHTMLファイルのアップロードのみである",
+        "ドメインプロパティは現在Googleでは利用できない"
+      ],
+      "correct": [1],
+      "explain": "ドメインプロパティは、サブドメインを含むドメイン全体を対象とし、http/https/wwwの有無を問わずまとめて1つとして扱われます。"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "Search Consoleの所有権確認に関する説明として、正しいものはどれか。",
+      "options": [
+        "所有権確認をしなくても、すべての機能をすぐに使うことができる",
+        "所有権が確認されるまでは、詳細な情報の閲覧や各種機能の利用ができない",
+        "所有権確認の方法はDNSレコードへの追記のみである",
+        "所有権確認は一度も行う必要がない"
+      ],
+      "correct": [1],
+      "explain": "プロパティ追加時点からデータ収集は始まりますが、所有権が確認されるまでは詳細な情報の閲覧や機能の利用はできません。"
+    },
+    {
+      "id": "q4",
+      "type": "multi",
+      "sectionIndex": 2,
+      "question": "URL検査ツールで確認できる情報として、正しいものをすべて選べ。",
+      "options": [
+        "そのページがインデックスに登録されているかどうか",
+        "最後にGooglebotがそのページをクロールした日時",
+        "ページで検出された構造化データの有無",
+        "そのページを閲覧したユーザーの氏名"
+      ],
+      "correct": [0, 1, 2],
+      "explain": "URL検査ツールでは、インデックス状況、最終クロール日時、構造化データの検出状況などを確認できます。個人を特定する情報は扱いません。"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "sectionIndex": 2,
+      "question": "URL検査ツールから「インデックス登録をリクエスト」した場合の説明として、最も適切なものはどれか。",
+      "options": [
+        "リクエストした瞬間に、必ず検索結果の1位に表示される",
+        "リクエストしても、必ずすぐにクロール・インデックスされるとは限らない",
+        "リクエストは1サイトにつき生涯で1回しか行えない",
+        "インデックス登録のリクエストという機能はSearch Consoleには存在しない"
+      ],
+      "correct": [1],
+      "explain": "インデックス登録をリクエストすることはできますが、リクエストしたからといって必ずすぐにクロール・インデックスされるとは限りません。"
+    },
+    {
+      "id": "q6",
+      "type": "multi",
+      "sectionIndex": 3,
+      "question": "サイト全体のURLを整理する際に確認すべき観点として、正しいものをすべて選べ。",
+      "options": [
+        "URLの階層や命名ルールの規則性",
+        "title・descriptionの重複や記述ミスの有無",
+        "無限に生成されうるパラメータ付きURLの有無",
+        "サイト運営会社の資本金の額"
+      ],
+      "correct": [0, 1, 2],
+      "explain": "URLの階層・規則性、title・descriptionの重複や記述ミス、パラメータURLの有無などは、サイト全体を把握する上で確認すべき観点です。資本金の額はSEOのURL整理には関係ありません。"
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "sectionIndex": 3,
+      "question": "サイトのURLを取得・整理することの意義として、最も適切なものはどれか。",
+      "options": [
+        "URLを整理しても、SEO戦略にはまったく関係しない",
+        "サイトの全容を把握することが、場当たり的でない改善施策を考えるための土台になる",
+        "URLは一度整理したら二度と確認する必要がない",
+        "URLの整理はクロールツールだけで完結し、Search Consoleの情報は不要である"
+      ],
+      "correct": [1],
+      "explain": "サイトの全容を正確に把握することは、部分的な対応に終始せず、本質的な改善施策を検討するための土台になります。クロールツールに加え、Search Consoleやsitemap.xmlの情報もあわせて活用することが推奨されます。"
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "sectionIndex": 4,
+      "question": "クロールの健全性を確認する観点として、最も適切なものはどれか。",
+      "options": [
+        "サイトのデザインカラーが競合と似ていないか",
+        "robots.txtで重要ページが誤ってブロックされていないか、404・500エラーが多発していないか",
+        "従業員の人数が十分かどうか",
+        "SNSのフォロワー数が増えているかどうか"
+      ],
+      "correct": [1],
+      "explain": "クロール健全性の確認では、robots.txtによる意図しないブロック、noindexの誤設定、404・500エラーの多発、クロール頻度の急激な増減などを確認します。"
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "sectionIndex": 4,
+      "question": "レンダリングの健全性を確認する方法として、最も適切なものはどれか。",
+      "options": [
+        "URL検査ツールで「クロール済みページを表示」し、Googlebotが解釈したHTMLやスクリーンショットを確認する",
+        "GA4の売上レポートを確認する",
+        "競合サイトのSNSフォロワー数を確認する",
+        "自社のメールマガジン開封率を確認する"
+      ],
+      "correct": [0],
+      "explain": "URL検査ツールの「クロール済みページを表示」から、Googlebotが解釈したHTMLソースやレンダリング結果のスクリーンショットを確認し、JavaScriptで生成されるコンテンツが正しく認識されているかなどをチェックできます。"
+    }
+  ]
+}

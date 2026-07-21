@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Console（基礎）（把握：クロールとレンダリングの健全性確認） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/practice/index.html" class="breadcrumb-back">← Search Console（基礎）</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約18分</span>
+    <h1 class="wizard-header__title">Search Console（基礎）</h1>
+    <p class="wizard-header__topics">登録：所有権確認、インデックス：URL検査、把握：全URLリストの作成、クロール・レンダリングの健全性確認</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">6 / 7</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>把握：クロールとレンダリングの健全性確認</h2>
+    <p>検索エンジンがページを評価・インデックスするためには、クローラーがURLに<mark>アクセス（クロール）</mark>し、さらにページの内容を<mark>レンダリング</mark>して把握する必要があります。このどちらかに問題があると、内容がどれだけ優れていても検索結果に正しく反映されません。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>クロールの統計情報</strong><br>Googlebotが自サイトをどのようにクロールしているか、その履歴と傾向を確認できるSearch Consoleのレポート。クロールリクエストの合計数、レスポンスコード別のリクエスト数、ファイルタイプ別のクロール状況、クロールの目的（新規ページの検出か既存ページの更新か）などを確認できる。</p></div><p>クロール健全性を確認する主な観点は次のとおりです。</p><ul><li>robots.txtで重要ページが誤ってブロックされていないか</li><li>意図しないnoindexがページに付与されていないか</li><li>404エラーや500エラーが多発していないか</li><li>クロール頻度・対象に急激な増減がないか</li></ul><p>特に大規模サイトでは、動的に不要ページが生成されやすく、クロールバジェット（Googlebotがサイトに割り当てるクロールの量）が無駄に消費されているケースもあるため、定期的な確認が推奨されます。ページ数が1,000未満程度の小規模サイトであれば、リニューアルやCMS変更などのタイミングで確認すれば十分とされています。</p><p>レンダリングの健全性は、Search Consoleの<mark>URL検査ツール</mark>から「クロール済みページを表示」を選択することで確認できます。Googlebotが解釈したHTMLソースやスクリーンショットが表示され、JavaScriptで生成されるコンテンツが正しく認識されているか、意図しないリソースがブロックされていないかをチェックできます。</p><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>インデックス状況は、コンテンツの追加・削除やアルゴリズムの変化によって<span class="text-primary">日々変動</span>します。「一度整理して終わり」にせず、定期的にモニタリングする体制を整えることが、場当たり的な対応にならないための土台になります。継続的なモニタリングの具体的な方法は、第11・12章で詳しく学びます。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-5.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-7.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

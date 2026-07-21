@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テクニカルSEO（まとめ） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約55分</span>
+    <h1 class="wizard-header__title">テクニカルSEO</h1>
+    <p class="wizard-header__topics">基礎：HTML構造、1URL1コンテンツ、サイト構造：URL設計、内部リンク、クロール制御：robots.txt、サイトマップ、エラー・スパム対応、表示速度：ネットワーク／レンダリング／サーバー、Core Web Vitals、測定ツール、HTTPS</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div></div>
+      <div class="wizard-progress__count">18 / 18</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>まとめ</h2>
+    <ul class="goals-list">
+      <li>GoogleはわかりやすくPredictableなURL構造を推奨しており、サイトの構成を反映した短く明確なURLが望ましい</li>
+      <li>URLの永続化とは、公開・インデックス済みのURLを変更せずに使い続けることで、やむを得ず変更する場合は301リダイレクトで評価を引き継ぐ</li>
+      <li>title・meta description・見出し（h要素）・alt属性は、検索エンジンにページ内容を伝える基本的なHTML要素であり、初出時にそれぞれ役割を理解しておく必要がある</li>
+      <li>1URL1コンテンツの原則のもと、重複コンテンツはURLの相違パターンごとに301リダイレクトかcanonicalを使い分けて正規化する</li>
+      <li>MECEなカテゴリ設計にはロジックツリー（WHAT/WHY/HOW）が役立ち、URLはキーワードを含め短くハイフン区切り・小文字で命名する</li>
+      <li>内部リンクはクローラーがページを発見する手がかりにもなり、ナビゲーション・パンくずリスト・メインコンテンツからのリンクにはそれぞれ異なる役割がある</li>
+      <li>XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めるべきで、canonicalタグは重複コンテンツの整理に使う</li>
+      <li>meta robotsやrobots.txtでクローラの動きを制御できるが、すべてのAIbotが指示に従う保証はなく、robots.txtは誰でも閲覧できる点にも注意が必要</li>
+      <li>URL検査ツール・RSS/Atomフィード・WebSubは、新規ページや更新ページのクロールを促進する手段であり、受動的・能動的な性質が異なる</li>
+      <li>エラーは自サイト（内部）と外部サイトのリンク切れに分けて対応し、404はソフト404にならないよう正しいステータスコードを返す。スパムは価値の低いコンテンツ・質の低い被リンク・クローラへの偽装行為に大別される</li>
+      <li>表示速度はネットワーク処理・サーバー処理・レンダリング処理の3領域で決まり、TTFBなど各処理のボトルネックを切り分けることが高速化の出発点になる</li>
+      <li>ネットワーク処理は通信量・通信回数・通信距離で決まり、圧縮技術やHTTP/2・HTTP/3、CDNが有効。レンダリング処理はCSS・JavaScript・画像それぞれの読み込み方法の工夫で改善できる</li>
+      <li>キャッシュの活用（ブラウザキャッシュ・サーバーキャッシュ）やResource Hintsは表示を補完的に高速化する技術であり、サーバー処理の高速化はエンジニアとの連携が前提となる</li>
+      <li>Core Web Vitalsは読み込み速度（LCP）・応答性（INP）・視覚的安定性（CLS）の3指標で構成され、それぞれ複数の構成要素（サブパート）に分解して原因を特定できる</li>
+      <li>Search Console・Lighthouse・PageSpeed Insightsは、調査対象ページとデータソース（フィールドデータ／ラボデータ）が異なり、目的に応じて使い分ける</li>
+      <li>GoogleはHTTPS化を2014年からランキングシグナルとして使用しているが、コンテンツの品質などと比べると影響は軽微な、軽量シグナルである</li>
+    </ul>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-17.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="quiz.html" class="btn btn--primary">📋 確認テストへ進む</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

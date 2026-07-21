@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>構造化データ（実践：構造化マークアップの3つの形式とJSON-LD） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/ai/index.html" class="breadcrumb-back">← 構造化データ</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約24分</span>
+    <h1 class="wizard-header__title">構造化データ</h1>
+    <p class="wizard-header__topics">基本：構造化タグと構造化マークアップの違い、実践：JSON-LDによるOrganization・WebSite・Breadcrumb・Product・Article等の実装、検証ツール</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">6 / 10</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>実践：構造化マークアップの3つの形式とJSON-LD</h2>
+    <p>要素に意味を付与する構造化マークアップですが、普及当初は複数の規格が乱立していました。そこで2011年、Google・Microsoft・Yahoo!・Yandexが共同で<strong>schema.org</strong>プロジェクトを立ち上げ、規格の統一を図りました。現在はschema.orgが定めるタイプとプロパティの体系に沿って、構造化マークアップが行われています。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>タイプ（Type）</strong><br>「Article（記事）」「Organization（組織）」のように、モノ・コトを表す分類概念。最上位の「Thing」を頂点に、ロジックツリー状に分類されています。</p><p style="margin:8px 0 0;"><strong>プロパティ（Property）</strong><br>タイプごとに定義された属性。例えば「Corporation（企業）」タイプは、住所やロゴ画像などのプロパティを持ちます。タイプは、自身の上位階層のタイプが持つプロパティも利用できます。</p></div><p>schema.orgが定め、かつGoogleがサポートしている記述形式には、Microdata・RDFa Lite・JSON-LDの3つがあります。</p><div class="table-wrap"><table><thead><tr><th>形式</th><th>特徴</th><th>メリット</th><th>デメリット</th></tr></thead><tbody><tr><td><strong>Microdata</strong></td><td>HTMLタグの属性（itemscope・itemtype・itempropなど）に直接意味を埋め込む</td><td>構造化データと実際のHTMLが一致しやすい</td><td>HTML属性が増えてソースが煩雑になり、メンテナンスコストが高い</td></tr><tr><td><strong>RDFa Lite</strong></td><td>RDFa（XHTML向けのセマンティックWeb技術）を簡素化した形式</td><td>XHTMLでも利用可能</td><td>ソースが煩雑。Googleの構造化データマークアップ支援ツールが非対応</td></tr><tr><td><strong>JSON-LD</strong></td><td>JSON形式で、HTML本文と分離して記述する</td><td>HTMLソースに影響しない。人間にもコンピュータにも読みやすい。不可視データの記述量が少ない</td><td>可視データはHTML本文とJSON-LDの2箇所に同じ内容を書く必要がある</td></tr></tbody></table></div><p>3形式を比べると、MicrodataとRDFa Liteは記法が類似している一方、JSON-LDは大きく異なります。JSON-LDはコンピュータが読み取りやすく、HTML本文とも分離できるため、Googleも推奨しており、管理のしやすさの面でも扱いやすい形式です。以降のセクションでは、JSON-LDによる具体的な実装例を紹介します。</p><p>JSON-LDは、HTML文書のどこに書いても機能しますが、<code>&lt;head&gt;</code>要素内に記述するのが一般的です。基本的な記述の骨組みは次のとおりです。</p><div class="table-wrap"><table><thead><tr><th>キー名</th><th>意味</th></tr></thead><tbody><tr><td><code>@context</code></td><td>使用する語彙（ボキャブラリー）を定義。通常は<code>https://schema.org</code>を指定</td></tr><tr><td><code>@type</code></td><td>タイプ名を定義（例：Article、Organizationなど）</td></tr><tr><td><code>@id</code></td><td>一意に識別するためのID。URLで指定する</td></tr><tr><td>@の付かないキー名</td><td>タイプが持つプロパティをラベル付けする（name、descriptionなど）</td></tr></tbody></table></div><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>JSON-LDはHTML本文と分離して記述するため、<span class="text-danger">記事内容を更新した際にJSON-LDの更新を忘れると、実際のHTML内容と構造化データの内容が食い違ってしまいます。</span>この不一致はGoogleのスパムポリシーに抵触する可能性があるため、コンテンツ更新時は必ずJSON-LD側も見直しましょう。CMSで記事を管理している場合は、該当箇所が自動的に反映されるようテンプレート側で管理すると、ミスを防ぎやすくなります。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-5.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-7.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

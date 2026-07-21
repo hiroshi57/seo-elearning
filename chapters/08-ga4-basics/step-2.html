@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GA4（基礎）（基本：イベントとは） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/practice/index.html" class="breadcrumb-back">← GA4（基礎）</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約12分</span>
+    <h1 class="wizard-header__title">GA4（基礎）</h1>
+    <p class="wizard-header__topics">基本：イベント、コンバージョン</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">2 / 4</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>基本：イベントとは</h2>
+    <p>GA4（Google アナリティクス4）では、サイト上でのユーザーの行動をすべて<mark>イベント</mark>という単位で計測します。ページの閲覧、ボタンのクリック、スクロールなど、あらゆる行動がイベントとして記録される仕組みです。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>イベント（GA4）</strong><br>GA4においてユーザーの行動を計測する基本単位。従来のUniversal Analytics（旧GA）では「ページビュー」「イベント」「トランザクション」など複数の計測方式が併存していましたが、GA4ではこれらがすべて「イベント」として統一的に扱われます。</p></div><p>GA4のイベントは、その収集方法によって次の4種類に分類されます。</p><table><thead><tr><th>種類</th><th>説明</th><th>例</th></tr></thead><tbody><tr><td><strong>自動収集イベント</strong></td><td>GA4のタグを設置するだけで自動的に収集される</td><td>page_view（ページ表示）、first_visit（初回訪問）</td></tr><tr><td><strong>拡張計測機能イベント</strong></td><td>管理画面で設定をオンにすると自動収集される</td><td>スクロール、外部リンクのクリック</td></tr><tr><td><strong>推奨イベント</strong></td><td>Googleが計測を推奨しているが、実装が必要</td><td>login（ログイン）、purchase（購入）</td></tr><tr><td><strong>カスタムイベント</strong></td><td>上記に該当しない場合に、独自に作成する</td><td>サイト固有の行動（例：資料ダウンロード）</td></tr></tbody></table>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-1.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-3.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

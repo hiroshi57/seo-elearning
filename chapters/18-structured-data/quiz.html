@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>構造化データ（確認テスト） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/ai/index.html" class="breadcrumb-back">← 構造化データ</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">📋 確認テスト</span>
+    <h1 class="wizard-header__title">構造化データ</h1>
+    <p class="wizard-header__topics">基本：構造化タグと構造化マークアップの違い、実践：JSON-LDによるOrganization・WebSite・Breadcrumb・Product・Article等の実装、検証ツール</p>
+  </div>
+
+  <section class="section-card" data-quiz-root data-chapter="18-structured-data" data-total-steps="10">
+    <div class="quiz-intro"><span class="quiz-intro__icon">📋</span>確認テスト</div>
+    <p class="quiz-sub">全11問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
+
+    <script type="application/json" data-quiz-data>
+[{"id":"q1","type":"single","sectionIndex":0,"question":"構造化タグと構造化マークアップの違いとして、最も適切なものはどれか。","options":["構造化タグは要素の意味を伝え、構造化マークアップは文書の構造を伝える","構造化タグは文書の構造を伝え、構造化マークアップは要素の意味を伝える","両者は全く同じ役割を持ち、区別する必要はない","構造化タグも構造化マークアップも、ブラウザの見た目を大きく変化させる"],"correct":[1],"explain":"構造化タグ（section・article等）は文章のまとまりの構造を伝え、構造化マークアップ（schema.org）は要素の意味を伝えるという違いがあります。"},{"id":"q2","type":"multi","sectionIndex":1,"question":"構造化タグの説明として、正しいものをすべて選べ。","options":["\u003csection>は見出しを付けられる文章のまとまりを表す基本のタグである","\u003carticle>は独立した記事・コンテンツであることを示す","\u003cheader>と\u003cfooter>はセクショニングコンテンツであり、単体で成り立つセクションである","\u003caside>は本文に関連する補足情報を表す"],"correct":[0,1,3],"explain":"\u003cheader>と\u003cfooter>はセクションに付属する要素であり、単体で成り立つセクショニングコンテンツではありません。"},{"id":"q3","type":"single","sectionIndex":2,"question":"\u003cdiv>タグと構造化タグの関係についての説明として、最も適切なものはどれか。","options":["既存の\u003cdiv>タグはそのまま構造化タグに置き換えられる","\u003cdiv>タグには文書構造の明示や意味付けの役割はなく、機械的な置換はできない","\u003cdiv>タグは構造化タグの上位互換であり、常に\u003cdiv>を使うべきである","\u003cdiv>タグを使うと、検索順位が自動的に下がる"],"correct":[1],"explain":"\u003cdiv>タグはCSSのデザイン範囲を区切るための便宜的な要素であり、文書構造や意味を明示する役割を持たないため、既存の\u003cdiv>を機械的に構造化タグへ置換することはできません。"},{"id":"q4","type":"single","sectionIndex":3,"question":"構造化データの説明として、最も適切なものはどれか。","options":["ページのデザインを自動生成するツール","ページ内の情報の意味を、検索エンジンにも分かる形式で明示するマークアップ","サイトの表示速度を計測する指標","広告の出稿費用を管理するシステム"],"correct":[1],"explain":"構造化データは、ページ内の情報が何を意味しているかを検索エンジンにも分かる形式で明示するためのマークアップです。"},{"id":"q5","type":"single","sectionIndex":4,"question":"構造化マークアップの3形式のうち、GoogleがSEO上推奨しており、HTML本文と分離して記述できる形式はどれか。","options":["Microdata","RDFa Lite","JSON-LD","CSV"],"correct":[2],"explain":"JSON-LDはHTML本文と分離して記述でき、コンピュータが読み取りやすい形式であるため、Googleが推奨しています。"},{"id":"q6","type":"single","sectionIndex":4,"question":"JSON-LDのデメリットとして、最も適切なものはどれか。","options":["HTML属性が増えすぎてソースが煩雑になる","XHTMLでしか利用できない","可視データについては、HTML本文とJSON-LDの2箇所に同じ内容を記述する必要がある","検索エンジンにまったく読み取られない"],"correct":[2],"explain":"JSON-LDはHTML本文と分離して記述するため、可視データについては同じ内容を2箇所に書く必要があり、更新時に食い違いが起きないよう注意が必要です。"},{"id":"q7","type":"multi","sectionIndex":5,"question":"BreadcrumbListの構造化マークアップについて、正しいものをすべて選べ。","options":["BreadcrumbListの中にListItemを階層の数だけ記述する","positionプロパティでパンくずリストの中での位置を指定する","トップページに付けたnameは、検索結果のサイト名として必ず採用される","パンくずリストを構造化マークアップすると、検索結果でURLの代わりに表示される場合がある"],"correct":[0,1,3],"explain":"トップページのnameはパンくずリスト内の表示に使われるだけで、検索結果のサイト名には影響しません。サイト名はWebSiteタイプで指定します。"},{"id":"q8","type":"single","sectionIndex":6,"question":"クチコミ情報を構造化マークアップする際の注意点として、最も適切なものはどれか。","options":["カテゴリ単位でまとめて評価をマークアップするのが望ましい","ページ本文に表示されていない評価も自由にマークアップしてよい","評価対象となる商品・店舗の構造化マークアップと1対1のセットで記載し、ページ本文にも必ず表示する","クチコミ件数が少ない場合は、実際より多い件数を記載してもよい"],"correct":[2],"explain":"クチコミ情報は、評価対象の構造化マークアップと1対1で記載し、特定の製品・サービスを対象とし、マークアップした内容は必ずページ本文にも表示する必要があります。"},{"id":"q9","type":"single","sectionIndex":7,"question":"Articleタイプの構造化マークアップがE-E-A-Tの観点からも重要とされる理由として、最も適切なものはどれか。","options":["著者情報や公開日を明示することで、検索エンジンがコンテンツの専門性や鮮度を認識しやすくなるため","Articleタイプを記述すると、必ず1位に表示されるため","著者情報を記載すると、記事の文字数が自動的に増えるため","E-E-A-Tとarticleタイプは無関係である"],"correct":[0],"explain":"著者情報（author）や公開日（datePublished）などを明示することで、検索エンジンはコンテンツの専門性を認識しやすくなり、ユーザーも情報の鮮度を判断しやすくなります。"},{"id":"q10","type":"multi","sectionIndex":7,"question":"構造化データの検証・確認に使えるツールとして、正しいものをすべて選べ。","options":["スキーマ マークアップ検証ツール","リッチリザルト テスト","Search Consoleの拡張レポート","Googleキーワードプランナー"],"correct":[0,1,2],"explain":"Googleキーワードプランナーは検索ボリュームを調べるツールであり、構造化データの検証には使いません。"},{"id":"q11","type":"single","sectionIndex":7,"question":"Google公式が報告している、構造化データ実装の効果事例として、正しいものはどれか。","options":["Rotten Tomatoesは構造化データの実装によりクリック率が低下した","Rotten Tomatoesは構造化データを実装したページでクリック率が25%増加した","構造化データの実装効果について、Googleは一切事例を公開していない","構造化データは必ず表示速度を2倍にする効果がある"],"correct":[1],"explain":"Google公式ドキュメントでは、Rotten Tomatoesが10万ページに構造化データを追加し、クリック率が25%増加した事例が報告されています。"}]
+    </script>
+
+    <div data-quiz-item="q1" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q1 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q1-question">構造化タグと構造化マークアップの違いとして、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q1-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>構造化タグは要素の意味を伝え、構造化マークアップは文書の構造を伝える</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>構造化タグは文書の構造を伝え、構造化マークアップは要素の意味を伝える</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>両者は全く同じ役割を持ち、区別する必要はない</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>構造化タグも構造化マークアップも、ブラウザの見た目を大きく変化させる</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q2" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q2 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type quiz-item__type--multi">複数選択（すべて選択）</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q2-question">構造化タグの説明として、正しいものをすべて選べ。</div>
+      <div class="quiz-options" role="group" aria-labelledby="q2-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>&lt;section&gt;は見出しを付けられる文章のまとまりを表す基本のタグである</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>&lt;article&gt;は独立した記事・コンテンツであることを示す</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>&lt;header&gt;と&lt;footer&gt;はセクショニングコンテンツであり、単体で成り立つセクションである</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>&lt;aside&gt;は本文に関連する補足情報を表す</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q3" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q3 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q3-question">&lt;div&gt;タグと構造化タグの関係についての説明として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q3-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>既存の&lt;div&gt;タグはそのまま構造化タグに置き換えられる</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>&lt;div&gt;タグには文書構造の明示や意味付けの役割はなく、機械的な置換はできない</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>&lt;div&gt;タグは構造化タグの上位互換であり、常に&lt;div&gt;を使うべきである</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>&lt;div&gt;タグを使うと、検索順位が自動的に下がる</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q4" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q4 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q4-question">構造化データの説明として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q4-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>ページのデザインを自動生成するツール</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>ページ内の情報の意味を、検索エンジンにも分かる形式で明示するマークアップ</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>サイトの表示速度を計測する指標</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>広告の出稿費用を管理するシステム</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q5" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q5 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q5-question">構造化マークアップの3形式のうち、GoogleがSEO上推奨しており、HTML本文と分離して記述できる形式はどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q5-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>Microdata</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>RDFa Lite</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>JSON-LD</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>CSV</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q6" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q6 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q6-question">JSON-LDのデメリットとして、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q6-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>HTML属性が増えすぎてソースが煩雑になる</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>XHTMLでしか利用できない</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>可視データについては、HTML本文とJSON-LDの2箇所に同じ内容を記述する必要がある</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>検索エンジンにまったく読み取られない</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q7" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q7 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type quiz-item__type--multi">複数選択（すべて選択）</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q7-question">BreadcrumbListの構造化マークアップについて、正しいものをすべて選べ。</div>
+      <div class="quiz-options" role="group" aria-labelledby="q7-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>BreadcrumbListの中にListItemを階層の数だけ記述する</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>positionプロパティでパンくずリストの中での位置を指定する</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>トップページに付けたnameは、検索結果のサイト名として必ず採用される</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>パンくずリストを構造化マークアップすると、検索結果でURLの代わりに表示される場合がある</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q8" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q8 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q8-question">クチコミ情報を構造化マークアップする際の注意点として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q8-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>カテゴリ単位でまとめて評価をマークアップするのが望ましい</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>ページ本文に表示されていない評価も自由にマークアップしてよい</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>評価対象となる商品・店舗の構造化マークアップと1対1のセットで記載し、ページ本文にも必ず表示する</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>クチコミ件数が少ない場合は、実際より多い件数を記載してもよい</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q9" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q9 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q9-question">Articleタイプの構造化マークアップがE-E-A-Tの観点からも重要とされる理由として、最も適切なものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q9-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>著者情報や公開日を明示することで、検索エンジンがコンテンツの専門性や鮮度を認識しやすくなるため</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>Articleタイプを記述すると、必ず1位に表示されるため</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>著者情報を記載すると、記事の文字数が自動的に増えるため</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>E-E-A-Tとarticleタイプは無関係である</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q10" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q10 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type quiz-item__type--multi">複数選択（すべて選択）</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q10-question">構造化データの検証・確認に使えるツールとして、正しいものをすべて選べ。</div>
+      <div class="quiz-options" role="group" aria-labelledby="q10-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>スキーマ マークアップ検証ツール</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>リッチリザルト テスト</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>Search Consoleの拡張レポート</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>Googleキーワードプランナー</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q11" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q11 / 11</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q11-question">Google公式が報告している、構造化データ実装の効果事例として、正しいものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q11-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>Rotten Tomatoesは構造化データの実装によりクリック率が低下した</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>Rotten Tomatoesは構造化データを実装したページでクリック率が25%増加した</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>構造化データの実装効果について、Googleは一切事例を公開していない</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>構造化データは必ず表示速度を2倍にする効果がある</span></div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-10.html" class="btn btn--ghost">← 教材に戻る</a>
+    <div class="wizard-footer__spacer"></div>
+    <div class="quiz-unanswered-note" data-quiz-unanswered-note></div>
+    <button class="btn btn--primary" data-quiz-grade disabled>📋 採点する</button>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>構造化データ（実践：構造化タグの正しい使い分け） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/ai/index.html" class="breadcrumb-back">← 構造化データ</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約24分</span>
+    <h1 class="wizard-header__title">構造化データ</h1>
+    <p class="wizard-header__topics">基本：構造化タグと構造化マークアップの違い、実践：JSON-LDによるOrganization・WebSite・Breadcrumb・Product・Article等の実装、検証ツール</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">4 / 10</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>実践：構造化タグの正しい使い分け</h2>
+    <p>構造化タグの利用では、間違いや混乱がよく発生します。ここでは頻出する3つの誤用を確認します。</p><p><strong>1. 独立セクションにも&lt;article&gt;ではなく&lt;section&gt;を使ってしまう</strong></p><p><code>&lt;section&gt;</code>と<code>&lt;article&gt;</code>はどちらも「セクション」を区切るセクショニングコンテンツですが、<code>&lt;article&gt;</code>は<code>&lt;section&gt;</code>に「他から独立しても成立する」という性質が加わったものと理解すると整理しやすくなります。</p><div class="compare"><div class="compare__card compare__card--a"><h4>1本の記事を段落分けする場合</h4><p style="margin:0; font-size:0.88rem;">1つの記事＝1つの独立したコンテンツのため、記事全体を<code>&lt;article&gt;</code>で囲み、その中の各段落を<code>&lt;section&gt;</code>で区切る（article内に複数section）</p></div><div class="compare__card compare__card--b"><h4>複数の記事を並べる場合</h4><p style="margin:0; font-size:0.88rem;">「人気記事一覧」のような1つのまとまりを<code>&lt;section&gt;</code>で囲み、独立した記事それぞれを<code>&lt;article&gt;</code>で囲む（section内に複数article）</p></div></div><p>「その部分だけを抜き出して独立ページとして成立するか」を基準に、成立するなら<code>&lt;article&gt;</code>、それ以外は<code>&lt;section&gt;</code>を使うのが基本的な考え方です。</p><p><strong>2. 既存の&lt;div&gt;をそのまま構造化タグに置換してしまう</strong></p><p><code>&lt;div&gt;</code>タグは複数の要素をまとめる役割を持つため、構造化タグと混同されがちです。しかし<code>&lt;div&gt;</code>には文書構造の明示や意味付けの役割は一切なく、あくまでCSSでデザイン範囲を区切るための便宜的な要素です。そのため、文書構造とまったく関係のない箇所（引用部分の装飾など）で使われることも多く、既存の<code>&lt;div&gt;</code>を機械的に構造化タグへ置き換えることはできません。既存HTMLに構造化タグを導入する際は、いったん<code>&lt;div&gt;</code>の存在を無視して文書構造から構造化タグを追記し、その後で<code>&lt;div&gt;</code>との統合を進めるとよいとされています。</p><div class="figure"><div class="figure__frame"><div class="flow"><div class="flow__step"><div class="flow__step-icon">❓</div><div class="flow__step-title">意味のまとまりに<br>見出しを付けられるか</div><div class="flow__step-desc">いいえ → &lt;div&gt;</div></div><div class="flow__arrow">→</div><div class="flow__step"><div class="flow__step-icon">❓</div><div class="flow__step-title">他のセクションから<br>独立して成り立つか</div><div class="flow__step-desc">いいえ → &lt;section&gt;</div></div><div class="flow__arrow">→</div><div class="flow__step"><div class="flow__step-icon">✅</div><div class="flow__step-title">&lt;article&gt;</div><div class="flow__step-desc">はい</div></div></div></div><div class="figure__caption">図2：&lt;div&gt;・&lt;section&gt;・&lt;article&gt;の使い分けフローチャート</div></div><p><strong>3. &lt;section&gt;内の見出しをすべて&lt;h1&gt;から書き始めてしまう</strong></p><p>WHATWG（Web標準化団体）は「ドキュメントには複数のトップレベル見出しを含められる」としており、複数の<code>&lt;h1&gt;</code>を使っても、Googleが文法上の理由で検索順位を下げることはないと公言しています。ただし、<code>&lt;section&gt;</code>のたびにすべて<code>&lt;h1&gt;</code>で書いてしまうと、階層ごとに<code>&lt;h1&gt;</code>が出現し、人の目には文書構造がわかりづらくなります。見出しレベル（h1〜h6）は、ネストされたセクションの階層に対応させ、文書全体で1つのアウトラインとして一貫させることが推奨されます。</p><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>構造化タグを記述しても、それ自体が検索順位に直接影響することはないとされています。ただし、<span class="text-danger">適切なアウトライン構成は、検索エンジンやAIがコンテンツを正確に認識する助けになり、結果的にユーザーにとっても理解しやすいコンテンツにつながります。</span></p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-3.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-5.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

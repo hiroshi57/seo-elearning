@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テクニカルSEO（クローラの制御：robots.txtとmeta robots） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約55分</span>
+    <h1 class="wizard-header__title">テクニカルSEO</h1>
+    <p class="wizard-header__topics">基礎：HTML構造、1URL1コンテンツ、サイト構造：URL設計、内部リンク、クロール制御：robots.txt、サイトマップ、エラー・スパム対応、表示速度：ネットワーク／レンダリング／サーバー、Core Web Vitals、測定ツール、HTTPS</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">9 / 18</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>クローラの制御：robots.txtとmeta robots</h2>
+    <p>クローラー（<mark>bot</mark>）は、サイト内のあらゆるページを無制限にクロールするわけではありません。サイトごとに<mark>クロールバジェット</mark>（クロールに割り当てられる量の目安）が存在するため、価値の低いページのクロールを抑え、重要なページに巡回を集中させる工夫が必要になります。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>bot（クローラー）</strong><br>Webサイトを自動的に巡回するプログラムの総称。GoogleやBingの検索エンジンクローラーのほか、生成AIサービスが使う専用クローラー（OpenAIのGPTBot、AnthropicのClaude-Webなど）も含まれます。</p></div><p>botの動作を制限する方法は、大きく3つあります。</p><div class="table-wrap"><table><thead><tr><th>方法</th><th>単位</th><th>対象</th></tr></thead><tbody><tr><td>meta robots</td><td>ページ単位</td><td>HTMLファイル</td></tr><tr><td>X-Robots-Tag</td><td>ページ単位</td><td>非HTMLファイル（PDF・画像など）</td></tr><tr><td>robots.txt</td><td>サイト・ディレクトリ単位</td><td>すべてのファイル</td></tr></tbody></table></div><p><strong>meta robots</strong>は、HTMLの<code>&lt;head&gt;</code>内に記述し、そのページ単位でクロール・インデックスの可否を指定するタグです。content属性はカンマ区切りで複数指定できます。</p><div class="table-wrap"><table><thead><tr><th>content属性の値</th><th>制御内容</th></tr></thead><tbody><tr><td>index / follow（デフォルト）</td><td>インデックスさせる／リンクを辿らせる。記述がなければこの挙動になる</td></tr><tr><td>noindex</td><td>ページをインデックスさせない</td></tr><tr><td>nofollow</td><td>ページ上のリンクを辿らせない</td></tr><tr><td>none</td><td>noindex, nofollowと同じ意味</td></tr><tr><td>nosnippet</td><td>検索結果にスニペットを表示させない</td></tr><tr><td>max-snippet:[数値]</td><td>スニペットの最大文字数を指定する</td></tr><tr><td>max-image-preview:[設定]</td><td>検索結果のサムネイル画像サイズを指定する（none/standard/large）</td></tr><tr><td>unavailable_after:[日時]</td><td>指定日時を過ぎると検索結果に表示しなくする</td></tr></tbody></table></div><p>noindexを使う代表的な場面には、サイト内検索結果ページ（特に0件ヒットのページ）、質の低いページ、キャンペーンページ、会員限定ページなどがあります。noindexを指定する際は、長期的にはnofollowと同じ意味になるとGoogleも説明しているため、<strong>「noindex, nofollow」</strong>とセットで記述するのが基本です。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>X-Robots-Tag</strong><br>PDFや画像など、meta robotsを記述できない非HTMLファイルに対して、クロール・インデックスの制御を行うためのHTTPヘッダー。Google Search Central（公式ドキュメント）によれば、meta robotsで指定できるものと同じルールを、サーバーの設定でHTTPレスポンスに追加する形で指定します。</p></div><p><strong>robots.txt</strong>は、サイトのルート直下（<code>https://www.example.com/robots.txt</code>）に設置する、クロールの可否をサイト・ディレクトリ単位で指定するテキストファイルです。基本構文は次の3要素で構成されます。</p><div class="figure"><div class="figure__frame"><div class="flow"><div class="flow__step"><div class="flow__step-icon">🤖</div><div class="flow__step-title">User-agent</div><div class="flow__step-desc">対象クローラの指定（*は全クローラ）</div></div><div class="flow__arrow">→</div><div class="flow__step"><div class="flow__step-icon">🚦</div><div class="flow__step-title">Disallow / Allow</div><div class="flow__step-desc">アクセス拒否／許可の指定</div></div><div class="flow__arrow">→</div><div class="flow__step"><div class="flow__step-icon">📁</div><div class="flow__step-title">対象パス</div><div class="flow__step-desc">ディレクトリ・ファイルの指定</div></div></div></div><div class="figure__caption">図1：robots.txtの基本構文（例：User-agent: * ／ Disallow: /no/）</div></div><p>DisallowとAllowを併用すると、Disallowで拒否したディレクトリの一部だけを許可することも可能です。記述の優先順位は、より対象パスが限定されている条件が優先されるため、記述順は問いません。</p><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>特定のクローラだけを制御したい場合は、User-agentトークンを個別指定します。代表例として、画像用は<code>Googlebot-Image</code>、生成AIの学習用途では<code>Google-Extended</code>（Gemini等）、OpenAIの学習用クローラは<code>GPTBot</code>などがあります。<span class="text-primary">「*」（全クローラ対象）を指定してもGoogleの広告品質チェック用クローラ（AdsBot）は対象にならない</span>点に注意が必要です。</p></div></div><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>meta robotsとrobots.txtは、GoogleのクローラーだけでなくAIbot（生成AIの学習・回答生成用クローラー）にも基本的には有効ですが、<span class="text-danger">すべてのAIbotが指示に従うことを保証するものではありません</span>。機密性の高い情報の保護策としては過信せず、Digest認証など別の方法でアクセス制限をかけることが望ましいとされています。また、robots.txtは誰でも閲覧できるファイルであるため、管理者用ページなどセキュリティ上センシティブなパスを記述しないことも重要です。</p></div></div><p>Googlebotは1日1回程度robots.txtを取得しますが、サーバーが5xxエラーを長期間返し続けると、Googleがサイト全体のクロールを停止する可能性があるため、robots.txtが正しく取得できているかはSearch Consoleで定期的に確認することが推奨されます。また、Googlebotがコンテンツを正しく認識するために、JavaScript・CSS・画像ファイルへのアクセスはブロックしないよう注意しましょう。</p>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-8.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-10.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

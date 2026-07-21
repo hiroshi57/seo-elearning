@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Console（基礎）（採点結果） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/practice/index.html" class="breadcrumb-back">← Search Console（基礎）</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約18分</span>
+    <h1 class="wizard-header__title">Search Console（基礎）</h1>
+    <p class="wizard-header__topics">登録：所有権確認、インデックス：URL検査、把握：全URLリストの作成、クロール・レンダリングの健全性確認</p>
+  </div>
+
+  <div class="result-summary" data-result-summary>
+    <div class="result-summary__icon" data-result-icon>🏆</div>
+    <div class="result-summary__title">確認テスト結果</div>
+    <div class="result-summary__score" data-result-score>--%</div>
+    <div class="result-summary__sub" data-result-sub></div>
+    <div class="result-status" data-result-status></div>
+  </div>
+
+  <div class="result-review">
+    <div class="result-review__head">
+      <div class="result-review__title">回答一覧と解説</div>
+      <div class="result-review__hint">間違えた問題は「関連する教材を見直す」から該当ページを確認できます</div>
+    </div>
+    <div data-result-list></div>
+  </div>
+
+  <div class="result-actions">
+    <button class="btn btn--primary" data-result-retry>↻ テストを再受験</button>
+    <a href="step-1.html" class="btn btn--ghost">📖 教材から見直す</a>
+    <a href="../../phases/practice/index.html" class="btn btn--muted">一覧に戻る</a>
+  </div>
+
+  <script type="application/json" data-quiz-data>
+[{"id":"q1","type":"single","sectionIndex":0,"question":"Search Consoleの説明として、最も適切なものはどれか。","options":["サイト訪問後のユーザー行動だけを計測するツール","Googleが提供する、自サイトが検索結果でどう扱われているかを確認・管理できる無料ツール","有料広告の入札単価を自動調整するツール","サイトのデザインテンプレートを提供するツール"],"correct":[1],"explain":"Search Consoleは、自分のサイトがGoogle検索でどのように扱われているかを確認・管理できる、Googleが提供する無料のツールです。"},{"id":"q2","type":"single","sectionIndex":0,"question":"「ドメインプロパティ」の特徴として、最も適切なものはどれか。","options":["特定のURL配下のみを対象とする","サブドメインを含むドメイン全体を対象とし、http/https/wwwの有無を問わずまとめて扱う","所有権確認の方法はHTMLファイルのアップロードのみである","ドメインプロパティは現在Googleでは利用できない"],"correct":[1],"explain":"ドメインプロパティは、サブドメインを含むドメイン全体を対象とし、http/https/wwwの有無を問わずまとめて1つとして扱われます。"},{"id":"q3","type":"single","sectionIndex":1,"question":"Search Consoleの所有権確認に関する説明として、正しいものはどれか。","options":["所有権確認をしなくても、すべての機能をすぐに使うことができる","所有権が確認されるまでは、詳細な情報の閲覧や各種機能の利用ができない","所有権確認の方法はDNSレコードへの追記のみである","所有権確認は一度も行う必要がない"],"correct":[1],"explain":"プロパティ追加時点からデータ収集は始まりますが、所有権が確認されるまでは詳細な情報の閲覧や機能の利用はできません。"},{"id":"q4","type":"multi","sectionIndex":2,"question":"URL検査ツールで確認できる情報として、正しいものをすべて選べ。","options":["そのページがインデックスに登録されているかどうか","最後にGooglebotがそのページをクロールした日時","ページで検出された構造化データの有無","そのページを閲覧したユーザーの氏名"],"correct":[0,1,2],"explain":"URL検査ツールでは、インデックス状況、最終クロール日時、構造化データの検出状況などを確認できます。個人を特定する情報は扱いません。"},{"id":"q5","type":"single","sectionIndex":2,"question":"URL検査ツールから「インデックス登録をリクエスト」した場合の説明として、最も適切なものはどれか。","options":["リクエストした瞬間に、必ず検索結果の1位に表示される","リクエストしても、必ずすぐにクロール・インデックスされるとは限らない","リクエストは1サイトにつき生涯で1回しか行えない","インデックス登録のリクエストという機能はSearch Consoleには存在しない"],"correct":[1],"explain":"インデックス登録をリクエストすることはできますが、リクエストしたからといって必ずすぐにクロール・インデックスされるとは限りません。"},{"id":"q6","type":"multi","sectionIndex":3,"question":"サイト全体のURLを整理する際に確認すべき観点として、正しいものをすべて選べ。","options":["URLの階層や命名ルールの規則性","title・descriptionの重複や記述ミスの有無","無限に生成されうるパラメータ付きURLの有無","サイト運営会社の資本金の額"],"correct":[0,1,2],"explain":"URLの階層・規則性、title・descriptionの重複や記述ミス、パラメータURLの有無などは、サイト全体を把握する上で確認すべき観点です。資本金の額はSEOのURL整理には関係ありません。"},{"id":"q7","type":"single","sectionIndex":3,"question":"サイトのURLを取得・整理することの意義として、最も適切なものはどれか。","options":["URLを整理しても、SEO戦略にはまったく関係しない","サイトの全容を把握することが、場当たり的でない改善施策を考えるための土台になる","URLは一度整理したら二度と確認する必要がない","URLの整理はクロールツールだけで完結し、Search Consoleの情報は不要である"],"correct":[1],"explain":"サイトの全容を正確に把握することは、部分的な対応に終始せず、本質的な改善施策を検討するための土台になります。クロールツールに加え、Search Consoleやsitemap.xmlの情報もあわせて活用することが推奨されます。"},{"id":"q8","type":"single","sectionIndex":4,"question":"クロールの健全性を確認する観点として、最も適切なものはどれか。","options":["サイトのデザインカラーが競合と似ていないか","robots.txtで重要ページが誤ってブロックされていないか、404・500エラーが多発していないか","従業員の人数が十分かどうか","SNSのフォロワー数が増えているかどうか"],"correct":[1],"explain":"クロール健全性の確認では、robots.txtによる意図しないブロック、noindexの誤設定、404・500エラーの多発、クロール頻度の急激な増減などを確認します。"},{"id":"q9","type":"single","sectionIndex":4,"question":"レンダリングの健全性を確認する方法として、最も適切なものはどれか。","options":["URL検査ツールで「クロール済みページを表示」し、Googlebotが解釈したHTMLやスクリーンショットを確認する","GA4の売上レポートを確認する","競合サイトのSNSフォロワー数を確認する","自社のメールマガジン開封率を確認する"],"correct":[0],"explain":"URL検査ツールの「クロール済みページを表示」から、Googlebotが解釈したHTMLソースやレンダリング結果のスクリーンショットを確認し、JavaScriptで生成されるコンテンツが正しく認識されているかなどをチェックできます。"}]
+  </script>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = 7;</script>
+<script src="../../assets/js/result.js"></script>
+</body>
+</html>

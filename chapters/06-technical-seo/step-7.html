@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テクニカルSEO（内部リンクとクロールのしやすさ） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約55分</span>
+    <h1 class="wizard-header__title">テクニカルSEO</h1>
+    <p class="wizard-header__topics">基礎：HTML構造、1URL1コンテンツ、サイト構造：URL設計、内部リンク、クロール制御：robots.txt、サイトマップ、エラー・スパム対応、表示速度：ネットワーク／レンダリング／サーバー、Core Web Vitals、測定ツール、HTTPS</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">7 / 18</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>内部リンクとクロールのしやすさ</h2>
+    <p>サイト構造をどれだけきれいに設計しても、実際にページ同士がリンクでつながっていなければ、ユーザーもクローラーも目的のページにたどり着けません。<mark>内部リンク</mark>の設計では、次の3点が重要とされています。</p><div class="figure"><div class="figure__frame"><div class="flow"><div class="flow__step"><div class="flow__step-icon">🔗</div><div class="flow__step-title">双方向リンク</div><div class="flow__step-desc">どのページからも他のページへ辿れる状態にする</div></div><div class="flow__arrow">＋</div><div class="flow__step"><div class="flow__step-icon">🧩</div><div class="flow__step-title">関連ページへのリンク</div><div class="flow__step-desc">同じカテゴリ・上位カテゴリへリンクする</div></div><div class="flow__arrow">＋</div><div class="flow__step"><div class="flow__step-icon">🏠</div><div class="flow__step-title">上位階層へのリンク</div><div class="flow__step-desc">常にトップページ・最上位カテゴリに戻れるようにする</div></div></div></div><div class="figure__caption">図1：内部リンク設計で重要とされる3つの観点</div></div><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>どのページからもリンクされていない「孤立したページ」や、リンクをたどった先が行き止まりになる構造は、<span class="text-primary">クローラーにもユーザーにも発見・到達されにくくなります</span>。多くのページからリンクを受けているページ（一般的にはトップページや上位カテゴリ）は、検索エンジンから「サイト内で特に重要なページ」として認識されやすくなるとされています。</p></div></div><p>この考え方を実装に落とし込む代表的な要素が<strong>ナビゲーション</strong>と<strong>パンくずリスト</strong>です。</p><div class="table-wrap"><table><thead><tr><th>種類</th><th>設置場所と役割</th><th>SEO上の位置づけ</th></tr></thead><tbody><tr><td>グローバルナビゲーション</td><td>全ページ共通。トップページ・最上位カテゴリへのリンクを担う</td><td>サイト内で多くのリンクを集めるため、重要ページとして認識されやすい</td></tr><tr><td>サイドナビゲーション（ローカルナビゲーション）</td><td>同一カテゴリ内の他ページへの導線</td><td>回遊性の向上に加え、対象ページの被リンク数増加にも寄与</td></tr><tr><td>フッターナビゲーション</td><td>利用規約・会社概要など補足情報ページへの導線</td><td>検索エンジンはフッターリンクの価値を低く評価する傾向があるとされる</td></tr><tr><td>パンくずリスト</td><td>トップページから現在地までの階層を示すリンクの集まり</td><td>3階層以上のサイトでは設置が推奨される。構造化マークアップで検索結果に表示されることもある</td></tr></tbody></table></div><p>また、記事本文などの<strong>メインコンテンツからのリンク</strong>は、文脈に沿って設置されるため、ナビゲーションからのリンクよりもページ内容との関連性が高いと検索エンジンに判断されやすいとされています。</p><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>次のリンク形式は、クローラビリティの観点で<span class="text-danger">注意が必要</span>とされています。</p><ul style="margin:6px 0 0; padding-left:20px;"><li><strong>JavaScriptのみのリンク</strong>：href属性を伴わないonclickだけのリンクは非推奨。href属性と併用すれば通常のリンクと同様に評価される</li><li><strong>プルダウンメニューによるリンク</strong>：クリックするまで選択肢が見えず、JavaScript処理も伴うため、クローラビリティ・ユーザビリティの両面で好ましくない</li><li><strong>検索フォームによるリンク</strong>：ある程度はクロール可能だが、全パターンを網羅的にクロールする保証はない</li></ul><p style="margin:8px 0 0;">重要なページへの内部リンクは、<code>&lt;a href="..."&gt;</code>によるテキストリンクで確実に設置することが望ましいとされています。</p></div></div><p>内部リンクの管理では、次の点にも配慮しましょう。</p><ul><li>ナビゲーションメニューやパンくずリストで、サイト全体の階層を分かりやすくする</li><li>関連コンテンツへのリンクを、記事の文脈に沿って適切に設置する</li><li>リンク切れ（存在しないページへのリンク）を放置しない</li><li>内部リンクのURLは、末尾スラッシュやhttp/httpsなどが揺れないよう、正規URLに統一する</li></ul><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>転職サイト・不動産サイト・ECサイト・記事メディアなど、いわゆるデータベース系サイトでは、1つの詳細ページ（求人・物件・商品・記事）が複数カテゴリに属すことがあり、カテゴリ構造とURL階層をあえて一致させないケースもあります。この場合でも、パンくずリストなどのリンク構造はカテゴリ構造と一致させ、検索エンジンにサイト構造を適切に伝えることが推奨されます。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-6.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-8.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

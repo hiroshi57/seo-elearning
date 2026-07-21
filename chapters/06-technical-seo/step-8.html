@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テクニカルSEO（XMLサイトマップとcanonical） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約55分</span>
+    <h1 class="wizard-header__title">テクニカルSEO</h1>
+    <p class="wizard-header__topics">基礎：HTML構造、1URL1コンテンツ、サイト構造：URL設計、内部リンク、クロール制御：robots.txt、サイトマップ、エラー・スパム対応、表示速度：ネットワーク／レンダリング／サーバー、Core Web Vitals、測定ツール、HTTPS</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">8 / 18</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>XMLサイトマップとcanonical</h2>
+    <p><mark>XMLサイトマップ</mark>は、サイト内のどのページをクロール・インデックスしてほしいかをGoogleに伝えるためのファイルです。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>XMLサイトマップ</strong><br>サイト内のURL一覧をXML形式でまとめたファイル。Search Console（第10章で学びます）を通じてGoogleに送信することで、クロールの手がかりとして活用してもらえます。ユーザー向けのHTMLサイトマップとは異なり、ユーザビリティを気にせず全URLを機械的に記載できます。</p></div><p>Google公式のガイドラインでは、XMLサイトマップには<strong>正規URL（canonicalで指定したURL）のみ</strong>を含めることが推奨されています。重複しているURLや、canonicalの指定と矛盾するURLをサイトマップに含めると、Googleに対して矛盾したシグナルを送ることになるためです。XMLサイトマップが特に効果的とされるのは、次のようなケースです。</p><ul><li>サイトが新しく、外部からの被リンクがまだ少ない</li><li>サイトのページ数が非常に多い</li><li>どこからもリンクされていないページが存在する（本来は望ましくない状態）</li></ul><p>基本的な記述には<code>&lt;loc&gt;</code>（URL、必須）に加え、<code>&lt;lastmod&gt;</code>（最終更新日）を含められます。Googleは<code>&lt;changefreq&gt;</code>（更新頻度）はあくまで参考情報として扱い、<code>&lt;priority&gt;</code>（優先度）は無視すると公式に説明しています。</p><div class="table-wrap"><table><thead><tr><th>制約</th><th>内容</th></tr></thead><tbody><tr><td>1ファイルのURL数</td><td>50,000個以下</td></tr><tr><td>1ファイルのサイズ</td><td>50MB以下（圧縮前のサイズが基準）</td></tr><tr><td>URLの長さ</td><td>1つのURLは2,048文字以下</td></tr></tbody></table></div><p>上限を超える場合は、複数のXMLサイトマップに分割し、それらのURLをまとめた<strong>サイトマップインデックス</strong>を作成すると管理しやすくなります。作成したXMLサイトマップは、次の2つの方法で存在を伝えます。</p><ul><li>Search Consoleの[インデックス作成]→[サイトマップ]からURLを送信する</li><li>robots.txtに<code>Sitemap:</code>としてURLを記載する（生成AIのクローラなど、Search Consoleに登録できない主体にも伝わる）</li></ul><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>画像や動画を多く扱うサイトでは、通常のXMLサイトマップに画像・動画専用の情報（<code>&lt;image:image&gt;</code>や<code>&lt;video:video&gt;</code>タグなど）を追加した「画像サイトマップ」「動画サイトマップ」を作成すると、画像検索・動画検索でのインデックスを促進できるとされています。ニュースメディアでは同様に「ニュースサイトマップ」も有効です。</p></div></div><p>正規URLの指定に使うのが<strong>canonicalタグ</strong>です。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>canonicalタグ（rel="canonical"）</strong><br>同じ内容、または似た内容のページが複数のURLで存在する場合に、「正規のURLはこちらです」とGoogleに伝えるためのタグ。URLの正規化（重複コンテンツの整理）に使われます。</p></div><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>同じ内容のページが、パラメータ違いなどで複数のURLからアクセスできる状態を放置すると、<strong>重複コンテンツ</strong>として扱われ、評価が分散してしまう可能性があります。canonicalタグやリダイレクトで、優先すべきURLを明示することが重要です。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-7.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-9.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

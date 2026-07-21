@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>構造化データ（基本：構造化タグと構造化マークアップの違い） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/ai/index.html" class="breadcrumb-back">← 構造化データ</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約24分</span>
+    <h1 class="wizard-header__title">構造化データ</h1>
+    <p class="wizard-header__topics">基本：構造化タグと構造化マークアップの違い、実践：JSON-LDによるOrganization・WebSite・Breadcrumb・Product・Article等の実装、検証ツール</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">2 / 10</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>基本：構造化タグと構造化マークアップの違い</h2>
+    <p>「構造化データ」と一口に言っても、実は<mark>文書の構造を伝えるもの</mark>と<mark>情報の意味を伝えるもの</mark>の2種類があります。混同しやすいため、まずこの違いを整理します。</p><div class="table-wrap"><table><thead><tr><th></th><th>構造化タグ</th><th>構造化マークアップ</th></tr></thead><tbody><tr><td>伝える内容</td><td>文章の「まとまり」の構造（本の章・目次・補足情報など）</td><td>要素の「意味」（これは商品名である、これは価格である、など）</td></tr><tr><td>具体例</td><td><code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code>など</td><td>Article, FAQ, Organizationなどのschema.orgタイプ</td></tr><tr><td>ブラウザでの見え方への影響</td><td>基本的に見た目は変わらない</td><td>基本的に見た目は変わらない（検索結果側で変化する）</td></tr></tbody></table></div><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>構造化タグ</strong><br>HTML5で定義されている<code>&lt;section&gt;</code>（見出しを持つ文章のまとまり）、<code>&lt;article&gt;</code>（独立した記事）、<code>&lt;nav&gt;</code>（ナビゲーション）、<code>&lt;aside&gt;</code>（補足情報）などのタグ。文書全体の「アウトライン（構造）」を検索エンジンに明示的に伝える役割を持ちます。</p></div><p>1998年、World Wide Webの考案者であるW3CのTim Berners-Lee氏は「セマンティックWeb」（意味を持つWeb）という構想を提唱しました。Web上のデータをコンピュータが理解できる形で意味付けし、より適切に情報を扱える状態を目指す考え方です。例えば人間は「Tシャツ」という単語を見れば、それが袖丈の短い洋服であると即座に理解できますが、文字の並びとしか認識できないコンピュータには、本来その理解ができません。構造化タグと構造化マークアップは、この溝を埋めるための仕組みとして登場しました。</p><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>例えば、未知の商品名（架空の造語など）が使われている場合、検索エンジンはその言葉だけでは何を指すのか判断できません。構造化マークアップによって「これは商品名であり、食品である」といった意味を明示することで、検索エンジンやAIがより正確に情報を理解できるようになります。AIの活用が広がるほど、こうしたセマンティックWebの重要性は増すと考えられています。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-1.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-3.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

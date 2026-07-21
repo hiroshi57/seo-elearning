@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>構造化データ（実践：Organization・WebSite・BreadcrumbListの実装） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/ai/index.html" class="breadcrumb-back">← 構造化データ</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約24分</span>
+    <h1 class="wizard-header__title">構造化データ</h1>
+    <p class="wizard-header__topics">基本：構造化タグと構造化マークアップの違い、実践：JSON-LDによるOrganization・WebSite・Breadcrumb・Product・Article等の実装、検証ツール</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">7 / 10</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>実践：Organization・WebSite・BreadcrumbListの実装</h2>
+    <p>ここからは代表的なタイプについて、JSON-LDの具体的な記述例を確認していきます。</p><p><strong>組織情報（Organization）</strong></p><p>組織の名称・ロゴ・住所・電話番号などを構造化マークアップすることで、検索結果のナレッジパネルなどに活用される可能性があります。「Organization」には、Corporation（企業）・EducationalOrganization（教育機関）・LocalBusiness（地域ビジネス）・NGO（非営利組織）など、多くのサブタイプが用意されており、実態に最も近いサブタイプを選ぶことで、より正確な情報を伝えられます。</p><div class="table-wrap"><table><thead><tr><th>コード例：Corporation（JSON-LD）</th></tr></thead><tbody><tr><td><pre style="white-space:pre-wrap; margin:0; font-size:0.82rem;">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "株式会社サンプル",
+  "url": "https://example.com/",
+  "logo": "https://example.com/img/logo.png",
+  "telephone": "03-0000-0000",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "150-0022",
+    "addressRegion": "東京都",
+    "addressLocality": "渋谷区",
+    "streetAddress": "恵比寿南1-15-1"
+  },
+  "description": "サンプル株式会社の事業概要"
+}
+&lt;/script&gt;</pre></td></tr></tbody></table></div><p>主なプロパティは、<code>name</code>（企業名）、<code>url</code>（サイトURL）、<code>logo</code>（ロゴ画像URL。112×112px以上を推奨）、<code>telephone</code>（電話番号）、<code>address</code>（住所。中に<code>PostalAddress</code>タイプを呼び出し、postalCode・addressRegion・addressLocality・streetAddressで構成）、<code>description</code>（事業概要）です。<code>{}</code>で囲むことで別タイプを入れ子にできる点がポイントです。</p><p><strong>Webサイト情報（WebSite）</strong></p><p>サイトのトップページに<code>WebSite</code>タイプを記述することで、検索結果に表示されるサイト名を検索エンジンに伝えられます。構造化マークアップがない場合もGoogleがページ内容から自動生成しますが、意図したサイト名を希望する場合はWebSite構造化データが最も重要だとGoogleが明言しています。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>WebSiteタイプのサイト名に関する注意点</strong><br>1つのドメイン（またはサブドメイン）につき1つの一貫したサイト名のみがサポートされます。サブディレクトリごとに異なるサイト名を指定しても反映されません。また、対象キーワードを意図的に含めた名前や、「〇〇が得意な会社」のような一般的すぎる名称は、Googleに採用されにくいとされています。構造化データだけでなく、<code>og:site_name</code>やtitleタグでも同じサイト名を使うことが推奨されます。</p></div><p><strong>パンくずリスト（BreadcrumbList）</strong></p><p>パンくずリストを構造化マークアップすると、検索結果画面でURLの代わりにパンくずリストが表示される場合があり、ユーザーが日本語でページの位置を把握しやすくなるため、クリック率の向上も期待できます。<code>BreadcrumbList</code>タイプの中に、階層の数だけ<code>ListItem</code>を並べて記述します。</p><div class="table-wrap"><table><thead><tr><th>コード例：BreadcrumbList（JSON-LD）</th></tr></thead><tbody><tr><td><pre style="white-space:pre-wrap; margin:0; font-size:0.82rem;">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1,
+      "item": "https://example.com/", "name": "トップページ" },
+    { "@type": "ListItem", "position": 2,
+      "item": "https://example.com/blog/", "name": "ブログ" },
+    { "@type": "ListItem", "position": 3,
+      "item": "https://example.com/blog/seo/", "name": "SEO" }
+  ]
+}
+&lt;/script&gt;</pre></td></tr></tbody></table></div><p><code>position</code>はパンくずの位置（「1」が起点）、<code>item</code>はURL、<code>name</code>はページ名を表します。なお、トップページに付けた<code>name</code>は検索結果に表示されるサイト名には影響しません。サイト名を指定したい場合は前述の<code>WebSite</code>タイプを利用します。</p>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-6.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-8.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

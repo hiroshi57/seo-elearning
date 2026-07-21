@@ -1,0 +1,216 @@
+{
+  "no": 18,
+  "phase": "ai",
+  "slug": "18-structured-data",
+  "title": "構造化データ",
+  "subtitle": "文書構造を伝えるHTMLタグと、意味を伝える構造化マークアップの違いを理解し、JSON-LDによるArticle・FAQ・Organization・Breadcrumb等の実装方法を学ぶ",
+  "topicsLabel": "基本：構造化タグと構造化マークアップの違い、実践：JSON-LDによるOrganization・WebSite・Breadcrumb・Product・Article等の実装、検証ツール",
+  "estimateMinutes": 24,
+  "goals": [
+    "構造化タグ（section・article等）と構造化マークアップの違いを理解する",
+    "section・article・aside・navなど構造化タグの意味と正しい使い分けを理解する",
+    "構造化データとリッチリザルト・ナレッジパネルの関係を理解する",
+    "構造化マークアップの3形式（Microdata・RDFa Lite・JSON-LD）の違いとJSON-LDが推奨される理由を理解する",
+    "Organization・WebSite・BreadcrumbListの具体的なプロパティと実装方法を理解する",
+    "Product・Article・FAQなど主要タイプの実装方法と、検証ツールによる確認方法を理解する"
+  ],
+  "sections": [
+    {
+      "heading": "基本：構造化タグと構造化マークアップの違い",
+      "bodyHtml": "<p>「構造化データ」と一口に言っても、実は<mark>文書の構造を伝えるもの</mark>と<mark>情報の意味を伝えるもの</mark>の2種類があります。混同しやすいため、まずこの違いを整理します。</p><div class=\"table-wrap\"><table><thead><tr><th></th><th>構造化タグ</th><th>構造化マークアップ</th></tr></thead><tbody><tr><td>伝える内容</td><td>文章の「まとまり」の構造（本の章・目次・補足情報など）</td><td>要素の「意味」（これは商品名である、これは価格である、など）</td></tr><tr><td>具体例</td><td><code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code>など</td><td>Article, FAQ, Organizationなどのschema.orgタイプ</td></tr><tr><td>ブラウザでの見え方への影響</td><td>基本的に見た目は変わらない</td><td>基本的に見た目は変わらない（検索結果側で変化する）</td></tr></tbody></table></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>構造化タグ</strong><br>HTML5で定義されている<code>&lt;section&gt;</code>（見出しを持つ文章のまとまり）、<code>&lt;article&gt;</code>（独立した記事）、<code>&lt;nav&gt;</code>（ナビゲーション）、<code>&lt;aside&gt;</code>（補足情報）などのタグ。文書全体の「アウトライン（構造）」を検索エンジンに明示的に伝える役割を持ちます。</p></div><p>1998年、World Wide Webの考案者であるW3CのTim Berners-Lee氏は「セマンティックWeb」（意味を持つWeb）という構想を提唱しました。Web上のデータをコンピュータが理解できる形で意味付けし、より適切に情報を扱える状態を目指す考え方です。例えば人間は「Tシャツ」という単語を見れば、それが袖丈の短い洋服であると即座に理解できますが、文字の並びとしか認識できないコンピュータには、本来その理解ができません。構造化タグと構造化マークアップは、この溝を埋めるための仕組みとして登場しました。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>例えば、未知の商品名（架空の造語など）が使われている場合、検索エンジンはその言葉だけでは何を指すのか判断できません。構造化マークアップによって「これは商品名であり、食品である」といった意味を明示することで、検索エンジンやAIがより正確に情報を理解できるようになります。AIの活用が広がるほど、こうしたセマンティックWebの重要性は増すと考えられています。</p></div></div>"
+    },
+    {
+      "heading": "実践：構造化タグの種類と記述方法",
+      "bodyHtml": "<p>HTML文書のbody要素では、検索エンジンに正しい情報を伝えられるよう、適切なアウトライン（文書構造）を形成することが大切です。構造化タグを使えば、この文書構造を検索エンジンに明示的に伝えられます。</p><div class=\"table-wrap\"><table><thead><tr><th>構造化タグ</th><th>意味と解説</th><th>本にたとえると</th></tr></thead><tbody><tr><td><code>&lt;section&gt;</code></td><td>見出しを付けられる文章のまとまり。1つの見出し（h要素）＋本文＋補足情報で構成される</td><td>「章」</td></tr><tr><td><code>&lt;article&gt;</code></td><td>独立した記事・コンテンツであることを示す。ブログでは記事全体、ニュースサイトでは個々のニュースが該当する</td><td>本「全体」</td></tr><tr><td><code>&lt;aside&gt;</code></td><td>本文と関連するが区別すべき補足情報。サイドバーにも使われる</td><td>「コラム」</td></tr><tr><td><code>&lt;nav&gt;</code></td><td>グローバルナビゲーションやパンくずリストなど、主要ページへのリンク集</td><td>「目次」</td></tr><tr><td><code>&lt;header&gt;</code></td><td>導入やナビゲーションの補助。文書のヘッダー情報を表す<code>&lt;head&gt;</code>タグとは別物</td><td>「表紙」</td></tr><tr><td><code>&lt;footer&gt;</code></td><td>作成者情報や著作権表示（Copyright）、関連文書へのリンクなど</td><td>「裏表紙」</td></tr></tbody></table></div><p>この中で基本となるのが<code>&lt;section&gt;</code>です。見出しを付けられる文章のまとまりを「セクション」と呼び、セクションを区分するタグを「セクショニングコンテンツ」と呼びます。<code>&lt;section&gt;</code>を基本形として、そのうち「記事」「補足情報」「ナビゲーション」という特別な役割を持つものに、それぞれ<code>&lt;article&gt;</code><code>&lt;aside&gt;</code><code>&lt;nav&gt;</code>が定義されています。一方、<code>&lt;header&gt;</code>と<code>&lt;footer&gt;</code>は単体で成り立つセクションではなく、セクションに付属する要素であり、セクショニングコンテンツには含まれません。</p><div class=\"figure\"><div class=\"figure__frame\"><p style=\"margin:0 0 14px; font-size:0.85rem; color:var(--color-text-muted);\">例：1つの記事ページを構造化タグでマークアップする場合</p><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🗂️</div><div class=\"flow__step-title\">&lt;header&gt;</div><div class=\"flow__step-desc\">記事タイトル・日時</div></div><div class=\"flow__arrow\">↓</div><div class=\"flow__step\"><div class=\"flow__step-icon\">📄</div><div class=\"flow__step-title\">&lt;section&gt;</div><div class=\"flow__step-desc\">本文の段落</div></div><div class=\"flow__arrow\">↓</div><div class=\"flow__step\"><div class=\"flow__step-icon\">💬</div><div class=\"flow__step-title\">&lt;aside&gt;</div><div class=\"flow__step-desc\">補足情報</div></div><div class=\"flow__arrow\">↓</div><div class=\"flow__step\"><div class=\"flow__step-icon\">✍️</div><div class=\"flow__step-title\">&lt;footer&gt;</div><div class=\"flow__step-desc\">著者情報</div></div></div></div><div class=\"figure__caption\">図1：&lt;article&gt;全体の中に、&lt;header&gt;（タイトル・日時）・&lt;section&gt;（本文）・&lt;aside&gt;（補足）・&lt;footer&gt;（著者情報）を入れ子にして配置する例。この&lt;header&gt;と&lt;footer&gt;は、&lt;article&gt;に付属する文章のまとまりであり、ページ全体のheader/footerとは別物</div></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>このように構造化タグでマークアップしても、<span class=\"text-primary\">ブラウザの見た目そのものは変化しません</span>。あくまで、文書構造と各文章のまとまりの意味を検索エンジンに明示する役割を持ちます。</p></div></div>"
+    },
+    {
+      "heading": "実践：構造化タグの正しい使い分け",
+      "bodyHtml": "<p>構造化タグの利用では、間違いや混乱がよく発生します。ここでは頻出する3つの誤用を確認します。</p><p><strong>1. 独立セクションにも&lt;article&gt;ではなく&lt;section&gt;を使ってしまう</strong></p><p><code>&lt;section&gt;</code>と<code>&lt;article&gt;</code>はどちらも「セクション」を区切るセクショニングコンテンツですが、<code>&lt;article&gt;</code>は<code>&lt;section&gt;</code>に「他から独立しても成立する」という性質が加わったものと理解すると整理しやすくなります。</p><div class=\"compare\"><div class=\"compare__card compare__card--a\"><h4>1本の記事を段落分けする場合</h4><p style=\"margin:0; font-size:0.88rem;\">1つの記事＝1つの独立したコンテンツのため、記事全体を<code>&lt;article&gt;</code>で囲み、その中の各段落を<code>&lt;section&gt;</code>で区切る（article内に複数section）</p></div><div class=\"compare__card compare__card--b\"><h4>複数の記事を並べる場合</h4><p style=\"margin:0; font-size:0.88rem;\">「人気記事一覧」のような1つのまとまりを<code>&lt;section&gt;</code>で囲み、独立した記事それぞれを<code>&lt;article&gt;</code>で囲む（section内に複数article）</p></div></div><p>「その部分だけを抜き出して独立ページとして成立するか」を基準に、成立するなら<code>&lt;article&gt;</code>、それ以外は<code>&lt;section&gt;</code>を使うのが基本的な考え方です。</p><p><strong>2. 既存の&lt;div&gt;をそのまま構造化タグに置換してしまう</strong></p><p><code>&lt;div&gt;</code>タグは複数の要素をまとめる役割を持つため、構造化タグと混同されがちです。しかし<code>&lt;div&gt;</code>には文書構造の明示や意味付けの役割は一切なく、あくまでCSSでデザイン範囲を区切るための便宜的な要素です。そのため、文書構造とまったく関係のない箇所（引用部分の装飾など）で使われることも多く、既存の<code>&lt;div&gt;</code>を機械的に構造化タグへ置き換えることはできません。既存HTMLに構造化タグを導入する際は、いったん<code>&lt;div&gt;</code>の存在を無視して文書構造から構造化タグを追記し、その後で<code>&lt;div&gt;</code>との統合を進めるとよいとされています。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">❓</div><div class=\"flow__step-title\">意味のまとまりに<br>見出しを付けられるか</div><div class=\"flow__step-desc\">いいえ → &lt;div&gt;</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">❓</div><div class=\"flow__step-title\">他のセクションから<br>独立して成り立つか</div><div class=\"flow__step-desc\">いいえ → &lt;section&gt;</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">✅</div><div class=\"flow__step-title\">&lt;article&gt;</div><div class=\"flow__step-desc\">はい</div></div></div></div><div class=\"figure__caption\">図2：&lt;div&gt;・&lt;section&gt;・&lt;article&gt;の使い分けフローチャート</div></div><p><strong>3. &lt;section&gt;内の見出しをすべて&lt;h1&gt;から書き始めてしまう</strong></p><p>WHATWG（Web標準化団体）は「ドキュメントには複数のトップレベル見出しを含められる」としており、複数の<code>&lt;h1&gt;</code>を使っても、Googleが文法上の理由で検索順位を下げることはないと公言しています。ただし、<code>&lt;section&gt;</code>のたびにすべて<code>&lt;h1&gt;</code>で書いてしまうと、階層ごとに<code>&lt;h1&gt;</code>が出現し、人の目には文書構造がわかりづらくなります。見出しレベル（h1〜h6）は、ネストされたセクションの階層に対応させ、文書全体で1つのアウトラインとして一貫させることが推奨されます。</p><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>構造化タグを記述しても、それ自体が検索順位に直接影響することはないとされています。ただし、<span class=\"text-danger\">適切なアウトライン構成は、検索エンジンやAIがコンテンツを正確に認識する助けになり、結果的にユーザーにとっても理解しやすいコンテンツにつながります。</span></p></div></div>"
+    },
+    {
+      "heading": "基本：構造化データとは",
+      "bodyHtml": "<p><mark>構造化データ</mark>とは、ページ内の情報が「何を意味しているか」を、検索エンジンにも分かる形式で明示するためのマークアップです。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>構造化データ（構造化マークアップ）</strong><br>検索エンジンやクローラーがコンテンツの内容を理解しやすくするための、決められた形式のデータ。例えば「これは記事のタイトルである」「これは著者名である」といった情報の意味を、機械にも分かる形で伝えます。</p><p style=\"margin:8px 0 0;\"><strong>リッチリザルト</strong><br>構造化データを実装することで、検索結果に表示される可能性がある拡張表示。星評価やパンくずリスト、FAQの折りたたみ表示など、通常のテキストリンクより多くの情報を表示できます。</p><p style=\"margin:8px 0 0;\"><strong>エンリッチリザルト</strong><br>リッチリザルトのうち、求人情報やレシピなど、ユーザーが検索結果内で直接操作できる双方向性を持つもの。ポップアップやインタラクティブなウィジェットとして、より視覚的に際立つ形式で表示されます。</p></div><p>構造化データが利用されるのは検索結果の拡張表示だけではありません。パソコンでは画面右側、スマートフォンでは上部に表示される<strong>ナレッジパネル</strong>（Googleが収集した知識データベース「ナレッジグラフ」をもとにした拡張表示）にも、構造化マークアップの情報が活用されていると考えられています。</p><p>Google Search Central（公式ドキュメント）は、構造化データの主なフォーマットとして<strong>JSON-LD</strong>を推奨しています。JSON-LDは、HTMLの本文とは別に、ページの意味情報だけをまとめて記述できる形式です（詳しくは次のセクションで説明します）。</p>"
+    },
+    {
+      "heading": "実践：構造化マークアップの3つの形式とJSON-LD",
+      "bodyHtml": "<p>要素に意味を付与する構造化マークアップですが、普及当初は複数の規格が乱立していました。そこで2011年、Google・Microsoft・Yahoo!・Yandexが共同で<strong>schema.org</strong>プロジェクトを立ち上げ、規格の統一を図りました。現在はschema.orgが定めるタイプとプロパティの体系に沿って、構造化マークアップが行われています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>タイプ（Type）</strong><br>「Article（記事）」「Organization（組織）」のように、モノ・コトを表す分類概念。最上位の「Thing」を頂点に、ロジックツリー状に分類されています。</p><p style=\"margin:8px 0 0;\"><strong>プロパティ（Property）</strong><br>タイプごとに定義された属性。例えば「Corporation（企業）」タイプは、住所やロゴ画像などのプロパティを持ちます。タイプは、自身の上位階層のタイプが持つプロパティも利用できます。</p></div><p>schema.orgが定め、かつGoogleがサポートしている記述形式には、Microdata・RDFa Lite・JSON-LDの3つがあります。</p><div class=\"table-wrap\"><table><thead><tr><th>形式</th><th>特徴</th><th>メリット</th><th>デメリット</th></tr></thead><tbody><tr><td><strong>Microdata</strong></td><td>HTMLタグの属性（itemscope・itemtype・itempropなど）に直接意味を埋め込む</td><td>構造化データと実際のHTMLが一致しやすい</td><td>HTML属性が増えてソースが煩雑になり、メンテナンスコストが高い</td></tr><tr><td><strong>RDFa Lite</strong></td><td>RDFa（XHTML向けのセマンティックWeb技術）を簡素化した形式</td><td>XHTMLでも利用可能</td><td>ソースが煩雑。Googleの構造化データマークアップ支援ツールが非対応</td></tr><tr><td><strong>JSON-LD</strong></td><td>JSON形式で、HTML本文と分離して記述する</td><td>HTMLソースに影響しない。人間にもコンピュータにも読みやすい。不可視データの記述量が少ない</td><td>可視データはHTML本文とJSON-LDの2箇所に同じ内容を書く必要がある</td></tr></tbody></table></div><p>3形式を比べると、MicrodataとRDFa Liteは記法が類似している一方、JSON-LDは大きく異なります。JSON-LDはコンピュータが読み取りやすく、HTML本文とも分離できるため、Googleも推奨しており、管理のしやすさの面でも扱いやすい形式です。以降のセクションでは、JSON-LDによる具体的な実装例を紹介します。</p><p>JSON-LDは、HTML文書のどこに書いても機能しますが、<code>&lt;head&gt;</code>要素内に記述するのが一般的です。基本的な記述の骨組みは次のとおりです。</p><div class=\"table-wrap\"><table><thead><tr><th>キー名</th><th>意味</th></tr></thead><tbody><tr><td><code>@context</code></td><td>使用する語彙（ボキャブラリー）を定義。通常は<code>https://schema.org</code>を指定</td></tr><tr><td><code>@type</code></td><td>タイプ名を定義（例：Article、Organizationなど）</td></tr><tr><td><code>@id</code></td><td>一意に識別するためのID。URLで指定する</td></tr><tr><td>@の付かないキー名</td><td>タイプが持つプロパティをラベル付けする（name、descriptionなど）</td></tr></tbody></table></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>JSON-LDはHTML本文と分離して記述するため、<span class=\"text-danger\">記事内容を更新した際にJSON-LDの更新を忘れると、実際のHTML内容と構造化データの内容が食い違ってしまいます。</span>この不一致はGoogleのスパムポリシーに抵触する可能性があるため、コンテンツ更新時は必ずJSON-LD側も見直しましょう。CMSで記事を管理している場合は、該当箇所が自動的に反映されるようテンプレート側で管理すると、ミスを防ぎやすくなります。</p></div></div>"
+    },
+    {
+      "heading": "実践：Organization・WebSite・BreadcrumbListの実装",
+      "bodyHtml": "<p>ここからは代表的なタイプについて、JSON-LDの具体的な記述例を確認していきます。</p><p><strong>組織情報（Organization）</strong></p><p>組織の名称・ロゴ・住所・電話番号などを構造化マークアップすることで、検索結果のナレッジパネルなどに活用される可能性があります。「Organization」には、Corporation（企業）・EducationalOrganization（教育機関）・LocalBusiness（地域ビジネス）・NGO（非営利組織）など、多くのサブタイプが用意されており、実態に最も近いサブタイプを選ぶことで、より正確な情報を伝えられます。</p><div class=\"table-wrap\"><table><thead><tr><th>コード例：Corporation（JSON-LD）</th></tr></thead><tbody><tr><td><pre style=\"white-space:pre-wrap; margin:0; font-size:0.82rem;\">&lt;script type=\"application/ld+json\"&gt;\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Corporation\",\n  \"name\": \"株式会社サンプル\",\n  \"url\": \"https://example.com/\",\n  \"logo\": \"https://example.com/img/logo.png\",\n  \"telephone\": \"03-0000-0000\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"postalCode\": \"150-0022\",\n    \"addressRegion\": \"東京都\",\n    \"addressLocality\": \"渋谷区\",\n    \"streetAddress\": \"恵比寿南1-15-1\"\n  },\n  \"description\": \"サンプル株式会社の事業概要\"\n}\n&lt;/script&gt;</pre></td></tr></tbody></table></div><p>主なプロパティは、<code>name</code>（企業名）、<code>url</code>（サイトURL）、<code>logo</code>（ロゴ画像URL。112×112px以上を推奨）、<code>telephone</code>（電話番号）、<code>address</code>（住所。中に<code>PostalAddress</code>タイプを呼び出し、postalCode・addressRegion・addressLocality・streetAddressで構成）、<code>description</code>（事業概要）です。<code>{}</code>で囲むことで別タイプを入れ子にできる点がポイントです。</p><p><strong>Webサイト情報（WebSite）</strong></p><p>サイトのトップページに<code>WebSite</code>タイプを記述することで、検索結果に表示されるサイト名を検索エンジンに伝えられます。構造化マークアップがない場合もGoogleがページ内容から自動生成しますが、意図したサイト名を希望する場合はWebSite構造化データが最も重要だとGoogleが明言しています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>WebSiteタイプのサイト名に関する注意点</strong><br>1つのドメイン（またはサブドメイン）につき1つの一貫したサイト名のみがサポートされます。サブディレクトリごとに異なるサイト名を指定しても反映されません。また、対象キーワードを意図的に含めた名前や、「〇〇が得意な会社」のような一般的すぎる名称は、Googleに採用されにくいとされています。構造化データだけでなく、<code>og:site_name</code>やtitleタグでも同じサイト名を使うことが推奨されます。</p></div><p><strong>パンくずリスト（BreadcrumbList）</strong></p><p>パンくずリストを構造化マークアップすると、検索結果画面でURLの代わりにパンくずリストが表示される場合があり、ユーザーが日本語でページの位置を把握しやすくなるため、クリック率の向上も期待できます。<code>BreadcrumbList</code>タイプの中に、階層の数だけ<code>ListItem</code>を並べて記述します。</p><div class=\"table-wrap\"><table><thead><tr><th>コード例：BreadcrumbList（JSON-LD）</th></tr></thead><tbody><tr><td><pre style=\"white-space:pre-wrap; margin:0; font-size:0.82rem;\">&lt;script type=\"application/ld+json\"&gt;\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    { \"@type\": \"ListItem\", \"position\": 1,\n      \"item\": \"https://example.com/\", \"name\": \"トップページ\" },\n    { \"@type\": \"ListItem\", \"position\": 2,\n      \"item\": \"https://example.com/blog/\", \"name\": \"ブログ\" },\n    { \"@type\": \"ListItem\", \"position\": 3,\n      \"item\": \"https://example.com/blog/seo/\", \"name\": \"SEO\" }\n  ]\n}\n&lt;/script&gt;</pre></td></tr></tbody></table></div><p><code>position</code>はパンくずの位置（「1」が起点）、<code>item</code>はURL、<code>name</code>はページ名を表します。なお、トップページに付けた<code>name</code>は検索結果に表示されるサイト名には影響しません。サイト名を指定したい場合は前述の<code>WebSite</code>タイプを利用します。</p>"
+    },
+    {
+      "heading": "実践：Product・Article・FAQの実装",
+      "bodyHtml": "<p><strong>商品・クチコミ情報（Product / AggregateRating）</strong></p><p>商品名・画像・価格などを構造化マークアップすると、検索結果に評価や価格帯が表示されることがあります。商品情報には<code>Product</code>タイプ、口コミの集計には<code>AggregateRating</code>タイプを使用します。</p><div class=\"table-wrap\"><table><thead><tr><th>コード例：Product（JSON-LD、一部抜粋）</th></tr></thead><tbody><tr><td><pre style=\"white-space:pre-wrap; margin:0; font-size:0.82rem;\">{\n  \"@type\": \"Product\",\n  \"name\": \"商品名\",\n  \"image\": [\"https://example.com/img1.png\"],\n  \"description\": \"商品の説明文\",\n  \"sku\": \"item-001\",\n  \"brand\": { \"@type\": \"Brand\", \"name\": \"ブランド名\" },\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"8000\",\n    \"priceCurrency\": \"JPY\",\n    \"availability\": \"https://schema.org/InStock\"\n  },\n  \"aggregateRating\": {\n    \"@type\": \"AggregateRating\",\n    \"ratingCount\": \"144\",\n    \"ratingValue\": \"4.5\"\n  }\n}</pre></td></tr></tbody></table></div><p>価格が幅を持つ場合は、<code>Offer</code>の代わりに<code>AggregateOffer</code>を使い、<code>lowPrice</code>・<code>highPrice</code>で価格帯を表現できます。</p><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>クチコミ情報の構造化マークアップには注意点があります。<span class=\"text-danger\">評価対象となる商品・店舗の構造化マークアップと1対1で記載すること、カテゴリ単位ではなく特定の製品・サービスを対象とすること、マークアップした評価は必ずページ本文にも表示すること</span>が求められます。ページに表示されていないクチコミ評価をマークアップすると、検索エンジンに無視されたり、スパムと判断される可能性があります。</p></div></div>"
+    },
+    {
+      "heading": "実践：記事情報とE-E-A-T、検証ツールの活用",
+      "bodyHtml": "<p><strong>記事情報（Article）</strong></p><p>記事のタイトル・画像・公開日・著者情報を構造化マークアップすると、検索結果に署名日が表示されたり、Googleニュースなど他サービスで活用されたりする場合があります。「Article」には、NewsArticle（ニュース記事）・BlogPosting（ブログ記事）・TechArticle（技術記事）などのサブタイプがあります。</p><div class=\"table-wrap\"><table><thead><tr><th>コード例：Article（JSON-LD）</th></tr></thead><tbody><tr><td><pre style=\"white-space:pre-wrap; margin:0; font-size:0.82rem;\">&lt;script type=\"application/ld+json\"&gt;\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"記事のタイトル\",\n  \"image\": \"https://example.com/img.png\",\n  \"author\": { \"@type\": \"Person\", \"name\": \"著者名\" },\n  \"datePublished\": \"2026-01-01T00:00:00+09:00\",\n  \"dateModified\": \"2026-02-01T00:00:00+09:00\",\n  \"description\": \"記事の詳細な概要\"\n}\n&lt;/script&gt;</pre></td></tr></tbody></table></div><p>主なプロパティは、<code>headline</code>（タイトル）、<code>image</code>（記事を表す画像）、<code>datePublished</code>／<code>dateModified</code>（公開日・更新日。ISO 8601形式で時刻まで含めることが推奨される）、<code>author</code>（作成者。PersonまたはOrganizationタイプを呼び出す）です。第7章で学んだE-E-A-Tの観点からも、著者情報や公開日を明示することは重要とされています。検索エンジンがコンテンツの専門性を認識しやすくなるとともに、ユーザーも情報の鮮度を判断しやすくなるためです。</p><p><strong>FAQ（FAQPage）</strong></p><p>よくある質問とその回答を<code>FAQPage</code>タイプで構造化マークアップすると、検索結果に質問と回答が折りたたみ表示されることがあります。<code>mainEntity</code>の中に<code>Question</code>を並べ、それぞれの<code>acceptedAnswer</code>として<code>Answer</code>を記述します。</p><p><strong>マークアップの検証・確認方法</strong></p><p>構造化マークアップは、正しく記述しないと検索結果に反映されません。Googleやschema.orgは、確認のための無料ツールをいくつか提供しています。</p><div class=\"table-wrap\"><table><thead><tr><th>ツール</th><th>確認できる内容</th></tr></thead><tbody><tr><td>スキーマ マークアップ検証ツール</td><td>schema.orgの構文として正しく記述できているかを検証する（Google固有の検証は行われない）</td></tr><tr><td>リッチリザルト テスト</td><td>Googleの検索結果でリッチリザルトとして表示される対象になるか、プレビューも含めて確認する</td></tr><tr><td>Search Consoleの拡張レポート</td><td>公開後のサイトで、構造化データにエラーが発生していないかを継続的に監視する</td></tr></tbody></table></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>構造化データマークアップのエラー自体が、サイトの評価を直接下落させることはないとされています。ただし、検索エンジンに正しい情報を伝えるという本来の役割を果たせなくなるため、サイト更新時にはSearch Consoleで定期的にチェックすることが推奨されます。</p></div></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>実際にユーザーが閲覧する内容と構造化データの内容が大きく乖離していたり、<span class=\"text-danger\">存在しないクチコミを記載する、料理以外の手順を「レシピ」として記載するなど、ユーザーを欺くようなマークアップはスパムと判定される可能性があります。</span>スパムと判定された場合はSearch Consoleの「手動による対策」にアラートが表示され、リッチリザルトの表示対象から外れることがあります（ただし、通常の検索順位への影響はないとされています）。</p></div></div><p>Google公式ドキュメントでは、構造化データを実装した企業の効果事例が具体的な数値とともに紹介されています。</p><div class=\"table-wrap\"><table><thead><tr><th>企業</th><th>報告されている効果</th></tr></thead><tbody><tr><td>Rotten Tomatoes</td><td>10万ページに構造化データを追加し、クリック率が25%増加</td></tr><tr><td>The Food Network</td><td>全ページの80%で検索結果の機能を有効化し、アクセス数が35%増加</td></tr><tr><td>Nestlé</td><td>リッチリザルトを表示するページのクリック率が、表示しないページより82%高い</td></tr></tbody></table></div>"
+    }
+  ],
+  "summary": [
+    "構造化タグ（section・article等）は文書の構造を、構造化マークアップ（schema.org）は要素の意味を検索エンジンに伝えるもので、役割が異なる",
+    "section・article・aside・nav・header・footerにはそれぞれ役割があり、divとの混同や見出しレベルの誤用に注意が必要",
+    "構造化データは、ページ内の情報の意味を検索エンジンにも分かる形式で明示するマークアップであり、リッチリザルトやナレッジパネルに活用される",
+    "構造化マークアップにはMicrodata・RDFa Lite・JSON-LDの3形式があり、HTML本文と分離でき読み取りやすいJSON-LDがGoogleに推奨されている",
+    "Organization・WebSite・BreadcrumbListはそれぞれ組織情報・サイト名・階層構造を伝えるタイプで、具体的なプロパティを組み合わせて実装する",
+    "Product・Article・FAQなど主要タイプの実装では、ページ本文の内容と構造化データの内容を一致させることが重要である",
+    "構造化マークアップはスキーマ マークアップ検証ツールやリッチリザルトテスト、Search Consoleで検証・監視でき、実装しても必ずリッチリザルトとして表示されるとは限らない"
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "single",
+      "sectionIndex": 0,
+      "question": "構造化タグと構造化マークアップの違いとして、最も適切なものはどれか。",
+      "options": [
+        "構造化タグは要素の意味を伝え、構造化マークアップは文書の構造を伝える",
+        "構造化タグは文書の構造を伝え、構造化マークアップは要素の意味を伝える",
+        "両者は全く同じ役割を持ち、区別する必要はない",
+        "構造化タグも構造化マークアップも、ブラウザの見た目を大きく変化させる"
+      ],
+      "correct": [1],
+      "explain": "構造化タグ（section・article等）は文章のまとまりの構造を伝え、構造化マークアップ（schema.org）は要素の意味を伝えるという違いがあります。"
+    },
+    {
+      "id": "q2",
+      "type": "multi",
+      "sectionIndex": 1,
+      "question": "構造化タグの説明として、正しいものをすべて選べ。",
+      "options": [
+        "<section>は見出しを付けられる文章のまとまりを表す基本のタグである",
+        "<article>は独立した記事・コンテンツであることを示す",
+        "<header>と<footer>はセクショニングコンテンツであり、単体で成り立つセクションである",
+        "<aside>は本文に関連する補足情報を表す"
+      ],
+      "correct": [0, 1, 3],
+      "explain": "<header>と<footer>はセクションに付属する要素であり、単体で成り立つセクショニングコンテンツではありません。"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "sectionIndex": 2,
+      "question": "<div>タグと構造化タグの関係についての説明として、最も適切なものはどれか。",
+      "options": [
+        "既存の<div>タグはそのまま構造化タグに置き換えられる",
+        "<div>タグには文書構造の明示や意味付けの役割はなく、機械的な置換はできない",
+        "<div>タグは構造化タグの上位互換であり、常に<div>を使うべきである",
+        "<div>タグを使うと、検索順位が自動的に下がる"
+      ],
+      "correct": [1],
+      "explain": "<div>タグはCSSのデザイン範囲を区切るための便宜的な要素であり、文書構造や意味を明示する役割を持たないため、既存の<div>を機械的に構造化タグへ置換することはできません。"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "sectionIndex": 3,
+      "question": "構造化データの説明として、最も適切なものはどれか。",
+      "options": [
+        "ページのデザインを自動生成するツール",
+        "ページ内の情報の意味を、検索エンジンにも分かる形式で明示するマークアップ",
+        "サイトの表示速度を計測する指標",
+        "広告の出稿費用を管理するシステム"
+      ],
+      "correct": [1],
+      "explain": "構造化データは、ページ内の情報が何を意味しているかを検索エンジンにも分かる形式で明示するためのマークアップです。"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "sectionIndex": 4,
+      "question": "構造化マークアップの3形式のうち、GoogleがSEO上推奨しており、HTML本文と分離して記述できる形式はどれか。",
+      "options": [
+        "Microdata",
+        "RDFa Lite",
+        "JSON-LD",
+        "CSV"
+      ],
+      "correct": [2],
+      "explain": "JSON-LDはHTML本文と分離して記述でき、コンピュータが読み取りやすい形式であるため、Googleが推奨しています。"
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "sectionIndex": 4,
+      "question": "JSON-LDのデメリットとして、最も適切なものはどれか。",
+      "options": [
+        "HTML属性が増えすぎてソースが煩雑になる",
+        "XHTMLでしか利用できない",
+        "可視データについては、HTML本文とJSON-LDの2箇所に同じ内容を記述する必要がある",
+        "検索エンジンにまったく読み取られない"
+      ],
+      "correct": [2],
+      "explain": "JSON-LDはHTML本文と分離して記述するため、可視データについては同じ内容を2箇所に書く必要があり、更新時に食い違いが起きないよう注意が必要です。"
+    },
+    {
+      "id": "q7",
+      "type": "multi",
+      "sectionIndex": 5,
+      "question": "BreadcrumbListの構造化マークアップについて、正しいものをすべて選べ。",
+      "options": [
+        "BreadcrumbListの中にListItemを階層の数だけ記述する",
+        "positionプロパティでパンくずリストの中での位置を指定する",
+        "トップページに付けたnameは、検索結果のサイト名として必ず採用される",
+        "パンくずリストを構造化マークアップすると、検索結果でURLの代わりに表示される場合がある"
+      ],
+      "correct": [0, 1, 3],
+      "explain": "トップページのnameはパンくずリスト内の表示に使われるだけで、検索結果のサイト名には影響しません。サイト名はWebSiteタイプで指定します。"
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "sectionIndex": 6,
+      "question": "クチコミ情報を構造化マークアップする際の注意点として、最も適切なものはどれか。",
+      "options": [
+        "カテゴリ単位でまとめて評価をマークアップするのが望ましい",
+        "ページ本文に表示されていない評価も自由にマークアップしてよい",
+        "評価対象となる商品・店舗の構造化マークアップと1対1のセットで記載し、ページ本文にも必ず表示する",
+        "クチコミ件数が少ない場合は、実際より多い件数を記載してもよい"
+      ],
+      "correct": [2],
+      "explain": "クチコミ情報は、評価対象の構造化マークアップと1対1で記載し、特定の製品・サービスを対象とし、マークアップした内容は必ずページ本文にも表示する必要があります。"
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "sectionIndex": 7,
+      "question": "Articleタイプの構造化マークアップがE-E-A-Tの観点からも重要とされる理由として、最も適切なものはどれか。",
+      "options": [
+        "著者情報や公開日を明示することで、検索エンジンがコンテンツの専門性や鮮度を認識しやすくなるため",
+        "Articleタイプを記述すると、必ず1位に表示されるため",
+        "著者情報を記載すると、記事の文字数が自動的に増えるため",
+        "E-E-A-Tとarticleタイプは無関係である"
+      ],
+      "correct": [0],
+      "explain": "著者情報（author）や公開日（datePublished）などを明示することで、検索エンジンはコンテンツの専門性を認識しやすくなり、ユーザーも情報の鮮度を判断しやすくなります。"
+    },
+    {
+      "id": "q10",
+      "type": "multi",
+      "sectionIndex": 7,
+      "question": "構造化データの検証・確認に使えるツールとして、正しいものをすべて選べ。",
+      "options": [
+        "スキーマ マークアップ検証ツール",
+        "リッチリザルト テスト",
+        "Search Consoleの拡張レポート",
+        "Googleキーワードプランナー"
+      ],
+      "correct": [0, 1, 2],
+      "explain": "Googleキーワードプランナーは検索ボリュームを調べるツールであり、構造化データの検証には使いません。"
+    },
+    {
+      "id": "q11",
+      "type": "single",
+      "sectionIndex": 7,
+      "question": "Google公式が報告している、構造化データ実装の効果事例として、正しいものはどれか。",
+      "options": [
+        "Rotten Tomatoesは構造化データの実装によりクリック率が低下した",
+        "Rotten Tomatoesは構造化データを実装したページでクリック率が25%増加した",
+        "構造化データの実装効果について、Googleは一切事例を公開していない",
+        "構造化データは必ず表示速度を2倍にする効果がある"
+      ],
+      "correct": [1],
+      "explain": "Google公式ドキュメントでは、Rotten Tomatoesが10万ページに構造化データを追加し、クリック率が25%増加した事例が報告されています。"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Console（分析）（インデックス未登録の調査） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/practice/index.html" class="breadcrumb-back">← Search Console（分析）</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約22分</span>
+    <h1 class="wizard-header__title">Search Console（分析）</h1>
+    <p class="wizard-header__topics">検索パフォーマンス：クリック・表示回数・CTR・順位、ゼロクリックサーチ、改善：順位分析、インデックス未登録調査、ファネル：検索からCVまでのモニタリング</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">4 / 7</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>インデックス未登録の調査</h2>
+    <p>Search Consoleの<mark>ページ（インデックス作成）レポート</mark>では、サイト内のどのページがインデックスに登録されていて、どのページが登録されていないか、その理由とあわせて確認できます。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>ページ（インデックス作成）レポート</strong><br>サイト内のURLについて、インデックス登録の状況を一覧できるSearch Consoleの機能。「エラー」「有効（警告あり）」「有効」「除外」といったステータスに分類され、除外の場合はその理由も確認できます。</p></div><p>インデックス未登録の代表的な理由には、次のようなものがあります。</p><ul><li><strong>検出 - インデックス未登録：</strong>Googleにページの存在は発見されたが、まだクロールされていない状態</li><li><strong>クロール済み - インデックス未登録：</strong>クロールはされたが、低品質と判断された等の理由でインデックスされていない状態</li><li><strong>robots.txtによるブロック：</strong>クロール自体が明示的に禁止されている状態</li></ul><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>重要なページが意図せず<span class="text-danger">「除外」に分類されている</span>場合は、原因を特定して対処する必要があります。第10章で学んだURL検査ツールと組み合わせて、個別のページの状態を詳しく確認するとよいでしょう。</p></div></div><p>また、sitemap.xmlに記載しているURL数と、実際のインデックス数を比較することも有効です。両者に大きな乖離がある場合、想定以上に多くのページがインデックスされていない可能性があり、技術的または内容的な問題が潜んでいるサインになります。</p>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-3.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-5.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>

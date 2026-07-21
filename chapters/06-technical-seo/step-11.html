@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テクニカルSEO（エラー対応とスパムへの対策） | SEO Eラーニング</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">コース一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../phases/basic/index.html" class="breadcrumb-back">← テクニカルSEO</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約55分</span>
+    <h1 class="wizard-header__title">テクニカルSEO</h1>
+    <p class="wizard-header__topics">基礎：HTML構造、1URL1コンテンツ、サイト構造：URL設計、内部リンク、クロール制御：robots.txt、サイトマップ、エラー・スパム対応、表示速度：ネットワーク／レンダリング／サーバー、Core Web Vitals、測定ツール、HTTPS</p>
+    <div class="wizard-progress">
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">11 / 18</div>
+    </div>
+  </div>
+
+  <section class="section-card">
+    <h2>エラー対応とスパムへの対策</h2>
+    <p>SEOでプラスの評価を積み上げる前提として、まずはマイナス評価につながる要因を取り除くことが重要です。本セクションでは<mark>エラーへの対応</mark>と<mark>スパムへの対策</mark>の基本を扱います。</p><p><strong>エラー対応</strong>では、まず「自サイトのエラー（内部エラー）」と「外部サイトへのリンク切れ（外部エラー）」を区別します。内部エラーは自社で解決可能ですが、外部サイトのエラー自体は解決できないため、リンクの変更・削除で対応します。</p><div class="table-wrap"><table><thead><tr><th>ステータスコード</th><th>意味</th></tr></thead><tbody><tr><td>200</td><td>正常（OK）</td></tr><tr><td>301 / 302</td><td>恒久的 / 一時的なリダイレクト</td></tr><tr><td>401 / 403</td><td>認証が必要 / アクセス禁止</td></tr><tr><td>404</td><td>ページが見つからない（Not Found）</td></tr><tr><td>500 / 503</td><td>サーバー内部エラー / サービス利用不可</td></tr></tbody></table></div><p>ユーザーやGooglebotがリンクをたどって到達できるページでエラーが起きている場合は、修正が必須です。Search Consoleの[インデックス作成]→[ページ]で発生状況を確認できます。どうしても404を返さざるを得ない場合は、デフォルトのエラーページではなく、次のようなユーザーフレンドリーな404ページを用意することが推奨されています。</p><ul><li>探しているページが見つからないことを、平易な言葉で明確に伝える</li><li>サイトの他ページと同じデザイン（ナビゲーション含む）にする</li><li>人気記事やホームページへのリンクを設置する</li></ul><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>独自の404ページを用意する際、システムによっては<span class="text-danger">ステータスコード200（正常）を返してしまう「ソフト404」</span>と呼ばれる状態になることがあります。この場合、削除された記事などが重複コンテンツとして扱われてしまう可能性があるため、404エラーページであっても正しく404のステータスコードを返す必要があります。</p></div></div><p>続いて<strong>スパムへの対策</strong>です。Googleは2018年にSpamBrainという仕組みを導入し、より高度なスパム行為を検出できるようになっています。スパム行為は大きく3つに分類されます。</p><div class="table-wrap"><table><thead><tr><th>分類</th><th>関連アップデート</th><th>代表例</th></tr></thead><tbody><tr><td>価値の低いコンテンツ</td><td>パンダアップデート</td><td>コピーコンテンツ、自動生成コンテンツ、キーワードの乱用、広告のみのコンテンツ</td></tr><tr><td>質の低い被リンク</td><td>ペンギンアップデート</td><td>リンクの売買、同一IP/テンプレートからの大量リンク</td></tr><tr><td>クローラへの偽装行為</td><td>-</td><td>隠しテキスト・隠しリンク、クローキング、不正なリダイレクト</td></tr></tbody></table></div><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>クローキング</strong><br>ユーザーとクローラに対して、異なるコンテンツやURLを見せる行為。検索順位の操作やユーザーへの詐欺行為に使われるためペナルティ対象です。PC/モバイルを別URLで運用している場合に、対応するページが正しく1対1でリダイレクトされない「不正なモバイルリダイレクト」も同様に問題視されます。</p></div><p>被リンクに関しては、広告やスポンサー活動を目的としたリンクそのものが問題なのではなく、<strong>ランキング操作を目的としたリンクの売買</strong>が問題とされます。こうした関係性のあるリンクには、次のような<code>rel</code>属性を付与してGoogleに関係性を伝える必要があります。</p><div class="table-wrap"><table><thead><tr><th>rel属性</th><th>意味</th></tr></thead><tbody><tr><td>rel="sponsored"</td><td>広告・スポンサー活動を目的としたリンク</td></tr><tr><td>rel="nofollow"</td><td>リンク先ページをクロールさせたくない場合</td></tr><tr><td>rel="ugc"</td><td>ブログコメントやフォーラム投稿など、ユーザー生成コンテンツのリンク</td></tr></tbody></table></div><div class="callout callout--point"><div class="callout__icon">💡</div><div class="callout__body"><div class="callout__title">Point</div><p>悪意ある第三者が意図的に低品質な被リンクを送り、対象サイトの評価を下げようとする行為を<span class="text-primary">「逆SEO」</span>と呼びます。過去から現在まで不正行為をしていなくても被害に遭う可能性があるため、Search Consoleで定期的に被リンク状況を確認することが推奨されます。質の低い被リンクが見つかり、自分で削除・修正できない場合の最終手段として、Search Consoleの「リンクの否認」機能が用意されています。</p></div></div><div class="callout callout--warning"><div class="callout__icon">⚠️</div><div class="callout__body"><div class="callout__title">Warning</div><p>これらのスパム行為がGoogleに認識されると、<span class="text-danger">Search Consoleの[手動による対策]レポートに検出され、検索結果から除外される</span>可能性があります。仮に一時的に順位が上がったとしても、いずれペナルティを受けるリスクがあるため、スパム行為による成果は資産にはならないとされています。</p></div></div>
+  </section>
+
+  <div class="wizard-footer">
+    <a href="step-10.html" class="btn btn--ghost">← 前へ</a>
+    <div class="wizard-footer__spacer"></div>
+    <a href="step-12.html" class="btn btn--primary">次へ →</a>
+  </div>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+
+</body>
+</html>
