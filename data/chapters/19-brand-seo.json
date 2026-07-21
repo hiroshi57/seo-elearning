@@ -19,7 +19,7 @@
     },
     {
       "heading": "レビュー・SNS・サイテーション",
-      "bodyHtml": "<p>ブランドに関する情報は、自社サイトの外でも広がっていきます。その中で重要な概念が<mark>サイテーション</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>サイテーション（Citation）</strong><br>Web上で、自社名やブランド名、商品名などが言及されている状態のこと。第6章で学んだ「被リンク（バックリンク）」との決定的な違いは、<strong>クリックできるリンクが付いていなくても成立する</strong>点です。SNSでの言及や、レビューサイトでの評価なども、サイテーションの一種です。</p></div><table><thead><tr><th></th><th>被リンク（バックリンク）</th><th>サイテーション</th></tr></thead><tbody><tr><td>成立条件</td><td>クリック可能なリンクが必要</td><td>リンクがなくても、名前の言及だけで成立</td></tr><tr><td>SEOにおける位置づけ</td><td>Google自身がランキング要因として位置づけている</td><td>ウェブ検索のランキング要因かどうかをGoogleは明確にしていない</td></tr></tbody></table><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>サイテーションがウェブ検索の順位に直接影響するかどうかについて、Googleは明確な見解を示していません。<span class=\"text-danger\">「サイテーションを増やせば必ず順位が上がる」と断定することはできません</span>が、ブランドが多くの場所で言及される状態は、指名検索の増加やユーザーの信頼にはつながりやすいと考えられます。</p></div></div><p>レビューやSNSでの言及は、第7章で学んだE-E-A-T（特に信頼性）にも関わってきます。多くのユーザーから言及・評価されている企業・商品は、第三者による評価という点で、信頼性の材料の一つになりうると考えられます。</p>"
+      "bodyHtml": "<p>ブランドに関する情報は、自社サイトの外でも広がっていきます。その中で重要な概念が<mark>サイテーション</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>サイテーション（Citation）</strong><br>Web上で、自社名やブランド名、商品名などが言及されている状態のこと。第6章で学んだ「被リンク（バックリンク）」との決定的な違いは、<strong>クリックできるリンクが付いていなくても成立する</strong>点です。SNSでの言及や、レビューサイトでの評価なども、サイテーションの一種です。</p></div><table><thead><tr><th></th><th>被リンク（バックリンク）</th><th>サイテーション</th></tr></thead><tbody><tr><td>成立条件</td><td>クリック可能なリンクが必要</td><td>リンクがなくても、名前の言及だけで成立</td></tr><tr><td>SEOにおける位置づけ</td><td>Google自身がランキング要因として位置づけている</td><td>ウェブ検索のランキング要因かどうかをGoogleは明確にしていない</td></tr></tbody></table><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>サイテーションがウェブ検索の順位に直接影響するかどうかについて、Googleは明確な見解を示していません。<span class=\"text-danger\">「サイテーションを増やせば必ず順位が上がる」と断定することはできません</span>が、ブランドが多くの場所で言及される状態は、指名検索の増加やユーザーの信頼にはつながりやすいと考えられます。</p></div></div><p>レビューやSNSでの言及は、第7章で学んだE-E-A-T（特に信頼性）にも関わってきます。多くのユーザーから言及・評価されている企業・商品は、第三者による評価という点で、信頼性の材料の一つになりうると考えられます。</p><p>なお、多くのSNS（X、Facebookなど）に投稿されるリンクには、<code>nofollow</code>属性が付与されており、通常の被リンクとしては扱われません。ただし、SNSでの拡散は、他のサイトやメディアから紹介・言及される（サイテーションや被リンクを獲得する）きっかけになりやすいという点で、間接的な意味を持ちます。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>OGP（Open Graph Protocol）</strong><br>SNSでURLが共有された際に表示されるタイトル・説明文・画像を、サイト側で指定できる仕組み。HTMLの<code>&lt;head&gt;</code>内に<code>og:title</code>や<code>og:image</code>などのmetaタグを記述します。OGPを設定していないと、SNS側が自動生成した意図しない表示になることがあります。</p></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>Google公式は2019年9月、nofollowが付いたリンクについて「評価対象から完全に除外するのではなく、あくまで判断材料の一つ（ヒント）として扱う」方針に変更したと発表しています。nofollowが付いていても、文脈によっては評価の手がかりとして参照される場合があるとされています。</p></div></div>"
     },
     {
       "heading": "ローカルSEO：地域ビジネスのブランド接点",
@@ -31,6 +31,7 @@
     "指名検索が増えることは、SEO施策だけでなく広告・PR・SNSなど幅広い活動の結果として表れるものである",
     "サイテーションはWeb上での名前の言及であり、被リンクと異なりクリック可能なリンクがなくても成立する",
     "Googleはサイテーションをウェブ検索のランキング要因と明確にはしていないが、ブランドへの信頼や指名検索の増加にはつながりやすいと考えられる",
+    "SNSのリンクにはnofollowが付与されることが多いが、拡散が他サイトからの言及・被リンクのきっかけになる。Googleは2019年9月からnofollowを完全な除外ではなく判断材料の一つとして扱う方針に変更した",
     "ローカルSEOは関連性・距離・知名度の3要素で評価され、Googleビジネスプロフィールへの登録が中心的な施策となる"
   ],
   "quiz": [
@@ -103,6 +104,20 @@
       ],
       "correct": [1],
       "explain": "多くのユーザーから言及・評価されている企業・商品は、第三者による評価という点で、E-E-A-Tの信頼性の材料の一つになりうると考えられます。"
+    },
+    {
+      "id": "q5b",
+      "type": "single",
+      "sectionIndex": 1,
+      "question": "OGP（Open Graph Protocol）の役割として、最も適切なものはどれか。",
+      "options": [
+        "サイトの表示速度を向上させる技術",
+        "SNSでURLが共有された際に表示されるタイトル・説明文・画像を、サイト側で指定する仕組み",
+        "検索エンジンのクロールを完全にブロックする仕組み",
+        "ユーザーのログイン情報を管理する仕組み"
+      ],
+      "correct": [1],
+      "explain": "OGPは、SNSでURLが共有された際に表示されるタイトル・説明文・画像などを、サイト側のmetaタグで指定できる仕組みです。"
     },
     {
       "id": "q6",

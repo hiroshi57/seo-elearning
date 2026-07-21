@@ -3,28 +3,33 @@
   "phase": "ai",
   "slug": "18-structured-data",
   "title": "構造化データ",
-  "subtitle": "構造化データの基本的な考え方と、Article・FAQ・Organization・Breadcrumbの役割を理解する",
-  "topicsLabel": "基本：構造化データとは、実践：Article・FAQ・Organization・Breadcrumb",
-  "estimateMinutes": 12,
+  "subtitle": "文書構造を伝えるHTMLタグと、意味を伝える構造化マークアップの違い、Article・FAQ・Organization・Breadcrumbの役割を理解する",
+  "topicsLabel": "基本：構造化タグと構造化マークアップの違い、実践：Article・FAQ・Organization・Breadcrumb",
+  "estimateMinutes": 14,
   "goals": [
-    "構造化データの基本的な考え方を理解する",
+    "構造化タグ（section・article等）と構造化マークアップの違いを理解する",
     "構造化データとリッチリザルトの関係を理解する",
     "Article・FAQ・Organization・Breadcrumbが、それぞれ何を表す構造化データかを理解する",
     "構造化データの主なフォーマット（JSON-LD）を理解する"
   ],
   "sections": [
     {
+      "heading": "基本：構造化タグと構造化マークアップの違い",
+      "bodyHtml": "<p>「構造化データ」と一口に言っても、実は<mark>文書の構造を伝えるもの</mark>と<mark>情報の意味を伝えるもの</mark>の2種類があります。混同しやすいため、まずこの違いを整理します。</p><div class=\"table-wrap\"><table><thead><tr><th></th><th>構造化タグ</th><th>構造化マークアップ</th></tr></thead><tbody><tr><td>伝える内容</td><td>文章の「まとまり」の構造（本の章・目次・補足情報など）</td><td>要素の「意味」（これは商品名である、これは価格である、など）</td></tr><tr><td>具体例</td><td><code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code>など</td><td>Article, FAQ, Organizationなどのschema.orgタイプ</td></tr><tr><td>ブラウザでの見え方への影響</td><td>基本的に見た目は変わらない</td><td>基本的に見た目は変わらない（検索結果側で変化する）</td></tr></tbody></table></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>構造化タグ</strong><br>HTML5で定義されている<code>&lt;section&gt;</code>（見出しを持つ文章のまとまり）、<code>&lt;article&gt;</code>（独立した記事）、<code>&lt;nav&gt;</code>（ナビゲーション）、<code>&lt;aside&gt;</code>（補足情報）などのタグ。文書全体の「アウトライン（構造）」を検索エンジンに明示的に伝える役割を持ちます。</p></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>例えば、未知の商品名（架空の造語など）が使われている場合、検索エンジンはその言葉だけでは何を指すのか判断できません。構造化マークアップによって「これは商品名であり、食品である」といった意味を明示することで、検索エンジンやAIがより正確に情報を理解できるようになります。</p></div></div>"
+    },
+    {
       "heading": "基本：構造化データとは",
       "bodyHtml": "<p><mark>構造化データ</mark>とは、ページ内の情報が「何を意味しているか」を、検索エンジンにも分かる形式で明示するためのマークアップです。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>構造化データ</strong><br>検索エンジンやクローラーがコンテンツの内容を理解しやすくするための、決められた形式のデータ。例えば「これは記事のタイトルである」「これは著者名である」といった情報の意味を、機械にも分かる形で伝えます。</p><p style=\"margin:8px 0 0;\"><strong>リッチリザルト</strong><br>構造化データを実装することで、検索結果に表示される可能性がある拡張表示。星評価やFAQの折りたたみ表示など、通常のテキストリンクより多くの情報を表示できます。</p></div><p>Google Search Central（公式ドキュメント）は、構造化データの主なフォーマットとして<strong>JSON-LD</strong>を推奨しています。JSON-LDは、HTMLの本文とは別に、ページの意味情報だけをまとめて記述できる形式です。</p>"
     },
     {
       "heading": "実践：主な構造化データの種類",
-      "bodyHtml": "<p>構造化データにはさまざまな種類（タイプ）がありますが、本コースに関連する代表的なものを紹介します。</p><div class=\"table-wrap\"><table><thead><tr><th>種類</th><th>表す内容</th><th>関連する章</th></tr></thead><tbody><tr><td><strong>Article</strong></td><td>記事ページのタイトル・公開日・著者などの情報</td><td>第5章（ライティングSEO）</td></tr><tr><td><strong>FAQ</strong></td><td>よくある質問とその回答のセット</td><td>第5章（FAQの活用）</td></tr><tr><td><strong>Organization</strong></td><td>企業・組織に関する基本情報。ナレッジパネルへの情報提供に使われる</td><td>第17章（エンティティSEO）</td></tr><tr><td><strong>BreadcrumbList</strong></td><td>サイト内でのページの階層位置（パンくずリスト）</td><td>第6章（テクニカルSEO）</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>構造化データは、これまでの章で学んだ内容（記事のタイトルや見出し、FAQ、企業情報、サイト構造）を、<span class=\"text-primary\">「検索エンジンが誤解なく読み取れる形」に変換する橋渡し役</span>と捉えると理解しやすくなります。</p></div></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>構造化データを実装したからといって、必ずリッチリザルトとして表示されるとは限りません。Googleは実装内容を検証した上で、表示するかどうかを判断します。実装後は、Search Consoleの「リッチリザルトレポート」などで、正しく認識されているかを確認できます。</p></div></div>"
+      "bodyHtml": "<p>構造化データにはさまざまな種類（タイプ）がありますが、本コースに関連する代表的なものを紹介します。</p><div class=\"table-wrap\"><table><thead><tr><th>種類</th><th>表す内容</th><th>関連する章</th></tr></thead><tbody><tr><td><strong>Article</strong></td><td>記事ページのタイトル・公開日・著者などの情報</td><td>第5章（ライティングSEO）</td></tr><tr><td><strong>FAQ</strong></td><td>よくある質問とその回答のセット</td><td>第5章（FAQの活用）</td></tr><tr><td><strong>Organization</strong></td><td>企業・組織に関する基本情報。ナレッジパネルへの情報提供に使われる</td><td>第17章（エンティティSEO）</td></tr><tr><td><strong>BreadcrumbList</strong></td><td>サイト内でのページの階層位置（パンくずリスト）</td><td>第6章（テクニカルSEO）</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>構造化データは、これまでの章で学んだ内容（記事のタイトルや見出し、FAQ、企業情報、サイト構造）を、<span class=\"text-primary\">「検索エンジンが誤解なく読み取れる形」に変換する橋渡し役</span>と捉えると理解しやすくなります。</p></div></div><p>Google公式ドキュメントでは、構造化データを実装した企業の効果事例が具体的な数値とともに紹介されています。</p><div class=\"table-wrap\"><table><thead><tr><th>企業</th><th>報告されている効果</th></tr></thead><tbody><tr><td>Rotten Tomatoes</td><td>10万ページに構造化データを追加し、クリック率が25%増加</td></tr><tr><td>The Food Network</td><td>全ページの80%で検索結果の機能を有効化し、アクセス数が35%増加</td></tr><tr><td>Nestlé</td><td>リッチリザルトを表示するページのクリック率が、表示しないページより82%高い</td></tr></tbody></table></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>構造化データを実装したからといって、必ずリッチリザルトとして表示されるとは限りません。Googleは実装内容を検証した上で、表示するかどうかを判断します。実装後は、Search Consoleの「リッチリザルトレポート」などで、正しく認識されているかを確認できます。</p></div></div>"
     }
   ],
   "summary": [
+    "構造化タグ（section・article等）は文書の構造を、構造化マークアップ（schema.org）は要素の意味を検索エンジンに伝えるもので、役割が異なる",
     "構造化データは、ページ内の情報の意味を検索エンジンにも分かる形式で明示するマークアップであり、JSON-LDが主な推奨フォーマットである",
-    "構造化データを実装すると、リッチリザルト（検索結果での拡張表示）の対象になる可能性がある",
+    "構造化データを実装すると、リッチリザルト（検索結果での拡張表示）の対象になる可能性があり、Google公式もクリック率向上などの事例を報告している",
     "Articleは記事情報、FAQはよくある質問、Organizationは企業情報、BreadcrumbListはサイトの階層構造を表す構造化データである",
     "構造化データを実装しても必ずリッチリザルトとして表示されるとは限らず、Search Consoleで認識状況を確認できる"
   ],
@@ -33,6 +38,20 @@
       "id": "q1",
       "type": "single",
       "sectionIndex": 0,
+      "question": "構造化タグと構造化マークアップの違いとして、最も適切なものはどれか。",
+      "options": [
+        "構造化タグは要素の意味を伝え、構造化マークアップは文書の構造を伝える",
+        "構造化タグは文書の構造を伝え、構造化マークアップは要素の意味を伝える",
+        "両者は全く同じ役割を持ち、区別する必要はない",
+        "構造化タグも構造化マークアップも、ブラウザの見た目を大きく変化させる"
+      ],
+      "correct": [1],
+      "explain": "構造化タグ（section・article等）は文章のまとまりの構造を伝え、構造化マークアップ（schema.org）は要素の意味を伝えるという違いがあります。"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "sectionIndex": 1,
       "question": "構造化データの説明として、最も適切なものはどれか。",
       "options": [
         "ページのデザインを自動生成するツール",
@@ -44,9 +63,9 @@
       "explain": "構造化データは、ページ内の情報が何を意味しているかを検索エンジンにも分かる形式で明示するためのマークアップです。"
     },
     {
-      "id": "q2",
+      "id": "q3",
       "type": "single",
-      "sectionIndex": 0,
+      "sectionIndex": 1,
       "question": "Google Search Centralが推奨している構造化データの主なフォーマットはどれか。",
       "options": [
         "JSON-LD",
@@ -58,9 +77,9 @@
       "explain": "Google Search Centralは、構造化データの主なフォーマットとしてJSON-LDを推奨しています。"
     },
     {
-      "id": "q3",
+      "id": "q4",
       "type": "multi",
-      "sectionIndex": 1,
+      "sectionIndex": 2,
       "question": "本章で紹介された構造化データの種類として、正しいものをすべて選べ。",
       "options": [
         "Article（記事情報）",
@@ -72,9 +91,9 @@
       "explain": "本章ではArticle・FAQ・Organization・BreadcrumbListの構造化データを紹介しました。パスワード情報を表す構造化データは存在しません。"
     },
     {
-      "id": "q4",
+      "id": "q5",
       "type": "single",
-      "sectionIndex": 1,
+      "sectionIndex": 2,
       "question": "BreadcrumbList構造化データが表す内容として、最も適切なものはどれか。",
       "options": [
         "サイトの表示速度",
@@ -86,9 +105,23 @@
       "explain": "BreadcrumbListは、サイト内でのページの階層位置（パンくずリスト）を表す構造化データです。"
     },
     {
-      "id": "q5",
+      "id": "q6",
       "type": "single",
-      "sectionIndex": 1,
+      "sectionIndex": 2,
+      "question": "Google公式が報告している、構造化データ実装の効果事例として、正しいものはどれか。",
+      "options": [
+        "Rotten Tomatoesは構造化データの実装によりクリック率が低下した",
+        "Rotten Tomatoesは構造化データを実装したページでクリック率が25%増加した",
+        "構造化データの実装効果について、Googleは一切事例を公開していない",
+        "構造化データは必ず表示速度を2倍にする効果がある"
+      ],
+      "correct": [1],
+      "explain": "Google公式ドキュメントでは、Rotten Tomatoesが10万ページに構造化データを追加し、クリック率が25%増加した事例が報告されています。"
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "sectionIndex": 2,
       "question": "構造化データを実装した場合の効果についての説明として、最も適切なものはどれか。",
       "options": [
         "実装すれば、必ずリッチリザルトとして表示される",

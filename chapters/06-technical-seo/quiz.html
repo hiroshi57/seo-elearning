@@ -31,49 +31,49 @@
 
   <section class="section-card" data-quiz-root data-chapter="06-technical-seo" data-total-steps="7">
     <div class="quiz-intro"><span class="quiz-intro__icon">📋</span>確認テスト</div>
-    <p class="quiz-sub">全6問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
+    <p class="quiz-sub">全7問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
 
     <script type="application/json" data-quiz-data>
-[{"id":"q1","type":"single","sectionIndex":0,"question":"Googleが推奨するURL構造の考え方として、最も適切なものはどれか。","options":["意味の分からないランダムな文字列・数字の羅列にする","わかりやすく予測可能で、人間にも理解しやすい構造にする","URLの長さは検索順位に一切関係しないため、何でもよい","サイトの構造とURLは無関係にすべきである"],"correct":[1],"explain":"Googleは公式のSEOスターターガイドで、わかりやすく予測可能で、人間にも理解しやすいURL構造を推奨しています。"},{"id":"q2","type":"single","sectionIndex":1,"question":"内部リンクとクロールのしやすさに関する説明として、最も適切なものはどれか。","options":["どのページからもリンクされていないページは、クローラーが発見しにくくなる","内部リンクはクローラーの巡回には一切関係しない","重要なページほど、他のページからリンクしない方がよい","内部リンクはユーザー体験にのみ影響し、検索エンジンには影響しない"],"correct":[0],"explain":"どのページからもリンクされていない「孤立したページ」はクローラーが発見しにくくなります。重要なページほど複数箇所からリンクされている状態が望ましいとされています。"},{"id":"q3","type":"single","sectionIndex":2,"question":"XMLサイトマップに含めるべきURLとして、Google公式ガイドラインが推奨しているものはどれか。","options":["重複しているURLも含め、サイト内のすべてのURLをできる限り含める","canonicalで指定した正規URLのみを含める","アクセス数が少ないURLだけを含める","XMLサイトマップにはURLを1つも含めない方がよい"],"correct":[1],"explain":"Google公式のガイドラインでは、XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めることが推奨されています。"},{"id":"q4","type":"single","sectionIndex":2,"question":"canonicalタグ（rel=\"canonical\"）の役割として、最も適切なものはどれか。","options":["ページの表示速度を向上させるためのタグ","同じ内容・似た内容のページが複数ある場合に、正規のURLを指定するためのタグ","検索結果の順位を強制的に固定するためのタグ","広告の表示を制御するためのタグ"],"correct":[1],"explain":"canonicalタグは、重複または類似する複数のURLの中から「正規のURLはこちらです」とGoogleに伝え、URLの正規化を行うためのタグです。"},{"id":"q5","type":"single","sectionIndex":3,"question":"meta robotsのcontent属性に「noindex」を指定した場合の効果として、最も適切なものはどれか。","options":["そのページの表示速度が向上する","そのページがインデックスされないようになる","そのページの検索順位が自動的に1位になる","そのページへの外部リンクがすべて無効になる"],"correct":[1],"explain":"meta robotsのcontent属性に「noindex」を指定すると、そのページはインデックスされないようになります。"},{"id":"q6","type":"multi","sectionIndex":4,"question":"Core Web Vitalsを構成する3つの指標として、正しいものをすべて選べ。","options":["LCP（Largest Contentful Paint）：読み込み速度","INP（Interaction to Next Paint）：操作への応答性","CLS（Cumulative Layout Shift）：視覚的な安定性","CTR（Click Through Rate）：クリック率"],"correct":[0,1,2],"explain":"Core Web VitalsはLCP（読み込み速度）・INP（応答性）・CLS（視覚的安定性）の3指標で構成されます。CTR（クリック率）はCore Web Vitalsには含まれません。"}]
+[{"id":"q1","type":"single","sectionIndex":0,"question":"MECE（ミーシー）なカテゴリ設計として、最も適切なものはどれか。","options":["カテゴリ同士が重複していても、抜け漏れさえなければよい","重複がなく、抜け漏れもない状態でカテゴリを分類すること","できるだけ多くのカテゴリに、同じページを重複して登録すること","カテゴリ分けは一切行わず、すべてのページをフラットに並べること"],"correct":[1],"explain":"MECEとは「重複なく、抜け漏れなく（Mutually Exclusive and Collectively Exhaustive）」分類されている状態を指します。"},{"id":"q2","type":"multi","sectionIndex":1,"question":"内部リンクの設計で重要とされる観点として、正しいものをすべて選べ。","options":["どのページからも他のページへ辿れる、双方向のリンク構造にする","関連するページ・上位カテゴリへリンクを張る","常にトップページ・最上位カテゴリへ戻れるリンクを用意する","リンクは一方向にのみ張り、行き止まりのページを作る"],"correct":[0,1,2],"explain":"内部リンクの設計では、双方向リンク・関連ページへのリンク・上位階層への復帰リンクの3点が重要とされています。行き止まりになる一方向のリンクは避けるべきとされています。"},{"id":"q3","type":"single","sectionIndex":2,"question":"XMLサイトマップに含めるべきURLとして、Google公式ガイドラインが推奨しているものはどれか。","options":["重複しているURLも含め、サイト内のすべてのURLをできる限り含める","canonicalで指定した正規URLのみを含める","アクセス数が少ないURLだけを含める","XMLサイトマップにはURLを1つも含めない方がよい"],"correct":[1],"explain":"Google公式のガイドラインでは、XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めることが推奨されています。"},{"id":"q4","type":"single","sectionIndex":2,"question":"canonicalタグ（rel=\"canonical\"）の役割として、最も適切なものはどれか。","options":["ページの表示速度を向上させるためのタグ","同じ内容・似た内容のページが複数ある場合に、正規のURLを指定するためのタグ","検索結果の順位を強制的に固定するためのタグ","広告の表示を制御するためのタグ"],"correct":[1],"explain":"canonicalタグは、重複または類似する複数のURLの中から「正規のURLはこちらです」とGoogleに伝え、URLの正規化を行うためのタグです。"},{"id":"q5","type":"single","sectionIndex":3,"question":"meta robotsのcontent属性に「noindex」を指定した場合の効果として、最も適切なものはどれか。","options":["そのページの表示速度が向上する","そのページがインデックスされないようになる","そのページの検索順位が自動的に1位になる","そのページへの外部リンクがすべて無効になる"],"correct":[1],"explain":"meta robotsのcontent属性に「noindex」を指定すると、そのページはインデックスされないようになります。"},{"id":"q6","type":"multi","sectionIndex":4,"question":"Core Web Vitalsを構成する3つの指標として、正しいものをすべて選べ。","options":["LCP（Largest Contentful Paint）：読み込み速度","INP（Interaction to Next Paint）：操作への応答性","CLS（Cumulative Layout Shift）：視覚的な安定性","CTR（Click Through Rate）：クリック率"],"correct":[0,1,2],"explain":"Core Web VitalsはLCP（読み込み速度）・INP（応答性）・CLS（視覚的安定性）の3指標で構成されます。CTR（クリック率）はCore Web Vitalsには含まれません。"},{"id":"q7","type":"single","sectionIndex":4,"question":"Core Web Vitalsの指標の変遷についての説明として、正しいものはどれか。","options":["Core Web Vitalsの指標は発表以来、一度も変更されていない","2024年3月に、それまで使われていたFID（初回入力遅延）がINPに置き換えられた","LCPは2024年に廃止され、現在は使われていない","Core Web Vitalsはランキングシグナルとして使われたことは一度もない"],"correct":[1],"explain":"Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新されています。2024年3月には、それまでのFID（初回入力遅延）がINPに置き換えられました。"}]
     </script>
 
     <div data-quiz-item="q1" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q1 / 6</span>
+        <span class="quiz-item__no">Q1 / 7</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
         </div>
       </div>
-      <div class="quiz-item__question" id="q1-question">Googleが推奨するURL構造の考え方として、最も適切なものはどれか。</div>
+      <div class="quiz-item__question" id="q1-question">MECE（ミーシー）なカテゴリ設計として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q1-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>意味の分からないランダムな文字列・数字の羅列にする</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>わかりやすく予測可能で、人間にも理解しやすい構造にする</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>URLの長さは検索順位に一切関係しないため、何でもよい</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>サイトの構造とURLは無関係にすべきである</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>カテゴリ同士が重複していても、抜け漏れさえなければよい</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>重複がなく、抜け漏れもない状態でカテゴリを分類すること</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>できるだけ多くのカテゴリに、同じページを重複して登録すること</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>カテゴリ分けは一切行わず、すべてのページをフラットに並べること</span></div>
       </div>
     </div>
 
     <div data-quiz-item="q2" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q2 / 6</span>
+        <span class="quiz-item__no">Q2 / 7</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
-          <span class="quiz-item__type">単一選択</span>
+          <span class="quiz-item__type quiz-item__type--multi">複数選択（すべて選択）</span>
         </div>
       </div>
-      <div class="quiz-item__question" id="q2-question">内部リンクとクロールのしやすさに関する説明として、最も適切なものはどれか。</div>
-      <div class="quiz-options" role="radiogroup" aria-labelledby="q2-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>どのページからもリンクされていないページは、クローラーが発見しにくくなる</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>内部リンクはクローラーの巡回には一切関係しない</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>重要なページほど、他のページからリンクしない方がよい</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>内部リンクはユーザー体験にのみ影響し、検索エンジンには影響しない</span></div>
+      <div class="quiz-item__question" id="q2-question">内部リンクの設計で重要とされる観点として、正しいものをすべて選べ。</div>
+      <div class="quiz-options" role="group" aria-labelledby="q2-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>どのページからも他のページへ辿れる、双方向のリンク構造にする</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>関連するページ・上位カテゴリへリンクを張る</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>常にトップページ・最上位カテゴリへ戻れるリンクを用意する</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>リンクは一方向にのみ張り、行き止まりのページを作る</span></div>
       </div>
     </div>
 
     <div data-quiz-item="q3" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q3 / 6</span>
+        <span class="quiz-item__no">Q3 / 7</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -90,7 +90,7 @@
 
     <div data-quiz-item="q4" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q4 / 6</span>
+        <span class="quiz-item__no">Q4 / 7</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -107,7 +107,7 @@
 
     <div data-quiz-item="q5" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q5 / 6</span>
+        <span class="quiz-item__no">Q5 / 7</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type">単一選択</span>
@@ -124,7 +124,7 @@
 
     <div data-quiz-item="q6" class="quiz-item is-unanswered">
       <div class="quiz-item__head">
-        <span class="quiz-item__no">Q6 / 6</span>
+        <span class="quiz-item__no">Q6 / 7</span>
         <div class="quiz-item__badges">
           <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
           <span class="quiz-item__type quiz-item__type--multi">複数選択（すべて選択）</span>
@@ -136,6 +136,23 @@
       <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>INP（Interaction to Next Paint）：操作への応答性</span></div>
       <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>CLS（Cumulative Layout Shift）：視覚的な安定性</span></div>
       <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>CTR（Click Through Rate）：クリック率</span></div>
+      </div>
+    </div>
+
+    <div data-quiz-item="q7" class="quiz-item is-unanswered">
+      <div class="quiz-item__head">
+        <span class="quiz-item__no">Q7 / 7</span>
+        <div class="quiz-item__badges">
+          <span class="quiz-item__unanswered" data-quiz-unanswered>⚠ 未回答</span>
+          <span class="quiz-item__type">単一選択</span>
+        </div>
+      </div>
+      <div class="quiz-item__question" id="q7-question">Core Web Vitalsの指標の変遷についての説明として、正しいものはどれか。</div>
+      <div class="quiz-options" role="radiogroup" aria-labelledby="q7-question">
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>Core Web Vitalsの指標は発表以来、一度も変更されていない</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>2024年3月に、それまで使われていたFID（初回入力遅延）がINPに置き換えられた</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>LCPは2024年に廃止され、現在は使われていない</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>Core Web Vitalsはランキングシグナルとして使われたことは一度もない</span></div>
       </div>
     </div>
 

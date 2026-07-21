@@ -15,11 +15,11 @@
   "sections": [
     {
       "heading": "サイト構造：わかりやすいURL",
-      "bodyHtml": "<p>Googleは公式のSEOスターターガイドで、<mark>わかりやすく予測可能で、人間にも理解しやすいURL構造</mark>を推奨しています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>URL構造</strong><br>Webページのアドレス（URL）の組み立て方。サイト内のディレクトリ構成やページの位置関係が、URLを見ただけである程度推測できる状態が望ましいとされています。</p></div><ul><li>サイトの構造を反映した、短く明確なURLにする</li><li>意味の分からないランダムな文字列・数字の羅列を避ける</li><li>可能であれば、ページの内容が推測できる単語を含める</li></ul><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>URL構造は、一度決めて公開した後に大きく変更すると、リダイレクト設定などの追加対応が必要になります。サイト設計の初期段階で、将来のページ追加も見据えた構造を検討しておくことが望ましいとされています。</p></div></div>"
+      "bodyHtml": "<p>Googleは公式のSEOスターターガイドで、<mark>わかりやすく予測可能で、人間にも理解しやすいURL構造</mark>を推奨しています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>サイト構造</strong><br>Webサイトの内容を分類し、階層構造で整理したもの。図書館が書籍をジャンル・テーマごとに分類して並べるのと同じように、Webサイトも「ユーザーが目的の情報を探しやすい形」にページを分類・整理する必要があります。</p></div><p>整理されたサイト構造を作る上で重要な考え方が<mark>MECE（ミーシー）</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>MECE（Mutually Exclusive and Collectively Exhaustive）</strong><br>「重複なく、抜け漏れなく」分類されている状態を指す言葉。カテゴリ設計がMECEになっていないと、ユーザーが「知りたい情報がサイト内で見つからない」（抜け漏れ）、「同じような内容のページが複数存在してしまう」（重複）といった問題が起こりやすくなります。</p></div><p>また、URLの階層は、このカテゴリ構造をそのまま反映させるのが基本です。</p><ul><li>サイトの構造を反映した、短く明確なURLにする</li><li>意味の分からないランダムな文字列・数字の羅列を避ける</li><li>可能であれば、ページの内容が推測できる単語を含める</li></ul><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>URL構造は、一度決めて公開した後に大きく変更すると、リダイレクト設定などの追加対応が必要になります。サイト設計の初期段階で、カテゴリ構造とURL階層を一致させ、将来のページ追加も見据えた構造を検討しておくことが望ましいとされています。なお、記事メディアやニュースサイトなど、1つのページが複数カテゴリに属するようなサイトでは、カテゴリ構造とURL階層を一致させるのが難しい例外もあります。</p></div></div>"
     },
     {
       "heading": "内部リンクとクロールのしやすさ",
-      "bodyHtml": "<p>第5章でも触れたとおり、内部リンクはユーザーの回遊性だけでなく、<mark>クローラーがサイト内のページを発見する手がかり</mark>としても機能します。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>どのページからもリンクされていない「孤立したページ」は、クローラーが発見しにくくなります。<span class=\"text-primary\">重要なページほど、サイト内の複数箇所からリンクされている状態</span>が望ましいとされています。</p></div></div><p>テクニカルSEOの観点では、次のような点も内部リンクの巡回性に影響します。</p><ul><li>ナビゲーションメニューやパンくずリストで、サイト全体の階層を分かりやすくする</li><li>関連コンテンツへのリンクを、記事の文脈に沿って適切に設置する</li><li>リンク切れ（存在しないページへのリンク）を放置しない</li></ul>"
+      "bodyHtml": "<p>サイト構造をどれだけきれいに設計しても、実際にページ同士がリンクでつながっていなければ、ユーザーもクローラーも目的のページにたどり着けません。<mark>内部リンク</mark>の設計では、次の3点が重要とされています。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🔗</div><div class=\"flow__step-title\">双方向リンク</div><div class=\"flow__step-desc\">どのページからも他のページへ辿れる状態にする</div></div><div class=\"flow__arrow\">＋</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🧩</div><div class=\"flow__step-title\">関連ページへのリンク</div><div class=\"flow__step-desc\">同じカテゴリ・上位カテゴリへリンクする</div></div><div class=\"flow__arrow\">＋</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🏠</div><div class=\"flow__step-title\">上位階層へのリンク</div><div class=\"flow__step-desc\">常にトップページ・最上位カテゴリに戻れるようにする</div></div></div></div><div class=\"figure__caption\">図1：内部リンク設計で重要とされる3つの観点</div></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>どのページからもリンクされていない「孤立したページ」や、リンクをたどった先が行き止まりになる構造は、<span class=\"text-primary\">クローラーにもユーザーにも発見・到達されにくくなります</span>。重要なページほど、サイト内の複数箇所からリンクされている状態が望ましいとされています。</p></div></div><p>また、多くのページからリンクを受けているページ（一般的にはトップページや上位カテゴリ）は、検索エンジンから「サイト内で特に重要なページ」として認識されやすくなるとされています。テクニカルSEOの観点では、次のような点も内部リンクの巡回性に影響します。</p><ul><li>ナビゲーションメニューやパンくずリストで、サイト全体の階層を分かりやすくする</li><li>関連コンテンツへのリンクを、記事の文脈に沿って適切に設置する</li><li>リンク切れ（存在しないページへのリンク）を放置しない</li></ul>"
     },
     {
       "heading": "XMLサイトマップとcanonical",
@@ -31,7 +31,7 @@
     },
     {
       "heading": "表示速度：Core Web Vitals",
-      "bodyHtml": "<p><mark>Core Web Vitals</mark>は、Googleが定めるページ体験に関する指標群で、読み込み速度・操作の反応性・視覚的な安定性を数値で評価します。</p><div class=\"table-wrap\"><table><thead><tr><th>指標</th><th>何を測るか</th><th>良好とされる目安</th></tr></thead><tbody><tr><td><strong>LCP</strong>（Largest Contentful Paint）</td><td>ページ内で最も大きな要素が表示されるまでの時間</td><td>2.5秒以内</td></tr><tr><td><strong>INP</strong>（Interaction to Next Paint）</td><td>ユーザーの操作に対する応答性</td><td>200ミリ秒未満</td></tr><tr><td><strong>CLS</strong>（Cumulative Layout Shift）</td><td>読み込み中のレイアウトのズレ（視覚的な安定性）</td><td>0.1未満</td></tr></tbody></table></div><p>Google公式の説明によれば、これらの指標は<strong>実際のユーザーの利用データ（フィールドデータ）</strong>をもとに評価され、あるページが「合格」と判定されるには、訪問の75パーセンタイル（多くのユーザー）で良好な体験が実現されている必要があります。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>Google自身も、良好なCore Web Vitalsは<span class=\"text-primary\">ユーザー体験の向上に役立つものであり、コアとなるランキングシステムが評価しようとする方向性とも合致する</span>と説明しています。Core Web Vitalsの実際の数値は、Search Console（後の章で学びます）で確認できます。</p></div></div>"
+      "bodyHtml": "<p><mark>Core Web Vitals</mark>は、Googleが2020年5月に発表した、Webページのユーザーエクスペリエンス（UX）を評価するための指標群です。読み込み速度・操作の反応性・視覚的な安定性を数値で評価します。</p><div class=\"table-wrap\"><table><thead><tr><th>指標</th><th>何を測るか</th><th>良好とされる目安</th></tr></thead><tbody><tr><td><strong>LCP</strong>（Largest Contentful Paint）</td><td>ページ内で最も大きな要素（画像・テキストなど）が表示されるまでの時間</td><td>2.5秒以内</td></tr><tr><td><strong>INP</strong>（Interaction to Next Paint）</td><td>クリック・タップ・キー入力など、ユーザーの操作に対する応答性</td><td>200ミリ秒未満</td></tr><tr><td><strong>CLS</strong>（Cumulative Layout Shift）</td><td>読み込み中に要素が予期せず動く、レイアウトのズレ</td><td>0.1未満</td></tr></tbody></table></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>Core Web Vitalsは、Googleが2021年6月から検索のランキングシグナルの一つとして使用しています。指標自体も更新されており、当初採用されていた「FID（初回入力遅延）」は2024年3月に「INP」へと置き換えられました。ただし、Core Web Vitalsのスコアを満点にしたからといって、必ずしも順位が大きく改善するわけではない点には留意が必要です。</p></div></div><p>Google公式の説明によれば、これらの指標は<strong>実際のユーザーの利用データ（フィールドデータ）</strong>をもとに評価され、あるページが「合格」と判定されるには、訪問の75パーセンタイル（多くのユーザー）で良好な体験が実現されている必要があります。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>Google自身も、良好なCore Web Vitalsは<span class=\"text-primary\">ユーザー体験の向上に役立つものであり、コアとなるランキングシステムが評価しようとする方向性とも合致する</span>と説明しています。</p></div></div><p>Core Web Vitalsを測定するツールには、それぞれ異なる特徴があります。</p><div class=\"table-wrap\"><table><thead><tr><th>ツール</th><th>特徴</th></tr></thead><tbody><tr><td><strong>Search Console</strong></td><td>自社の公開ページを対象に、実際のユーザーデータをもとにサイト全体の傾向を把握できる</td></tr><tr><td><strong>PageSpeed Insights</strong></td><td>公開ページのURLを入力するだけで、実ユーザーデータと計測環境データの両方を即座に確認できる</td></tr><tr><td><strong>Lighthouse</strong></td><td>非公開ページも含めて計測でき、開発環境での詳細なデバッグに向いている</td></tr></tbody></table></div>"
     }
   ],
   "summary": [
@@ -39,36 +39,37 @@
     "内部リンクはクローラーがページを発見する手がかりにもなり、孤立したページを作らないことが重要",
     "XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めるべきで、canonicalタグは重複コンテンツの整理に使う",
     "meta robotsやrobots.txtでクローラの動きを制御できるが、すべてのAIbotが指示に従う保証はない",
-    "Core Web Vitalsは読み込み速度（LCP）・応答性（INP）・視覚的安定性（CLS）の3指標で構成され、実際のユーザーデータをもとに評価される"
+    "Core Web Vitalsは読み込み速度（LCP）・応答性（INP）・視覚的安定性（CLS）の3指標で構成され、実際のユーザーデータをもとに評価される",
+    "Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新される（2024年3月にFIDがINPへ置き換え）"
   ],
   "quiz": [
     {
       "id": "q1",
       "type": "single",
       "sectionIndex": 0,
-      "question": "Googleが推奨するURL構造の考え方として、最も適切なものはどれか。",
+      "question": "MECE（ミーシー）なカテゴリ設計として、最も適切なものはどれか。",
       "options": [
-        "意味の分からないランダムな文字列・数字の羅列にする",
-        "わかりやすく予測可能で、人間にも理解しやすい構造にする",
-        "URLの長さは検索順位に一切関係しないため、何でもよい",
-        "サイトの構造とURLは無関係にすべきである"
+        "カテゴリ同士が重複していても、抜け漏れさえなければよい",
+        "重複がなく、抜け漏れもない状態でカテゴリを分類すること",
+        "できるだけ多くのカテゴリに、同じページを重複して登録すること",
+        "カテゴリ分けは一切行わず、すべてのページをフラットに並べること"
       ],
       "correct": [1],
-      "explain": "Googleは公式のSEOスターターガイドで、わかりやすく予測可能で、人間にも理解しやすいURL構造を推奨しています。"
+      "explain": "MECEとは「重複なく、抜け漏れなく（Mutually Exclusive and Collectively Exhaustive）」分類されている状態を指します。"
     },
     {
       "id": "q2",
-      "type": "single",
+      "type": "multi",
       "sectionIndex": 1,
-      "question": "内部リンクとクロールのしやすさに関する説明として、最も適切なものはどれか。",
+      "question": "内部リンクの設計で重要とされる観点として、正しいものをすべて選べ。",
       "options": [
-        "どのページからもリンクされていないページは、クローラーが発見しにくくなる",
-        "内部リンクはクローラーの巡回には一切関係しない",
-        "重要なページほど、他のページからリンクしない方がよい",
-        "内部リンクはユーザー体験にのみ影響し、検索エンジンには影響しない"
+        "どのページからも他のページへ辿れる、双方向のリンク構造にする",
+        "関連するページ・上位カテゴリへリンクを張る",
+        "常にトップページ・最上位カテゴリへ戻れるリンクを用意する",
+        "リンクは一方向にのみ張り、行き止まりのページを作る"
       ],
-      "correct": [0],
-      "explain": "どのページからもリンクされていない「孤立したページ」はクローラーが発見しにくくなります。重要なページほど複数箇所からリンクされている状態が望ましいとされています。"
+      "correct": [0, 1, 2],
+      "explain": "内部リンクの設計では、双方向リンク・関連ページへのリンク・上位階層への復帰リンクの3点が重要とされています。行き止まりになる一方向のリンクは避けるべきとされています。"
     },
     {
       "id": "q3",
@@ -125,6 +126,20 @@
       ],
       "correct": [0, 1, 2],
       "explain": "Core Web VitalsはLCP（読み込み速度）・INP（応答性）・CLS（視覚的安定性）の3指標で構成されます。CTR（クリック率）はCore Web Vitalsには含まれません。"
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "sectionIndex": 4,
+      "question": "Core Web Vitalsの指標の変遷についての説明として、正しいものはどれか。",
+      "options": [
+        "Core Web Vitalsの指標は発表以来、一度も変更されていない",
+        "2024年3月に、それまで使われていたFID（初回入力遅延）がINPに置き換えられた",
+        "LCPは2024年に廃止され、現在は使われていない",
+        "Core Web Vitalsはランキングシグナルとして使われたことは一度もない"
+      ],
+      "correct": [1],
+      "explain": "Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新されています。2024年3月には、それまでのFID（初回入力遅延）がINPに置き換えられました。"
     }
   ]
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>構造化データ（基本：構造化データとは） | SEO Eラーニング</title>
+<title>構造化データ（基本：構造化タグと構造化マークアップの違い） | SEO Eラーニング</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -24,18 +24,18 @@
   <a href="../../phases/ai/index.html" class="breadcrumb-back">← 構造化データ</a>
 
   <div class="wizard-header">
-    <span class="time-badge">🕒 学習目安 約12分</span>
+    <span class="time-badge">🕒 学習目安 約14分</span>
     <h1 class="wizard-header__title">構造化データ</h1>
-    <p class="wizard-header__topics">基本：構造化データとは、実践：Article・FAQ・Organization・Breadcrumb</p>
+    <p class="wizard-header__topics">基本：構造化タグと構造化マークアップの違い、実践：Article・FAQ・Organization・Breadcrumb</p>
     <div class="wizard-progress">
-      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
-      <div class="wizard-progress__count">2 / 4</div>
+      <div class="wizard-progress__track"><div class="wizard-progress__seg is-done"></div><div class="wizard-progress__seg is-active"></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div><div class="wizard-progress__seg "></div></div>
+      <div class="wizard-progress__count">2 / 5</div>
     </div>
   </div>
 
   <section class="section-card">
-    <h2>基本：構造化データとは</h2>
-    <p><mark>構造化データ</mark>とは、ページ内の情報が「何を意味しているか」を、検索エンジンにも分かる形式で明示するためのマークアップです。</p><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>構造化データ</strong><br>検索エンジンやクローラーがコンテンツの内容を理解しやすくするための、決められた形式のデータ。例えば「これは記事のタイトルである」「これは著者名である」といった情報の意味を、機械にも分かる形で伝えます。</p><p style="margin:8px 0 0;"><strong>リッチリザルト</strong><br>構造化データを実装することで、検索結果に表示される可能性がある拡張表示。星評価やFAQの折りたたみ表示など、通常のテキストリンクより多くの情報を表示できます。</p></div><p>Google Search Central（公式ドキュメント）は、構造化データの主なフォーマットとして<strong>JSON-LD</strong>を推奨しています。JSON-LDは、HTMLの本文とは別に、ページの意味情報だけをまとめて記述できる形式です。</p>
+    <h2>基本：構造化タグと構造化マークアップの違い</h2>
+    <p>「構造化データ」と一口に言っても、実は<mark>文書の構造を伝えるもの</mark>と<mark>情報の意味を伝えるもの</mark>の2種類があります。混同しやすいため、まずこの違いを整理します。</p><div class="table-wrap"><table><thead><tr><th></th><th>構造化タグ</th><th>構造化マークアップ</th></tr></thead><tbody><tr><td>伝える内容</td><td>文章の「まとまり」の構造（本の章・目次・補足情報など）</td><td>要素の「意味」（これは商品名である、これは価格である、など）</td></tr><tr><td>具体例</td><td><code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code>など</td><td>Article, FAQ, Organizationなどのschema.orgタイプ</td></tr><tr><td>ブラウザでの見え方への影響</td><td>基本的に見た目は変わらない</td><td>基本的に見た目は変わらない（検索結果側で変化する）</td></tr></tbody></table></div><div class="term-box"><div class="term-box__label">Term / 用語定義</div><p style="margin:0;"><strong>構造化タグ</strong><br>HTML5で定義されている<code>&lt;section&gt;</code>（見出しを持つ文章のまとまり）、<code>&lt;article&gt;</code>（独立した記事）、<code>&lt;nav&gt;</code>（ナビゲーション）、<code>&lt;aside&gt;</code>（補足情報）などのタグ。文書全体の「アウトライン（構造）」を検索エンジンに明示的に伝える役割を持ちます。</p></div><div class="callout callout--note"><div class="callout__icon">📝</div><div class="callout__body"><div class="callout__title">Note</div><p>例えば、未知の商品名（架空の造語など）が使われている場合、検索エンジンはその言葉だけでは何を指すのか判断できません。構造化マークアップによって「これは商品名であり、食品である」といった意味を明示することで、検索エンジンやAIがより正確に情報を理解できるようになります。</p></div></div>
   </section>
 
   <div class="wizard-footer">
