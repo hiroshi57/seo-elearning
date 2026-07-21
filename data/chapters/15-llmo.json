@@ -97,7 +97,7 @@
         "Search Console"
       ],
       "correct": [0],
-      "explain": "Perplexityは、検索エンジンと生成AIのハイブリッド型とされ、回答に引用元URLを明示する仕様が特徴とされています。"
+      "explain": "Perplexityは、Web検索と連動して最新情報を参照し、回答に引用元URLを明示するタイプの生成AIサービスとして本章で紹介されています。"
     }
   ]
 }
