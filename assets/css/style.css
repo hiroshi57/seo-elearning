@@ -375,6 +375,20 @@ tbody tr:nth-child(even) { background: #fafafa; }
   margin-top: 10px;
 }
 
+/* 書籍原稿の図版・スクリーンショット画像 */
+.figure__frame--img {
+  padding: 12px;
+}
+
+.figure__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
 /* 散布図（クラスタリング・類似度イメージ） */
 .scatter-svg { width: 100%; height: auto; max-width: 640px; }
 .scatter-dot__label {

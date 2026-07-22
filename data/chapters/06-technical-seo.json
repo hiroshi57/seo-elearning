@@ -33,7 +33,7 @@
     },
     {
       "heading": "1URL1コンテンツの原則と重複コンテンツの解消",
-      "bodyHtml": "<p>検索エンジンはWebページを「URL単位」で識別します。そのため、URLが1文字でも異なれば別ページとして扱われます。この前提から導かれるのが<mark>1URL1コンテンツの原則</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>1URL1コンテンツの原則</strong><br>1つのURLには1つのまとまったコンテンツを対応させるべきという考え方。検索結果には基本的に同一ドメインから1ページしか表示されにくいため、同じキーワードを複数ページで対策しても評価が分散し、無駄になりやすいとされています。</p></div><p>この原則が崩れると、代表的に次の3パターンの問題が起こります。</p><div class=\"table-wrap\"><table><thead><tr><th>パターン</th><th>具体例</th><th>主な対応</th></tr></thead><tbody><tr><td>同一URLに異なるコンテンツ</td><td>サイト内検索結果ページなどで、検索条件が違っても同じURL（例：<code>search.php</code>）が使われる</td><td>検索条件ごとに異なるURLを付与する</td></tr><tr><td>異なるURLに同一コンテンツ</td><td>http/https、wwwの有無、末尾スラッシュの有無、パラメータの有無などでURLが分岐する</td><td>URLの正規化（301リダイレクト／canonical）</td></tr><tr><td>異なるURLに1コンテンツが分割</td><td>一覧ページのページネーション（1ページ目・2ページ目…）</td><td>各ページを自己参照canonicalにし、前後リンクを設置する</td></tr></tbody></table></div><p><strong>URLの正規化</strong>とは、重複コンテンツの中から「どのURLが正規のURLか」を検索エンジンに伝える対応です。次の3ステップで進めます。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🔍</div><div class=\"flow__step-title\">①重複コンテンツの発見</div><div class=\"flow__step-desc\">Search Consoleの「ページ」レポートなどで確認</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🏷️</div><div class=\"flow__step-title\">②正規ページの決定</div><div class=\"flow__step-desc\">将来にわたって変わりにくいURLを選ぶ</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">↪️</div><div class=\"flow__step-title\">③正規ページへ寄せる</div><div class=\"flow__step-desc\">301リダイレクト、またはcanonical</div></div></div></div><div class=\"figure__caption\">図1：URL正規化の3ステップ</div></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>301リダイレクト</strong><br>ページが恒久的に移転したことを示すステータスコード。ユーザーがアクセスすると自動的に正規URLへ転送され、評価もあわせて引き継がれます。</p><p style=\"margin:8px 0 0;\"><strong>canonicalタグ</strong><br>ユーザーを転送せず、非正規ページをそのまま閲覧させながら「正規のURLはこちら」と検索エンジンに伝えるタグ。ユーザーを正規URLへ強制的に遷移させたくない場合に使います。</p></div><p>Googleは基本的に301リダイレクトを推奨しており、301リダイレクトができない場合の代替としてcanonicalを使うよう案内しています。次の表に、URLの相違パターンごとの対応方法をまとめます。</p><div class=\"table-wrap\"><table><thead><tr><th>URLの相違パターン</th><th>正規化の方向</th><th>対応方法</th></tr></thead><tbody><tr><td>http ↔ https</td><td>httpsに統一</td><td>301リダイレクト</td></tr><tr><td>wwwの有無</td><td>どちらでも可（統一）</td><td>301リダイレクト</td></tr><tr><td>indexファイル名の有無</td><td>index名なしに統一</td><td>301リダイレクト</td></tr><tr><td>末尾スラッシュの有無</td><td>スラッシュありに統一</td><td>301リダイレクト</td></tr><tr><td>URLパラメータの有無</td><td>パラメータなしを正規に</td><td>canonical（アクセス解析用パラメータ等は消せないため）</td></tr><tr><td>モバイル版 ↔ PC版（別URL運用の場合）</td><td>PC版を正規に</td><td>302リダイレクト＋canonical／alternate</td></tr></tbody></table></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>PC版とモバイル版を別URLで運用している場合、デバイスに応じた誘導には<span class=\"text-danger\">301ではなく302リダイレクトを使う</span>べきとされています。301はキャッシュされる性質があるため、モバイル用URLのキャッシュとしてPC版ページが保存されてしまう可能性があるためです。なお、Googleはこうした別URL運用よりも、実装・維持が容易なレスポンシブWebデザインを推奨しています。</p></div></div><p>正規化にあたっては、canonicalタグは相対パスではなく<strong>絶対パスで記述する</strong>ことが推奨されています。また、非HTMLファイル（PDFや画像など）を正規化したい場合は、HTMLにcanonicalタグを書けないため、HTTPヘッダーで指定します。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>ページネーション（一覧ページの分割）を採用する場合は、<span class=\"text-primary\">各ページを自分自身に正規化（自己参照canonical）</span>し、1ページ目に強制的にcanonicalしないことが重要です。またページ同士を<code>&lt;a&gt;</code>タグで前後リンクし、検索エンジンに一連のページであることを伝えましょう。Googleは、ページネーションされた一連のページで同じtitle/descriptionを使っても問題ないと説明していますが、ユーザビリティの観点からはユニーク化が望ましいとされています。</p></div></div><p>title・descriptionについても、内容の重複は「重複コンテンツ」と同様に扱われる可能性があります。ページごとにユニークな記述を心がけましょう。</p>"
+      "bodyHtml": "<p>検索エンジンはWebページを「URL単位」で識別します。そのため、URLが1文字でも異なれば別ページとして扱われます。この前提から導かれるのが<mark>1URL1コンテンツの原則</mark>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>1URL1コンテンツの原則</strong><br>1つのURLには1つのまとまったコンテンツを対応させるべきという考え方。検索結果には基本的に同一ドメインから1ページしか表示されにくいため、同じキーワードを複数ページで対策しても評価が分散し、無駄になりやすいとされています。</p></div><p>この原則が崩れると、代表的に次の3パターンの問題が起こります。</p><div class=\"table-wrap\"><table><thead><tr><th>パターン</th><th>具体例</th><th>主な対応</th></tr></thead><tbody><tr><td>同一URLに異なるコンテンツ</td><td>サイト内検索結果ページなどで、検索条件が違っても同じURL（例：<code>search.php</code>）が使われる</td><td>検索条件ごとに異なるURLを付与する</td></tr><tr><td>異なるURLに同一コンテンツ</td><td>http/https、wwwの有無、末尾スラッシュの有無、パラメータの有無などでURLが分岐する</td><td>URLの正規化（301リダイレクト／canonical）</td></tr><tr><td>異なるURLに1コンテンツが分割</td><td>一覧ページのページネーション（1ページ目・2ページ目…）</td><td>各ページを自己参照canonicalにし、前後リンクを設置する</td></tr></tbody></table></div><p><strong>URLの正規化</strong>とは、重複コンテンツの中から「どのURLが正規のURLか」を検索エンジンに伝える対応です。次の3ステップで進めます。</p><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec03-canonicalization-image.png\" alt=\"URLの正規化のイメージ：複数URLの評価を1つの正規URLに集約する\" loading=\"lazy\"></div><div class=\"figure__caption\">URLの正規化のイメージ：複数URLの評価を1つの正規URLに集約する</div></div><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🔍</div><div class=\"flow__step-title\">①重複コンテンツの発見</div><div class=\"flow__step-desc\">Search Consoleの「ページ」レポートなどで確認</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🏷️</div><div class=\"flow__step-title\">②正規ページの決定</div><div class=\"flow__step-desc\">将来にわたって変わりにくいURLを選ぶ</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">↪️</div><div class=\"flow__step-title\">③正規ページへ寄せる</div><div class=\"flow__step-desc\">301リダイレクト、またはcanonical</div></div></div></div><div class=\"figure__caption\">図1：URL正規化の3ステップ</div></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>301リダイレクト</strong><br>ページが恒久的に移転したことを示すステータスコード。ユーザーがアクセスすると自動的に正規URLへ転送され、評価もあわせて引き継がれます。</p><p style=\"margin:8px 0 0;\"><strong>canonicalタグ</strong><br>ユーザーを転送せず、非正規ページをそのまま閲覧させながら「正規のURLはこちら」と検索エンジンに伝えるタグ。ユーザーを正規URLへ強制的に遷移させたくない場合に使います。</p></div><p>Googleは基本的に301リダイレクトを推奨しており、301リダイレクトができない場合の代替としてcanonicalを使うよう案内しています。次の表に、URLの相違パターンごとの対応方法をまとめます。</p><div class=\"table-wrap\"><table><thead><tr><th>URLの相違パターン</th><th>正規化の方向</th><th>対応方法</th></tr></thead><tbody><tr><td>http ↔ https</td><td>httpsに統一</td><td>301リダイレクト</td></tr><tr><td>wwwの有無</td><td>どちらでも可（統一）</td><td>301リダイレクト</td></tr><tr><td>indexファイル名の有無</td><td>index名なしに統一</td><td>301リダイレクト</td></tr><tr><td>末尾スラッシュの有無</td><td>スラッシュありに統一</td><td>301リダイレクト</td></tr><tr><td>URLパラメータの有無</td><td>パラメータなしを正規に</td><td>canonical（アクセス解析用パラメータ等は消せないため）</td></tr><tr><td>モバイル版 ↔ PC版（別URL運用の場合）</td><td>PC版を正規に</td><td>302リダイレクト＋canonical／alternate</td></tr></tbody></table></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>PC版とモバイル版を別URLで運用している場合<div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec03-canonicalization-flowchart.png\" alt=\"URLの正規化方法の決定フローチャート\" loading=\"lazy\"></div><div class=\"figure__caption\">URLの正規化方法の決定フローチャート</div></div>、デバイスに応じた誘導には<span class=\"text-danger\">301ではなく302リダイレクトを使う</span>べきとされています。301はキャッシュされる性質があるため、モバイル用URLのキャッシュとしてPC版ページが保存されてしまう可能性があるためです。なお、Googleはこうした別URL運用よりも、実装・維持が容易なレスポンシブWebデザインを推奨しています。</p></div></div><p>正規化にあたっては、canonicalタグは相対パスではなく<strong>絶対パスで記述する</strong>ことが推奨されています。また、非HTMLファイル（PDFや画像など）を正規化したい場合は、HTMLにcanonicalタグを書けないため、HTTPヘッダーで指定します。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>ページネーション（一覧ページの分割）を採用する場合は、<span class=\"text-primary\">各ページを自分自身に正規化（自己参照canonical）</span>し、1ページ目に強制的にcanonicalしないことが重要です。またページ同士を<code>&lt;a&gt;</code>タグで前後リンクし、検索エンジンに一連のページであることを伝えましょう。Googleは、ページネーションされた一連のページで同じtitle/descriptionを使っても問題ないと説明していますが、ユーザビリティの観点からはユニーク化が望ましいとされています。</p></div></div><p>title・descriptionについても、内容の重複は「重複コンテンツ」と同様に扱われる可能性があります。ページごとにユニークな記述を心がけましょう。</p>"
     },
     {
       "heading": "サイト構造設計：MECEなカテゴリとURL命名",
@@ -45,19 +45,19 @@
     },
     {
       "heading": "XMLサイトマップとcanonical",
-      "bodyHtml": "<p><mark>XMLサイトマップ</mark>は、サイト内のどのページをクロール・インデックスしてほしいかをGoogleに伝えるためのファイルです。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>XMLサイトマップ</strong><br>サイト内のURL一覧をXML形式でまとめたファイル。Search Console（第10章で学びます）を通じてGoogleに送信することで、クロールの手がかりとして活用してもらえます。ユーザー向けのHTMLサイトマップとは異なり、ユーザビリティを気にせず全URLを機械的に記載できます。</p></div><p>Google公式のガイドラインでは、XMLサイトマップには<strong>正規URL（canonicalで指定したURL）のみ</strong>を含めることが推奨されています。重複しているURLや、canonicalの指定と矛盾するURLをサイトマップに含めると、Googleに対して矛盾したシグナルを送ることになるためです。XMLサイトマップが特に効果的とされるのは、次のようなケースです。</p><ul><li>サイトが新しく、外部からの被リンクがまだ少ない</li><li>サイトのページ数が非常に多い</li><li>どこからもリンクされていないページが存在する（本来は望ましくない状態）</li></ul><p>基本的な記述には<code>&lt;loc&gt;</code>（URL、必須）に加え、<code>&lt;lastmod&gt;</code>（最終更新日）を含められます。Googleは<code>&lt;changefreq&gt;</code>（更新頻度）はあくまで参考情報として扱い、<code>&lt;priority&gt;</code>（優先度）は無視すると公式に説明しています。</p><div class=\"table-wrap\"><table><thead><tr><th>制約</th><th>内容</th></tr></thead><tbody><tr><td>1ファイルのURL数</td><td>50,000個以下</td></tr><tr><td>1ファイルのサイズ</td><td>50MB以下（圧縮前のサイズが基準）</td></tr><tr><td>URLの長さ</td><td>1つのURLは2,048文字以下</td></tr></tbody></table></div><p>上限を超える場合は、複数のXMLサイトマップに分割し、それらのURLをまとめた<strong>サイトマップインデックス</strong>を作成すると管理しやすくなります。作成したXMLサイトマップは、次の2つの方法で存在を伝えます。</p><ul><li>Search Consoleの[インデックス作成]→[サイトマップ]からURLを送信する</li><li>robots.txtに<code>Sitemap:</code>としてURLを記載する（生成AIのクローラなど、Search Consoleに登録できない主体にも伝わる）</li></ul><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>画像や動画を多く扱うサイトでは、通常のXMLサイトマップに画像・動画専用の情報（<code>&lt;image:image&gt;</code>や<code>&lt;video:video&gt;</code>タグなど）を追加した「画像サイトマップ」「動画サイトマップ」を作成すると、画像検索・動画検索でのインデックスを促進できるとされています。ニュースメディアでは同様に「ニュースサイトマップ」も有効です。</p></div></div><p>正規URLの指定に使うのが<strong>canonicalタグ</strong>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>canonicalタグ（rel=\"canonical\"）</strong><br>同じ内容、または似た内容のページが複数のURLで存在する場合に、「正規のURLはこちらです」とGoogleに伝えるためのタグ。URLの正規化（重複コンテンツの整理）に使われます。</p></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>同じ内容のページが、パラメータ違いなどで複数のURLからアクセスできる状態を放置すると、<strong>重複コンテンツ</strong>として扱われ、評価が分散してしまう可能性があります。canonicalタグやリダイレクトで、優先すべきURLを明示することが重要です。</p></div></div>"
+      "bodyHtml": "<p><mark>XMLサイトマップ</mark>は、サイト内のどのページをクロール・インデックスしてほしいかをGoogleに伝えるためのファイルです。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>XMLサイトマップ</strong><br>サイト内のURL一覧をXML形式でまとめたファイル。Search Console（第10章で学びます）を通じてGoogleに送信することで、クロールの手がかりとして活用してもらえます。ユーザー向けのHTMLサイトマップとは異なり、ユーザビリティを気にせず全URLを機械的に記載できます。</p></div><p>Google公式のガイドラインでは、XMLサイトマップには<strong>正規URL（canonicalで指定したURL）のみ</strong>を含めることが推奨されています。重複しているURLや、canonicalの指定と矛盾するURLをサイトマップに含めると、Googleに対して矛盾したシグナルを送ることになるためです。XMLサイトマップが特に効果的とされるのは、次のようなケースです。</p><ul><li>サイトが新しく、外部からの被リンクがまだ少ない</li><li>サイトのページ数が非常に多い</li><li>どこからもリンクされていないページが存在する（本来は望ましくない状態）</li></ul><p>基本的な記述には<code>&lt;loc&gt;</code>（URL、必須）に加え、<code>&lt;lastmod&gt;</code>（最終更新日）を含められます。Googleは<code>&lt;changefreq&gt;</code>（更新頻度）はあくまで参考情報として扱い、<code>&lt;priority&gt;</code>（優先度）は無視すると公式に説明しています。</p><div class=\"table-wrap\"><table><thead><tr><th>制約</th><th>内容</th></tr></thead><tbody><tr><td>1ファイルのURL数</td><td>50,000個以下</td></tr><tr><td>1ファイルのサイズ</td><td>50MB以下（圧縮前のサイズが基準）</td></tr><tr><td>URLの長さ</td><td>1つのURLは2,048文字以下</td></tr></tbody></table></div><p>上限を超える場合は、複数のXMLサイトマップに分割し、それらのURLをまとめた<strong>サイトマップインデックス</strong>を作成すると管理しやすくなります。作成したXMLサイトマップは、次の2つの方法で存在を伝えます。</p><ul><li>Search Consoleの[インデックス作成]→[サイトマップ]からURLを送信する</li><li>robots.txtに<code>Sitemap:</code>としてURLを記載する（生成AIのクローラなど、Search Consoleに登録できない主体にも伝わる）</li></ul><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec06-sitemap-submit.png\" alt=\"Search Consoleの「サイトマップ」設定画面\" loading=\"lazy\"></div><div class=\"figure__caption\">Search Consoleの「サイトマップ」設定画面</div></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>画像や動画を多く扱うサイトでは、通常のXMLサイトマップに画像・動画専用の情報（<code>&lt;image:image&gt;</code>や<code>&lt;video:video&gt;</code>タグなど）を追加した「画像サイトマップ」「動画サイトマップ」を作成すると、画像検索・動画検索でのインデックスを促進できるとされています。ニュースメディアでは同様に「ニュースサイトマップ」も有効です。</p></div></div><p>正規URLの指定に使うのが<strong>canonicalタグ</strong>です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>canonicalタグ（rel=\"canonical\"）</strong><br>同じ内容、または似た内容のページが複数のURLで存在する場合に、「正規のURLはこちらです」とGoogleに伝えるためのタグ。URLの正規化（重複コンテンツの整理）に使われます。</p></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>同じ内容のページが、パラメータ違いなどで複数のURLからアクセスできる状態を放置すると、<strong>重複コンテンツ</strong>として扱われ、評価が分散してしまう可能性があります。canonicalタグやリダイレクトで、優先すべきURLを明示することが重要です。</p></div></div>"
     },
     {
       "heading": "クローラの制御：robots.txtとmeta robots",
-      "bodyHtml": "<p>クローラー（<mark>bot</mark>）は、サイト内のあらゆるページを無制限にクロールするわけではありません。サイトごとに<mark>クロールバジェット</mark>（クロールに割り当てられる量の目安）が存在するため、価値の低いページのクロールを抑え、重要なページに巡回を集中させる工夫が必要になります。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>bot（クローラー）</strong><br>Webサイトを自動的に巡回するプログラムの総称。GoogleやBingの検索エンジンクローラーのほか、生成AIサービスが使う専用クローラー（OpenAIのGPTBot、AnthropicのClaude-Webなど）も含まれます。</p></div><p>botの動作を制限する方法は、大きく3つあります。</p><div class=\"table-wrap\"><table><thead><tr><th>方法</th><th>単位</th><th>対象</th></tr></thead><tbody><tr><td>meta robots</td><td>ページ単位</td><td>HTMLファイル</td></tr><tr><td>X-Robots-Tag</td><td>ページ単位</td><td>非HTMLファイル（PDF・画像など）</td></tr><tr><td>robots.txt</td><td>サイト・ディレクトリ単位</td><td>すべてのファイル</td></tr></tbody></table></div><p><strong>meta robots</strong>は、HTMLの<code>&lt;head&gt;</code>内に記述し、そのページ単位でクロール・インデックスの可否を指定するタグです。content属性はカンマ区切りで複数指定できます。</p><div class=\"table-wrap\"><table><thead><tr><th>content属性の値</th><th>制御内容</th></tr></thead><tbody><tr><td>index / follow（デフォルト）</td><td>インデックスさせる／リンクを辿らせる。記述がなければこの挙動になる</td></tr><tr><td>noindex</td><td>ページをインデックスさせない</td></tr><tr><td>nofollow</td><td>ページ上のリンクを辿らせない</td></tr><tr><td>none</td><td>noindex, nofollowと同じ意味</td></tr><tr><td>nosnippet</td><td>検索結果にスニペットを表示させない</td></tr><tr><td>max-snippet:[数値]</td><td>スニペットの最大文字数を指定する</td></tr><tr><td>max-image-preview:[設定]</td><td>検索結果のサムネイル画像サイズを指定する（none/standard/large）</td></tr><tr><td>unavailable_after:[日時]</td><td>指定日時を過ぎると検索結果に表示しなくする</td></tr></tbody></table></div><p>noindexを使う代表的な場面には、サイト内検索結果ページ（特に0件ヒットのページ）、質の低いページ、キャンペーンページ、会員限定ページなどがあります。noindexを指定する際は、長期的にはnofollowと同じ意味になるとGoogleも説明しているため、<strong>「noindex, nofollow」</strong>とセットで記述するのが基本です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>X-Robots-Tag</strong><br>PDFや画像など、meta robotsを記述できない非HTMLファイルに対して、クロール・インデックスの制御を行うためのHTTPヘッダー。Google Search Central（公式ドキュメント）によれば、meta robotsで指定できるものと同じルールを、サーバーの設定でHTTPレスポンスに追加する形で指定します。</p></div><p><strong>robots.txt</strong>は、サイトのルート直下（<code>https://www.example.com/robots.txt</code>）に設置する、クロールの可否をサイト・ディレクトリ単位で指定するテキストファイルです。基本構文は次の3要素で構成されます。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🤖</div><div class=\"flow__step-title\">User-agent</div><div class=\"flow__step-desc\">対象クローラの指定（*は全クローラ）</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🚦</div><div class=\"flow__step-title\">Disallow / Allow</div><div class=\"flow__step-desc\">アクセス拒否／許可の指定</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">📁</div><div class=\"flow__step-title\">対象パス</div><div class=\"flow__step-desc\">ディレクトリ・ファイルの指定</div></div></div></div><div class=\"figure__caption\">図1：robots.txtの基本構文（例：User-agent: * ／ Disallow: /no/）</div></div><p>DisallowとAllowを併用すると、Disallowで拒否したディレクトリの一部だけを許可することも可能です。記述の優先順位は、より対象パスが限定されている条件が優先されるため、記述順は問いません。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>特定のクローラだけを制御したい場合は、User-agentトークンを個別指定します。代表例として、画像用は<code>Googlebot-Image</code>、生成AIの学習用途では<code>Google-Extended</code>（Gemini等）、OpenAIの学習用クローラは<code>GPTBot</code>などがあります。<span class=\"text-primary\">「*」（全クローラ対象）を指定してもGoogleの広告品質チェック用クローラ（AdsBot）は対象にならない</span>点に注意が必要です。</p></div></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>meta robotsとrobots.txtは、GoogleのクローラーだけでなくAIbot（生成AIの学習・回答生成用クローラー）にも基本的には有効ですが、<span class=\"text-danger\">すべてのAIbotが指示に従うことを保証するものではありません</span>。機密性の高い情報の保護策としては過信せず、Digest認証など別の方法でアクセス制限をかけることが望ましいとされています。また、robots.txtは誰でも閲覧できるファイルであるため、管理者用ページなどセキュリティ上センシティブなパスを記述しないことも重要です。</p></div></div><p>Googlebotは1日1回程度robots.txtを取得しますが、サーバーが5xxエラーを長期間返し続けると、Googleがサイト全体のクロールを停止する可能性があるため、robots.txtが正しく取得できているかはSearch Consoleで定期的に確認することが推奨されます。また、Googlebotがコンテンツを正しく認識するために、JavaScript・CSS・画像ファイルへのアクセスはブロックしないよう注意しましょう。</p>"
+      "bodyHtml": "<p>クローラー（<mark>bot</mark>）は、サイト内のあらゆるページを無制限にクロールするわけではありません。サイトごとに<mark>クロールバジェット</mark>（クロールに割り当てられる量の目安）が存在するため、価値の低いページのクロールを抑え、重要なページに巡回を集中させる工夫が必要になります。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>bot（クローラー）</strong><br>Webサイトを自動的に巡回するプログラムの総称。GoogleやBingの検索エンジンクローラーのほか、生成AIサービスが使う専用クローラー（OpenAIのGPTBot、AnthropicのClaude-Webなど）も含まれます。</p></div><p>botの動作を制限する方法は、大きく3つあります。</p><div class=\"table-wrap\"><table><thead><tr><th>方法</th><th>単位</th><th>対象</th></tr></thead><tbody><tr><td>meta robots</td><td>ページ単位</td><td>HTMLファイル</td></tr><tr><td>X-Robots-Tag</td><td>ページ単位</td><td>非HTMLファイル（PDF・画像など）</td></tr><tr><td>robots.txt</td><td>サイト・ディレクトリ単位</td><td>すべてのファイル</td></tr></tbody></table></div><p><strong>meta robots</strong>は、HTMLの<code>&lt;head&gt;</code>内に記述し、そのページ単位でクロール・インデックスの可否を指定するタグです。content属性はカンマ区切りで複数指定できます。</p><div class=\"table-wrap\"><table><thead><tr><th>content属性の値</th><th>制御内容</th></tr></thead><tbody><tr><td>index / follow（デフォルト）</td><td>インデックスさせる／リンクを辿らせる。記述がなければこの挙動になる</td></tr><tr><td>noindex</td><td>ページをインデックスさせない</td></tr><tr><td>nofollow</td><td>ページ上のリンクを辿らせない</td></tr><tr><td>none</td><td>noindex, nofollowと同じ意味</td></tr><tr><td>nosnippet</td><td>検索結果にスニペットを表示させない</td></tr><tr><td>max-snippet:[数値]</td><td>スニペットの最大文字数を指定する</td></tr><tr><td>max-image-preview:[設定]</td><td>検索結果のサムネイル画像サイズを指定する（none/standard/large）</td></tr><tr><td>unavailable_after:[日時]</td><td>指定日時を過ぎると検索結果に表示しなくする</td></tr></tbody></table></div><p>noindexを使う代表的な場面には、サイト内検索結果ページ（特に0件ヒットのページ）、質の低いページ、キャンペーンページ、会員限定ページなどがあります。noindexを指定する際は、長期的にはnofollowと同じ意味になるとGoogleも説明しているため、<strong>「noindex, nofollow」</strong>とセットで記述するのが基本です。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>X-Robots-Tag</strong><br>PDFや画像など、meta robotsを記述できない非HTMLファイルに対して、クロール・インデックスの制御を行うためのHTTPヘッダー。Google Search Central（公式ドキュメント）によれば、meta robotsで指定できるものと同じルールを、サーバーの設定でHTTPレスポンスに追加する形で指定します。</p></div><p><strong>robots.txt</strong>は、サイトのルート直下（<code>https://www.example.com/robots.txt</code>）に設置する、クロールの可否をサイト・ディレクトリ単位で指定するテキストファイルです。基本構文は次の3要素で構成されます。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🤖</div><div class=\"flow__step-title\">User-agent</div><div class=\"flow__step-desc\">対象クローラの指定（*は全クローラ）</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🚦</div><div class=\"flow__step-title\">Disallow / Allow</div><div class=\"flow__step-desc\">アクセス拒否／許可の指定</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">📁</div><div class=\"flow__step-title\">対象パス</div><div class=\"flow__step-desc\">ディレクトリ・ファイルの指定</div></div></div></div><div class=\"figure__caption\">図1：robots.txtの基本構文（例：User-agent: * ／ Disallow: /no/）</div></div><p>DisallowとAllowを併用すると、Disallowで拒否したディレクトリの一部だけを許可することも可能です。記述の優先順位は、より対象パスが限定されている条件が優先されるため、記述順は問いません。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>特定のクローラだけを制御したい場合は、User-agentトークンを個別指定します。代表例として、画像用は<code>Googlebot-Image</code>、生成AIの学習用途では<code>Google-Extended</code>（Gemini等）、OpenAIの学習用クローラは<code>GPTBot</code>などがあります。<span class=\"text-primary\">「*」（全クローラ対象）を指定してもGoogleの広告品質チェック用クローラ（AdsBot）は対象にならない</span>点に注意が必要です。</p></div></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>meta robotsとrobots.txtは、GoogleのクローラーだけでなくAIbot（生成AIの学習・回答生成用クローラー）にも基本的には有効ですが、<span class=\"text-danger\">すべてのAIbotが指示に従うことを保証するものではありません</span>。機密性の高い情報の保護策としては過信せず、Digest認証など別の方法でアクセス制限をかけることが望ましいとされています。また、robots.txtは誰でも閲覧できるファイルであるため、管理者用ページなどセキュリティ上センシティブなパスを記述しないことも重要です。</p></div></div><p>Googlebotは1日1回程度robots.txtを取得しますが、サーバーが5xxエラーを長期間返し続けると、Googleがサイト全体のクロールを停止する可能性があるため、robots.txtが正しく取得できているかはSearch Consoleで定期的に確認することが推奨されます。<div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec07-robots-txt-status.png\" alt=\"Search Consoleでrobots.txtの取得状況を確認する画面\" loading=\"lazy\"></div><div class=\"figure__caption\">Search Consoleでrobots.txtの取得状況を確認する画面</div></div><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec07-robots-txt-blocked.png\" alt=\"robots.txtによりブロックされたURLの表示例\" loading=\"lazy\"></div><div class=\"figure__caption\">robots.txtによりブロックされたURLの表示例</div></div>また、Googlebotがコンテンツを正しく認識するために、JavaScript・CSS・画像ファイルへのアクセスはブロックしないよう注意しましょう。</p>"
     },
     {
       "heading": "クロールの促進：URL検査・フィード・WebSub",
-      "bodyHtml": "<p>クロールを「制限する」方法に対し、本セクションでは新規ページや更新ページを<mark>いち早くクローラに発見してもらう</mark>ための方法を扱います。XMLサイトマップ（前セクション）に加えて、代表的な方法が3つあります。</p><div class=\"table-wrap\"><table><thead><tr><th>方法</th><th>特徴</th><th>クロールの性質</th></tr></thead><tbody><tr><td>URL検査ツール</td><td>Search Consoleから特定URLのクロールを個別にリクエストする</td><td>能動的（手動で1件ずつ）</td></tr><tr><td>RSS/Atomフィード</td><td>更新ページの一覧をXML形式で配信する</td><td>受動的（クローラや購読者が定期的に取得）</td></tr><tr><td>WebSub（旧PubSubHubbub）</td><td>更新をハブ経由でプッシュ通知する</td><td>能動的（システムで自動化）</td></tr></tbody></table></div><p><strong>URL検査ツール</strong>は、Search Console上部の検索ボックスにURLを入力し、[インデックス登録をリクエスト]をクリックすることでクロールを要求できる機能です。あわせて次の確認も可能です。</p><ul><li><strong>HTTPレスポンスの確認</strong>：HTTPステータスコードや、HTTPヘッダーによるcanonical設定などを確認できる</li><li><strong>レンダリングチェック</strong>：Googlebotが認識しているページのスクリーンショットを確認できる。表示内容が実際のユーザー向け表示と大きく異なる場合は、クローラへの偽装行為（クローキング）と誤認識されるリスクもある</li></ul><p><strong>RSS/Atomフィード</strong>は、更新ページのURL・更新日・タイトル・要約などを配信する仕組みです。全URLを網羅するXMLサイトマップとは役割が異なり、直近の更新情報を効率よく伝えることに向いています。RSSとAtomの2形式がありますが、Atomのほうが仕様が明瞭であるとされ、新規に作成する場合はAtom形式が選ばれる傾向にあります。フィードを用意したら、Search Consoleへの登録に加え、トップページのhead要素に<code>&lt;link rel=\"alternate\"&gt;</code>でフィードのURLを記述して存在を伝えます。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>WebSub（旧称PubSubHubbub）</strong><br>コンテンツの更新をハブ（Hub）経由でクローラやフィードリーダーにプッシュ通知する仕組み。出版者（サイト運営者）がハブに更新を伝え、ハブが購読者（Googlebotなど）へ通知することで、更新を都度手動リクエストせずに能動的なクロールを実現できます。エンジニアによるシステム実装が必要です。</p></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>これらの手法は、いずれも「Googleが自主的にクロールしてくれるのを待つのではなく、更新をこちらから積極的に伝える」という発想に基づきます。特にニュース記事など速報性が求められるコンテンツでは、フィードやWebSubの活用がクロール頻度の向上に有効とされています。ただし、URL検査ツールとWebSubは検索エンジンのクローラに対してのみ有効で、生成AIのクローラには基本的に効果がありません。</p></div></div>"
+      "bodyHtml": "<p>クロールを「制限する」方法に対し、本セクションでは新規ページや更新ページを<mark>いち早くクローラに発見してもらう</mark>ための方法を扱います。XMLサイトマップ（前セクション）に加えて、代表的な方法が3つあります。</p><div class=\"table-wrap\"><table><thead><tr><th>方法</th><th>特徴</th><th>クロールの性質</th></tr></thead><tbody><tr><td>URL検査ツール</td><td>Search Consoleから特定URLのクロールを個別にリクエストする</td><td>能動的（手動で1件ずつ）</td></tr><tr><td>RSS/Atomフィード</td><td>更新ページの一覧をXML形式で配信する</td><td>受動的（クローラや購読者が定期的に取得）</td></tr><tr><td>WebSub（旧PubSubHubbub）</td><td>更新をハブ経由でプッシュ通知する</td><td>能動的（システムで自動化）</td></tr></tbody></table></div><p><strong>URL検査ツール</strong>は、Search Console上部の検索ボックスにURLを入力し、[インデックス登録をリクエスト]をクリックすることでクロールを要求できる機能です。<div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec08-url-inspection-registered.png\" alt=\"URL検査ツールで「URLはGoogleに登録されています」と表示された結果画面\" loading=\"lazy\"></div><div class=\"figure__caption\">URL検査ツールで「URLはGoogleに登録されています」と表示された結果画面</div></div><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec08-url-inspection-detail.png\" alt=\"URL検査ツールで確認できるHTTPレスポンスの詳細\" loading=\"lazy\"></div><div class=\"figure__caption\">URL検査ツールで確認できるHTTPレスポンスの詳細</div></div>あわせて次の確認も可能です。</p><ul><li><strong>HTTPレスポンスの確認</strong>：HTTPステータスコードや、HTTPヘッダーによるcanonical設定などを確認できる</li><li><strong>レンダリングチェック</strong>：Googlebotが認識しているページのスクリーンショットを確認できる。表示内容が実際のユーザー向け表示と大きく異なる場合は、クローラへの偽装行為（クローキング）と誤認識されるリスクもある</li></ul><p><strong>RSS/Atomフィード</strong>は、更新ページのURL・更新日・タイトル・要約などを配信する仕組みです。全URLを網羅するXMLサイトマップとは役割が異なり、直近の更新情報を効率よく伝えることに向いています。RSSとAtomの2形式がありますが、Atomのほうが仕様が明瞭であるとされ、新規に作成する場合はAtom形式が選ばれる傾向にあります。フィードを用意したら、Search Consoleへの登録に加え、トップページのhead要素に<code>&lt;link rel=\"alternate\"&gt;</code>でフィードのURLを記述して存在を伝えます。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>WebSub（旧称PubSubHubbub）</strong><br>コンテンツの更新をハブ（Hub）経由でクローラやフィードリーダーにプッシュ通知する仕組み。出版者（サイト運営者）がハブに更新を伝え、ハブが購読者（Googlebotなど）へ通知することで、更新を都度手動リクエストせずに能動的なクロールを実現できます。エンジニアによるシステム実装が必要です。</p></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>これらの手法は、いずれも「Googleが自主的にクロールしてくれるのを待つのではなく、更新をこちらから積極的に伝える」という発想に基づきます。特にニュース記事など速報性が求められるコンテンツでは、フィードやWebSubの活用がクロール頻度の向上に有効とされています。ただし、URL検査ツールとWebSubは検索エンジンのクローラに対してのみ有効で、生成AIのクローラには基本的に効果がありません。</p></div></div>"
     },
     {
       "heading": "エラー対応とスパムへの対策",
-      "bodyHtml": "<p>SEOでプラスの評価を積み上げる前提として、まずはマイナス評価につながる要因を取り除くことが重要です。本セクションでは<mark>エラーへの対応</mark>と<mark>スパムへの対策</mark>の基本を扱います。</p><p><strong>エラー対応</strong>では、まず「自サイトのエラー（内部エラー）」と「外部サイトへのリンク切れ（外部エラー）」を区別します。内部エラーは自社で解決可能ですが、外部サイトのエラー自体は解決できないため、リンクの変更・削除で対応します。</p><div class=\"table-wrap\"><table><thead><tr><th>ステータスコード</th><th>意味</th></tr></thead><tbody><tr><td>200</td><td>正常（OK）</td></tr><tr><td>301 / 302</td><td>恒久的 / 一時的なリダイレクト</td></tr><tr><td>401 / 403</td><td>認証が必要 / アクセス禁止</td></tr><tr><td>404</td><td>ページが見つからない（Not Found）</td></tr><tr><td>500 / 503</td><td>サーバー内部エラー / サービス利用不可</td></tr></tbody></table></div><p>ユーザーやGooglebotがリンクをたどって到達できるページでエラーが起きている場合は、修正が必須です。Search Consoleの[インデックス作成]→[ページ]で発生状況を確認できます。どうしても404を返さざるを得ない場合は、デフォルトのエラーページではなく、次のようなユーザーフレンドリーな404ページを用意することが推奨されています。</p><ul><li>探しているページが見つからないことを、平易な言葉で明確に伝える</li><li>サイトの他ページと同じデザイン（ナビゲーション含む）にする</li><li>人気記事やホームページへのリンクを設置する</li></ul><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>独自の404ページを用意する際、システムによっては<span class=\"text-danger\">ステータスコード200（正常）を返してしまう「ソフト404」</span>と呼ばれる状態になることがあります。この場合、削除された記事などが重複コンテンツとして扱われてしまう可能性があるため、404エラーページであっても正しく404のステータスコードを返す必要があります。</p></div></div><p>続いて<strong>スパムへの対策</strong>です。Googleは2018年にSpamBrainという仕組みを導入し、より高度なスパム行為を検出できるようになっています。スパム行為は大きく3つに分類されます。</p><div class=\"table-wrap\"><table><thead><tr><th>分類</th><th>関連アップデート</th><th>代表例</th></tr></thead><tbody><tr><td>価値の低いコンテンツ</td><td>パンダアップデート</td><td>コピーコンテンツ、自動生成コンテンツ、キーワードの乱用、広告のみのコンテンツ</td></tr><tr><td>質の低い被リンク</td><td>ペンギンアップデート</td><td>リンクの売買、同一IP/テンプレートからの大量リンク</td></tr><tr><td>クローラへの偽装行為</td><td>-</td><td>隠しテキスト・隠しリンク、クローキング、不正なリダイレクト</td></tr></tbody></table></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>クローキング</strong><br>ユーザーとクローラに対して、異なるコンテンツやURLを見せる行為。検索順位の操作やユーザーへの詐欺行為に使われるためペナルティ対象です。PC/モバイルを別URLで運用している場合に、対応するページが正しく1対1でリダイレクトされない「不正なモバイルリダイレクト」も同様に問題視されます。</p></div><p>被リンクに関しては、広告やスポンサー活動を目的としたリンクそのものが問題なのではなく、<strong>ランキング操作を目的としたリンクの売買</strong>が問題とされます。こうした関係性のあるリンクには、次のような<code>rel</code>属性を付与してGoogleに関係性を伝える必要があります。</p><div class=\"table-wrap\"><table><thead><tr><th>rel属性</th><th>意味</th></tr></thead><tbody><tr><td>rel=\"sponsored\"</td><td>広告・スポンサー活動を目的としたリンク</td></tr><tr><td>rel=\"nofollow\"</td><td>リンク先ページをクロールさせたくない場合</td></tr><tr><td>rel=\"ugc\"</td><td>ブログコメントやフォーラム投稿など、ユーザー生成コンテンツのリンク</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>悪意ある第三者が意図的に低品質な被リンクを送り、対象サイトの評価を下げようとする行為を<span class=\"text-primary\">「逆SEO」</span>と呼びます。過去から現在まで不正行為をしていなくても被害に遭う可能性があるため、Search Consoleで定期的に被リンク状況を確認することが推奨されます。質の低い被リンクが見つかり、自分で削除・修正できない場合の最終手段として、Search Consoleの「リンクの否認」機能が用意されています。</p></div></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>これらのスパム行為がGoogleに認識されると、<span class=\"text-danger\">Search Consoleの[手動による対策]レポートに検出され、検索結果から除外される</span>可能性があります。仮に一時的に順位が上がったとしても、いずれペナルティを受けるリスクがあるため、スパム行為による成果は資産にはならないとされています。</p></div></div>"
+      "bodyHtml": "<p>SEOでプラスの評価を積み上げる前提として、まずはマイナス評価につながる要因を取り除くことが重要です。本セクションでは<mark>エラーへの対応</mark>と<mark>スパムへの対策</mark>の基本を扱います。</p><p><strong>エラー対応</strong>では、まず「自サイトのエラー（内部エラー）」と「外部サイトへのリンク切れ（外部エラー）」を区別します。内部エラーは自社で解決可能ですが、外部サイトのエラー自体は解決できないため、リンクの変更・削除で対応します。</p><div class=\"table-wrap\"><table><thead><tr><th>ステータスコード</th><th>意味</th></tr></thead><tbody><tr><td>200</td><td>正常（OK）</td></tr><tr><td>301 / 302</td><td>恒久的 / 一時的なリダイレクト</td></tr><tr><td>401 / 403</td><td>認証が必要 / アクセス禁止</td></tr><tr><td>404</td><td>ページが見つからない（Not Found）</td></tr><tr><td>500 / 503</td><td>サーバー内部エラー / サービス利用不可</td></tr></tbody></table></div><p>ユーザーやGooglebotがリンクをたどって到達できるページでエラーが起きている場合は、修正が必須です。Search Consoleの[インデックス作成]→[ページ]で発生状況を確認できます。どうしても404を返さざるを得ない場合は、デフォルトのエラーページではなく、次のようなユーザーフレンドリーな404ページを用意することが推奨されています。</p><ul><li>探しているページが見つからないことを、平易な言葉で明確に伝える</li><li>サイトの他ページと同じデザイン（ナビゲーション含む）にする</li><li>人気記事やホームページへのリンクを設置する</li></ul><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec09-404-friendly-page.png\" alt=\"ユーザーフレンドリーな404ページのレイアウト例\" loading=\"lazy\"></div><div class=\"figure__caption\">ユーザーフレンドリーな404ページのレイアウト例</div></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>独自の404ページを用意する際、システムによっては<span class=\"text-danger\">ステータスコード200（正常）を返してしまう「ソフト404」</span>と呼ばれる状態になることがあります。この場合、削除された記事などが重複コンテンツとして扱われてしまう可能性があるため、404エラーページであっても正しく404のステータスコードを返す必要があります。</p></div></div><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec09-404-correct-status.png\" alt=\"異なるURLで同じ404内容が正しくステータスコード404として返されている例\" loading=\"lazy\"></div><div class=\"figure__caption\">異なるURLで同じ404内容が正しくステータスコード404として返されている例</div></div><p>続いて<strong>スパムへの対策</strong>です。Googleは2018年にSpamBrainという仕組みを導入し、より高度なスパム行為を検出できるようになっています。スパム行為は大きく3つに分類されます。</p><div class=\"table-wrap\"><table><thead><tr><th>分類</th><th>関連アップデート</th><th>代表例</th></tr></thead><tbody><tr><td>価値の低いコンテンツ</td><td>パンダアップデート</td><td>コピーコンテンツ、自動生成コンテンツ、キーワードの乱用、広告のみのコンテンツ</td></tr><tr><td>質の低い被リンク</td><td>ペンギンアップデート</td><td>リンクの売買、同一IP/テンプレートからの大量リンク</td></tr><tr><td>クローラへの偽装行為</td><td>-</td><td>隠しテキスト・隠しリンク、クローキング、不正なリダイレクト</td></tr></tbody></table></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>クローキング</strong><br>ユーザーとクローラに対して、異なるコンテンツやURLを見せる行為。検索順位の操作やユーザーへの詐欺行為に使われるためペナルティ対象です。PC/モバイルを別URLで運用している場合に、対応するページが正しく1対1でリダイレクトされない「不正なモバイルリダイレクト」も同様に問題視されます。</p></div><p>被リンクに関しては、広告やスポンサー活動を目的としたリンクそのものが問題なのではなく、<strong>ランキング操作を目的としたリンクの売買</strong>が問題とされます。こうした関係性のあるリンクには、次のような<code>rel</code>属性を付与してGoogleに関係性を伝える必要があります。</p><div class=\"table-wrap\"><table><thead><tr><th>rel属性</th><th>意味</th></tr></thead><tbody><tr><td>rel=\"sponsored\"</td><td>広告・スポンサー活動を目的としたリンク</td></tr><tr><td>rel=\"nofollow\"</td><td>リンク先ページをクロールさせたくない場合</td></tr><tr><td>rel=\"ugc\"</td><td>ブログコメントやフォーラム投稿など、ユーザー生成コンテンツのリンク</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>悪意ある第三者が意図的に低品質な被リンクを送り、対象サイトの評価を下げようとする行為を<span class=\"text-primary\">「逆SEO」</span>と呼びます。過去から現在まで不正行為をしていなくても被害に遭う可能性があるため、Search Consoleで定期的に被リンク状況を確認することが推奨されます。質の低い被リンクが見つかり、自分で削除・修正できない場合の最終手段として、Search Consoleの「リンクの否認」機能が用意されています。</p></div></div><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec09-disavow-links.png\" alt=\"Search Consoleの「リンクの否認」申請画面\" loading=\"lazy\"></div><div class=\"figure__caption\">Search Consoleの「リンクの否認」申請画面</div></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>これらのスパム行為がGoogleに認識されると、<span class=\"text-danger\">Search Consoleの[手動による対策]レポートに検出され、検索結果から除外される</span>可能性があります。仮に一時的に順位が上がったとしても、いずれペナルティを受けるリスクがあるため、スパム行為による成果は資産にはならないとされています。</p></div></div>"
     },
     {
       "heading": "表示速度の基本：Webページが表示されるまで",
@@ -65,7 +65,7 @@
     },
     {
       "heading": "ネットワークとレンダリングの高速化",
-      "bodyHtml": "<p>ここでは、表示速度を構成する3領域のうち、<mark>ネットワーク処理</mark>と<mark>レンダリング処理</mark>の高速化の考え方を、やや実装寄りの視点で解説します。</p><p><strong>ネットワーク処理</strong>に要する時間は、「通信量」「通信回数」「通信距離」の掛け算で決まるとされています。</p><div class=\"table-wrap\"><table><thead><tr><th>要素</th><th>高速化の主な手法</th></tr></thead><tbody><tr><td>通信量</td><td>テキストファイルのMinify圧縮・gzip/Brotli圧縮、画像の適切な形式選択（WebP・AVIF等）と圧縮</td></tr><tr><td>通信回数</td><td>HTTP/2・HTTP/3の活用、画像の遅延読み込み（Lazy Load）</td></tr><tr><td>通信距離</td><td>ユーザーに近いサーバーの選定、CDNの活用</td></tr></tbody></table></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>gzip圧縮 / Brotli圧縮</strong><br>テキストファイル（HTML・CSS・JavaScript）を圧縮してファイルサイズを削減する技術。gzipの圧縮率は約60〜80%、GoogleがgzipをさらにOSSで発展させたBrotliは約70〜90%とされ、Brotliの方が高圧縮ですがCPU負荷は大きくなる傾向があります。いずれもテキストファイルに効果的で、すでに圧縮済みの画像やPDFにはあまり効果がありません。</p><p style=\"margin:8px 0 0;\"><strong>CDN（Content Delivery Network）</strong><br>世界各地に配置したエッジサーバーを経由して、ユーザーに地理的・ネットワーク的に近い拠点からコンテンツを配信する仕組み。通信距離の短縮に加え、オリジンサーバーの負荷分散にも役立ちます。</p></div><p>画像ファイルは、ページ全体のファイルサイズの約4割を占めるとされる調査もあり、通信量削減の重要なターゲットです。主な画像形式の使い分けの目安を示します。</p><div class=\"table-wrap\"><table><thead><tr><th>形式</th><th>特徴</th><th>向いている用途</th></tr></thead><tbody><tr><td>JPEG</td><td>非可逆圧縮。輪郭のはっきりした画像でノイズが出やすい</td><td>写真</td></tr><tr><td>PNG</td><td>可逆圧縮。透過に対応</td><td>透過が必要な画像、色を優先したい画像</td></tr><tr><td>WebP</td><td>Google開発。JPEG比25〜34%、PNG比26%程度の削減が見込める</td><td>Web用画像全般（現在は主要ブラウザが対応）</td></tr><tr><td>SVG</td><td>ベクター形式。拡大しても粗くならない</td><td>ロゴ・アイコンなど単純な図形</td></tr><tr><td>AVIF</td><td>次世代形式。WebPよりさらに高圧縮</td><td>今後活用が広がると見込まれる形式（2024年8月にGoogle検索が対応）</td></tr></tbody></table></div><p>通信回数の観点では、通信プロトコルの進化も重要です。HTTP/1.1は1つの接続で1つのリクエストしか処理できない制約がありましたが、<strong>HTTP/2</strong>では1つの接続内で複数のストリームを多重化でき、<strong>HTTP/3</strong>ではTCPに代わりUDPベースの「QUIC」を採用することで、接続確立の高速化やパケットロスへの耐性が向上しています。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>HTTP/2は主要ブラウザにおいてHTTPS通信であることが前提となっています。そのため、HTTP/2以降の通信高速化の恩恵を受けるうえでも、HTTPS化（後述）は欠かせない土台になっています。</p></div></div><p>続いて<strong>レンダリング処理</strong>です。ブラウザはHTMLから<strong>DOMツリー</strong>、CSSから<strong>CSSOMツリー</strong>を構築し、両者を組み合わせて<strong>レンダリングツリー</strong>を作り、要素の位置とサイズを決める「レイアウト」、描画命令を作る「ペインティング」を経て画面に表示します。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🌳</div><div class=\"flow__step-title\">DOMツリー</div><div class=\"flow__step-desc\">HTMLの解析結果</div></div><div class=\"flow__arrow\">＋</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🎨</div><div class=\"flow__step-title\">CSSOMツリー</div><div class=\"flow__step-desc\">CSSの解析結果</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🖼️</div><div class=\"flow__step-title\">レンダリングツリー</div><div class=\"flow__step-desc\">レイアウト→ペインティング→画面表示</div></div></div></div><div class=\"figure__caption\">図1：レンダリングツリー構築までの流れ</div></div><p>レンダリング処理の高速化には、CSS・JavaScript・画像それぞれで押さえるべきポイントがあります。</p><div class=\"table-wrap\"><table><thead><tr><th>対象</th><th>高速化のポイント</th></tr></thead><tbody><tr><td>CSS</td><td>ファーストビューに必要なCSSを早期に（head要素内で）読み込み、シンプルなセレクタ（id・class名）を使う</td></tr><tr><td>JavaScript</td><td>body要素の最後に配置する、または<code>async</code>・<code>defer</code>属性で非同期読み込みにする</td></tr><tr><td>画像</td><td>HTML/CSSで<code>width</code>・<code>height</code>をあらかじめ指定し、レイアウト計算の停止を防ぐ</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p><code>async</code>属性は読み込みが完了した順に実行されるため、jQueryとその依存ライブラリのように<span class=\"text-primary\">実行順序が重要なスクリプトには不向き</span>です。順序を保ちたい場合はHTMLの記述順で実行される<code>defer</code>属性を使いましょう。順序が問題にならない場合は、読み込み完了次第すぐ実行される<code>async</code>属性のほうが高速です。</p></div></div>"
+      "bodyHtml": "<p>ここでは、表示速度を構成する3領域のうち、<mark>ネットワーク処理</mark>と<mark>レンダリング処理</mark>の高速化の考え方を、やや実装寄りの視点で解説します。</p><p><strong>ネットワーク処理</strong>に要する時間は、「通信量」「通信回数」「通信距離」の掛け算で決まるとされています。</p><div class=\"table-wrap\"><table><thead><tr><th>要素</th><th>高速化の主な手法</th></tr></thead><tbody><tr><td>通信量</td><td>テキストファイルのMinify圧縮・gzip/Brotli圧縮、画像の適切な形式選択（WebP・AVIF等）と圧縮</td></tr><tr><td>通信回数</td><td>HTTP/2・HTTP/3の活用、画像の遅延読み込み（Lazy Load）</td></tr><tr><td>通信距離</td><td>ユーザーに近いサーバーの選定、CDNの活用</td></tr></tbody></table></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>gzip圧縮 / Brotli圧縮</strong><br>テキストファイル（HTML・CSS・JavaScript）を圧縮してファイルサイズを削減する技術。gzipの圧縮率は約60〜80%、GoogleがgzipをさらにOSSで発展させたBrotliは約70〜90%とされ、Brotliの方が高圧縮ですがCPU負荷は大きくなる傾向があります。いずれもテキストファイルに効果的で、すでに圧縮済みの画像やPDFにはあまり効果がありません。</p><p style=\"margin:8px 0 0;\"><strong>CDN（Content Delivery Network）</strong><br>世界各地に配置したエッジサーバーを経由して、ユーザーに地理的・ネットワーク的に近い拠点からコンテンツを配信する仕組み。通信距離の短縮に加え、オリジンサーバーの負荷分散にも役立ちます。</p></div><p>画像ファイルは、ページ全体のファイルサイズの約4割を占めるとされる調査もあり、通信量削減の重要なターゲットです。主な画像形式の使い分けの目安を示します。</p><div class=\"table-wrap\"><table><thead><tr><th>形式</th><th>特徴</th><th>向いている用途</th></tr></thead><tbody><tr><td>JPEG</td><td>非可逆圧縮。輪郭のはっきりした画像でノイズが出やすい</td><td>写真</td></tr><tr><td>PNG</td><td>可逆圧縮。透過に対応</td><td>透過が必要な画像、色を優先したい画像</td></tr><tr><td>WebP</td><td>Google開発。JPEG比25〜34%、PNG比26%程度の削減が見込める</td><td>Web用画像全般（現在は主要ブラウザが対応）</td></tr><tr><td>SVG</td><td>ベクター形式。拡大しても粗くならない</td><td>ロゴ・アイコンなど単純な図形</td></tr><tr><td>AVIF</td><td>次世代形式。WebPよりさらに高圧縮</td><td>今後活用が広がると見込まれる形式（2024年8月にGoogle検索が対応）</td></tr></tbody></table></div><p>通信回数の観点では、通信プロトコルの進化も重要です。<div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec11-image-format-usage.png\" alt=\"主要な画像ファイル形式の利用率（W3Techs調べ）\" loading=\"lazy\"></div><div class=\"figure__caption\">主要な画像ファイル形式の利用率（W3Techs調べ）</div></div>HTTP/1.1は1つの接続で1つのリクエストしか処理できない制約がありましたが、<strong>HTTP/2</strong>では1つの接続内で複数のストリームを多重化でき、<strong>HTTP/3</strong>ではTCPに代わりUDPベースの「QUIC」を採用することで、接続確立の高速化やパケットロスへの耐性が向上しています。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>HTTP/2は主要ブラウザにおいてHTTPS通信であることが前提となっています。そのため、HTTP/2以降の通信高速化の恩恵を受けるうえでも、HTTPS化（後述）は欠かせない土台になっています。</p></div></div><p>続いて<strong>レンダリング処理</strong>です。ブラウザはHTMLから<strong>DOMツリー</strong>、CSSから<strong>CSSOMツリー</strong>を構築し、両者を組み合わせて<strong>レンダリングツリー</strong>を作り、要素の位置とサイズを決める「レイアウト」、描画命令を作る「ペインティング」を経て画面に表示します。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🌳</div><div class=\"flow__step-title\">DOMツリー</div><div class=\"flow__step-desc\">HTMLの解析結果</div></div><div class=\"flow__arrow\">＋</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🎨</div><div class=\"flow__step-title\">CSSOMツリー</div><div class=\"flow__step-desc\">CSSの解析結果</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🖼️</div><div class=\"flow__step-title\">レンダリングツリー</div><div class=\"flow__step-desc\">レイアウト→ペインティング→画面表示</div></div></div></div><div class=\"figure__caption\">図1：レンダリングツリー構築までの流れ</div></div><p>レンダリング処理の高速化には、CSS・JavaScript・画像それぞれで押さえるべきポイントがあります。</p><div class=\"table-wrap\"><table><thead><tr><th>対象</th><th>高速化のポイント</th></tr></thead><tbody><tr><td>CSS</td><td>ファーストビューに必要なCSSを早期に（head要素内で）読み込み、シンプルなセレクタ（id・class名）を使う</td></tr><tr><td>JavaScript</td><td>body要素の最後に配置する、または<code>async</code>・<code>defer</code>属性で非同期読み込みにする</td></tr><tr><td>画像</td><td>HTML/CSSで<code>width</code>・<code>height</code>をあらかじめ指定し、レイアウト計算の停止を防ぐ</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p><code>async</code>属性は読み込みが完了した順に実行されるため、jQueryとその依存ライブラリのように<span class=\"text-primary\">実行順序が重要なスクリプトには不向き</span>です。順序を保ちたい場合はHTMLの記述順で実行される<code>defer</code>属性を使いましょう。順序が問題にならない場合は、読み込み完了次第すぐ実行される<code>async</code>属性のほうが高速です。</p></div></div>"
     },
     {
       "heading": "キャッシュ活用とサーバー処理",
@@ -73,15 +73,15 @@
     },
     {
       "heading": "Core Web Vitals：LCP・INP・CLSを深く理解する",
-      "bodyHtml": "<p><mark>Core Web Vitals</mark>は、Googleが2020年5月に発表した、Webページのユーザーエクスペリエンス（UX）を評価するための指標群です。読み込み速度・操作の反応性・視覚的な安定性を、専門知識がなくても扱えるようスコア化したものです。</p><div class=\"table-wrap\"><table><thead><tr><th>指標</th><th>何を測るか</th><th>良好とされる目安</th></tr></thead><tbody><tr><td><strong>LCP</strong>（Largest Contentful Paint）</td><td>ページ内で最も大きな要素（画像・テキストなど）が表示されるまでの時間</td><td>2.5秒以内</td></tr><tr><td><strong>INP</strong>（Interaction to Next Paint）</td><td>クリック・タップ・キー入力など、ユーザーの操作に対する応答性</td><td>200ミリ秒未満</td></tr><tr><td><strong>CLS</strong>（Cumulative Layout Shift）</td><td>読み込み中に要素が予期せず動く、レイアウトのズレ</td><td>0.1未満</td></tr></tbody></table></div><p>Google公式の説明によれば、これらの指標は<strong>実際のユーザーの利用データ（フィールドデータ）</strong>をもとに評価され、あるページが「合格」と判定されるには、訪問の75パーセンタイル（多くのユーザー）で良好な体験が実現されている必要があります。Core Web Vitalsは2021年6月からランキングシグナルとして使用されていますが、当初の指標「FID（初回入力遅延）」は2024年3月に「INP」へ置き換えられるなど、指標自体も更新され続けています。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>Google自身も、良好なCore Web Vitalsは<span class=\"text-primary\">ユーザー体験の向上に役立つものであり、コアとなるランキングシステムが評価しようとする方向性とも合致する</span>と説明しています。ただし、<span class=\"text-primary\">関連性の高い優れたコンテンツに、優れたページエクスペリエンスが勝ることはない</span>ともGoogleは明言しており、コンテンツの質がまだ磨けていない段階では、Core Web Vitalsの改善よりコンテンツの質向上を優先すべきとされています。楽天やYahoo!ニュースなど、Core Web Vitals改善が収益向上につながった事例も報告されています。</p></div></div><p><strong>LCP</strong>は、ビューポート内で最も大きい画像・動画・背景画像・テキストブロックなどが表示されるまでの時間です。LCPは4つの構成要素（サブパート）に分解でき、それぞれ目安となる時間配分が示されています。</p><div class=\"table-wrap\"><table><thead><tr><th>LCPの構成要素</th><th>内容</th><th>目安の割合</th></tr></thead><tbody><tr><td>TTFB</td><td>リクエストから最初のバイトが届くまで</td><td>約40%</td></tr><tr><td>リソース読み込みの遅延</td><td>LCP要素の読み込みが始まるまでの遅延</td><td>10%未満</td></tr><tr><td>リソースの読み込み時間</td><td>LCP要素そのものの読み込みにかかる時間</td><td>約40%</td></tr><tr><td>要素のレンダリング遅延</td><td>読み込み完了から画面に描画されるまで</td><td>10%未満</td></tr></tbody></table></div><p>代表的な改善策には、LCP要素をJavaScriptで動的に追加せず初期HTMLに含める、画像に<code>fetchpriority=\"high\"</code>を付与する、レンダリングを妨げるCSSを削減・インライン化する、といった方法があります。</p><p><strong>INP</strong>は、ページ滞在中に行われたすべてのクリック・タップ・キー入力のうち、最も応答が遅かったものを評価する指標です（ホバーやスクロールは対象外）。旧指標のFIDが「最初の操作」だけを測っていたのに対し、INPは<strong>滞在中のすべての操作</strong>を評価するため、より実態に近いUX評価ができるとされています。</p><div class=\"table-wrap\"><table><thead><tr><th>INPの構成要素</th><th>内容</th></tr></thead><tbody><tr><td>入力遅延</td><td>操作からブラウザが処理を開始するまでの時間。他の重い処理でメインスレッドが塞がれていると悪化する</td></tr><tr><td>処理期間</td><td>イベントコールバック（操作に応じて実行されるJavaScript）の実行時間。INP全体の約40%を占めるとされる</td></tr><tr><td>表示の遅延</td><td>処理完了後、実際に画面が新しい表示に切り替わるまでの時間</td></tr></tbody></table></div><p>INPの改善策としては、不要なJavaScriptの削減、重い処理を細かいタスクに分割する（<code>setTimeout</code>・<code>scheduler.yield()</code>・<code>requestIdleCallback</code>などを利用）、DOM操作を伴わない処理をWeb Workerに逃がす、DOMツリーを小さく保つ（Lighthouseはbody内ノード数が800を超えると警告）といった方法が挙げられます。タグマネージャー（GTM）が肥大化しているケースも、INP悪化の原因になりやすいため、不要なタグの棚卸しが有効です。</p><p><strong>CLS</strong>は、読み込み中に要素が予期せず動く「レイアウトシフト」の合計をスコア化した指標です。CLSスコアは次の計算式で求められます。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>CLSスコア＝「インパクトの割合」（画面のうち動いた範囲の割合）×「距離の割合」（要素が移動した距離の割合）。例えば、画面の50%を占める要素が画面高さの14%分movementした場合、0.5×0.14＝0.07がそのシフトのスコアになります。値が大きいほど、視覚的な安定性が損なわれていることを意味します。</p></div></div><p>CLSは他の2指標に比べて原因が特定しやすく、改善もしやすい指標とされています。代表的な原因と対策は次の通りです。</p><div class=\"table-wrap\"><table><thead><tr><th>よくある原因</th><th>改善策</th></tr></thead><tbody><tr><td>画像・動画の高さ未指定</td><td><code>width</code>・<code>height</code>属性、またはCSSの<code>aspect-ratio</code>で領域を確保する</td></tr><tr><td>サイズ可変の広告枠</td><td>広告コンテナに<code>min-height</code>などでサイズを明示する</td></tr><tr><td>アニメーションによる要素移動</td><td>レイアウトに影響する<code>margin</code>等ではなく、<code>transform</code>・<code>opacity</code>を使う</td></tr><tr><td>Webフォントの読み込み時のサイズ差（FOUT/FOIT）</td><td>類似のフォールバックフォントを指定する、<code>&lt;link rel=\"preload\"&gt;</code>で先読みする</td></tr></tbody></table></div>"
+      "bodyHtml": "<p><mark>Core Web Vitals</mark>は、Googleが2020年5月に発表した、Webページのユーザーエクスペリエンス（UX）を評価するための指標群です。読み込み速度・操作の反応性・視覚的な安定性を、専門知識がなくても扱えるようスコア化したものです。</p><div class=\"table-wrap\"><table><thead><tr><th>指標</th><th>何を測るか</th><th>良好とされる目安</th></tr></thead><tbody><tr><td><strong>LCP</strong>（Largest Contentful Paint）</td><td>ページ内で最も大きな要素（画像・テキストなど）が表示されるまでの時間</td><td>2.5秒以内</td></tr><tr><td><strong>INP</strong>（Interaction to Next Paint）</td><td>クリック・タップ・キー入力など、ユーザーの操作に対する応答性</td><td>200ミリ秒未満</td></tr><tr><td><strong>CLS</strong>（Cumulative Layout Shift）</td><td>読み込み中に要素が予期せず動く、レイアウトのズレ</td><td>0.1未満</td></tr></tbody></table></div><p>Google公式の説明によれば、これらの指標は<strong>実際のユーザーの利用データ（フィールドデータ）</strong>をもとに評価され、あるページが「合格」と判定されるには、訪問の75パーセンタイル（多くのユーザー）で良好な体験が実現されている必要があります。Core Web Vitalsは2021年6月からランキングシグナルとして使用されていますが、当初の指標「FID（初回入力遅延）」は2024年3月に「INP」へ置き換えられるなど、指標自体も更新され続けています。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>Google自身も、良好なCore Web Vitalsは<span class=\"text-primary\">ユーザー体験の向上に役立つものであり、コアとなるランキングシステムが評価しようとする方向性とも合致する</span>と説明しています。ただし、<span class=\"text-primary\">関連性の高い優れたコンテンツに、優れたページエクスペリエンスが勝ることはない</span>ともGoogleは明言しており、コンテンツの質がまだ磨けていない段階では、Core Web Vitalsの改善よりコンテンツの質向上を優先すべきとされています。楽天やYahoo!ニュースなど、Core Web Vitals改善が収益向上につながった事例も報告されています。</p></div></div><p><strong>LCP</strong>は、ビューポート内で最も大きい画像・動画・背景画像・テキストブロックなどが表示されるまでの時間です。LCPは4つの構成要素（サブパート）に分解でき、それぞれ目安となる時間配分が示されています。</p><div class=\"table-wrap\"><table><thead><tr><th>LCPの構成要素</th><th>内容</th><th>目安の割合</th></tr></thead><tbody><tr><td>TTFB</td><td>リクエストから最初のバイトが届くまで</td><td>約40%</td></tr><tr><td>リソース読み込みの遅延</td><td>LCP要素の読み込みが始まるまでの遅延</td><td>10%未満</td></tr><tr><td>リソースの読み込み時間</td><td>LCP要素そのものの読み込みにかかる時間</td><td>約40%</td></tr><tr><td>要素のレンダリング遅延</td><td>読み込み完了から画面に描画されるまで</td><td>10%未満</td></tr></tbody></table><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec13-lcp-breakdown.png\" alt=\"Chrome DevToolsで確認できるLCPの実測値\" loading=\"lazy\"></div><div class=\"figure__caption\">Chrome DevToolsで確認できるLCPの実測値</div></div></div><p>代表的な改善策には、LCP要素をJavaScriptで動的に追加せず初期HTMLに含める、画像に<code>fetchpriority=\"high\"</code>を付与する、レンダリングを妨げるCSSを削減・インライン化する、といった方法があります。</p><p><strong>INP</strong>は、ページ滞在中に行われたすべてのクリック・タップ・キー入力のうち、最も応答が遅かったものを評価する指標です（ホバーやスクロールは対象外）。旧指標のFIDが「最初の操作」だけを測っていたのに対し、INPは<strong>滞在中のすべての操作</strong>を評価するため、より実態に近いUX評価ができるとされています。</p><div class=\"table-wrap\"><table><thead><tr><th>INPの構成要素</th><th>内容</th></tr></thead><tbody><tr><td>入力遅延</td><td>操作からブラウザが処理を開始するまでの時間。他の重い処理でメインスレッドが塞がれていると悪化する</td></tr><tr><td>処理期間</td><td>イベントコールバック（操作に応じて実行されるJavaScript）の実行時間。INP全体の約40%を占めるとされる</td></tr><tr><td>表示の遅延</td><td>処理完了後、実際に画面が新しい表示に切り替わるまでの時間</td></tr></tbody></table><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec13-inp-breakdown.png\" alt=\"Chrome DevToolsで確認できるINPの内訳（サブパート別の所要時間）\" loading=\"lazy\"></div><div class=\"figure__caption\">Chrome DevToolsで確認できるINPの内訳（サブパート別の所要時間）</div></div></div><p>INPの改善策としては、不要なJavaScriptの削減、重い処理を細かいタスクに分割する（<code>setTimeout</code>・<code>scheduler.yield()</code>・<code>requestIdleCallback</code>などを利用）、DOM操作を伴わない処理をWeb Workerに逃がす、DOMツリーを小さく保つ（Lighthouseはbody内ノード数が800を超えると警告）といった方法が挙げられます。タグマネージャー（GTM）が肥大化しているケースも、INP悪化の原因になりやすいため、不要なタグの棚卸しが有効です。</p><p><strong>CLS</strong>は、読み込み中に要素が予期せず動く「レイアウトシフト」の合計をスコア化した指標です。CLSスコアは次の計算式で求められます。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>CLSスコア＝「インパクトの割合」（画面のうち動いた範囲の割合）×「距離の割合」（要素が移動した距離の割合）。例えば、画面の50%を占める要素が画面高さの14%分movementした場合、0.5×0.14＝0.07がそのシフトのスコアになります。値が大きいほど、視覚的な安定性が損なわれていることを意味します。</p></div></div><p>CLSは他の2指標に比べて原因が特定しやすく、改善もしやすい指標とされています。代表的な原因と対策は次の通りです。</p><div class=\"table-wrap\"><table><thead><tr><th>よくある原因</th><th>改善策</th></tr></thead><tbody><tr><td>画像・動画の高さ未指定</td><td><code>width</code>・<code>height</code>属性、またはCSSの<code>aspect-ratio</code>で領域を確保する</td></tr><tr><td>サイズ可変の広告枠</td><td>広告コンテナに<code>min-height</code>などでサイズを明示する</td></tr><tr><td>アニメーションによる要素移動</td><td>レイアウトに影響する<code>margin</code>等ではなく、<code>transform</code>・<code>opacity</code>を使う</td></tr><tr><td>Webフォントの読み込み時のサイズ差（FOUT/FOIT）</td><td>類似のフォールバックフォントを指定する、<code>&lt;link rel=\"preload\"&gt;</code>で先読みする</td></tr></tbody></table><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec13-cls-cause.png\" alt=\"Search Consoleで確認できるレイアウトシフトの原因の詳細\" loading=\"lazy\"></div><div class=\"figure__caption\">Search Consoleで確認できるレイアウトシフトの原因の詳細</div></div></div>"
     },
     {
       "heading": "測定ツールの使い分け：Search Console・Lighthouse・PageSpeed Insights",
-      "bodyHtml": "<p>Core Web Vitalsを測定するツールには、それぞれ異なる特徴があります。まず、計測データには性質の異なる2種類があることを理解しておきましょう。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>フィールドデータ</strong><br>実際のユーザーから収集された実測データ。GoogleがChromeユーザーの利用状況から集める「CrUX（Chrome User Experience Report）」がこれにあたり、Search ConsoleやPageSpeed Insightsで確認できます。</p><p style=\"margin:8px 0 0;\"><strong>ラボデータ</strong><br>決められた条件下でシミュレーション的に計測されたデータ。Lighthouseが該当し、端末スペックやネットワーク状況に結果が左右されます。十分なアクセス数がなくCrUXデータが集まらないページでも計測できます。</p></div><p>3つのツールは、調査できるページの範囲や参照するデータソースが異なります。</p><div class=\"table-wrap\"><table><thead><tr><th>ツール</th><th>調査可能ページ</th><th>データソース</th><th>特徴</th></tr></thead><tbody><tr><td><strong>Search Console</strong></td><td>自社管理の公開ページのみ</td><td>CrUX（フィールドデータ）</td><td>サイト全体のCWV傾向を把握し、「不良／改善が必要」なURL群を特定できる</td></tr><tr><td><strong>PageSpeed Insights</strong></td><td>公開ページのみ</td><td>CrUX＋Lighthouseラボデータ</td><td>URLを入力するだけで実ユーザーデータと計測環境データの両方を即座に確認できる</td></tr><tr><td><strong>Lighthouse</strong></td><td>非公開ページも含めて全て</td><td>ラボデータのみ</td><td>開発環境での詳細なデバッグに向き、認証が必要なページもテストできる</td></tr></tbody></table></div><p>実務では、<strong>Search Consoleで問題のあるURL群を特定 → Lighthouseで技術的な原因を深掘り → 改善を実施 → PageSpeed Insightsで効果を検証</strong>という流れで使い分けるのが典型的なパターンです。</p><p>Search Consoleの「ウェブに関する主な指標」レポートでは、LCP・INP・CLSそれぞれについて、良好・改善が必要・不良の3段階でURLが分類されます。</p><div class=\"table-wrap\"><table><thead><tr><th>指標</th><th>良好</th><th>改善が必要</th><th>不良</th></tr></thead><tbody><tr><td>LCP</td><td>2.5秒以下</td><td>4秒以下</td><td>4秒超</td></tr><tr><td>INP</td><td>200ミリ秒以下</td><td>500ミリ秒以下</td><td>500ミリ秒超</td></tr><tr><td>CLS</td><td>0.1以下</td><td>0.25以下</td><td>0.25超</td></tr></tbody></table></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>Search Consoleでは、プライバシー保護の観点から、影響を受けているURLが個別にではなく「URLグループ」（ユーザー体験が類似すると考えられるURLの集合）としてまとめて表示されます。1つのグループを改善すると、同グループに属する複数ページの改善につながるという利点もあります。</p></div></div><p>Lighthouseは、パフォーマンス・ユーザー補助（アクセシビリティ）・おすすめの方法・SEOの4項目を100点満点で採点します。パフォーマンススコアは、FCP・Speed Index・LCP・TBT（Total Blocking Time）・CLSの加重平均で算出され、特にTBT（重み30%）とLCP・CLS（各25%）の影響が大きくなっています。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>PageSpeed Insightsには「このURL」（特定ページ単体）と「オリジン」（ドメイン全体の平均）という2つの集計範囲があります。<span class=\"text-primary\">「このURL」が「オリジン」より明確に悪い場合はページ固有の問題、両者が同程度に悪い場合はサイト全体・インフラ側の問題</span>である可能性が高く、この比較から課題の切り分けができます。</p></div></div>"
+      "bodyHtml": "<p>Core Web Vitalsを測定するツールには、それぞれ異なる特徴があります。まず、計測データには性質の異なる2種類があることを理解しておきましょう。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>フィールドデータ</strong><br>実際のユーザーから収集された実測データ。GoogleがChromeユーザーの利用状況から集める「CrUX（Chrome User Experience Report）」がこれにあたり、Search ConsoleやPageSpeed Insightsで確認できます。</p><p style=\"margin:8px 0 0;\"><strong>ラボデータ</strong><br>決められた条件下でシミュレーション的に計測されたデータ。Lighthouseが該当し、端末スペックやネットワーク状況に結果が左右されます。十分なアクセス数がなくCrUXデータが集まらないページでも計測できます。</p></div><p>3つのツールは、調査できるページの範囲や参照するデータソースが異なります。</p><div class=\"table-wrap\"><table><thead><tr><th>ツール</th><th>調査可能ページ</th><th>データソース</th><th>特徴</th></tr></thead><tbody><tr><td><strong>Search Console</strong></td><td>自社管理の公開ページのみ</td><td>CrUX（フィールドデータ）</td><td>サイト全体のCWV傾向を把握し、「不良／改善が必要」なURL群を特定できる</td></tr><tr><td><strong>PageSpeed Insights</strong></td><td>公開ページのみ</td><td>CrUX＋Lighthouseラボデータ</td><td>URLを入力するだけで実ユーザーデータと計測環境データの両方を即座に確認できる</td></tr><tr><td><strong>Lighthouse</strong></td><td>非公開ページも含めて全て</td><td>ラボデータのみ</td><td>開発環境での詳細なデバッグに向き、認証が必要なページもテストできる</td></tr></tbody></table></div><p>実務では、<strong>Search Consoleで問題のあるURL群を特定 → Lighthouseで技術的な原因を深掘り → 改善を実施 → PageSpeed Insightsで効果を検証</strong>という流れで使い分けるのが典型的なパターンです。</p><p>Search Consoleの「ウェブに関する主な指標」レポートでは、LCP・INP・CLSそれぞれについて、良好・改善が必要・不良の3段階でURLが分類されます。</p><div class=\"table-wrap\"><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec14-core-web-vitals-report.png\" alt=\"Search Console「ウェブに関する主な指標」レポート（モバイル／PC別のURL数推移）\" loading=\"lazy\"></div><div class=\"figure__caption\">Search Console「ウェブに関する主な指標」レポート（モバイル／PC別のURL数推移）</div></div><table><thead><tr><th>指標</th><th>良好</th><th>改善が必要</th><th>不良</th></tr></thead><tbody><tr><td>LCP</td><td>2.5秒以下</td><td>4秒以下</td><td>4秒超</td></tr><tr><td>INP</td><td>200ミリ秒以下</td><td>500ミリ秒以下</td><td>500ミリ秒超</td></tr><tr><td>CLS</td><td>0.1以下</td><td>0.25以下</td><td>0.25超</td></tr></tbody></table></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>Search Consoleでは、プライバシー保護の観点から、影響を受けているURLが個別にではなく「URLグループ」（ユーザー体験が類似すると考えられるURLの集合）としてまとめて表示されます。1つのグループを改善すると、同グループに属する複数ページの改善につながるという利点もあります。</p></div></div><p>Lighthouseは、パフォーマンス・ユーザー補助（アクセシビリティ）・おすすめの方法・SEOの4項目を100点満点で採点します。パフォーマンススコアは、FCP・Speed Index・LCP・TBT（Total Blocking Time）・CLSの加重平均で算出され、特にTBT（重み30%）とLCP・CLS（各25%）の影響が大きくなっています。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>PageSpeed Insightsには「このURL」<div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec14-psi-field-data.png\" alt=\"PageSpeed Insightsの「実際のユーザーの環境で評価する」フィールドデータ表示\" loading=\"lazy\"></div><div class=\"figure__caption\">PageSpeed Insightsの「実際のユーザーの環境で評価する」フィールドデータ表示</div></div>（特定ページ単体）と「オリジン」（ドメイン全体の平均）という2つの集計範囲があります。<span class=\"text-primary\">「このURL」が「オリジン」より明確に悪い場合はページ固有の問題、両者が同程度に悪い場合はサイト全体・インフラ側の問題</span>である可能性が高く、この比較から課題の切り分けができます。</p></div></div>"
     },
     {
       "heading": "セキュリティ：HTTPS化",
-      "bodyHtml": "<p>URLの先頭にある<mark>HTTPS</mark>は、ブラウザとWebサーバー間の通信を暗号化する仕組みです。通信内容の盗聴・改ざんを防ぐHTTP（Hypertext Transfer Protocol）の安全版として普及しました。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>HTTPS（HTTP Secure）</strong><br>SSL/TLSプロトコルによる暗号化の上でHTTP通信を行う仕組み。通信データの暗号化、改ざんの検知、通信相手（サーバー）の認証という3つのセキュリティ上の役割を持ちます。日本国内でChromeがHTTPS経由で読み込んだページの割合は、2025年時点で95%に達しているとされています。</p></div><p>Google Search Central（公式ブログ、2014年）は、<strong>HTTPS化を検索のランキングシグナルとして使用する</strong>と発表しました。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>ただしGoogle自身の説明によれば、HTTPSは<span class=\"text-primary\">全体の検索クエリの1%未満にしか影響しない軽量なシグナル</span>であり、質の高いコンテンツなど他の評価要素と比べると影響は小さいとされています。とはいえ、HTTPSはユーザーの通信を保護する基本的な仕組みであり、現在ではほぼすべてのサイトで標準的に導入されています。</p></div></div><p>HTTPS化は、ランキングシグナルとしての意味だけでなく、次のような点でもサイト運営に関わります。</p><ul><li>多くのブラウザで、HTTP接続のページに「保護されていません」といった警告が表示されるため、HTTPS化はユーザーの信頼確保につながる</li><li>通信を高速化する新しいプロトコル（HTTP/2やHTTP/3）は、HTTPS接続が前提となっている</li><li>フォームでの個人情報送信など、ユーザーの信頼が特に重要なページでは必須の対応とされている</li></ul><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>SSL/TLS証明書の期限切れや、証明書のドメイン不一致、HTTPSページ内にHTTPのリソース（画像・CSS・JavaScriptなど）が混在している場合、<span class=\"text-danger\">ブラウザにセキュリティ警告が表示され、ユーザーの離脱につながります</span>。HTTPS化の設定後は、Chrome DevToolsなどで証明書・TLS接続・リソースの配信経路に問題がないか確認することが推奨されます。</p></div></div>"
+      "bodyHtml": "<p>URLの先頭にある<mark>HTTPS</mark>は、ブラウザとWebサーバー間の通信を暗号化する仕組みです。通信内容の盗聴・改ざんを防ぐHTTP（Hypertext Transfer Protocol）の安全版として普及しました。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>HTTPS（HTTP Secure）</strong><br>SSL/TLSプロトコルによる暗号化の上でHTTP通信を行う仕組み。通信データの暗号化、改ざんの検知、通信相手（サーバー）の認証という3つのセキュリティ上の役割を持ちます。日本国内でChromeがHTTPS経由で読み込んだページの割合は、2025年時点で95%に達しているとされています。</p></div><p>Google Search Central（公式ブログ、2014年）は、<strong>HTTPS化を検索のランキングシグナルとして使用する</strong>と発表しました。</p><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>ただしGoogle自身の説明によれば、HTTPSは<span class=\"text-primary\">全体の検索クエリの1%未満にしか影響しない軽量なシグナル</span>であり、質の高いコンテンツなど他の評価要素と比べると影響は小さいとされています。とはいえ、HTTPSはユーザーの通信を保護する基本的な仕組みであり、現在ではほぼすべてのサイトで標準的に導入されています。</p></div></div><p>HTTPS化は、ランキングシグナルとしての意味だけでなく、次のような点でもサイト運営に関わります。</p><ul><li>多くのブラウザで、HTTP接続のページに「保護されていません」といった警告が表示されるため、HTTPS化はユーザーの信頼確保につながる</li><li>通信を高速化する新しいプロトコル（HTTP/2やHTTP/3）は、HTTPS接続が前提となっている</li><li>フォームでの個人情報送信など、ユーザーの信頼が特に重要なページでは必須の対応とされている</li></ul><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>SSL/TLS証明書の期限切れや、証明書のドメイン不一致、HTTPSページ内にHTTPのリソース（画像・CSS・JavaScriptなど）が混在している場合、<span class=\"text-danger\">ブラウザにセキュリティ警告が表示され、ユーザーの離脱につながります</span>。HTTPS化の設定後は、Chrome DevToolsなどで証明書・TLS接続・リソースの配信経路に問題がないか確認することが推奨されます。</p></div></div><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/06-technical-seo/sec15-devtools-security.png\" alt=\"Chrome DevToolsのセキュリティタブでHTTPS接続状態を確認する画面\" loading=\"lazy\"></div><div class=\"figure__caption\">Chrome DevToolsのセキュリティタブでHTTPS接続状態を確認する画面</div></div>"
     }
   ],
   "summary": [
@@ -114,7 +114,9 @@
         "できるだけ多くのカテゴリに、同じページを重複して登録すること",
         "カテゴリ分けは一切行わず、すべてのページをフラットに並べること"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "MECEとは「重複なく、抜け漏れなく（Mutually Exclusive and Collectively Exhaustive）」分類されている状態を指します。"
     },
     {
@@ -128,7 +130,9 @@
         "URLの永続化はSNSでの拡散には一切関係しない",
         "ブランド名を変更した場合、URLも即座に変更しなければならない"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explain": "URLの永続化とは、公開・インデックス済みのページのURLを、内容が存在する限り変更せずに使い続けるという考え方です。W3C創設者のティム・バーナーズ=リー氏も「Cool URIs don’t change」と述べています。"
     },
     {
@@ -142,7 +146,9 @@
         "URLを変更する際は、必ずページも削除しなければならない",
         "リダイレクトを設定すると、かえって評価が下がるため避けるべきである"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "やむを得ずURLを変更する場合は、旧URLから新URLへ301リダイレクトを設定し、それまで蓄積された評価をできる限り引き継ぐことが望ましいとされています。"
     },
     {
@@ -156,7 +162,11 @@
         "h要素は階層（h1→h2→h3…）を飛ばさず、装飾目的だけで使うべきではない",
         "h1タグはすべてのページで完全に同じ文言に統一しなければならない"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "explain": "title・meta description・h要素はいずれもページごとにユニークで、階層や役割を意識した記述が推奨されます。h1をロゴ画像などで全ページ共通・同一文言にすることは、下層ページでは不適切とされています。"
     },
     {
@@ -170,7 +180,9 @@
         "画像のファイルサイズを圧縮するための属性である",
         "リンク先のURLを指定するための属性である"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "alt属性は画像が表示されない場合の代替テキストとして定義されており、スクリーンリーダーでの読み上げや、検索エンジンによる画像内容の理解にも使われます。"
     },
     {
@@ -184,7 +196,9 @@
         "各ページにユニークなtitleとdescriptionが設定されている状態",
         "ページネーションの各ページが、それぞれ自己参照のcanonicalを持っている状態"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "検索条件によって表示内容が異なるにもかかわらず同一URLになっている状態は、「同一URLに異なるコンテンツが表示されるケース」に該当し、1URL1コンテンツの原則が守られていません。"
     },
     {
@@ -198,7 +212,11 @@
         "Googleは基本的に301リダイレクトを推奨しており、できない場合の代替としてcanonicalを案内している",
         "canonicalタグは常に相対パスで記述しなければならない"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "explain": "301リダイレクトとcanonicalはどちらも正規化の手段ですが、性質が異なります。canonicalタグは絶対パスでの記述が推奨されています。"
     },
     {
@@ -212,7 +230,9 @@
         "HOWツリー",
         "SWOTツリー"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "WHYツリーは、頂点に解決したい問題・課題を配置し、その原因をMECEに分類していく手法で、課題解決型サイトなどに適しています。"
     },
     {
@@ -226,7 +246,11 @@
         "常にトップページ・最上位カテゴリへ戻れるリンクを用意する",
         "リンクは一方向にのみ張り、行き止まりのページを作る"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "explain": "内部リンクの設計では、双方向リンク・関連ページへのリンク・上位階層への復帰リンクの3点が重要とされています。行き止まりになる一方向のリンクは避けるべきとされています。"
     },
     {
@@ -240,7 +264,9 @@
         "パンくずリストのリンク",
         "グローバルナビゲーションのリンク"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "href属性を伴わないJavaScriptのみのリンクはGoogleが非推奨としており、クローラビリティの観点で注意が必要です。href属性と併用すれば通常のリンクと同様に評価されます。"
     },
     {
@@ -254,7 +280,9 @@
         "アクセス数が少ないURLだけを含める",
         "XMLサイトマップにはURLを1つも含めない方がよい"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "Google公式のガイドラインでは、XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めることが推奨されています。"
     },
     {
@@ -268,7 +296,9 @@
         "XMLサイトマップは必ずルートディレクトリに設置しなければならない",
         "画像や動画専用のサイトマップを作成することはできない"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "XMLサイトマップは1ファイルにつきURL数50,000個以下、ファイルサイズ50MB以下（圧縮前）という制約があり、超える場合は複数ファイルに分割してサイトマップインデックスでまとめます。robots.txtと異なり設置場所も自由です。"
     },
     {
@@ -282,7 +312,9 @@
         "そのページの検索順位が自動的に1位になる",
         "そのページへの外部リンクがすべて無効になる"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "meta robotsのcontent属性に「noindex」を指定すると、そのページはインデックスされないようになります。"
     },
     {
@@ -296,7 +328,9 @@
         "クロールバジェットを自動的に増やすための申請フォーム",
         "XMLサイトマップの別の呼び方"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "X-Robots-Tagは、PDFや画像など、meta robotsを記述できない非HTMLファイルに対して、HTTPヘッダーでクロール・インデックスの制御を行う仕組みです。"
     },
     {
@@ -310,7 +344,11 @@
         "WebSubでハブ経由の更新通知を行う",
         "robots.txtで全クローラのアクセスを禁止する"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "explain": "URL検査ツール・フィード・WebSubはいずれもクロールを促進する手段です。robots.txtで全クローラのアクセスを禁止することは、クロールの制限であり促進ではありません。"
     },
     {
@@ -324,7 +362,9 @@
         "404エラーページのデザインをサイトの他ページと統一した状態",
         "リンク切れを完全に検出できるツールのこと"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "ソフト404とは、独自の404エラーページを用意した際に、本来返すべき404ではなくステータスコード200を返してしまっている状態を指します。これにより重複コンテンツとして扱われる可能性があります。"
     },
     {
@@ -338,7 +378,11 @@
         "クローラへの偽装行為（隠しテキスト、クローキングなど）",
         "画像にalt属性を正しく設定する行為"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "explain": "スパム行為は「価値の低いコンテンツ」「質の低い被リンク」「クローラへの偽装行為」の3つに大別されます。alt属性を正しく設定することはスパムではなく推奨される対応です。"
     },
     {
@@ -352,7 +396,11 @@
         "レンダリング処理（受け取ったデータを画面に描画する）",
         "インデックス処理（クロールしたページをデータベースに登録する）"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "explain": "表示速度はネットワーク処理・サーバー処理・レンダリング処理の3領域に分けて捉えられます。インデックス処理は検索エンジン側の仕組みであり、表示速度の3領域には含まれません。"
     },
     {
@@ -366,7 +414,9 @@
         "常にHTTP接続（非暗号化）が前提となっている",
         "画像の圧縮形式の一種である"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explain": "HTTP/2は1つのTCPコネクション内で複数の仮想的な通信路（ストリーム）を多重化でき、順不同でデータを処理できるため、通信回数によるネットワーク処理の遅延が軽減されます。"
     },
     {
@@ -380,7 +430,9 @@
         "更新頻度の高いファイルには、必ず長期間のキャッシュを設定すべきである",
         "キャッシュはネットワーク処理やレンダリング処理とは無関係な仕組みである"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explain": "キャッシュは保存場所によってブラウザキャッシュとサーバーキャッシュに分かれます。更新頻度の高いファイルは、ファイル名にフィンガープリントを埋め込むなどしてキャッシュの更新漏れを防ぐ工夫が必要です。"
     },
     {
@@ -394,7 +446,11 @@
         "CLS（Cumulative Layout Shift）：視覚的な安定性",
         "CTR（Click Through Rate）：クリック率"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "explain": "Core Web VitalsはLCP（読み込み速度）・INP（応答性）・CLS（視覚的安定性）の3指標で構成されます。CTR（クリック率）はCore Web Vitalsには含まれません。"
     },
     {
@@ -408,7 +464,9 @@
         "LCPは2024年に廃止され、現在は使われていない",
         "Core Web Vitalsはランキングシグナルとして使われたことは一度もない"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新されています。2024年3月には、それまでのFID（初回入力遅延）がINPに置き換えられました。"
     },
     {
@@ -422,7 +480,9 @@
         "インパクトの割合と距離の割合を掛け合わせた値がCLSスコアになる",
         "CLSスコアはページの読み込み時間から自動的に算出される"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explain": "CLSスコアは「インパクトの割合（動いた要素が画面に占める割合）」と「距離の割合（要素が移動した距離の割合）」を掛け合わせて算出されます。"
     },
     {
@@ -436,7 +496,9 @@
         "Search Consoleは非公開ページの調査に特化したツールである",
         "PageSpeed Insightsではフィールドデータもラボデータも一切参照できない"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "Lighthouseは非公開ページも含めて調査でき、その場でシミュレーション計測したラボデータを提供します。一方Search Consoleは自社管理の公開ページのみ、PageSpeed Insightsは公開ページのフィールドデータとラボデータ両方を扱います。"
     },
     {
@@ -450,7 +512,9 @@
         "HTTPS化さえすれば、他の要素に関わらず必ず1位になれる",
         "HTTPS化はセキュリティ上の意味しかなく、SEOとは無関係な施策である"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "Google公式は2014年にHTTPS化をランキングシグナルとして使用すると発表しましたが、全体のクエリの1%未満にしか影響しない軽量なシグナルであり、コンテンツの品質などと比べると影響は小さいとしています。"
     },
     {
@@ -464,7 +528,11 @@
         "通信相手（サーバー）の認証",
         "ページの表示速度を自動的に2倍にすること"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "explain": "HTTPSは通信データの暗号化・改ざんの検知・通信相手の認証という3つのセキュリティ上の役割を持ちます。表示速度を「自動的に2倍にする」機能ではありません。"
     }
   ]
