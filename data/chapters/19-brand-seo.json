@@ -25,11 +25,11 @@
     },
     {
       "heading": "実践：被リンクの4つの評価要素",
-      "bodyHtml": "<p>被リンクは、a要素によって明示的にWebページと紐付けられる引用です。<code>rel=\"nofollow\"</code>が設定されたリンクは基本的に評価対象外ですが、Googleが評価すべきと判断した場合は、nofollowリンクでも評価対象になり得るとされています。</p><p>被リンクの評価要素として、主に次の4つが挙げられます。これらは並列の関係ではなく、1つ目の「ページランク」がすべての基礎を形成しています。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🏆</div><div class=\"flow__step-title\">①ページランク</div><div class=\"flow__step-desc\">リンク元ページの評価</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">👀</div><div class=\"flow__step-title\">②掲載状況</div><div class=\"flow__step-desc\">リンクの見え方・位置</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🔗</div><div class=\"flow__step-title\">③関連性</div><div class=\"flow__step-desc\">リンク元と先の文脈</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">⏱️</div><div class=\"flow__step-title\">④リンクエイジ</div><div class=\"flow__step-desc\">張られてからの経過時間</div></div></div></div><div class=\"figure__caption\">図1：被リンクの4つの評価要素。①ページランクが基礎となり、②〜④の要素が組み合わさって評価される</div></div><p><strong>①リンク元のページ評価（ページランク）</strong></p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>ページランク（PageRank）</strong><br>被リンクをもとに算出される、ページの品質ランク。「量：被リンク数が多いほど価値が高まる」「質：高品質なページからの被リンクほど価値が高まる」という2つの観点で構成されます。Googleの創業者が発表した論文で示された、被リンク評価の基礎となる考え方です。</p></div><p>ページランクの計算では、リンク元ページの評価をそのページからの発リンク数で割った値が、リンク先に分配されるイメージで説明されます。あわせて、他サイトからリンクを受けていないページにも一定の「初期パワー」が与えられる仕組みになっており、この初期パワーがあることで、被リンクの少ないページも適切に評価される設計になっているとされています。この分配の様子は、論文の中で「ランダムにリンクを辿るユーザー」に例えられていました。</p><p>ただし、現在のアルゴリズムはこの単純なランダムモデルから進化しており、「リーズナブルサーファーモデル」と呼ばれます。すべての発リンクに均等に評価を分配するのではなく、ユーザーが実際にクリックしやすいリンクに、より重点的に評価を分配する合理的なモデルです。</p><p><strong>②リンク元ページにおけるリンクの掲載状況</strong></p><p>リーズナブルサーファーモデルでは、次のような掲載状況をもとに、クリックされやすさが判断されていると考えられています。</p><ul><li>アンカーテキストのフォントサイズ・色・書式（太字など）</li><li>リンクの出現箇所（ファーストビュー、フッター、サイドバーなど）</li><li>アンカーテキストの単語数</li></ul><p>Googleのマット・カッツ氏も、サイドバーやフッターなど全ページ共通のリンク（サイトワイドリンク）の価値は、メインコンテンツ内のリンクよりも低いと述べています。ただし、これはあくまでページ内での相対的な評価の差であり、「アンカーテキストを大きくすれば評価が上がる」といった小手先の対応をしても意味はありません。</p><p><strong>③リンク元とリンク先のコンテンツ・文脈的な関連性</strong></p><p>被リンク元のコンテンツと関連性が高いページへのリンクほど、より重点的に評価が分配されると考えられています。ユーザーにとって、閲覧中のコンテンツと関連性の高いページへのリンクが有益だからです。単純なコンテンツの関連性だけでなく、そのリンクが置かれている文脈（前後の文章がどのような話題か）も評価に含まれるとされ、これは自然言語解析技術の発展があって初めて実現した評価方法だと考えられています。</p><p><strong>④リンクが張られてからの経過時間（リンクエイジ）</strong></p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>リンクエイジ</strong><br>被リンクが初めて張られてから（検索エンジンが認識してから）の経過時間。新しいリンクを継続的に獲得しているページを高く評価し、コンテンツの陳腐化を判別する手がかりの一つとして使われていると考えられています。</p></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>「新しいリンクが多いほど評価される」という仕組みを逆手に取った、<span class=\"text-danger\">人工的な被リンクの急増はスパムシグナルとして認識される可能性があります。</span>正当なサイトの被リンク獲得ペースは緩やかであり、時事性のあるトピックでもないのに被リンクが不自然に急増した場合は注意が必要です。</p></div></div>"
+      "bodyHtml": "<p>被リンクは、a要素によって明示的にWebページと紐付けられる引用です。<code>rel=\"nofollow\"</code>が設定されたリンクは基本的に評価対象外ですが、Googleが評価すべきと判断した場合は、nofollowリンクでも評価対象になり得るとされています。</p><p>被リンクの評価要素として、主に次の4つが挙げられます。これらは並列の関係ではなく、1つ目の「ページランク」がすべての基礎を形成しています。</p><div class=\"figure\"><div class=\"figure__frame\"><div class=\"flow\"><div class=\"flow__step\"><div class=\"flow__step-icon\">🏆</div><div class=\"flow__step-title\">①ページランク</div><div class=\"flow__step-desc\">リンク元ページの評価</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">👀</div><div class=\"flow__step-title\">②掲載状況</div><div class=\"flow__step-desc\">リンクの見え方・位置</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">🔗</div><div class=\"flow__step-title\">③関連性</div><div class=\"flow__step-desc\">リンク元と先の文脈</div></div><div class=\"flow__arrow\">→</div><div class=\"flow__step\"><div class=\"flow__step-icon\">⏱️</div><div class=\"flow__step-title\">④リンクエイジ</div><div class=\"flow__step-desc\">張られてからの経過時間</div></div></div></div><div class=\"figure__caption\">図1：被リンクの4つの評価要素。①ページランクが基礎となり、②〜④の要素が組み合わさって評価される</div></div><p><strong>①リンク元のページ評価（ページランク）</strong></p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>ページランク（PageRank）</strong><br>被リンクをもとに算出される、ページの品質ランク。「量：被リンク数が多いほど価値が高まる」「質：高品質なページからの被リンクほど価値が高まる」という2つの観点で構成されます。Googleの創業者が発表した論文で示された、被リンク評価の基礎となる考え方です。</p></div><p>ページランクの計算では、リンク元ページの評価をそのページからの発リンク数で割った値が、リンク先に分配されるイメージで説明されます。あわせて、他サイトからリンクを受けていないページにも一定の「初期パワー」が与えられる仕組みになっており、この初期パワーがあることで、被リンクの少ないページも適切に評価される設計になっているとされています。この分配の様子は、論文の中で「ランダムにリンクを辿るユーザー」に例えられていました。</p><p>ただし、現在のアルゴリズムはこの単純なランダムモデルから進化しており、「リーズナブルサーファーモデル」と呼ばれます。すべての発リンクに均等に評価を分配するのではなく、ユーザーが実際にクリックしやすいリンクに、より重点的に評価を分配する合理的なモデルです。</p><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/19-brand-seo/sec02-reasonable-surfer.png\" alt=\"リーズナブルサーファーモデル：関連性の高いリンクへより多くのページランクを分配するイメージ\" loading=\"lazy\"></div><div class=\"figure__caption\">リーズナブルサーファーモデル：関連性の高いリンクへより多くのページランクを分配するイメージ</div></div><p><strong>②リンク元ページにおけるリンクの掲載状況</strong></p><p>リーズナブルサーファーモデルでは、次のような掲載状況をもとに、クリックされやすさが判断されていると考えられています。</p><ul><li>アンカーテキストのフォントサイズ・色・書式（太字など）</li><li>リンクの出現箇所（ファーストビュー、フッター、サイドバーなど）</li><li>アンカーテキストの単語数</li></ul><p>Googleのマット・カッツ氏も、サイドバーやフッターなど全ページ共通のリンク（サイトワイドリンク）の価値は、メインコンテンツ内のリンクよりも低いと述べています。ただし、これはあくまでページ内での相対的な評価の差であり、「アンカーテキストを大きくすれば評価が上がる」といった小手先の対応をしても意味はありません。</p><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/19-brand-seo/sec02-pagerank-position.png\" alt=\"フォントサイズ・掲載位置に応じたページランクの分配イメージ\" loading=\"lazy\"></div><div class=\"figure__caption\">フォントサイズ・掲載位置に応じたページランクの分配イメージ</div></div><p><strong>③リンク元とリンク先のコンテンツ・文脈的な関連性</strong></p><p>被リンク元のコンテンツと関連性が高いページへのリンクほど、より重点的に評価が分配されると考えられています。ユーザーにとって、閲覧中のコンテンツと関連性の高いページへのリンクが有益だからです。単純なコンテンツの関連性だけでなく、そのリンクが置かれている文脈（前後の文章がどのような話題か）も評価に含まれるとされ、これは自然言語解析技術の発展があって初めて実現した評価方法だと考えられています。</p><p><strong>④リンクが張られてからの経過時間（リンクエイジ）</strong></p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>リンクエイジ</strong><br>被リンクが初めて張られてから（検索エンジンが認識してから）の経過時間。新しいリンクを継続的に獲得しているページを高く評価し、コンテンツの陳腐化を判別する手がかりの一つとして使われていると考えられています。</p></div><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/19-brand-seo/sec02-link-age.png\" alt=\"新しい被リンクと古い被リンクによるページ評価の違い\" loading=\"lazy\"></div><div class=\"figure__caption\">新しい被リンクと古い被リンクによるページ評価の違い</div></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>「新しいリンクが多いほど評価される」という仕組みを逆手に取った、<span class=\"text-danger\">人工的な被リンクの急増はスパムシグナルとして認識される可能性があります。</span>正当なサイトの被リンク獲得ペースは緩やかであり、時事性のあるトピックでもないのに被リンクが不自然に急増した場合は注意が必要です。</p></div></div>"
     },
     {
       "heading": "実践：コントローラブルな被リンクの獲得方法",
-      "bodyHtml": "<p>被リンクの獲得は「運任せ」に見られがちですが、明日からでも取り組めるコントローラブルな方法もあります。作り手の観点で整理すると、次の3つに分けられます。</p><div class=\"table-wrap\"><table><thead><tr><th>作り手</th><th>リンク元サイト</th><th>コントロール性</th></tr></thead><tbody><tr><td>自作</td><td>自社コーポレートサイト</td><td>コントローラブル</td></tr><tr><td>自作</td><td>サテライトサイト</td><td>コントローラブル</td></tr><tr><td>他作</td><td>他サイト</td><td>アンコントローラブル</td></tr></tbody></table></div><p><strong>①自社コーポレートサイトからのリンク</strong></p><p>自社のコーポレートサイトからサービスサイトへのリンクは、被リンク効果に加えて、運営者情報を検索エンジンに伝え、信頼性を高めることにもつながります。サイドバーやフッターにリンクを置くだけでなく、サービス紹介ページや関連ニュース記事など、<strong>メインコンテンツ内で言及するページ</strong>を用意することが望ましいとされています。</p><p><strong>②サテライトサイトからのリンク</strong></p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>サテライトサイト</strong><br>自社サイトと関連するが異なるテーマ・コンテンツを扱う、別の自社サイト。本サイトと競合しない切り口でユーザーを集め、価値あるコンテンツとして本サイトを紹介する運用が想定されています。</p></div><p>サテライトサイトを運用する際は、次の2点に注意が必要です。</p><ul><li><strong>関連性の高いサイトからの被リンク効果には上限がある：</strong>リンク構造・トラフィック・ドメイン名・IPアドレスなどから見て関連性が高いと判断されるサイト同士は、被リンクの評価に一定の上限が設けられると考えられています</li><li><strong>リンク獲得だけを目的にしたサテライトサイトはペナルティ対象になりうる：</strong>Googleのマット・カッツ氏も「関連する2サイトをリンクすること自体は問題ないが、大量のサイト同士でリンクさせるのは問題」と述べています</li></ul><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>Googleは、<span class=\"text-danger\">被リンクの多くがトップページに集中している、アンカーテキストの形式が同じ、サイトタイプが同じ、といった「分散性のないリンク構造」を人工的なリンクビルディングのシグナルとして監視している</span>とされています。自然な被リンクは分散する傾向にあるという前提を踏まえ、多数のサテライトサイトに労力を分散するより、本サイト自体の価値向上に注力する方が望ましいと考えられます。</p></div></div><p><strong>③他サイトからのリンク（リンクベイト）</strong></p><p>他社からの被リンクはアンコントローラブルな要因が多いものの、「どうすれば自社メディアを他社に紹介してもらえるか」という企画の視点で取り組めます。こうしたリンクされやすい記事を<mark>リンクベイト</mark>と呼びます。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>リンクベイト（Link Bait）</strong><br>他サイトからのリンクを呼び寄せる「餌」となるコンテンツ企画。Baitは英語で「餌」の意味。</p><p style=\"margin:8px 0 0;\"><strong>リンケラティ（Linkerati）</strong><br>ブロガーやWebメディアの記者・執筆者など、実際にリンクを張れる立場にあるユーザー層。ソーシャルメディア利用者やオフラインの口コミ伝搬者は、リンケラティに記事の存在を伝えるサポーターの役割を担います。</p></div><div class=\"table-wrap\"><table><thead><tr><th>カテゴリ</th><th>内容の例</th></tr></thead><tbody><tr><td>まとめ記事</td><td>「〇〇に関する〇個のまとめ」のような網羅型記事、インフォグラフィックス</td></tr><tr><td>一次情報記事</td><td>「〇年度の内定率調査結果」のような、自社で実施したアンケート等の一次情報</td></tr><tr><td>流行記事</td><td>「速報！〇〇の謎解明」のような、鮮度が求められるニュース系の紹介・分析</td></tr><tr><td>ユーモア記事</td><td>写真や動画などを使った、思わず紹介したくなるユーモアのある記事</td></tr><tr><td>煽り記事</td><td>固定観念を覆すような切り口の記事</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>特に、<span class=\"text-primary\">ユーザーや顧客へのアンケートなどによる一次情報の作成は、リンクベイトとして有効</span>とされています。定量的な統計データは他の記事に引用されやすく、プレスリリース配信サービスなどを通じて拡散させることも有効です。</p></div></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>リンク獲得のみを目的とした虚偽の情報（フェイクニュース）の発信は、<span class=\"text-danger\">SEO的にも社会的にも避けるべきです。</span>Googleはフェイクニュースの検索順位を下げるアルゴリズムを導入しており、SNS各社も同様の対応を進めているとされています。</p></div></div>"
+      "bodyHtml": "<p>被リンクの獲得は「運任せ」に見られがちですが、明日からでも取り組めるコントローラブルな方法もあります。作り手の観点で整理すると、次の3つに分けられます。</p><div class=\"table-wrap\"><table><thead><tr><th>作り手</th><th>リンク元サイト</th><th>コントロール性</th></tr></thead><tbody><tr><td>自作</td><td>自社コーポレートサイト</td><td>コントローラブル</td></tr><tr><td>自作</td><td>サテライトサイト</td><td>コントローラブル</td></tr><tr><td>他作</td><td>他サイト</td><td>アンコントローラブル</td></tr></tbody></table></div><p><strong>①自社コーポレートサイトからのリンク</strong></p><p>自社のコーポレートサイトからサービスサイトへのリンクは、被リンク効果に加えて、運営者情報を検索エンジンに伝え、信頼性を高めることにもつながります。サイドバーやフッターにリンクを置くだけでなく、サービス紹介ページや関連ニュース記事など、<strong>メインコンテンツ内で言及するページ</strong>を用意することが望ましいとされています。</p><p><strong>②サテライトサイトからのリンク</strong></p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>サテライトサイト</strong><br>自社サイトと関連するが異なるテーマ・コンテンツを扱う、別の自社サイト。本サイトと競合しない切り口でユーザーを集め、価値あるコンテンツとして本サイトを紹介する運用が想定されています。</p></div><p>サテライトサイトを運用する際は、次の2点に注意が必要です。</p><ul><li><strong>関連性の高いサイトからの被リンク効果には上限がある：</strong>リンク構造・トラフィック・ドメイン名・IPアドレスなどから見て関連性が高いと判断されるサイト同士は、被リンクの評価に一定の上限が設けられると考えられています</li><li><strong>リンク獲得だけを目的にしたサテライトサイトはペナルティ対象になりうる：</strong>Googleのマット・カッツ氏も「関連する2サイトをリンクすること自体は問題ないが、大量のサイト同士でリンクさせるのは問題」と述べています</li></ul><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>Googleは、<span class=\"text-danger\">被リンクの多くがトップページに集中している、アンカーテキストの形式が同じ、サイトタイプが同じ、といった「分散性のないリンク構造」を人工的なリンクビルディングのシグナルとして監視している</span>とされています。自然な被リンクは分散する傾向にあるという前提を踏まえ、多数のサテライトサイトに労力を分散するより、本サイト自体の価値向上に注力する方が望ましいと考えられます。</p></div></div><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/19-brand-seo/sec03-ip-octet.png\" alt=\"IPアドレスのオクテット構成：第1〜第2オクテットが同一だと関連性が高いと判断される\" loading=\"lazy\"></div><div class=\"figure__caption\">IPアドレスのオクテット構成：第1〜第2オクテットが同一だと関連性が高いと判断される</div></div><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/19-brand-seo/sec03-2way-3way-link.png\" alt=\"2-way linkと3-way linkの違い：クッションページを挟んでもGoogleはリンクの関連性を認識できる\" loading=\"lazy\"></div><div class=\"figure__caption\">2-way linkと3-way linkの違い：クッションページを挟んでもGoogleはリンクの関連性を認識できる</div></div><p><strong>③他サイトからのリンク（リンクベイト）</strong></p><p>他社からの被リンクはアンコントローラブルな要因が多いものの、「どうすれば自社メディアを他社に紹介してもらえるか」という企画の視点で取り組めます。こうしたリンクされやすい記事を<mark>リンクベイト</mark>と呼びます。</p><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/19-brand-seo/sec03-linkbait-linkerati.png\" alt=\"リンクベイトからリンケラティ・サポーターを経て被リンクが広がる構造\" loading=\"lazy\"></div><div class=\"figure__caption\">リンクベイトからリンケラティ・サポーターを経て被リンクが広がる構造</div></div><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>リンクベイト（Link Bait）</strong><br>他サイトからのリンクを呼び寄せる「餌」となるコンテンツ企画。Baitは英語で「餌」の意味。</p><p style=\"margin:8px 0 0;\"><strong>リンケラティ（Linkerati）</strong><br>ブロガーやWebメディアの記者・執筆者など、実際にリンクを張れる立場にあるユーザー層。ソーシャルメディア利用者やオフラインの口コミ伝搬者は、リンケラティに記事の存在を伝えるサポーターの役割を担います。</p></div><div class=\"table-wrap\"><table><thead><tr><th>カテゴリ</th><th>内容の例</th></tr></thead><tbody><tr><td>まとめ記事</td><td>「〇〇に関する〇個のまとめ」のような網羅型記事、インフォグラフィックス</td></tr><tr><td>一次情報記事</td><td>「〇年度の内定率調査結果」のような、自社で実施したアンケート等の一次情報</td></tr><tr><td>流行記事</td><td>「速報！〇〇の謎解明」のような、鮮度が求められるニュース系の紹介・分析</td></tr><tr><td>ユーモア記事</td><td>写真や動画などを使った、思わず紹介したくなるユーモアのある記事</td></tr><tr><td>煽り記事</td><td>固定観念を覆すような切り口の記事</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>特に、<span class=\"text-primary\">ユーザーや顧客へのアンケートなどによる一次情報の作成は、リンクベイトとして有効</span>とされています。定量的な統計データは他の記事に引用されやすく、プレスリリース配信サービスなどを通じて拡散させることも有効です。</p></div></div><div class=\"callout callout--warning\"><div class=\"callout__icon\">⚠️</div><div class=\"callout__body\"><div class=\"callout__title\">Warning</div><p>リンク獲得のみを目的とした虚偽の情報（フェイクニュース）の発信は、<span class=\"text-danger\">SEO的にも社会的にも避けるべきです。</span>Googleはフェイクニュースの検索順位を下げるアルゴリズムを導入しており、SNS各社も同様の対応を進めているとされています。</p></div></div>"
     },
     {
       "heading": "レビュー・SNS・サイテーション",
@@ -37,7 +37,7 @@
     },
     {
       "heading": "実践：SNSでのリンク獲得（OGP設定とシェアボタン）",
-      "bodyHtml": "<p>SNSでの拡散は、前セクションで見たようにリンケラティからの被リンク・サイテーション獲得のきっかけになります。ここでは、SNSでの拡散を後押しするための実装面のポイントを紹介します。</p><p><strong>OGP設定による適切なページ情報の表示</strong></p><p>URLがSNSで共有された際に表示されるタイトル・説明文・画像は、<mark>OGP（Open Graph Protocol）</mark>を設定することで、サイト側が意図した内容に指定できます。設定していない場合、SNS側が自動生成した意図しない表示になることがあります。</p><div class=\"table-wrap\"><table><thead><tr><th>コード例：OGPの記述（head要素内）</th></tr></thead><tbody><tr><td><pre style=\"white-space:pre-wrap; margin:0; font-size:0.82rem;\">&lt;meta property=\"og:title\" content=\"記事タイトル\"&gt;\n&lt;meta property=\"og:type\" content=\"article\"&gt;\n&lt;meta property=\"og:url\" content=\"https://example.com/article/\"&gt;\n&lt;meta property=\"og:image\" content=\"https://example.com/img/thumb.jpg\"&gt;\n&lt;meta property=\"og:description\" content=\"記事の概要説明文\"&gt;\n&lt;meta name=\"twitter:card\" content=\"summary_large_image\"&gt;</pre></td></tr></tbody></table></div><div class=\"table-wrap\"><table><thead><tr><th>項目名</th><th>必須</th><th>内容</th></tr></thead><tbody><tr><td><code>og:title</code></td><td>◯</td><td>ページタイトル</td></tr><tr><td><code>og:type</code></td><td>◯</td><td>ページの型。トップページはwebsite、それ以外はarticleを指定することが多い</td></tr><tr><td><code>og:url</code></td><td>◯</td><td>ページURL（絶対パス）</td></tr><tr><td><code>og:image</code></td><td>◯</td><td>サムネイル画像URL（絶対パス）</td></tr><tr><td><code>og:description</code></td><td>-</td><td>ページの概要</td></tr><tr><td><code>twitter:card</code></td><td>-</td><td>Xでの表示形式。<code>summary_large_image</code>を指定すると画像が大きく表示される</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>OGPは、<span class=\"text-primary\">全ページで同じtitleやdescription、imageを使い回すのではなく、ページごとにユニークな内容にする</span>ことが重要とされています。トップページはサイト名・サイト概要・ロゴ画像、記事ページは記事タイトル・記事概要・記事内画像、というように内容を分けることで、リンク先の内容が正確に伝わり、クリックやシェアを促しやすくなります。公開前には、X・Facebookそれぞれが提供する確認ツールで表示のプレビューをチェックすることが推奨されます。</p></div></div><p><strong>SNSシェアボタンの設置</strong></p><p>ユーザーが簡単に共有できるよう、SNSのシェアボタンを記事ページに設置します。設置場所は、記事を読み終えたタイミングで目に入る<strong>記事末尾</strong>に加えて、<strong>記事冒頭</strong>にも置くことが望ましいとされています。設置を検討したい代表的なボタンは、X（旧Twitter）・Facebook・はてなブックマークの3つです。</p><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>はてなブックマークは日本最大級のソーシャルブックマークサービスで、新着エントリーや人気エントリーに掲載されたブックマークにはnofollowが付与されず、純粋な被リンクとして扱われるとされています。ただし、宣伝目的などスパム行為と認識されたリンクにはnofollowが付与されることがあります。複数アカウントを使った自作自演のブックマークはアカウント停止の対象になりえますが、運営者アカウント自身によるブックマーク登録は問題ないとされています。</p></div></div><p><strong>ソーシャルメディアポリシーの整備</strong></p><p>SNSでの拡散を進める一方で、企業アカウント運用にはブランド毀損などのリスクも伴います。そのため、<mark>ソーシャルメディアポリシー</mark>を定めておくことが望ましいとされています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>ソーシャルメディアポリシー</strong><br>企業がSNSを利用する際の姿勢・対応方法を明文化したもの。アカウント運営者である社員の行動指針を示すことと、ユーザーに対して運営方針・責任の所在を示すことの2つの目的があります。社外秘情報の公開禁止、コメント対応方針、責任の所在の明記などが一般的な項目です。</p></div><p>あわせて、企業アカウントだけでなく、従業員個人のプライベートアカウントでの発信がブランド毀損につながるケースも増えているとされ、社外秘事項や自社・関係他社に関する発信について、従業員向けのガイドラインを別途整備することも重要とされています。</p>"
+      "bodyHtml": "<p>SNSでの拡散は、前セクションで見たようにリンケラティからの被リンク・サイテーション獲得のきっかけになります。ここでは、SNSでの拡散を後押しするための実装面のポイントを紹介します。</p><p><strong>OGP設定による適切なページ情報の表示</strong></p><p>URLがSNSで共有された際に表示されるタイトル・説明文・画像は、<mark>OGP（Open Graph Protocol）</mark>を設定することで、サイト側が意図した内容に指定できます。設定していない場合、SNS側が自動生成した意図しない表示になることがあります。</p><div class=\"table-wrap\"><table><thead><tr><th>コード例：OGPの記述（head要素内）</th></tr></thead><tbody><tr><td><pre style=\"white-space:pre-wrap; margin:0; font-size:0.82rem;\">&lt;meta property=\"og:title\" content=\"記事タイトル\"&gt;\n&lt;meta property=\"og:type\" content=\"article\"&gt;\n&lt;meta property=\"og:url\" content=\"https://example.com/article/\"&gt;\n&lt;meta property=\"og:image\" content=\"https://example.com/img/thumb.jpg\"&gt;\n&lt;meta property=\"og:description\" content=\"記事の概要説明文\"&gt;\n&lt;meta name=\"twitter:card\" content=\"summary_large_image\"&gt;</pre></td></tr></tbody></table></div><div class=\"table-wrap\"><table><thead><tr><th>項目名</th><th>必須</th><th>内容</th></tr></thead><tbody><tr><td><code>og:title</code></td><td>◯</td><td>ページタイトル</td></tr><tr><td><code>og:type</code></td><td>◯</td><td>ページの型。トップページはwebsite、それ以外はarticleを指定することが多い</td></tr><tr><td><code>og:url</code></td><td>◯</td><td>ページURL（絶対パス）</td></tr><tr><td><code>og:image</code></td><td>◯</td><td>サムネイル画像URL（絶対パス）</td></tr><tr><td><code>og:description</code></td><td>-</td><td>ページの概要</td></tr><tr><td><code>twitter:card</code></td><td>-</td><td>Xでの表示形式。<code>summary_large_image</code>を指定すると画像が大きく表示される</td></tr></tbody></table></div><div class=\"callout callout--point\"><div class=\"callout__icon\">💡</div><div class=\"callout__body\"><div class=\"callout__title\">Point</div><p>OGPは、<span class=\"text-primary\">全ページで同じtitleやdescription、imageを使い回すのではなく、ページごとにユニークな内容にする</span>ことが重要とされています。トップページはサイト名・サイト概要・ロゴ画像、記事ページは記事タイトル・記事概要・記事内画像、というように内容を分けることで、リンク先の内容が正確に伝わり、クリックやシェアを促しやすくなります。公開前には、X・Facebookそれぞれが提供する確認ツールで表示のプレビューをチェックすることが推奨されます。</p></div></div><p><strong>SNSシェアボタンの設置</strong></p><p>ユーザーが簡単に共有できるよう、SNSのシェアボタンを記事ページに設置します。設置場所は、記事を読み終えたタイミングで目に入る<strong>記事末尾</strong>に加えて、<strong>記事冒頭</strong>にも置くことが望ましいとされています。設置を検討したい代表的なボタンは、X（旧Twitter）・Facebook・はてなブックマークの3つです。</p><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/19-brand-seo/sec05-facebook-share-button.png\" alt=\"Facebook「シェアボタン設定ツール」の設定画面\" loading=\"lazy\"></div><div class=\"figure__caption\">Facebook「シェアボタン設定ツール」の設定画面</div></div><div class=\"figure\"><div class=\"figure__frame figure__frame--img\"><img class=\"figure__img\" src=\"../../assets/images/19-brand-seo/sec05-hatena-bookmark-button.png\" alt=\"はてなブックマークボタンの設定画面\" loading=\"lazy\"></div><div class=\"figure__caption\">はてなブックマークボタンの設定画面</div></div><div class=\"callout callout--note\"><div class=\"callout__icon\">📝</div><div class=\"callout__body\"><div class=\"callout__title\">Note</div><p>はてなブックマークは日本最大級のソーシャルブックマークサービスで、新着エントリーや人気エントリーに掲載されたブックマークにはnofollowが付与されず、純粋な被リンクとして扱われるとされています。ただし、宣伝目的などスパム行為と認識されたリンクにはnofollowが付与されることがあります。複数アカウントを使った自作自演のブックマークはアカウント停止の対象になりえますが、運営者アカウント自身によるブックマーク登録は問題ないとされています。</p></div></div><p><strong>ソーシャルメディアポリシーの整備</strong></p><p>SNSでの拡散を進める一方で、企業アカウント運用にはブランド毀損などのリスクも伴います。そのため、<mark>ソーシャルメディアポリシー</mark>を定めておくことが望ましいとされています。</p><div class=\"term-box\"><div class=\"term-box__label\">Term / 用語定義</div><p style=\"margin:0;\"><strong>ソーシャルメディアポリシー</strong><br>企業がSNSを利用する際の姿勢・対応方法を明文化したもの。アカウント運営者である社員の行動指針を示すことと、ユーザーに対して運営方針・責任の所在を示すことの2つの目的があります。社外秘情報の公開禁止、コメント対応方針、責任の所在の明記などが一般的な項目です。</p></div><p>あわせて、企業アカウントだけでなく、従業員個人のプライベートアカウントでの発信がブランド毀損につながるケースも増えているとされ、社外秘事項や自社・関係他社に関する発信について、従業員向けのガイドラインを別途整備することも重要とされています。</p>"
     }
   ],
   "summary": [
@@ -61,7 +61,9 @@
         "検索エンジンが自動的に生成する検索キーワード",
         "広告経由でのみ発生する検索"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "指名検索とは、企業名やブランド名、商品名など特定の固有名詞で検索されることを指します。"
     },
     {
@@ -75,7 +77,9 @@
         "検索ボリュームと競合性",
         "ページランクとドメインパワー"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explain": "外部要素は大別すると、明示的な引用である「被リンク」と、暗示的な引用である「サイテーション」の2つに分かれます。"
     },
     {
@@ -89,7 +93,9 @@
         "どちらも全く同じ精度で評価される",
         "どちらも検索エンジンには一切認識されない"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explain": "被リンクはa要素による明示的な引用であるため、暗示的な引用であるサイテーションよりも検索エンジンが認識・評価しやすいと考えられています。"
     },
     {
@@ -103,7 +109,11 @@
         "リンク元とリンク先のコンテンツ・文脈的な関連性",
         "リンク元サイトのサーバー契約プラン"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "explain": "被リンクの評価要素として、ページランク・リンクの掲載状況・コンテンツ及び文脈的な関連性・リンクエイジの4つが挙げられます。サーバー契約プランは評価要素ではありません。"
     },
     {
@@ -117,7 +127,9 @@
         "リンク先ページの表示速度を表す指標である",
         "被リンクの数を年齢に例えた冗談の表現にすぎない"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explain": "リンクエイジとは、被リンクが初めて張られてからの経過時間を表す考え方で、コンテンツの陳腐化を判別する手がかりの一つとされています。"
     },
     {
@@ -131,7 +143,11 @@
         "リンクベイトによる他サイトからの自然なリンク獲得",
         "リンクの売買による大量獲得"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "explain": "自社コーポレートサイト・サテライトサイト・リンクベイトの3つがコントローラブルな獲得方法として紹介されました。リンクの売買はリンクスキームに該当し、ガイドライン違反です。"
     },
     {
@@ -145,7 +161,9 @@
         "自社サイト内のリンク構造を分析する手法",
         "リンクを購入するための取引仲介サービス"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explain": "リンクベイトとは、他サイトからのリンクを呼び寄せる「餌」となる、企画性の高いコンテンツのことです。"
     },
     {
@@ -159,7 +177,9 @@
         "被リンクはリンクがなくても成立し、サイテーションは必ずリンクが必要である",
         "サイテーションは被リンクの別の呼び方にすぎない"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "サイテーションは、クリック可能なリンクが付いていなくても、名前の言及だけで成立する点が被リンクとの決定的な違いです。"
     },
     {
@@ -173,7 +193,9 @@
         "サイテーションはSEOと無関係なので、特に対応する必要はない",
         "自社名を意図的に隠すことで、サイテーション効果が高まる"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "検索エンジンがブランド名とWebページの関係性を認識していなければ、他ページでの言及も評価にはつながりません。構造化マークアップやSNSアカウントの整備などで、事前に紐付けを認識させることが重要です。"
     },
     {
@@ -187,7 +209,9 @@
         "OGPを設定すると、サイトの表示速度が自動的に向上する",
         "OGPはFacebookでのみ有効で、他のSNSには一切影響しない"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "OGPは全ページ共通ではなく、ページごとにユニークな内容にすることで、リンク先の内容が正確に伝わり、クリックやシェアを促しやすくなります。"
     },
     {
@@ -201,7 +225,9 @@
         "フォロワー数を自動的に増やす仕組みを構築すること",
         "SNS上のすべてのコメントに返信することを義務付けること"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explain": "ソーシャルメディアポリシーは、アカウント運営者である社員の行動指針を示すことと、ユーザーに対して運営方針・責任の所在を示すことを目的としています。"
     }
   ]
