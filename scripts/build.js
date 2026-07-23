@@ -303,7 +303,8 @@ ${optionsHtml}
 
   <section class="section-card" data-quiz-root data-chapter="${chapter.slug}" data-total-steps="${chData.sections.length + 2}">
     <div class="quiz-intro"><span class="quiz-intro__icon">📋</span>確認テスト</div>
-    <p class="quiz-sub">全${chData.quiz.length}問。すべて回答して「採点する」を押してください。（合格基準：80%以上）</p>
+    <p class="quiz-sub">全${chData.quiz.length}問。すべて回答して「採点する」を押してください。</p>
+    <p class="quiz-pass"><span class="quiz-pass__icon">🎯</span>合格基準：正答率 <strong>80%</strong> 以上</p>
 
     <script type="application/json" data-quiz-data>
 ${questionsJson}

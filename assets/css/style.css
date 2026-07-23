@@ -516,7 +516,29 @@ tbody tr:nth-child(even) { background: #fafafa; }
 .quiz-sub {
   color: var(--color-text-muted);
   font-size: 0.88rem;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
+}
+
+/* 合格基準を独立したチップとして明示（文末に埋もれず位置が安定する） */
+.quiz-pass {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin: 0 0 24px;
+}
+
+.quiz-pass strong {
+  font-weight: 800;
+}
+
+.quiz-pass__icon {
+  font-size: 0.95rem;
 }
 
 .quiz-item {
@@ -561,13 +583,19 @@ tbody tr:nth-child(even) { background: #fafafa; }
   color: #b45309;
   padding: 4px 10px;
   border-radius: 999px;
-  display: inline-flex;
+  display: none;
   align-items: center;
   gap: 4px;
 }
 
 .quiz-item.is-unanswered {
   border-color: #fde68a;
+}
+
+/* 「未回答」バッジは未回答の設問（.is-unanswered）のときだけ表示する。
+   回答すると quiz.js が .is-unanswered を外すためバッジが消える。 */
+.quiz-item.is-unanswered .quiz-item__unanswered {
+  display: inline-flex;
 }
 
 .quiz-unanswered-note {
