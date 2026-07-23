@@ -1,0 +1,8 @@
+# デプロイに不要な重いソース素材・作業ファイルを除外（Vercel CLIは.gitignoreを見ないため別途指定）
+Chapter/
+PDFs/
+.git/
+node_modules/
+.claude/
+*.log
+*.zip
