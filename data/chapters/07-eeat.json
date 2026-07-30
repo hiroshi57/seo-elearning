@@ -55,12 +55,12 @@
       "sectionIndex": 1,
       "question": "E-E-A-Tを構成する要素として、正しいものをすべて選べ。",
       "options": [
+        "Experience（経験）",
         "Expertise（専門性）",
         "Authoritativeness（権威性）",
-        "Efficiency（効率性）",
-        "Experience（経験）"
+        "Efficiency（効率性）"
       ],
-      "correct": [0, 1, 3],
+      "correct": [0, 1, 2],
       "explain": "E-E-A-Tは Experience（経験）・Expertise（専門性）・Authoritativeness（権威性）・Trust（信頼性）の4要素から構成されます。Efficiency（効率性）は含まれません。"
     },
     {
