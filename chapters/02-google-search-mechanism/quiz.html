@@ -36,7 +36,7 @@
     <p class="quiz-pass"><span class="quiz-pass__icon">🎯</span>合格基準：正答率 <strong>80%</strong> 以上</p>
 
     <script type="application/json" data-quiz-data>
-[{"id":"q1","type":"single","sectionIndex":0,"question":"クローリング（Crawling）の説明として、最も適切なものはどれか。","options":["検索エンジンのロボットがWebページを発見・巡回し、内容を収集するプロセス","検索結果に表示するページの順位を決めるプロセス","ユーザーが入力した検索キーワードを解析するプロセス","ページの表示速度を計測するプロセス"],"correct":[0],"explain":"クローリングは検索エンジン（クローラー）がWebページを発見・巡回し、内容を収集する最初のプロセスです。"},{"id":"q2","type":"single","sectionIndex":1,"question":"「クロールはされたが、インデックスはされていない」ページについての説明として、正しいものはどれか。","options":["検索結果に必ず1位で表示される","検索結果には表示されない","クロールされていないページより優先的に表示される","インデックスの有無は検索結果の表示に影響しない"],"correct":[1],"explain":"インデックスに登録されて初めて検索結果に表示される対象になります。クロールされてもインデックスされなければ表示されません。"},{"id":"q3","type":"single","sectionIndex":2,"question":"Googleのランキングの仕組みに関する説明として、最も適切なものはどれか。","options":["たった1つの指標だけで検索順位がすべて決まる","ページの公開日が新しいページが常に最上位に表示される","関連性・品質・有用性など、数多くのシグナルを組み合わせて順位が決まる","広告費を支払ったページが自動的に自然検索結果の1位になる"],"correct":[2],"explain":"Googleのランキングは単一の指標ではなく、関連性・品質・ユーザーにとっての有用性など多数のシグナルを組み合わせて決定される仕組みです。"},{"id":"q4","type":"multi","sectionIndex":3,"question":"Google Search Centralで紹介されている、検索クエリの意図理解に使われるシステムとして、正しいものをすべて選べ。","options":["Core Web Vitals","BERT","RankBrain","ニューラルマッチング"],"correct":[1,2,3],"explain":"RankBrain・BERT・ニューラルマッチングはいずれも、検索クエリの意図や文脈の理解を助けるAIシステムです。Core Web Vitalsはページ体験の指標であり、意図理解の仕組みとは異なります。"},{"id":"q5","type":"multi","sectionIndex":4,"question":"検索意図の分類として、一般的に使われているものをすべて選べ。","options":["Do（したい）","Know（知りたい）","Go（行きたい）","Sell（売りたい）"],"correct":[0,1,2],"explain":"検索意図はKnow（知りたい）・Do（したい）・Go（行きたい）・Buy（買いたい）の4分類で考えるのが一般的です。「Sell（売りたい）」はユーザー側ではなく提供者側の意図であり、検索意図の分類には含まれません。"},{"id":"q6","type":"single","sectionIndex":4,"question":"「〇〇株式会社 公式サイト」という検索クエリが該当する検索意図の分類として、最も適切なものはどれか。","options":["Know（知りたい）","Do（したい）","Buy（買いたい）","Go（行きたい）"],"correct":[3],"explain":"特定のサイトや場所に到達したいという指名検索は「Go（行きたい）」クエリに分類されます。"},{"id":"q7","type":"single","sectionIndex":5,"question":"Website queryとVisit-in-Person queryの違いに関する説明として、最も適切なものはどれか。","options":["Website queryは1つに特定されるサイトを探しており、Visit-in-Person queryは近くにある特定ジャンルの複数の店舗・施設を探している","両者に違いはなく、完全に同じ意味である","Website queryはモバイル検索専用の分類であり、PCでは発生しない","Visit-in-Person queryは購入意欲が最も高いクエリに分類される"],"correct":[0],"explain":"Website queryは「Amazon」のように1つに特定されるサイトへの到達を目的とするのに対し、Visit-in-Person queryは「近くのラーメン屋」のように特定ジャンルに属する複数の候補を探すクエリです。"},{"id":"q8","type":"single","sectionIndex":5,"question":"ゼロクリック検索（Zero-click Search）の説明として、最も適切なものはどれか。","options":["検索結果に一切ページが表示されない状態のこと","検索結果ページ上で疑問が解決し、ユーザーがどのサイトもクリックしないまま検索行動が完結すること","検索エンジンがクロールを一切行わなくなる現象のこと","広告費がゼロで検索結果に表示される仕組みのこと"],"correct":[1],"explain":"ゼロクリック検索とは、強調スニペットやナレッジパネル、AI Overviewなどによって検索結果ページ上で疑問が解決し、サイトへのクリックが発生しないまま検索が完結する行動を指します。"},{"id":"gq_exclude","type":"single","sectionIndex":0,"question":"特定のページをGoogleの検索結果に表示させたくない場合の対応として、ガイドの記述に最も適切なものはどれか。","options":["title要素を空にしてインデックスから外す","ページを一時的にサーバーエラー（5xx）にし続ける","robots.txt での不許可や noindex など、適切な方法でクロール/インデックスを制御する","そのページへの内部リンクをすべて外す"],"correct":[2],"explain":"表示したくないページは robots.txt でのブロックや noindex など、目的に応じた適切な方法で制御します。リンクを外す・title空・エラー化などは確実な除外方法ではありません。（スターターガイド『Googleの検索結果から除外したい場合』）"}]
+[{"id":"q1","type":"single","sectionIndex":0,"question":"クローリング（Crawling）の説明として、最も適切なものはどれか。","options":["検索エンジンのロボットがリンクやサイトマップをたどってWebページを発見・巡回し、内容を収集するプロセス","収集済みのページ内容を解析し、検索用データベースに登録・整理するプロセス","検索クエリとの関連性を計算し、表示する順位を決めるプロセス","取得できなかったURLに対して、代替ページを自動生成するプロセス"],"correct":[0],"explain":"クローリングはロボットがページを発見・巡回して収集する工程です。B（登録・整理）はインデックス、C（順位付け）はランキングの説明で、混同しやすい選択肢です。"},{"id":"q2","type":"single","sectionIndex":1,"question":"「クロールはされたが、インデックスはされていない」ページについての説明として、正しいものはどれか。","options":["クロール済みであれば、インデックス前でも検索結果に表示される","インデックスされていないため、検索結果には表示されない","クロールとインデックスは同義のため、この状態は発生しない","インデックス前のページは、インデックス済みページより上位に表示される"],"correct":[1],"explain":"検索結果に表示されるにはインデックス登録が必要です。クロール（発見）とインデックス（登録）は別工程で、クロールされただけでは表示されません。"},{"id":"q3","type":"single","sectionIndex":2,"question":"Googleのランキングの仕組みに関する説明として、最も適切なものはどれか。","options":["被リンクの本数が最も多いページが、内容にかかわらず常に最上位になる","本文の文字数が多いページほど、機械的に上位に表示される","関連性・品質・有用性など、数多くのシグナルを組み合わせて総合的に順位が決まる","更新日時が最も新しいページが、内容にかかわらず常に上位になる"],"correct":[2],"explain":"ランキングは単一の指標ではなく、多数のシグナルの組み合わせで決まります。被リンク数・文字数・更新日時などの単一要素だけで順位が決まるわけではありません。"},{"id":"q4","type":"multi","sectionIndex":3,"question":"Google Search Centralで紹介されている、検索クエリの意図理解に使われるシステムとして、正しいものをすべて選べ。","options":["ニューラルマッチング","BERT","RankBrain","PageRank（リンクによる評価を扱う仕組み）"],"correct":[0,1,2],"explain":"RankBrain・BERT・ニューラルマッチングは検索クエリの意図・文脈理解に関わる仕組みです。PageRankはリンクによる評価の仕組みで、意図理解のシステムではありません。"},{"id":"q5","type":"multi","sectionIndex":4,"question":"検索意図の分類として、一般的に使われているものをすべて選べ。","options":["Do（したい）","Go（行きたい）","Know（知りたい）","Sell（売りたい）","Buy（買いたい）"],"correct":[0,1,2,4],"explain":"一般に使われる分類はKnow・Do・Go・Buyの4つです。『Sell（売りたい）』は含まれません（Buyとの取り違えに注意）。"},{"id":"q6","type":"single","sectionIndex":4,"question":"「〇〇株式会社 公式サイト」という検索クエリが該当する検索意図の分類として、最も適切なものはどれか。","options":["Know（知りたい）","Do（したい）","Buy（買いたい）","Go（行きたい）"],"correct":[3],"explain":"特定のサイトや場所に到達したいという指名検索は「Go（行きたい）」クエリに分類されます。"},{"id":"q7","type":"single","sectionIndex":5,"question":"Website queryとVisit-in-Person queryの違いに関する説明として、最も適切なものはどれか。","options":["Website queryは特定の1サイトを、Visit-in-Person queryは近くの特定ジャンルの複数店舗・施設を探している","Website queryは公式サイトを、Visit-in-Person queryはSNSアカウントを探すクエリである","Visit-in-Person queryはモバイル検索専用で、Website queryはPC検索専用である","Visit-in-Person queryは購入意欲が最も高いBuyクエリと同じ意味である"],"correct":[0],"explain":"Website queryは1つに特定されるサイト、Visit-in-Person queryは近隣の複数店舗・施設を探すクエリです。デバイス限定やBuyと同義といった説明は誤りです。"},{"id":"q8","type":"single","sectionIndex":5,"question":"ゼロクリック検索（Zero-click Search）の説明として、最も適切なものはどれか。","options":["検索結果にオーガニックのページが1件も表示されない状態のこと","検索結果ページ上で疑問が解決し、ユーザーがどのサイトもクリックしないまま検索が完結すること","広告を避けてオーガニック検索結果だけをクリックするユーザー行動のこと","クリック課金広告で、クリックが発生せず費用がかからない状態のこと"],"correct":[1],"explain":"ゼロクリック検索は、強調スニペットやAI Overviewなどで検索結果画面上だけで疑問が解決し、サイトに遷移しないまま完結する現象を指します。"},{"id":"gq_exclude","type":"single","sectionIndex":0,"question":"特定のページをGoogleの検索結果に表示させたくない場合の対応として、ガイドの記述に最も適切なものはどれか。","options":["title要素を空にしてインデックスから外す","ページを一時的にサーバーエラー（5xx）にし続ける","robots.txt での不許可や noindex など、適切な方法でクロール/インデックスを制御する","そのページへの内部リンクをすべて外す"],"correct":[2],"explain":"表示したくないページは robots.txt でのブロックや noindex など、目的に応じた適切な方法で制御します。リンクを外す・title空・エラー化などは確実な除外方法ではありません。（スターターガイド『Googleの検索結果から除外したい場合』）"}]
     </script>
 
     <div data-quiz-item="q1" class="quiz-item is-unanswered">
@@ -49,10 +49,10 @@
       </div>
       <div class="quiz-item__question" id="q1-question">クローリング（Crawling）の説明として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q1-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>検索エンジンのロボットがWebページを発見・巡回し、内容を収集するプロセス</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>検索結果に表示するページの順位を決めるプロセス</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>ユーザーが入力した検索キーワードを解析するプロセス</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>ページの表示速度を計測するプロセス</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>検索エンジンのロボットがリンクやサイトマップをたどってWebページを発見・巡回し、内容を収集するプロセス</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>収集済みのページ内容を解析し、検索用データベースに登録・整理するプロセス</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>検索クエリとの関連性を計算し、表示する順位を決めるプロセス</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>取得できなかったURLに対して、代替ページを自動生成するプロセス</span></div>
       </div>
     </div>
 
@@ -66,10 +66,10 @@
       </div>
       <div class="quiz-item__question" id="q2-question">「クロールはされたが、インデックスはされていない」ページについての説明として、正しいものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q2-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>検索結果に必ず1位で表示される</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>検索結果には表示されない</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>クロールされていないページより優先的に表示される</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>インデックスの有無は検索結果の表示に影響しない</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>クロール済みであれば、インデックス前でも検索結果に表示される</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>インデックスされていないため、検索結果には表示されない</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>クロールとインデックスは同義のため、この状態は発生しない</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>インデックス前のページは、インデックス済みページより上位に表示される</span></div>
       </div>
     </div>
 
@@ -83,10 +83,10 @@
       </div>
       <div class="quiz-item__question" id="q3-question">Googleのランキングの仕組みに関する説明として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q3-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>たった1つの指標だけで検索順位がすべて決まる</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>ページの公開日が新しいページが常に最上位に表示される</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>関連性・品質・有用性など、数多くのシグナルを組み合わせて順位が決まる</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>広告費を支払ったページが自動的に自然検索結果の1位になる</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>被リンクの本数が最も多いページが、内容にかかわらず常に最上位になる</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>本文の文字数が多いページほど、機械的に上位に表示される</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>関連性・品質・有用性など、数多くのシグナルを組み合わせて総合的に順位が決まる</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>更新日時が最も新しいページが、内容にかかわらず常に上位になる</span></div>
       </div>
     </div>
 
@@ -100,10 +100,10 @@
       </div>
       <div class="quiz-item__question" id="q4-question">Google Search Centralで紹介されている、検索クエリの意図理解に使われるシステムとして、正しいものをすべて選べ。</div>
       <div class="quiz-options" role="group" aria-labelledby="q4-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>Core Web Vitals</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>ニューラルマッチング</span></div>
       <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>BERT</span></div>
       <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>RankBrain</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>ニューラルマッチング</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>PageRank（リンクによる評価を扱う仕組み）</span></div>
       </div>
     </div>
 
@@ -118,9 +118,10 @@
       <div class="quiz-item__question" id="q5-question">検索意図の分類として、一般的に使われているものをすべて選べ。</div>
       <div class="quiz-options" role="group" aria-labelledby="q5-question">
       <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>Do（したい）</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>Know（知りたい）</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>Go（行きたい）</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>Go（行きたい）</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>Know（知りたい）</span></div>
       <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>Sell（売りたい）</span></div>
+      <div class="quiz-option" data-quiz-option="4"><span class="quiz-option__mark">E</span><span>Buy（買いたい）</span></div>
       </div>
     </div>
 
@@ -151,10 +152,10 @@
       </div>
       <div class="quiz-item__question" id="q7-question">Website queryとVisit-in-Person queryの違いに関する説明として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q7-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>Website queryは1つに特定されるサイトを探しており、Visit-in-Person queryは近くにある特定ジャンルの複数の店舗・施設を探している</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>両者に違いはなく、完全に同じ意味である</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>Website queryはモバイル検索専用の分類であり、PCでは発生しない</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>Visit-in-Person queryは購入意欲が最も高いクエリに分類される</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>Website queryは特定の1サイトを、Visit-in-Person queryは近くの特定ジャンルの複数店舗・施設を探している</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>Website queryは公式サイトを、Visit-in-Person queryはSNSアカウントを探すクエリである</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>Visit-in-Person queryはモバイル検索専用で、Website queryはPC検索専用である</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>Visit-in-Person queryは購入意欲が最も高いBuyクエリと同じ意味である</span></div>
       </div>
     </div>
 
@@ -168,10 +169,10 @@
       </div>
       <div class="quiz-item__question" id="q8-question">ゼロクリック検索（Zero-click Search）の説明として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q8-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>検索結果に一切ページが表示されない状態のこと</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>検索結果ページ上で疑問が解決し、ユーザーがどのサイトもクリックしないまま検索行動が完結すること</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>検索エンジンがクロールを一切行わなくなる現象のこと</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>広告費がゼロで検索結果に表示される仕組みのこと</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>検索結果にオーガニックのページが1件も表示されない状態のこと</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>検索結果ページ上で疑問が解決し、ユーザーがどのサイトもクリックしないまま検索が完結すること</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>広告を避けてオーガニック検索結果だけをクリックするユーザー行動のこと</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>クリック課金広告で、クリックが発生せず費用がかからない状態のこと</span></div>
       </div>
     </div>
 

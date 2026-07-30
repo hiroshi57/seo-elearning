@@ -36,7 +36,7 @@
     <p class="quiz-pass"><span class="quiz-pass__icon">🎯</span>合格基準：正答率 <strong>80%</strong> 以上</p>
 
     <script type="application/json" data-quiz-data>
-[{"id":"q1","type":"single","sectionIndex":0,"question":"MECE（ミーシー）なカテゴリ設計として、最も適切なものはどれか。","options":["重複がなく、抜け漏れもない状態でカテゴリを分類すること","カテゴリ同士が重複していても、抜け漏れさえなければよい","できるだけ多くのカテゴリに、同じページを重複して登録すること","カテゴリ分けは一切行わず、すべてのページをフラットに並べること"],"correct":[0],"explain":"MECEとは「重複なく、抜け漏れなく（Mutually Exclusive and Collectively Exhaustive）」分類されている状態を指します。"},{"id":"q2","type":"single","sectionIndex":1,"question":"「URLの永続化」の考え方として、最も適切なものはどれか。","options":["URLはSEO評価のリセットのために定期的に変更すべきである","公開・インデックス済みのページのURLは、内容が存在する限りできるだけ変更しない","URLの永続化はSNSでの拡散には一切関係しない","ブランド名を変更した場合、URLも即座に変更しなければならない"],"correct":[1],"explain":"URLの永続化とは、公開・インデックス済みのページのURLを、内容が存在する限り変更せずに使い続けるという考え方です。W3C創設者のティム・バーナーズ=リー氏も「Cool URIs don’t change」と述べています。"},{"id":"q3","type":"single","sectionIndex":1,"question":"やむを得ずページのURLを変更する場合の対応として、最も適切なものはどれか。","options":["旧URLは放置し、新URLだけを新たに公開する","URLを変更する際は、必ずページも削除しなければならない","旧URLから新URLへ301リダイレクトを設定し、評価をできる限り引き継ぐ","リダイレクトを設定すると、かえって評価が下がるため避けるべきである"],"correct":[2],"explain":"やむを得ずURLを変更する場合は、旧URLから新URLへ301リダイレクトを設定し、それまで蓄積された評価をできる限り引き継ぐことが望ましいとされています。"},{"id":"q4","type":"multi","sectionIndex":2,"question":"title要素・meta description・h要素の扱いとして、正しいものをすべて選べ。","options":["h要素は階層（h1→h2→h3…）を飛ばさず、装飾目的だけで使うべきではない","meta descriptionは検索結果のスニペットに使われることがあり、ページごとにユニークな記述が推奨される","title要素はページ内容を端的に表し、サイト内でユニークな内容にすることが望ましい","h1タグはすべてのページで完全に同じ文言に統一しなければならない"],"correct":[0,1,2],"explain":"title・meta description・h要素はいずれもページごとにユニークで、階層や役割を意識した記述が推奨されます。h1をロゴ画像などで全ページ共通・同一文言にすることは、下層ページでは不適切とされています。"},{"id":"q5","type":"single","sectionIndex":2,"question":"img要素のalt属性の役割として、最も適切なものはどれか。","options":["ページの表示速度を自動的に向上させる属性である","画像のファイルサイズを圧縮するための属性である","リンク先のURLを指定するための属性である","画像が表示されない場合の代替テキストであり、検索エンジンが画像内容を理解する手がかりにもなる"],"correct":[3],"explain":"alt属性は画像が表示されない場合の代替テキストとして定義されており、スクリーンリーダーでの読み上げや、検索エンジンによる画像内容の理解にも使われます。"},{"id":"q6","type":"single","sectionIndex":3,"question":"「1URL1コンテンツの原則」が守られていない例として、最も適切なものはどれか。","options":["検索条件が異なるにもかかわらず、常に同一のURL（例：search.php）で結果が表示される状態","1つのURLに1つのまとまったコンテンツが対応している状態","各ページにユニークなtitleとdescriptionが設定されている状態","ページネーションの各ページが、それぞれ自己参照のcanonicalを持っている状態"],"correct":[0],"explain":"検索条件によって表示内容が異なるにもかかわらず同一URLになっている状態は、「同一URLに異なるコンテンツが表示されるケース」に該当し、1URL1コンテンツの原則が守られていません。"},{"id":"q7","type":"multi","sectionIndex":3,"question":"URLの正規化の方法として、正しいものをすべて選べ。","options":["301リダイレクトは、旧URLへのアクセスを正規URLへ転送し、評価もあわせて引き継ぐ","Googleは基本的に301リダイレクトを推奨しており、できない場合の代替としてcanonicalを案内している","canonicalタグは、ユーザーを転送せずに正規URLを検索エンジンへ伝える","canonicalタグは常に相対パスで記述しなければならない"],"correct":[0,1,2],"explain":"301リダイレクトとcanonicalはどちらも正規化の手段ですが、性質が異なります。canonicalタグは絶対パスでの記述が推奨されています。"},{"id":"q8","type":"single","sectionIndex":4,"question":"ロジックツリーのうち、「頂点に解決したい問題や課題を置き、その原因をMECEに分解していく」手法はどれか。","options":["WHATツリー","WHYツリー","HOWツリー","SWOTツリー"],"correct":[1],"explain":"WHYツリーは、頂点に解決したい問題・課題を配置し、その原因をMECEに分類していく手法で、課題解決型サイトなどに適しています。"},{"id":"q9","type":"multi","sectionIndex":5,"question":"内部リンクの設計で重要とされる観点として、正しいものをすべて選べ。","options":["どのページからも他のページへ辿れる、双方向のリンク構造にする","常にトップページ・最上位カテゴリへ戻れるリンクを用意する","関連するページ・上位カテゴリへリンクを張る","リンクは一方向にのみ張り、行き止まりのページを作る"],"correct":[0,1,2],"explain":"内部リンクの設計では、双方向リンク・関連ページへのリンク・上位階層への復帰リンクの3点が重要とされています。行き止まりになる一方向のリンクは避けるべきとされています。"},{"id":"q10","type":"single","sectionIndex":5,"question":"クローラビリティの観点で、注意が必要とされるリンク形式はどれか。","options":["href属性を持つ通常のテキストリンク（aタグ）","パンくずリストのリンク","href属性を伴わない、JavaScriptのonclickだけで遷移するリンク","グローバルナビゲーションのリンク"],"correct":[2],"explain":"href属性を伴わないJavaScriptのみのリンクはGoogleが非推奨としており、クローラビリティの観点で注意が必要です。href属性と併用すれば通常のリンクと同様に評価されます。"},{"id":"q11","type":"single","sectionIndex":6,"question":"XMLサイトマップに含めるべきURLとして、Google公式ガイドラインが推奨しているものはどれか。","options":["重複しているURLも含め、サイト内のすべてのURLをできる限り含める","アクセス数が少ないURLだけを含める","XMLサイトマップにはURLを1つも含めない方がよい","canonicalで指定した正規URLのみを含める"],"correct":[3],"explain":"Google公式のガイドラインでは、XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めることが推奨されています。"},{"id":"q12","type":"single","sectionIndex":6,"question":"XMLサイトマップの制約に関する説明として、正しいものはどれか。","options":["1ファイルのURL数は50,000個以下、ファイルサイズは50MB以下（圧縮前）に収める必要がある","1ファイルに含められるURLは無制限である","XMLサイトマップは必ずルートディレクトリに設置しなければならない","画像や動画専用のサイトマップを作成することはできない"],"correct":[0],"explain":"XMLサイトマップは1ファイルにつきURL数50,000個以下、ファイルサイズ50MB以下（圧縮前）という制約があり、超える場合は複数ファイルに分割してサイトマップインデックスでまとめます。robots.txtと異なり設置場所も自由です。"},{"id":"q13","type":"single","sectionIndex":7,"question":"meta robotsのcontent属性に「noindex」を指定した場合の効果として、最も適切なものはどれか。","options":["そのページの表示速度が向上する","そのページがインデックスされないようになる","そのページの検索順位が自動的に1位になる","そのページへの外部リンクがすべて無効になる"],"correct":[1],"explain":"meta robotsのcontent属性に「noindex」を指定すると、そのページはインデックスされないようになります。"},{"id":"q14","type":"single","sectionIndex":7,"question":"X-Robots-Tagの説明として、最も適切なものはどれか。","options":["HTMLページにのみ使用できる、meta robotsの別名","クロールバジェットを自動的に増やすための申請フォーム","PDFや画像などmeta robotsを記述できない非HTMLファイルに対して、HTTPヘッダーでクロール・インデックスを制御する仕組み","XMLサイトマップの別の呼び方"],"correct":[2],"explain":"X-Robots-Tagは、PDFや画像など、meta robotsを記述できない非HTMLファイルに対して、HTTPヘッダーでクロール・インデックスの制御を行う仕組みです。"},{"id":"q15","type":"multi","sectionIndex":8,"question":"クロールを促進する手段として、正しいものをすべて選べ。","options":["WebSubでハブ経由の更新通知を行う","Search ConsoleのURL検査ツールで、個別にクロールをリクエストする","RSS/Atomフィードで更新ページの情報を配信する","robots.txtで全クローラのアクセスを禁止する"],"correct":[0,1,2],"explain":"URL検査ツール・フィード・WebSubはいずれもクロールを促進する手段です。robots.txtで全クローラのアクセスを禁止することは、クロールの制限であり促進ではありません。"},{"id":"q16","type":"single","sectionIndex":9,"question":"「ソフト404」の説明として、最も適切なものはどれか。","options":["404エラーページを一切用意しない状態","404エラーページのデザインをサイトの他ページと統一した状態","リンク切れを完全に検出できるツールのこと","存在しないページに対して、ステータスコード200を返してしまっている状態"],"correct":[3],"explain":"ソフト404とは、独自の404エラーページを用意した際に、本来返すべき404ではなくステータスコード200を返してしまっている状態を指します。これにより重複コンテンツとして扱われる可能性があります。"},{"id":"q17","type":"multi","sectionIndex":9,"question":"スパム行為の3分類として、正しいものをすべて選べ。","options":["価値の低いコンテンツ（コピーコンテンツ、キーワードの乱用など）","クローラへの偽装行為（隠しテキスト、クローキングなど）","画像にalt属性を正しく設定する行為","質の低い被リンク（リンクの売買など）"],"correct":[0,1,3],"explain":"スパム行為は「価値の低いコンテンツ」「質の低い被リンク」「クローラへの偽装行為」の3つに大別されます。alt属性を正しく設定することはスパムではなく推奨される対応です。"},{"id":"q18","type":"multi","sectionIndex":10,"question":"Webページの表示速度に関わる3つの処理領域として、正しいものをすべて選べ。","options":["レンダリング処理（受け取ったデータを画面に描画する）","インデックス処理（クロールしたページをデータベースに登録する）","ネットワーク処理（ブラウザとサーバー間のデータの送受信）","サーバー処理（リクエストを受けてHTMLを組み立てる）"],"correct":[0,2,3],"explain":"表示速度はネットワーク処理・サーバー処理・レンダリング処理の3領域に分けて捉えられます。インデックス処理は検索エンジン側の仕組みであり、表示速度の3領域には含まれません。"},{"id":"q19","type":"single","sectionIndex":11,"question":"HTTP/2の特徴として、最も適切なものはどれか。","options":["1つのTCPコネクション内で複数のストリームを多重化し、順不同でデータを処理できる","1つのコネクションで1組のリクエスト・レスポンスしか処理できない","常にHTTP接続（非暗号化）が前提となっている","画像の圧縮形式の一種である"],"correct":[0],"explain":"HTTP/2は1つのTCPコネクション内で複数の仮想的な通信路（ストリーム）を多重化でき、順不同でデータを処理できるため、通信回数によるネットワーク処理の遅延が軽減されます。"},{"id":"q20","type":"single","sectionIndex":12,"question":"キャッシュに関する説明として、最も適切なものはどれか。","options":["キャッシュを設定すると、常にファイルの中身を書き換えずに配信し続けなければならない","キャッシュには保存場所によってブラウザキャッシュとサーバーキャッシュの2種類がある","更新頻度の高いファイルには、必ず長期間のキャッシュを設定すべきである","キャッシュはネットワーク処理やレンダリング処理とは無関係な仕組みである"],"correct":[1],"explain":"キャッシュは保存場所によってブラウザキャッシュとサーバーキャッシュに分かれます。更新頻度の高いファイルは、ファイル名にフィンガープリントを埋め込むなどしてキャッシュの更新漏れを防ぐ工夫が必要です。"},{"id":"q21","type":"multi","sectionIndex":13,"question":"Core Web Vitalsを構成する3つの指標として、正しいものをすべて選べ。","options":["CTR（Click Through Rate）：クリック率","INP（Interaction to Next Paint）：操作への応答性","CLS（Cumulative Layout Shift）：視覚的な安定性","LCP（Largest Contentful Paint）：読み込み速度"],"correct":[1,2,3],"explain":"Core Web VitalsはLCP（読み込み速度）・INP（応答性）・CLS（視覚的安定性）の3指標で構成されます。CTR（クリック率）はCore Web Vitalsには含まれません。"},{"id":"q22","type":"single","sectionIndex":13,"question":"Core Web Vitalsの指標の変遷についての説明として、正しいものはどれか。","options":["Core Web Vitalsの指標は発表以来、一度も変更されていない","LCPは2024年に廃止され、現在は使われていない","2024年3月に、それまで使われていたFID（初回入力遅延）がINPに置き換えられた","Core Web Vitalsはランキングシグナルとして使われたことは一度もない"],"correct":[2],"explain":"Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新されています。2024年3月には、それまでのFID（初回入力遅延）がINPに置き換えられました。"},{"id":"q23","type":"single","sectionIndex":13,"question":"CLSスコアの計算方法として、最も適切なものはどれか。","options":["要素が移動した距離（ピクセル数）そのものがCLSスコアになる","インパクトの割合と距離の割合を足し合わせた値がCLSスコアになる","CLSスコアはページの読み込み時間から自動的に算出される","インパクトの割合と距離の割合を掛け合わせた値がCLSスコアになる"],"correct":[3],"explain":"CLSスコアは「インパクトの割合（動いた要素が画面に占める割合）」と「距離の割合（要素が移動した距離の割合）」を掛け合わせて算出されます。"},{"id":"q24","type":"single","sectionIndex":14,"question":"Search Console・Lighthouse・PageSpeed Insightsの違いに関する説明として、最も適切なものはどれか。","options":["Lighthouseは非公開ページを含めて調査でき、端末環境に依存するラボデータを提供する","3つのツールはすべて同じデータソース・同じ調査対象ページを扱う","Search Consoleは非公開ページの調査に特化したツールである","PageSpeed Insightsではフィールドデータもラボデータも一切参照できない"],"correct":[0],"explain":"Lighthouseは非公開ページも含めて調査でき、その場でシミュレーション計測したラボデータを提供します。一方Search Consoleは自社管理の公開ページのみ、PageSpeed Insightsは公開ページのフィールドデータとラボデータ両方を扱います。"},{"id":"q25","type":"single","sectionIndex":15,"question":"HTTPS化とGoogleのランキングシグナルの関係について、公式ブログが示している見解として、最も適切なものはどれか。","options":["HTTPS化は検索順位に一切影響しない","HTTPS化はランキングシグナルとして使用されているが、コンテンツの品質など他の要素と比べると影響は軽微である","HTTPS化さえすれば、他の要素に関わらず必ず1位になれる","HTTPS化はセキュリティ上の意味しかなく、SEOとは無関係な施策である"],"correct":[1],"explain":"Google公式は2014年にHTTPS化をランキングシグナルとして使用すると発表しましたが、全体のクエリの1%未満にしか影響しない軽量なシグナルであり、コンテンツの品質などと比べると影響は小さいとしています。"},{"id":"q26","type":"multi","sectionIndex":15,"question":"HTTPSが持つセキュリティ上の役割として、正しいものをすべて選べ。","options":["データ改ざんの検知","通信データの暗号化","ページの表示速度を自動的に2倍にすること","通信相手（サーバー）の認証"],"correct":[0,1,3],"explain":"HTTPSは通信データの暗号化・改ざんの検知・通信相手の認証という3つのセキュリティ上の役割を持ちます。表示速度を「自動的に2倍にする」機能ではありません。"},{"id":"gq_url","type":"single","sectionIndex":3,"question":"わかりやすいURLの考え方として、ガイドの記述に最も近いものはどれか。","options":["内容と無関係でも短い連番ID（例：/p?id=8421）にする","対策キーワードをURLの中で何度も繰り返す","内容が推測できる意味のある語を使う（例：/blog/cheese-recipe）","階層をできるだけ深くし、パラメータを多く付与する"],"correct":[2],"explain":"URLは内容が推測できる意味のある語で構成すると、ユーザーにも検索エンジンにも分かりやすくなります。（スターターガイド『わかりやすいURLを使用する』）"},{"id":"gq_tld","type":"single","sectionIndex":3,"question":"ドメイン名やTLD（「.com」「.guru」など）がGoogleのランキングに与える影響について、ガイドの記述に最も近いものはどれか。","options":["「.com」ドメインは常に上位表示されやすい","ドメイン名にキーワードを含めると順位が大きく上がる","「.org」は「.com」より信頼され、ランキングが上がる","ドメイン名/URL中のキーワードやTLDの種類は、ランキングにほとんど影響しない（特定国向けのccTLDを除く）"],"correct":[3],"explain":"ドメイン名やURL中のキーワード、TLDの種類は基本的にランキングにほとんど影響しません（特定の国のユーザーを狙うccTLDのケースを除く）。（スターターガイド『Googleが重要でないと考えること』）"}]
+[{"id":"q1","type":"single","sectionIndex":0,"question":"MECE（ミーシー）なカテゴリ設計として、最も適切なものはどれか。","options":["重複がなく、抜け漏れもない状態でカテゴリを分類すること","抜け漏れさえなければ、カテゴリ同士が多少重複していても問題ない","同じページを、関連する複数のカテゴリに重複して登録すること","カテゴリ分けはせず、全ページをフラットに並べること"],"correct":[0],"explain":"MECEは『重複なく・漏れなく』分類することです。重複を許容したり、意図的に重複登録したりする状態はMECEではありません。"},{"id":"q2","type":"single","sectionIndex":1,"question":"「URLの永続化」の考え方として、最も適切なものはどれか。","options":["URLはSEO評価のリセットのために定期的に変更すべきである","公開・インデックス済みのページのURLは、内容が存在する限りできるだけ変更しない","URLの永続化はSNSでの拡散には一切関係しない","ブランド名を変更した場合、URLも即座に変更しなければならない"],"correct":[1],"explain":"URLの永続化とは、公開・インデックス済みのページのURLを、内容が存在する限り変更せずに使い続けるという考え方です。W3C創設者のティム・バーナーズ=リー氏も「Cool URIs don’t change」と述べています。"},{"id":"q3","type":"single","sectionIndex":1,"question":"やむを得ずページのURLを変更する場合の対応として、最も適切なものはどれか。","options":["旧URLは放置し、新URLだけを新たに公開する","URLを変更する際は、必ずページも削除しなければならない","旧URLから新URLへ301リダイレクトを設定し、評価をできる限り引き継ぐ","リダイレクトを設定すると、かえって評価が下がるため避けるべきである"],"correct":[2],"explain":"やむを得ずURLを変更する場合は、旧URLから新URLへ301リダイレクトを設定し、それまで蓄積された評価をできる限り引き継ぐことが望ましいとされています。"},{"id":"q4","type":"multi","sectionIndex":2,"question":"title要素・meta description・h要素の扱いとして、正しいものをすべて選べ。","options":["h要素は階層（h1→h2→h3…）を飛ばさず、装飾目的だけで使うべきではない","meta descriptionは検索結果のスニペットに使われることがあり、ページごとにユニークな記述が推奨される","title要素はページ内容を端的に表し、サイト内でユニークな内容にすることが望ましい","h1タグはすべてのページで完全に同じ文言に統一しなければならない"],"correct":[0,1,2],"explain":"title・meta description・h要素はいずれもページごとにユニークで、階層や役割を意識した記述が推奨されます。h1をロゴ画像などで全ページ共通・同一文言にすることは、下層ページでは不適切とされています。"},{"id":"q5","type":"single","sectionIndex":2,"question":"img要素のalt属性の役割として、最も適切なものはどれか。","options":["ページの表示速度を自動的に向上させる属性である","画像のファイルサイズを圧縮するための属性である","リンク先のURLを指定するための属性である","画像が表示されない場合の代替テキストであり、検索エンジンが画像内容を理解する手がかりにもなる"],"correct":[3],"explain":"alt属性は画像が表示されない場合の代替テキストとして定義されており、スクリーンリーダーでの読み上げや、検索エンジンによる画像内容の理解にも使われます。"},{"id":"q6","type":"single","sectionIndex":3,"question":"「1URL1コンテンツの原則」が守られていない例として、最も適切なものはどれか。","options":["検索条件が異なっても、常に同一URL（例：search.php）で結果が表示される状態","1つのURLに1つのまとまったコンテンツが対応している状態","各ページにユニークなtitle・descriptionが設定されている状態","ページネーションの各ページが自己参照のcanonicalを持つ状態"],"correct":[0],"explain":"検索条件が違うのに同じURLになる状態は『1URL1コンテンツ』が崩れた例です。B・C・Dはいずれも原則が適切に守られている状態です。"},{"id":"q7","type":"multi","sectionIndex":3,"question":"URLの正規化の方法として、正しいものをすべて選べ。","options":["301リダイレクトは、旧URLへのアクセスを正規URLへ転送し、評価もあわせて引き継ぐ","Googleは基本的に301リダイレクトを推奨しており、できない場合の代替としてcanonicalを案内している","canonicalタグは、ユーザーを転送せずに正規URLを検索エンジンへ伝える","canonicalタグは常に相対パスで記述しなければならない"],"correct":[0,1,2],"explain":"301リダイレクトとcanonicalはどちらも正規化の手段ですが、性質が異なります。canonicalタグは絶対パスでの記述が推奨されています。"},{"id":"q8","type":"single","sectionIndex":4,"question":"ロジックツリーのうち、「頂点に解決したい問題や課題を置き、その原因をMECEに分解していく」手法はどれか。","options":["WHATツリー","WHYツリー","HOWツリー","KPIツリー"],"correct":[1],"explain":"課題を頂点に置き、その原因をMECEに分解するのはWHYツリーです。WHATは構成要素の分解、HOWは手段の分解に用います。"},{"id":"q9","type":"multi","sectionIndex":5,"question":"内部リンクの設計で重要とされる観点として、正しいものをすべて選べ。","options":["どのページからも他のページへ辿れる、双方向のリンク構造にする","常にトップページ・最上位カテゴリへ戻れるリンクを用意する","関連するページ・上位カテゴリへリンクを張る","リンクは一方向にのみ張り、行き止まりのページを作る"],"correct":[0,1,2],"explain":"内部リンクの設計では、双方向リンク・関連ページへのリンク・上位階層への復帰リンクの3点が重要とされています。行き止まりになる一方向のリンクは避けるべきとされています。"},{"id":"q10","type":"single","sectionIndex":5,"question":"クローラビリティの観点で、注意が必要とされるリンク形式はどれか。","options":["href属性を持つ通常のテキストリンク（aタグ）","パンくずリスト内のテキストリンク","href属性を持たず、JavaScriptのonclickだけで遷移するリンク","グローバルナビゲーション内のテキストリンク"],"correct":[2],"explain":"クローラは基本的にhref属性をたどるため、href無しでonclickだけのリンクは辿れないことがあります。通常のaタグ・パンくず・ナビは問題になりにくいリンク形式です。"},{"id":"q11","type":"single","sectionIndex":6,"question":"XMLサイトマップに含めるべきURLとして、Google公式ガイドラインが推奨しているものはどれか。","options":["重複しているURLも含め、サイト内のすべてのURLをできる限り含める","アクセス数が少ないURLだけを含める","XMLサイトマップにはURLを1つも含めない方がよい","canonicalで指定した正規URLのみを含める"],"correct":[3],"explain":"Google公式のガイドラインでは、XMLサイトマップには正規URL（canonicalで指定したURL）のみを含めることが推奨されています。"},{"id":"q12","type":"single","sectionIndex":6,"question":"XMLサイトマップの制約に関する説明として、正しいものはどれか。","options":["1ファイルのURL数は50,000個以下、ファイルサイズは50MB以下（圧縮前）に収める必要がある","1ファイルに含められるURLは無制限である","XMLサイトマップは必ずルートディレクトリに設置しなければならない","画像や動画専用のサイトマップを作成することはできない"],"correct":[0],"explain":"XMLサイトマップは1ファイルにつきURL数50,000個以下、ファイルサイズ50MB以下（圧縮前）という制約があり、超える場合は複数ファイルに分割してサイトマップインデックスでまとめます。robots.txtと異なり設置場所も自由です。"},{"id":"q13","type":"single","sectionIndex":7,"question":"meta robotsのcontent属性に「noindex」を指定した場合の効果として、最も適切なものはどれか。","options":["そのページの表示速度が自動的に向上する","そのページがインデックスに登録されないようになる","そのページの検索順位が一定期間だけ上がる","そのページから他サイトへの外部リンクがすべて無効になる"],"correct":[1],"explain":"meta robotsのnoindexは、そのページをインデックス対象から外す指定です。表示速度や順位、外部リンクの有効性を変えるものではありません。"},{"id":"q14","type":"single","sectionIndex":7,"question":"X-Robots-Tagの説明として、最も適切なものはどれか。","options":["HTMLページにのみ使用できる、meta robotsの別名","クロールバジェットを自動的に増やすための申請フォーム","PDFや画像などmeta robotsを記述できない非HTMLファイルに対して、HTTPヘッダーでクロール・インデックスを制御する仕組み","XMLサイトマップの別の呼び方"],"correct":[2],"explain":"X-Robots-Tagは、PDFや画像など、meta robotsを記述できない非HTMLファイルに対して、HTTPヘッダーでクロール・インデックスの制御を行う仕組みです。"},{"id":"q15","type":"multi","sectionIndex":8,"question":"クロールを促進する手段として、正しいものをすべて選べ。","options":["Search ConsoleのURL検査ツールで、個別にクロールをリクエストする","RSS/Atomフィードで更新ページの情報を配信する","WebSubでハブ経由の更新通知を行う","robots.txtで全クローラのアクセスを禁止する"],"correct":[0,1,2],"explain":"URL検査ツール・フィード・WebSubはいずれもクロールを促進する手段です。robots.txtで全クローラのアクセスを禁止することは、クロールの制限であり促進ではありません。"},{"id":"q16","type":"single","sectionIndex":9,"question":"「ソフト404」の説明として、最も適切なものはどれか。","options":["404エラーページをまったく用意していない状態","404ページのデザインをサイトの他ページと統一した状態","リンク切れを自動で検出・修復できるツールのこと","存在しないページなのに、ステータスコード200（正常）を返してしまっている状態"],"correct":[3],"explain":"ソフト404は、実質存在しないページが200を返している状態を指します。本来は404（または410）を返すべきです。デザイン統一やツールのことではありません。"},{"id":"q17","type":"multi","sectionIndex":9,"question":"スパム行為の3分類として、正しいものをすべて選べ。","options":["価値の低いコンテンツ（コピーコンテンツ、キーワードの乱用など）","質の低い被リンク（リンクの売買など）","クローラへの偽装行為（隠しテキスト、クローキングなど）","画像にalt属性を正しく設定する行為"],"correct":[0,1,2],"explain":"スパム行為は「価値の低いコンテンツ」「質の低い被リンク」「クローラへの偽装行為」の3つに大別されます。alt属性を正しく設定することはスパムではなく推奨される対応です。"},{"id":"q18","type":"multi","sectionIndex":10,"question":"Webページの表示速度に関わる3つの処理領域として、正しいものをすべて選べ。","options":["レンダリング処理（受け取ったデータを画面に描画する）","インデックス処理（クロールしたページをデータベースに登録する）","ネットワーク処理（ブラウザとサーバー間のデータの送受信）","サーバー処理（リクエストを受けてHTMLを組み立てる）"],"correct":[0,2,3],"explain":"表示速度はネットワーク処理・サーバー処理・レンダリング処理の3領域に分けて捉えられます。インデックス処理は検索エンジン側の仕組みであり、表示速度の3領域には含まれません。"},{"id":"q19","type":"single","sectionIndex":11,"question":"HTTP/2の特徴として、最も適切なものはどれか。","options":["1つのTCPコネクション内で複数のストリームを多重化し、順不同で処理できる","1つのコネクションで、1組のリクエストとレスポンスしか処理できない","常に非暗号化（平文HTTP）での通信が前提となっている","画像を軽量化するための新しい圧縮フォーマットである"],"correct":[0],"explain":"HTTP/2は多重化により1コネクションで複数リクエストを並行処理できます。1組ずつしか扱えないのはHTTP/1.1で、画像圧縮形式でもありません。"},{"id":"q20","type":"single","sectionIndex":12,"question":"キャッシュに関する説明として、最も適切なものはどれか。","options":["一度設定すると、ファイルの中身を二度と更新できなくなる","保存場所によってブラウザキャッシュとサーバーキャッシュの2種類がある","更新頻度が高いファイルほど、長期間のキャッシュを設定すべきである","キャッシュはネットワーク処理やレンダリングとは無関係な仕組みである"],"correct":[1],"explain":"キャッシュには保存場所によりブラウザ／サーバーの2種類があります。更新頻度の高いファイルに長期キャッシュは不向きで、表示速度（ネットワーク処理）に関わります。"},{"id":"q21","type":"multi","sectionIndex":13,"question":"Core Web Vitalsを構成する3つの指標として、正しいものをすべて選べ。","options":["CTR（Click Through Rate）：クリック率","INP（Interaction to Next Paint）：操作への応答性","CLS（Cumulative Layout Shift）：視覚的な安定性","LCP（Largest Contentful Paint）：読み込み速度"],"correct":[1,2,3],"explain":"Core Web VitalsはLCP（読み込み速度）・INP（応答性）・CLS（視覚的安定性）の3指標で構成されます。CTR（クリック率）はCore Web Vitalsには含まれません。"},{"id":"q22","type":"single","sectionIndex":13,"question":"Core Web Vitalsの指標の変遷についての説明として、正しいものはどれか。","options":["Core Web Vitalsの指標は発表以来、一度も変更されていない","LCPは2024年に廃止され、現在は使われていない","2024年3月に、それまで使われていたFID（初回入力遅延）がINPに置き換えられた","Core Web Vitalsはランキングシグナルとして使われたことは一度もない"],"correct":[2],"explain":"Core Web Vitalsは2021年6月からランキングシグナルとして使用されており、指標も更新されています。2024年3月には、それまでのFID（初回入力遅延）がINPに置き換えられました。"},{"id":"q23","type":"single","sectionIndex":13,"question":"CLSスコアの計算方法として、最も適切なものはどれか。","options":["インパクトの割合と距離の割合を足し合わせた値がスコアになる","要素が移動したピクセル数そのものがスコアになる","ページの総読み込み時間からスコアが自動算出される","インパクトの割合と距離の割合を掛け合わせた値がスコアになる"],"correct":[3],"explain":"CLSは『インパクト率 × 距離率』で算出します。加算やピクセル数そのもの、読み込み時間からの算出ではありません。"},{"id":"q24","type":"single","sectionIndex":14,"question":"Search Console・Lighthouse・PageSpeed Insightsの違いに関する説明として、最も適切なものはどれか。","options":["Lighthouseは非公開ページも調査でき、実行端末の環境に依存するラボデータを提供する","3つのツールはすべて同一のデータソース・同一の対象ページを扱う","Search Consoleは非公開ページの調査に特化したツールである","PageSpeed Insightsはフィールドデータもラボデータも一切扱えない"],"correct":[0],"explain":"Lighthouseはローカル実行でき非公開ページも測定可（ラボデータ）。Search Consoleは実ユーザーのフィールドデータ中心で公開ページ対象、PageSpeed Insightsは両データを扱えます。"},{"id":"q25","type":"single","sectionIndex":15,"question":"HTTPS化とGoogleのランキングシグナルの関係について、公式ブログが示している見解として、最も適切なものはどれか。","options":["検索順位にはまったく影響しないと明言されている","ランキングシグナルとして使われているが、コンテンツ品質など他要素と比べ影響は軽微とされる","HTTPS化さえすれば、他の要素に関わらず必ず上位になれる","セキュリティ上の意味だけで、SEO・ランキングとは無関係である"],"correct":[1],"explain":"HTTPSは軽微ながらランキングシグナルとされています。影響ゼロでも、単独で上位化を保証するものでもありません。"},{"id":"q26","type":"multi","sectionIndex":15,"question":"HTTPSが持つセキュリティ上の役割として、正しいものをすべて選べ。","options":["データ改ざんの検知","通信データの暗号化","ページの表示速度を自動的に2倍にすること","通信相手（サーバー）の認証"],"correct":[0,1,3],"explain":"HTTPSは通信データの暗号化・改ざんの検知・通信相手の認証という3つのセキュリティ上の役割を持ちます。表示速度を「自動的に2倍にする」機能ではありません。"},{"id":"gq_url","type":"single","sectionIndex":3,"question":"わかりやすいURLの考え方として、ガイドの記述に最も近いものはどれか。","options":["内容と無関係でも短い連番ID（例：/p?id=8421）にする","対策キーワードをURLの中で何度も繰り返す","内容が推測できる意味のある語を使う（例：/blog/cheese-recipe）","階層をできるだけ深くし、パラメータを多く付与する"],"correct":[2],"explain":"URLは内容が推測できる意味のある語で構成すると、ユーザーにも検索エンジンにも分かりやすくなります。（スターターガイド『わかりやすいURLを使用する』）"},{"id":"gq_tld","type":"single","sectionIndex":3,"question":"ドメイン名やTLD（「.com」「.guru」など）がGoogleのランキングに与える影響について、ガイドの記述に最も近いものはどれか。","options":["「.com」ドメインは常に上位表示されやすい","ドメイン名にキーワードを含めると順位が大きく上がる","「.org」は「.com」より信頼され、ランキングが上がる","ドメイン名/URL中のキーワードやTLDの種類は、ランキングにほとんど影響しない（特定国向けのccTLDを除く）"],"correct":[3],"explain":"ドメイン名やURL中のキーワード、TLDの種類は基本的にランキングにほとんど影響しません（特定の国のユーザーを狙うccTLDのケースを除く）。（スターターガイド『Googleが重要でないと考えること』）"}]
     </script>
 
     <div data-quiz-item="q1" class="quiz-item is-unanswered">
@@ -50,9 +50,9 @@
       <div class="quiz-item__question" id="q1-question">MECE（ミーシー）なカテゴリ設計として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q1-question">
       <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>重複がなく、抜け漏れもない状態でカテゴリを分類すること</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>カテゴリ同士が重複していても、抜け漏れさえなければよい</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>できるだけ多くのカテゴリに、同じページを重複して登録すること</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>カテゴリ分けは一切行わず、すべてのページをフラットに並べること</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>抜け漏れさえなければ、カテゴリ同士が多少重複していても問題ない</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>同じページを、関連する複数のカテゴリに重複して登録すること</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>カテゴリ分けはせず、全ページをフラットに並べること</span></div>
       </div>
     </div>
 
@@ -134,10 +134,10 @@
       </div>
       <div class="quiz-item__question" id="q6-question">「1URL1コンテンツの原則」が守られていない例として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q6-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>検索条件が異なるにもかかわらず、常に同一のURL（例：search.php）で結果が表示される状態</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>検索条件が異なっても、常に同一URL（例：search.php）で結果が表示される状態</span></div>
       <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>1つのURLに1つのまとまったコンテンツが対応している状態</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>各ページにユニークなtitleとdescriptionが設定されている状態</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>ページネーションの各ページが、それぞれ自己参照のcanonicalを持っている状態</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>各ページにユニークなtitle・descriptionが設定されている状態</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>ページネーションの各ページが自己参照のcanonicalを持つ状態</span></div>
       </div>
     </div>
 
@@ -171,7 +171,7 @@
       <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>WHATツリー</span></div>
       <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>WHYツリー</span></div>
       <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>HOWツリー</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>SWOTツリー</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>KPIツリー</span></div>
       </div>
     </div>
 
@@ -203,9 +203,9 @@
       <div class="quiz-item__question" id="q10-question">クローラビリティの観点で、注意が必要とされるリンク形式はどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q10-question">
       <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>href属性を持つ通常のテキストリンク（aタグ）</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>パンくずリストのリンク</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>href属性を伴わない、JavaScriptのonclickだけで遷移するリンク</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>グローバルナビゲーションのリンク</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>パンくずリスト内のテキストリンク</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>href属性を持たず、JavaScriptのonclickだけで遷移するリンク</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>グローバルナビゲーション内のテキストリンク</span></div>
       </div>
     </div>
 
@@ -253,10 +253,10 @@
       </div>
       <div class="quiz-item__question" id="q13-question">meta robotsのcontent属性に「noindex」を指定した場合の効果として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q13-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>そのページの表示速度が向上する</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>そのページがインデックスされないようになる</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>そのページの検索順位が自動的に1位になる</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>そのページへの外部リンクがすべて無効になる</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>そのページの表示速度が自動的に向上する</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>そのページがインデックスに登録されないようになる</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>そのページの検索順位が一定期間だけ上がる</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>そのページから他サイトへの外部リンクがすべて無効になる</span></div>
       </div>
     </div>
 
@@ -287,9 +287,9 @@
       </div>
       <div class="quiz-item__question" id="q15-question">クロールを促進する手段として、正しいものをすべて選べ。</div>
       <div class="quiz-options" role="group" aria-labelledby="q15-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>WebSubでハブ経由の更新通知を行う</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>Search ConsoleのURL検査ツールで、個別にクロールをリクエストする</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>RSS/Atomフィードで更新ページの情報を配信する</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>Search ConsoleのURL検査ツールで、個別にクロールをリクエストする</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>RSS/Atomフィードで更新ページの情報を配信する</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>WebSubでハブ経由の更新通知を行う</span></div>
       <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>robots.txtで全クローラのアクセスを禁止する</span></div>
       </div>
     </div>
@@ -304,10 +304,10 @@
       </div>
       <div class="quiz-item__question" id="q16-question">「ソフト404」の説明として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q16-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>404エラーページを一切用意しない状態</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>404エラーページのデザインをサイトの他ページと統一した状態</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>リンク切れを完全に検出できるツールのこと</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>存在しないページに対して、ステータスコード200を返してしまっている状態</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>404エラーページをまったく用意していない状態</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>404ページのデザインをサイトの他ページと統一した状態</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>リンク切れを自動で検出・修復できるツールのこと</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>存在しないページなのに、ステータスコード200（正常）を返してしまっている状態</span></div>
       </div>
     </div>
 
@@ -322,9 +322,9 @@
       <div class="quiz-item__question" id="q17-question">スパム行為の3分類として、正しいものをすべて選べ。</div>
       <div class="quiz-options" role="group" aria-labelledby="q17-question">
       <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>価値の低いコンテンツ（コピーコンテンツ、キーワードの乱用など）</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>クローラへの偽装行為（隠しテキスト、クローキングなど）</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>画像にalt属性を正しく設定する行為</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>質の低い被リンク（リンクの売買など）</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>質の低い被リンク（リンクの売買など）</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>クローラへの偽装行為（隠しテキスト、クローキングなど）</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>画像にalt属性を正しく設定する行為</span></div>
       </div>
     </div>
 
@@ -355,10 +355,10 @@
       </div>
       <div class="quiz-item__question" id="q19-question">HTTP/2の特徴として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q19-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>1つのTCPコネクション内で複数のストリームを多重化し、順不同でデータを処理できる</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>1つのコネクションで1組のリクエスト・レスポンスしか処理できない</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>常にHTTP接続（非暗号化）が前提となっている</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>画像の圧縮形式の一種である</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>1つのTCPコネクション内で複数のストリームを多重化し、順不同で処理できる</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>1つのコネクションで、1組のリクエストとレスポンスしか処理できない</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>常に非暗号化（平文HTTP）での通信が前提となっている</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>画像を軽量化するための新しい圧縮フォーマットである</span></div>
       </div>
     </div>
 
@@ -372,10 +372,10 @@
       </div>
       <div class="quiz-item__question" id="q20-question">キャッシュに関する説明として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q20-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>キャッシュを設定すると、常にファイルの中身を書き換えずに配信し続けなければならない</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>キャッシュには保存場所によってブラウザキャッシュとサーバーキャッシュの2種類がある</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>更新頻度の高いファイルには、必ず長期間のキャッシュを設定すべきである</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>キャッシュはネットワーク処理やレンダリング処理とは無関係な仕組みである</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>一度設定すると、ファイルの中身を二度と更新できなくなる</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>保存場所によってブラウザキャッシュとサーバーキャッシュの2種類がある</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>更新頻度が高いファイルほど、長期間のキャッシュを設定すべきである</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>キャッシュはネットワーク処理やレンダリングとは無関係な仕組みである</span></div>
       </div>
     </div>
 
@@ -423,10 +423,10 @@
       </div>
       <div class="quiz-item__question" id="q23-question">CLSスコアの計算方法として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q23-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>要素が移動した距離（ピクセル数）そのものがCLSスコアになる</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>インパクトの割合と距離の割合を足し合わせた値がCLSスコアになる</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>CLSスコアはページの読み込み時間から自動的に算出される</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>インパクトの割合と距離の割合を掛け合わせた値がCLSスコアになる</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>インパクトの割合と距離の割合を足し合わせた値がスコアになる</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>要素が移動したピクセル数そのものがスコアになる</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>ページの総読み込み時間からスコアが自動算出される</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>インパクトの割合と距離の割合を掛け合わせた値がスコアになる</span></div>
       </div>
     </div>
 
@@ -440,10 +440,10 @@
       </div>
       <div class="quiz-item__question" id="q24-question">Search Console・Lighthouse・PageSpeed Insightsの違いに関する説明として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q24-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>Lighthouseは非公開ページを含めて調査でき、端末環境に依存するラボデータを提供する</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>3つのツールはすべて同じデータソース・同じ調査対象ページを扱う</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>Lighthouseは非公開ページも調査でき、実行端末の環境に依存するラボデータを提供する</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>3つのツールはすべて同一のデータソース・同一の対象ページを扱う</span></div>
       <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>Search Consoleは非公開ページの調査に特化したツールである</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>PageSpeed Insightsではフィールドデータもラボデータも一切参照できない</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>PageSpeed Insightsはフィールドデータもラボデータも一切扱えない</span></div>
       </div>
     </div>
 
@@ -457,10 +457,10 @@
       </div>
       <div class="quiz-item__question" id="q25-question">HTTPS化とGoogleのランキングシグナルの関係について、公式ブログが示している見解として、最も適切なものはどれか。</div>
       <div class="quiz-options" role="radiogroup" aria-labelledby="q25-question">
-      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>HTTPS化は検索順位に一切影響しない</span></div>
-      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>HTTPS化はランキングシグナルとして使用されているが、コンテンツの品質など他の要素と比べると影響は軽微である</span></div>
-      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>HTTPS化さえすれば、他の要素に関わらず必ず1位になれる</span></div>
-      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>HTTPS化はセキュリティ上の意味しかなく、SEOとは無関係な施策である</span></div>
+      <div class="quiz-option" data-quiz-option="0"><span class="quiz-option__mark">A</span><span>検索順位にはまったく影響しないと明言されている</span></div>
+      <div class="quiz-option" data-quiz-option="1"><span class="quiz-option__mark">B</span><span>ランキングシグナルとして使われているが、コンテンツ品質など他要素と比べ影響は軽微とされる</span></div>
+      <div class="quiz-option" data-quiz-option="2"><span class="quiz-option__mark">C</span><span>HTTPS化さえすれば、他の要素に関わらず必ず上位になれる</span></div>
+      <div class="quiz-option" data-quiz-option="3"><span class="quiz-option__mark">D</span><span>セキュリティ上の意味だけで、SEO・ランキングとは無関係である</span></div>
       </div>
     </div>
 
