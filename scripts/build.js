@@ -84,6 +84,7 @@ function pageShell({ title, assetDepth, bodyClass, headerBack, bodyContent, extr
     <a href="${prefix}index.html" class="site-header__title">📘 SEO Eラーニング</a>
     <nav class="site-header__nav">
       <a href="${prefix}index.html">コース一覧</a>
+      <a href="${prefix}tests/index.html">確認テスト</a>
     </nav>
   </div>
 </header>
@@ -393,6 +394,60 @@ ${safeJsonForScript(chData.quiz)}
    実行
    ------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------
+   確認テストだけを受けるための一覧ページ（tests/index.html）
+   ------------------------------------------------------------------------- */
+
+function buildTestsPage() {
+  const phaseBlocks = curriculum.phases
+    .map((phase) => {
+      const chapterList = phase.chapters
+        .map((no) => curriculum.chapters.find((c) => c.no === no))
+        .filter(Boolean);
+      const cards = chapterList
+        .map((ch) => {
+          const chData = loadChapterData(ch.slug);
+          if (!chData) return "";
+          const quizCount = chData.quiz.length;
+          return `
+        <a href="../chapters/${ch.slug}/quiz.html" class="test-card" data-chapter-card="${ch.slug}">
+          <div class="test-card__no">第${ch.no}章</div>
+          <div class="test-card__title">${escapeHtml(ch.title)}</div>
+          <div class="test-card__meta"><span class="module-badge module-badge--test">📋 ${quizCount}問</span><span class="module-item__arrow">→</span></div>
+        </a>`;
+        })
+        .join("\n");
+      return `
+    <section class="test-phase">
+      <h2 class="test-phase__title">${phase.icon || "📘"} ${escapeHtml(phase.title)} <small>${escapeHtml(phase.subtitle || "")}</small></h2>
+      <div class="test-grid">
+${cards}
+      </div>
+    </section>`;
+    })
+    .join("\n");
+
+  const totalQuiz = curriculum.chapters.reduce((sum, ch) => {
+    const d = loadChapterData(ch.slug);
+    return sum + (d ? d.quiz.length : 0);
+  }, 0);
+
+  const body = `
+  <div class="hero-banner">
+    <h1>📋 確認テスト</h1>
+    <p>レッスンを飛ばして、各章の確認テストだけを受けられます（全${curriculum.chapters.length}章・計${totalQuiz}問）。すべて回答して採点してください。合格基準は正答率80%以上です。</p>
+  </div>
+${phaseBlocks}
+`;
+  const headerBack = `  <a href="../index.html" class="breadcrumb-back">← コース一覧</a>`;
+  return pageShell({
+    title: "確認テスト一覧 | SEO Eラーニング",
+    assetDepth: 1,
+    headerBack,
+    bodyContent: body
+  });
+}
+
 function main() {
   let builtChapters = 0;
   let skippedChapters = [];
@@ -400,6 +455,8 @@ function main() {
   curriculum.phases.forEach((phase) => {
     writeFile(path.join(ROOT, "phases", phase.id, "index.html"), buildPhasePage(phase));
   });
+
+  writeFile(path.join(ROOT, "tests", "index.html"), buildTestsPage());
 
   curriculum.chapters.forEach((chapter) => {
     const chData = loadChapterData(chapter.slug);

@@ -1,0 +1,5053 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="ja-x-mtfrom-en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#fff"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjp.css"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v107582df1f8cabe95023057593fcfc98f8386291b244931fb3c357fcf4782855/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v107582df1f8cabe95023057593fcfc98f8386291b244931fb3c357fcf4782855/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v107582df1f8cabe95023057593fcfc98f8386291b244931fb3c357fcf4782855/developers/images/touchicon-180-new.png"><link rel="canonical" href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ja"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google for Developers" href="https://developers.google.com/s/opensearch.xml?hl=ja">
+      <link rel="alternate" hreflang="en"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" /><link rel="alternate" hreflang="x-default" href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" /><link rel="alternate" hreflang="ar"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ar" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-tw" /><link rel="alternate" hreflang="fr"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=de" /><link rel="alternate" hreflang="hi"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ru" /><link rel="alternate" hreflang="es"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=es" /><link rel="alternate" hreflang="es-419"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=vi" /><title>Google 公式 SEO スターター ガイド | Google 検索セントラル &nbsp;|&nbsp; Documentation &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="Google 公式 SEO スターター ガイド | Google 検索セントラル &nbsp;|&nbsp; Documentation &nbsp;|&nbsp; Google for Developers"><meta name="description" content="検索エンジン最適化に関する、Google 公式の SEO スターター ガイドです。SEO の定義からウェブサイト運用者向けの基本的な施策まで、SEO 関連の基礎を幅広くご紹介します。">
+  <meta property="og:description" content="検索エンジン最適化に関する、Google 公式の SEO スターター ガイドです。SEO の定義からウェブサイト運用者向けの基本的な施策まで、SEO 関連の基礎を幅広くご紹介します。"><meta property="og:url" content="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ja"><meta property="og:image" content="https://developers.google.com/static/search/images/home-social-share-lockup.jpg?hl=ja">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="ja"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Search Central",
+      "item": "https://developers.google.com/search"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Documentation",
+      "item": "https://developers.google.com/search/docs"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Google 公式 SEO スターター ガイド | Google 検索セントラル",
+      "item": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    }]
+  }
+  </script><link rel="alternate machine-translated-from" hreflang="en"
+        href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=en">
+  
+    
+    
+    
+    
+    
+    
+    
+    <meta name="apple-itunes-app" content="app-id=1512522198">
+    
+    
+  
+
+    </head>
+  <body class="color-scheme--light"
+        template="page"
+        theme="white"
+        type="lcat"
+        
+        
+        
+        layout="docs"
+        
+        
+        
+        
+        
+          
+            concierge='closed'
+          
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      メイン コンテンツにスキップ
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="メニューを開く">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/search?hl=ja">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-product-logo"
+           alt="Google Search Central"
+           src="https://developers.google.com/static/search/images/google-search-central-logo.svg?hl=ja"
+           srcset=" /static/search/images/google-search-central-logo.svg"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/search?hl=ja"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google Search Central"
+      
+    >
+    
+          <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>Search Central
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="上部のタブ">
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    devsite-active
+    
+    ">
+  
+    <a href="https://developers.google.com/search/docs?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/search/docs?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - ドキュメント"
+       track-metadata-module="primary nav"
+       aria-label="ドキュメント, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ドキュメント"
+         
+           track-name="ドキュメント"
+         
+       >
+    ドキュメント
+  
+    </a>
+    
+      <button
+         aria-haspopup="menu"
+         aria-expanded="false"
+         aria-label="プルダウン メニュー: ドキュメント"
+         track-type="nav"
+         track-metadata-eventdetail="https://developers.google.com/search/docs?hl=ja"
+         track-metadata-position="nav - ドキュメント"
+         track-metadata-module="primary nav"
+         
+          
+            data-category="Site-Wide Custom Events"
+          
+            data-label="Tab: ドキュメント"
+          
+            track-name="ドキュメント"
+          
+        
+         class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></button>
+    
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>SEO の基礎</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="seo の基礎"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      はじめに
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/essentials?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/essentials?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="seo の基礎"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      検索の基本事項
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="seo の基礎"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      SEO スターター ガイド
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="seo の基礎"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      生成 AI 検索向けに最適化
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/fundamentals/how-search-works?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/fundamentals/how-search-works?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="seo の基礎"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google 検索の仕組み
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="seo の基礎"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      SEO 業者の利用を検討する
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>クロールとインデックス登録</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="クロールとインデックス登録"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      サイトマップ
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="クロールとインデックス登録"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      robots.txt
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/crawling-indexing/special-tags?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/crawling-indexing/special-tags?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="クロールとインデックス登録"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      メタタグ
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="クロールとインデックス登録"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      クローラーの管理
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/crawling-indexing/control-what-you-share?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/crawling-indexing/control-what-you-share?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="クロールとインデックス登録"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      削除
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="クロールとインデックス登録"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      正規化
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/crawling-indexing/301-redirects?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/crawling-indexing/301-redirects?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="クロールとインデックス登録"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      リダイレクト
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="クロールとインデックス登録"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      JavaScript SEO
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>ランキングと検索での見え方</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/appearance/visual-elements-gallery?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/appearance/visual-elements-gallery?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ランキングと検索での見え方"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      視覚要素ギャラリー
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/appearance/title-link?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/appearance/title-link?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ランキングと検索での見え方"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      タイトルリンク
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/appearance/snippet?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/appearance/snippet?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ランキングと検索での見え方"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      スニペット
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/appearance/google-images?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/appearance/google-images?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ランキングと検索での見え方"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      画像
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/appearance/video?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/appearance/video?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ランキングと検索での見え方"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      動画
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/appearance/structured-data/search-gallery?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/appearance/structured-data/search-gallery?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ランキングと検索での見え方"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      構造化データ
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/appearance/favicon-in-search?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/appearance/favicon-in-search?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ランキングと検索での見え方"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ファビコン
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>サイト固有のガイド</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/specialty/ecommerce?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/specialty/ecommerce?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="サイト固有のガイド"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      e コマース
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/specialty/international?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/specialty/international?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="サイト固有のガイド"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      国際化したサイトと多言語サイト
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>データ分析</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/monitor-debug/search-console-start?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/monitor-debug/search-console-start?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="サイト固有のガイド"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Search Console を使ってみる
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="サイト固有のガイド"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      トラフィック減少のデバッグ
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/monitor-debug/google-analytics-search-console?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/monitor-debug/google-analytics-search-console?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="サイト固有のガイド"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Search Console と Google アナリティクスのデータを SEO に使用する
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/docs/monitor-debug/trends-start?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/docs/monitor-debug/trends-start?hl=ja"
+                     track-metadata-position="nav - ドキュメント"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="サイト固有のガイド"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google トレンドを使ってみる
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/search/help?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/search/help?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - サポート"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: サポート"
+         
+           track-name="サポート"
+         
+       >
+    サポート
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/search/blog?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/search/blog?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - ブログ"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ブログ"
+         
+           track-name="ブログ"
+         
+       >
+    ブログ
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    
+    
+    
+    ">
+  
+    <a href="https://developers.google.com/search/news?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/search/news?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - 新機能"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: 新機能"
+         
+           track-name="新機能"
+         
+       >
+    新機能
+  
+    </a>
+    
+      <button
+         aria-haspopup="menu"
+         aria-expanded="false"
+         aria-label="プルダウン メニュー: 新機能"
+         track-type="nav"
+         track-metadata-eventdetail="https://developers.google.com/search/news?hl=ja"
+         track-metadata-position="nav - 新機能"
+         track-metadata-module="primary nav"
+         
+          
+            data-category="Site-Wide Custom Events"
+          
+            data-label="Tab: 新機能"
+          
+            track-name="新機能"
+          
+        
+         class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></button>
+    
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/news?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/news?hl=ja"
+                     track-metadata-position="nav - 新機能"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      すべてのアップデート
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/search/updates?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/search/updates?hl=ja"
+                     track-metadata-position="nav - 新機能"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ドキュメントの更新情報
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history?hl=ja"
+                     track-metadata-position="nav - 新機能"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ランキングの更新情報
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://www.youtube.com/channel/UCWf2ZlNsCGDS89VBF_awNvA?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://www.youtube.com/channel/UCWf2ZlNsCGDS89VBF_awNvA?hl=ja"
+                     track-metadata-position="nav - 新機能"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      YouTube の新しい動画
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://pod.link/1512522198"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://pod.link/1512522198"
+                     track-metadata-position="nav - 新機能"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ポッドキャストの最近のエピソード
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/search/events?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/search/events?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - イベント"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: イベント"
+         
+           track-name="イベント"
+         
+       >
+    イベント
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/search/case-studies?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/search/case-studies?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - 事例紹介"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: 事例紹介"
+         
+           track-name="事例紹介"
+         
+       >
+    事例紹介
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="Documentation"
+    tenant-name="Google for Developers"
+    project-scope="/search/docs"
+    url-scoped="https://developers.google.com/s/results/search/docs?hl=ja"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developers.google.com/s/results?hl=ja" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="検索を開始"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="検索"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="検索"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="検索を閉じる"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>ログイン</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    
+      devsite-header-no-lower-tabs
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                <div class="devsite-product-id">
+                  
+                  
+                  
+                    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/search/docs?hl=ja"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Documentation"
+      
+    >
+    
+          Documentation
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+                </div>
+                
+              
+              
+            </div>
+            
+              <div class="devsite-product-button-row">
+  
+
+  
+  <a href="https://goo.gle/searchconsole"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-label="open search console header button"
+      
+        data-category="Search docs"
+      
+    
+    >Search Console</a>
+
+</div>
+            
+          </div>
+          
+        
+      
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars >
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="フィルタ"
+         
+         aria-label="フィルタ テキストを入力"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="フィルタをクリア"
+        aria-label="フィルタをクリア"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="サイドメニュー">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="ナビゲーションを閉じる">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/search?hl=ja">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-product-logo"
+           alt="Google Search Central"
+           src="https://developers.google.com/static/search/images/google-search-central-logo.svg?hl=ja"
+           srcset=" /static/search/images/google-search-central-logo.svg"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/search?hl=ja"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google Search Central"
+      
+    >
+    
+          <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>Search Central
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/search/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ドキュメント"
+      
+        track-name="ドキュメント"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ドキュメント"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ドキュメント
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ドキュメント"
+      
+        track-name="ドキュメント"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="ドキュメント">
+      その他
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="ドキュメント">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/search/help"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: サポート"
+      
+        track-name="サポート"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: サポート"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      サポート
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/search/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ブログ"
+      
+        track-name="ブログ"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ブログ"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ブログ
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/search/news"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: 新機能"
+      
+        track-name="新機能"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 新機能"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      新機能
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: 新機能"
+      
+        track-name="新機能"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="新機能">
+      その他
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="新機能">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/search/events"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: イベント"
+      
+        track-name="イベント"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: イベント"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      イベント
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/search/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: 事例紹介"
+      
+        track-name="事例紹介"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 事例紹介"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      事例紹介
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/search/docs"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>はじめに</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>検索の基本事項</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/essentials"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>概要</span></a></li><li class="devsite-nav-item"><a href="/search/docs/essentials/technical"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>技術的な要件</span></a></li><li class="devsite-nav-item"><a href="/search/docs/essentials/spam-policies"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>スパムに関するポリシー</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>SEO の基礎</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/fundamentals/seo-starter-guide"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>SEO スターター ガイド</span></a></li><li class="devsite-nav-item"><a href="/search/docs/fundamentals/how-search-works"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google 検索の仕組み</span></a></li><li class="devsite-nav-item"><a href="/search/docs/fundamentals/creating-helpful-content"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>有用で信頼性の高い、ユーザー第一のコンテンツの作成</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>生成 AI の基礎</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/fundamentals/ai-optimization-guide"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>生成 AI 向けに最適化</span></a></li><li class="devsite-nav-item"><a href="/search/docs/fundamentals/using-gen-ai-content"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>生成 AI の利用に関するガイダンス</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/search/docs/fundamentals/get-started"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>サイトの SEO 対策</span></a></li><li class="devsite-nav-item"><a href="/search/docs/fundamentals/get-started-developers"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>検索に関するデベロッパー ガイド</span></a></li><li class="devsite-nav-item"><a href="/search/docs/fundamentals/do-i-need-seo"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>SEO 業者の利用を検討する</span></a></li><li class="devsite-nav-item"><a href="/search/docs/fundamentals/third-party-seo"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>サードパーティの SEO ツールとアドバイスに関するガイダンス</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>クロールとインデックス登録</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>概要</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/indexable-file-types"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google がインデックスに登録できるファイル形式</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/url-structure"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>URL 構造</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/links-crawlable"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>リンク</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>サイトマップ</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/sitemaps/overview"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>サイトマップについて</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/sitemaps/build-sitemap"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>サイトマップの作成と送信</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/sitemaps/large-sitemaps"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>サイトマップ インデックス ファイルでサイトマップを管理する</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>サイトマップ拡張機能</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/sitemaps/image-sitemaps"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>画像サイトマップ</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/sitemaps/news-sitemap"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ニュース サイトマップ</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/sitemaps/video-sitemaps"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>動画サイトマップとサイトマップの代わり</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/sitemaps/combine-sitemap-extensions"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>サイトマップ拡張機能の統合</span></a></li></ul></div></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>クローラーの管理</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/ask-google-to-recrawl"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>URL の再クロールを Google にリクエストする</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/troubleshoot-crawling-errors"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>クロールエラーのトラブルシューティング</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Google クローラー</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
+           devsite-nav-external"><a href="/crawling/docs/crawlers-fetchers/overview-google-crawlers"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google クローラーの一覧</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="外部サイト"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/googlebot"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Googlebot</span></a></li><li class="devsite-nav-item
+           devsite-nav-external"><a href="/crawling/docs/crawlers-fetchers/reduce-crawl-rate"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google のクロール頻度を下げる</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="外部サイト"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item
+           devsite-nav-external"><a href="/crawling/docs/crawlers-fetchers/verifying-googlebot"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>クローラーが Googlebot などの Google クローラーであることを確認する</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="外部サイト"
+        aria-hidden="true"></span></a></li></ul></div></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>robots.txt</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/robots/intro"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>robots.txt の概要</span></a></li><li class="devsite-nav-item
+           devsite-nav-external"><a href="/crawling/docs/robots-txt/robots-txt-spec"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google による robots.txt の指定の解釈</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="外部サイト"
+        aria-hidden="true"></span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>正規化</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/canonicalization"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>URL の正規化とは</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/consolidate-duplicate-urls"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>rel=&#34;canonical&#34; などを利用して正規 URL を指定する方法</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/canonicalization-troubleshooting"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>正規化に関する問題の修正</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>モバイルサイトとモバイルファースト インデックス</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>AMP</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/amp"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google 検索での AMP について</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/amp/enhance-amp"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AMP コンテンツを強化する</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/amp/validate-amp"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AMP コンテンツを検証する</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/amp/remove-amp"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AMP コンテンツを削除する</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>JavaScript</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/javascript/javascript-seo-basics"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>JavaScript SEO の基本を理解する</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/javascript/fix-search-javascript"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>検索関連の JavaScript の問題を解決する</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/javascript/lazy-loading"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>遅延読み込みコンテンツを修正する</span></a></li><li class="devsite-nav-item
+           devsite-nav-deprecated"><a href="/search/docs/crawling-indexing/javascript/dynamic-rendering"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>回避策としてのダイナミック レンダリング</span><span class="devsite-nav-icon material-icons"
+        data-icon="deprecated"
+        data-title="非推奨"
+        aria-hidden="true"></span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>ページとコンテンツのメタデータ</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/valid-page-metadata"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ページ メタデータ</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>メタタグ</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/special-tags"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google がサポートしているメタタグと HTML 属性</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/robots-meta-tag"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>robots メタタグ、data-nosnippet、X-Robots-Tag</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/block-indexing"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>noindex</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/qualify-outbound-links"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>rel 属性</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>削除</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/control-what-you-share"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google と共有するコンテンツを制限する</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/remove-information"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ページの削除</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/prevent-images-on-your-page"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>画像の削除</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/keep-redacted-information-out"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>削除した情報</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>サイトの移転と変更</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/301-redirects"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>リダイレクトと Google 検索</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>サイトの移動</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/site-move-no-url-changes"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ホスティングの変更</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/site-move-with-url-changes"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>URL の変更を伴うサイト移転</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/website-testing"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>A/B テスト</span></a></li><li class="devsite-nav-item"><a href="/search/docs/crawling-indexing/pause-online-business"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ウェブサイトを一時停止または無効化する</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>ランキングと検索での見え方</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/appearance"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>概要</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/ai-features"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AI 機能</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/publication-dates"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>署名日</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/favicon-in-search"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ファビコン</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/featured-snippets"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>強調スニペット</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/flexible-sampling"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Flexible Sampling</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/google-discover"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google Discover</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/google-images"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>画像</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>地域に関連する機能</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/appearance/establish-business-details"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>お店やサービスの詳細</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/top-places-list"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>人気スポットリスト</span></a></li><li class="devsite-nav-item
+           devsite-nav-external"><a href="https://support.google.com/webmasters/answer/3035947"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ローカル検索結果のオプトアウト</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="外部サイト"
+        aria-hidden="true"></span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>ページ エクスペリエンス</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/appearance/page-experience"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ページ エクスペリエンスについて</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/core-web-vitals"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Core Web Vitals</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/avoid-intrusive-interstitials"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>インタースティシャルとダイアログ</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/search/docs/appearance/preferred-sources"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>信頼を置いている情報源</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>ランキング システム</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/appearance/ranking-systems-guide"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google 検索ランキング システムのご紹介</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/reviews-system"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>レビュー システム</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>ランキングの更新情報</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
+           devsite-nav-external"><a href="https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ランキングの更新情報のリスト</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="外部サイト"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/core-updates"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>コア アップデート</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/spam-updates"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>スパム アップデート</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/search/docs/appearance/site-names"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>サイト名</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/sitelinks"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>サイトリンク</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/snippet"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>スニペット</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>構造化データ</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/intro-structured-data"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>構造化データの仕組みについて</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/sd-policies"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>構造化データに関する一般的なガイドライン</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/enriched-search-results"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>エンリッチ リザルト</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/generate-structured-data-with-javascript"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>JavaScript を使用して構造化データを生成する</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>機能ガイド</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/search-gallery"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>すべての構造化データ機能</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/article"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>記事</span></a></li><li class="devsite-nav-item
+           devsite-nav-limited"><a href="/search/docs/appearance/structured-data/book"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>書籍アクション</span><span class="devsite-nav-icon material-icons"
+        data-icon="limited"
+        data-title="アクセス制限付き"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/breadcrumb"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>パンくずリスト</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/carousel"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>カルーセル</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/course"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>コースリスト</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/dataset"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>データセット</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/discussion-forum"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ディスカッション フォーラム</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/education-qa"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>教育向け Q&amp;A</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/employer-rating"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>雇用主の総合評価</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/factcheck"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ファクト チェック</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/event"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>イベント</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/image-license-metadata"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>画像メタデータ</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/job-posting"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>求人情報</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/local-business"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ローカル ビジネス</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/math-solvers"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>数学の解法</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/movie"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>映画カルーセル</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/organization"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>組織</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>ショッピング</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/product"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>概要</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/product-snippet"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>商品スニペット</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/merchant-listing"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>販売者のリスティング</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/product-variants"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>パターン</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/loyalty-program"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ポイント プログラム</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/return-policy"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>販売者の返品に関するポリシー</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/shipping-policy"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>販売者の配送に関するポリシー</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/profile-page"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>プロフィール ページ</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/qapage"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Q＆A</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/recipe"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>レシピ</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/review-snippet"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>クチコミ抜粋</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/software-app"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ソフトウェア アプリ</span></a></li><li class="devsite-nav-item
+           devsite-nav-beta"><a href="/search/docs/appearance/structured-data/speakable"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>読み上げ可能</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="ベータ版"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/paywalled-content"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>定期購入とペイウォール コンテンツ</span></a></li><li class="devsite-nav-item
+           devsite-nav-limited"><a href="/search/docs/appearance/structured-data/vacation-rental"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>民泊</span><span class="devsite-nav-icon material-icons"
+        data-icon="limited"
+        data-title="アクセス制限付き"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/structured-data/video"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>動画</span></a></li></ul></div></li></ul></div></li><li class="devsite-nav-item"><a href="/search/docs/appearance/title-link"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>タイトルリンク</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>翻訳された機能</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/appearance/translated-results"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>翻訳された検索結果</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/ad-network-and-translation"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>広告ネットワークと翻訳関連の Google 検索機能</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/search/docs/appearance/video"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>動画</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/visual-elements-gallery"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>視覚要素ギャラリー</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>ウェブ ストーリー</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/appearance/enable-web-stories"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google でウェブ ストーリーを有効にする</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/web-stories-creation-best-practices"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ウェブ ストーリーの作成に関するベスト プラクティス</span></a></li><li class="devsite-nav-item"><a href="/search/docs/appearance/web-stories-content-policy"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ウェブ ストーリーのコンテンツ ポリシー</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>先行ユーザー プログラム</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
+           devsite-nav-beta"><a href="/search/docs/appearance/package-tracking"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>荷物追跡</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="ベータ版"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item
+           devsite-nav-beta"><a href="/search/docs/appearance/structured-data/carousels-beta"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>構造化データ カルーセル（ベータ）</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="ベータ版"
+        aria-hidden="true"></span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>モニタリングとデバッグ</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/debugging-search-traffic-drops"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>検索トラフィックの減少をデバッグする</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Search Console でモニターする</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/search-console-start"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Search Console を使ってみる</span></a></li><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/bubble-chart-analysis"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>バブルチャートで SEO を改善</span></a></li><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/google-analytics-search-console"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Search Console と Google アナリティクスのデータを SEO に使用する</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>検索演算子でデバッグする</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/search-operators"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>概要</span></a></li><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/search-operators/all-search-site"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>site: 検索演算子</span></a></li><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/search-operators/image-search"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google 画像検索の検索演算子</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>不正行為の防止とモニタリング</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/security"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>概要</span></a></li><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/prevent-abuse"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ユーザー生成スパムを防ぐ</span></a></li><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/security/malware"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>マルウェアと望ましくないソフトウェア</span></a></li><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/security/prevent-malware"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>マルウェアへの感染を防止する</span></a></li><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/security/social-engineering"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ソーシャル エンジニアリング（フィッシングや偽のサイト）</span></a></li><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/security/safe-browsing-repeat-offenders"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>違反を繰り返すサイトに関する Google セーフ ブラウジング ポリシー</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/search/docs/monitor-debug/trends-start"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google トレンドを使ってみる</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>サイト固有のガイド</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>e コマース</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/specialty/ecommerce"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>概要</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/ecommerce/where-ecommerce-data-can-appear-on-google"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>コンテンツが表示される場所</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/ecommerce/share-your-product-data-with-google"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>商品データを共有する</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/ecommerce/include-structured-data-relevant-to-ecommerce"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>構造化データを追加する</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/ecommerce/how-to-launch-an-ecommerce-website"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>新しいウェブサイトをリリースする</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/ecommerce/write-high-quality-reviews"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>質の高いレビューを書く</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/ecommerce/designing-a-url-structure-for-ecommerce-sites"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>URL 構造を設計する</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>e コマース サイトの構造</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/ecommerce/pagination-and-incremental-page-loading"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ページ分け、段階的ページ読み込み、Google 検索</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>多地域と多言語</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/specialty/international"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>概要</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/international/managing-multi-regional-sites"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>多地域、多言語のサイトの管理</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/international/localized-versions"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ページのローカライズ版について Google に知らせる</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/international/locale-adaptive-pages"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google が地域対応ページをクロールする方法</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>露骨な表現を含むコンテンツ</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/specialty/explicit/guidelines"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>露骨な表現を含むコンテンツが掲載されたサイトに関するガイドライン</span></a></li><li class="devsite-nav-item"><a href="/search/docs/specialty/explicit/troubleshooting"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>サイトが誤って露骨な表現として報告された場合の対応方法</span></a></li></ul></div></li></ul></div></li>
+          </ul>
+        
+        
+          
+    
+      
+      <ul class="devsite-nav-list" menu="ドキュメント"
+          aria-label="サイドメニュー" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      SEO の基礎
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: はじめに"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      はじめに
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/essentials"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 検索の基本事項"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      検索の基本事項
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/fundamentals/seo-starter-guide"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: SEO スターター ガイド"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      SEO スターター ガイド
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/fundamentals/ai-optimization-guide"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 生成 AI 検索向けに最適化"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      生成 AI 検索向けに最適化
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/fundamentals/how-search-works"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google 検索の仕組み"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google 検索の仕組み
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/fundamentals/do-i-need-seo"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: SEO 業者の利用を検討する"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      SEO 業者の利用を検討する
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      クロールとインデックス登録
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/crawling-indexing/sitemaps/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: サイトマップ"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      サイトマップ
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/crawling-indexing/robots/intro"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: robots.txt"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      robots.txt
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/crawling-indexing/special-tags"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: メタタグ"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      メタタグ
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/crawling-indexing/ask-google-to-recrawl"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: クローラーの管理"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      クローラーの管理
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/crawling-indexing/control-what-you-share"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 削除"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      削除
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/crawling-indexing/consolidate-duplicate-urls"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 正規化"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      正規化
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/crawling-indexing/301-redirects"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: リダイレクト"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      リダイレクト
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/crawling-indexing/javascript/javascript-seo-basics"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: JavaScript SEO"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      JavaScript SEO
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      ランキングと検索での見え方
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/appearance/visual-elements-gallery"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 視覚要素ギャラリー"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      視覚要素ギャラリー
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/appearance/title-link"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: タイトルリンク"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      タイトルリンク
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/appearance/snippet"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: スニペット"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      スニペット
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/appearance/google-images"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 画像"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      画像
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/appearance/video"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 動画"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      動画
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/appearance/structured-data/search-gallery"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 構造化データ"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      構造化データ
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/appearance/favicon-in-search"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ファビコン"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ファビコン
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      サイト固有のガイド
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/specialty/ecommerce"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: e コマース"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      e コマース
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/specialty/international"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 国際化したサイトと多言語サイト"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      国際化したサイトと多言語サイト
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      データ分析
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/monitor-debug/search-console-start"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Search Console を使ってみる"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Search Console を使ってみる
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/monitor-debug/debugging-search-traffic-drops"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: トラフィック減少のデバッグ"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      トラフィック減少のデバッグ
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/monitor-debug/google-analytics-search-console"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Search Console と Google アナリティクスのデータを SEO に使用する"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Search Console と Google アナリティクスのデータを SEO に使用する
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/docs/monitor-debug/trends-start"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google トレンドを使ってみる"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google トレンドを使ってみる
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="新機能"
+          aria-label="サイドメニュー" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/news"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: すべてのアップデート"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      すべてのアップデート
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/search/updates"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ドキュメントの更新情報"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ドキュメントの更新情報
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ランキングの更新情報"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ランキングの更新情報
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://www.youtube.com/channel/UCWf2ZlNsCGDS89VBF_awNvA"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: YouTube の新しい動画"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      YouTube の新しい動画
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://pod.link/1512522198"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ポッドキャストの最近のエピソード"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ポッドキャストの最近のエピソード
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+    
+  
+        
+        
+          
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="このページの内容"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article"><style>
+      /* Styles inlined from /search/sitewide.css */
+/* Popped white box with shadow*/
+.sc-shadow-box-row .devsite-landing-row-inner {
+  background-color: #fff;
+  box-shadow: 0 13px 18px -8px rgba(0,0,0,0.15), 0 11px 55px 10px rgba(0,0,0,0.07);
+  border-radius: 8px;
+  margin-bottom: 55px;
+}
+
+/* Stat box for big numbers and description*/
+.big-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 64px 32px;
+    text-align: center;
+}
+@media (min-width: 481px) {
+  .big-stats {
+      flex-direction: row;
+  }
+}
+.big-stat {
+    margin-bottom: 32px;
+}
+@media (min-width: 481px) {
+  .big-stat {
+      flex: 1;
+      margin: 0 8px;
+  }
+}
+.big-stat__figure {
+    font-size: 1.5em;
+    line-height: 1em;
+}
+@media (min-width: 241px) {
+  .big-stat__figure {
+      font-size: 4em;
+  }
+}
+@media (min-width: 1020px) {
+  .big-stat__figure {
+      font-size: 6em;
+  }
+}
+.big-stat__description,
+.big-stat__figure {
+    color: inherit;
+    font-family: "Google Sans",sans-serif;
+    margin: 0;
+    text-align: inherit;
+}
+.big-stat__description {
+    line-height: 1.5em;
+}
+.big-stat__description,
+.big-stat__figure {
+    color: inherit;
+    font-family: "Google Sans",sans-serif;
+    margin: 0;
+    text-align: inherit;
+}
+.big-stat__sub {
+    font-size: .5em;
+    line-height: 1em;
+    vertical-align: baseline;
+}
+
+/* Green background and text -- consistent style with devsite notices */
+.green {
+    background: #e0f2f1;
+    color: #00796b;
+}
+
+/* Color scheme of unconference for background and text */
+.unconference-yellow {
+  background: #fdd901;
+  color: #3a3a3a;
+}
+
+/* Publish date styling */
+.publish-date {
+  font-size: smaller;
+  font-style: italic
+}
+
+/*
+  Fixes SVG label spacing fix to avoid webkit (Safari et. al.) issues
+*/
+foreignObject p {
+  margin: 0 ;
+  padding: 1rem 0;
+}
+
+      </style>
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="パンくずリスト">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/?hl=ja"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          ホーム
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/search?hl=ja"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Google Search Central"
+      
+    >
+    
+          Search Central
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/search/docs?hl=ja"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Documentation"
+      
+    >
+    
+          Documentation
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Documentation"
+  product-id="103417"
+  bucket="Search Docs"
+  context="DevSite feedback link"
+  version="t-devsite-webserver-20260723-r00-rc00.479195742362430491"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+  
+    disable-product-feedback
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/search/images/google-search-central-logo.svg?hl=ja"
+    
+  
+  
+    project-support-url="https://developers.google.com/search/help?hl=ja"
+  
+  
+  >
+
+  <button>
+  
+    
+    フィードバックを送信
+  
+  </button>
+</devsite-feedback>
+  <devsite-actions hidden data-nosnippet>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+    
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  <div class="devsite-article-body clearfix
+  devsite-no-page-title">
+
+  
+    
+    
+    
+  <h1 class="page-title" data-text="検索エンジン最適化（SEO）スターター ガイド" id="search-engine-optimization-seo-starter-guide" tabindex="-1">検索エンジン最適化（SEO）スターター ガイド</h1>
+  
+<p>
+  ウェブサイトの構築時には、ユーザーを念頭に置き、見つけやすく閲覧しやすいサイトになるよう工夫するのが普通です。検索エンジンもユーザーの一種ですが、コンテンツを見つけるためにユーザーの手助けをします。SEO（検索エンジン最適化）では、検索エンジンにコンテンツを理解させることで、ユーザーが検索エンジンからサイトを見つけてアクセスすべきかどうかを判断できるようにします。</p>
+<p>
+  <a href="https://developers.google.com/search/docs/essentials?hl=ja">検索の基本事項</a>では、ウェブサイトが Google 検索の表示対象となるために特に重要となる事項を説明しています。Google のインデックスに確実に登録される方法はありませんが、<b>検索の基本事項に沿って作成したサイトは Google の検索結果に表示されやすくなります</b>。SEO とは、一歩進んで <b>Google 検索での存在感を高める取り組みのことです</b>。このガイドでは、サイトの改善方法の中から特に一般的で効果の高いものをいくつか選んで説明します。</p>
+<p>
+  残念ながら、Google でのランキングがトップになるような秘訣はありません。これからおすすめする方法の中には、皆さんのビジネスには該当しない方法もあると思いますが、このベスト プラクティスを活用することで、検索エンジン（Google 以外も含む）からのクロール、インデックス登録、内容把握が容易になることを願っております。</p>
+<h2 data-text="Google 検索の仕組み" id="hsw" tabindex="-1">Google 検索の仕組み</h2>
+<p>
+  Google は完全に自動化された検索エンジンです。クローラーというプログラムを使用してウェブを絶えず探索し、見つかったページをインデックスに登録しています。通常、サイトをウェブに公開する以外のことを行っていただく必要はありません。検索結果に表示されるサイトのほとんどは、ウェブのクロール中に発見され、自動的に追加されたものです。さらに詳しいことは、<a href="https://developers.google.com/search/docs/fundamentals/how-search-works?hl=ja">Google の検索の仕組み、クロール、検索結果への表示についてのドキュメント</a>をご覧ください。</p>
+<aside class="key-point">
+  <b>お急ぎの方や詳細にご関心がない方は、</b>専門家の採用をご検討ください。その際には、<a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=ja">こちらの項目</a>をご検討ください。</aside>
+<h2 data-text="検索結果への反映にかかる時間" id="how-long-must-i-wait" tabindex="-1">検索結果への反映にかかる時間</h2>
+<p>
+  変更した結果が Google 側に反映されるまでにはある程度の時間がかかります。数時間かかる変更もあれば、数か月かかる変更もあります。一般的には、数週間待ってから Google 検索の検索結果に良い影響があったかどうか確認することをおすすめします。ただし、変更すれば必ず目に見える変化が現れるというわけではありません。結果に満足できない場合には、ビジネス戦略上許される範囲内で変更を繰り返しながら違いが出るかどうか確認してみてください。</p>
+<h2 data-text="Google がコンテンツを見つけられるようにする" id="find" tabindex="-1">Google がコンテンツを見つけられるようにする</h2>
+<p>
+  以下の方法を実際に試す前に、すでに Google に発見されているかを確認してください（何もする必要がないかもしれないからです）。<code dir="ltr" translate="no"><a href="https://developers.google.com/search/docs/monitor-debug/search-operators/all-search-site?hl=ja">site: search operator</a></code> を使って、Google で自分のサイトを検索しましょう。検索結果が自分のサイトを指していれば、インデックスに登録されています。たとえば、「<code dir="ltr" translate="no">site:wikipedia.org</code>」を検索すると、<a class="external-link" href="https://www.google.com/search?q=site%3Awikipedia.org&hl=ja" >このような結果</a>が表示されます。自分のサイトが表示されない場合は、<a href="https://developers.google.com/search/docs/essentials/technical?hl=ja">技術要件</a>に目を通して Google 検索での表示を妨げる技術的な要因が存在しないことを確認してから、次に進んでください。</p>
+
+    
+    <aside class="note"><p>検索エンジンの仕組みを漫画で説明しています。詳しく知りたい方は、こちらをご覧ください。</p>
+      <devsite-expandable id="manga">
+      <button href="#manga" type="button" class="button expand-control once gc-analytics-event" data-category="Search docs" data-label="Expand manga button"><span class="material-icons" aria-hidden="true" translate="no">expand_more</span> 漫画を読む</button>
+      <img src="https://developers.google.com/static/search/docs/images/How-Google-Search-Works-Manga-001.png?hl=ja" alt="猫カフェの店長の佐賀須さんは、パソコンの前で困惑して眉をひそめています。彼は自分のウェブサイトで集客促進キャンペーンを行っていますが、実際に店に来る人は誰もいないようです。 アルバイトの三田さんは、何か手っ取り早い解決策はないかと考えていますが、簡単に解決できるとは思っていません。">
+      <img src="https://developers.google.com/static/search/docs/images/How-Google-Search-Works-Manga-002.png?hl=ja" alt="突然出現した Googlebot くんは、ページが公開されたからといって、人々がそのページを検索結果で見つけられるわけではないことを説明します。Googlebot くんは、検索の仕組みには、クロール、インデックス登録、検索結果の提供の 3 つの段階があると紹介します。佐賀須さんはパニックに陥り、どうすれば確実に検索結果に表示されるようになるか質問します。Googlebot はウェブ全体で新しい情報を探しており、多くのホームページが世界中に存在しています。">
+      <img src="https://developers.google.com/static/search/docs/images/How-Google-Search-Works-Manga-003a.png?hl=ja" alt="佐賀須さんは理解し始めました。それは、海で泳いで網を投げるようなものです。 Googlebot はインターネットの大海を泳ぎ回り、そこで新しいページを探しています。">
+      <img src="https://developers.google.com/static/search/docs/images/How-Google-Search-Works-Manga-003b.png?hl=ja" alt="佐賀須さんは、Googlebot がどのようにしてホームページを見つけてクロールするのか質問しています。パスワードまたはその他のログイン保護でアクセスできないホームページが現れると、Googlebot はそれ以上調べることができません。">
+      <img src="https://developers.google.com/static/search/docs/images/How-Google-Search-Works-Manga-004a.png?hl=ja" alt="次にインデックスの話です。Googlebot くんは、同様のコンテンツが複数存在する場合に、クラスター化してインデックスに登録すると説明しています。佐賀須さんは、Googlebot がホームページをインデックスに登録していないのは、Googlebot が犬好きのためなのだろうかと疑っています。 Googlebot くんは、そうではないことをすぐに説明します。 一般的にインデックス登録は保証されていないのです。">
+      <img src="https://developers.google.com/static/search/docs/images/How-Google-Search-Works-Manga-004b.png?hl=ja" alt="Googlebot くんは、ホームページがインデックスに登録されない理由として、低品質コンテンツ、ページをブロックするメタ タグの実装、またはインデックス登録を困難するようなデザインと説明しています。佐賀須さんは自分のウェブサイトがインデックスに登録されないかも、と不安になっています。">
+      <img src="https://developers.google.com/static/search/docs/images/How-Google-Search-Works-Manga-005a.png?hl=ja" alt="Googlebot がページをクロールでき、ページがインデックスに登録されているので佐賀須さんはもう安心しているようですが、、本当にもうユーザーはそのページを Google 検索で見つけられるのでしょうか?。それは、ユーザーがどこから検索しているか、どの言語を使用しているかなど、さまざまな要因によって異なります。">
+      <img src="https://developers.google.com/static/search/docs/images/How-Google-Search-Works-Manga-005b.png?hl=ja" alt="Googlebot くんは、ページがユーザーに関連していないか、メタ タグによって妨げられているために、ページが検索結果に表示されない場合があると説明しています。 Google が猫カフェのページをクロールしようとするのを、佐賀須さんは不安げに見守っています。 数週間後、ついにホームページの紹介を見た初めてのお客さんが猫カフェにいらっしゃいました。">
+    </devsite-expandable>
+  </aside>
+  
+  
+<p>
+  Google では、主にクロール済みのページからリンクをたどることで新たにページを発見しています。たいていは他のサイトからのリンクがあるものです。リンクしてくれるサイトは時間がたてば自然に現れるものですが、見つけてもらえるように<a href="#promoting">ウェブサイトを宣伝する</a>という方法もあります。</p>
+<p>
+  また、技術的な方法ですが、<a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=ja">サイトマップ</a>を送信するという方法もあります。サイトマップとは、サイト内の重要だと思われる URL をすべて含めたファイルのことです。これを自動的に行うコンテンツ マネジメント システム（CMS）もあります。ただ、これは必須ではないので、まずは<a href="#promoting">サイトの存在を知ってもらう</a>ことから始めてください。</p>
+<h3 data-text="ページの見え方が Google とユーザーで同じかどうかを確認する" id="check-if-google-can-see" tabindex="-1">ページの見え方が Google とユーザーで同じかどうかを確認する</h3>
+<p>
+  Google がページをクロールする際は、<a href="https://developers.google.com/search/blog/2014/05/understanding-web-pages-better?hl=ja">平均的なユーザーが見た場合と同じように見える</a>ことが理想です。そのためには、ユーザーのブラウザからアクセスできるリソースに、Google からもアクセスできる必要があります。<a class="external-link" href="https://en.wikipedia.org/wiki/CSS" >CSS</a> や <a class="external-link" href="https://en.wikipedia.org/wiki/JavaScript" >JavaScript</a> のようなサイトの重要な構成要素が隠されていると、Google がページの内容を把握できません。そのため、ターゲットとする語句で検索されたときに表示されなかったり、上位にランキングされなかったりする可能性があります。</p>
+<p>
+  ユーザーが実際にいる地域に応じて掲載情報を変えている場合は、Google のクローラーが実行される地域（通常は米国）の表示内容で問題がないことを確認してください。</p>
+<p>
+  <a class="external-link" href="https://support.google.com/webmasters/answer/9012289?hl=ja" >Search Console の URL 検査ツール</a>を使えば、Google からの見え方を確認できます。</p>
+<h3 data-text="Google の検索結果から除外したい場合" id="dont-want-a-page-in-googles-search-results" tabindex="-1">Google の検索結果から除外したい場合</h3>
+<p>
+  サイトの全部または一部が検索結果から除外されるようにオプトアウトすることが必要な場合もあります。たとえば、はずかしい思いをしたという話題を投稿した場合、それを検索結果に表示させたくはないでしょう。Google では各種の方法で URL のクロールとインデックス登録を拒否できます。一部のファイルやディレクトリを、あるいはサイト全体を Google 検索からブロックしたい場合には、<a href="https://developers.google.com/search/docs/crawling-indexing/control-what-you-share?hl=ja#how-to-block-content">コンテンツを検索結果に表示させない方法</a>に関するガイドをご覧ください。</p>
+<h2 data-text="サイトを整理する" id="organize" tabindex="-1">サイトを整理する</h2>
+<p>
+  サイトの構築時や改装時には、論理的に整理することをおすすめします。検索エンジンやユーザーがページ間の関係を把握しやすくなるからです。ただし、今すぐ整理し直す必要はありません。長期的にはよいことですが（特に大規模なサイトの場合）、サイトが整理されていなくても、おそらく、そのままの状態で検索エンジンが把握してくれます。</p>
+<h3 data-text="わかりやすい URL を使用する" id="use-descriptive-urls" tabindex="-1">わかりやすい URL を使用する</h3>
+<p>
+  URL の各部分はパンくずリストとして検索結果に表示できるので、ユーザーも URL から結果が役に立つかどうかを把握できます。</p>
+<svg aria-labelledby="descriptive-url" direction="ltr" viewBox="0 0 750 300" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <title id="descriptive-url">Google 検索のテキスト検索結果を示すイラスト。コールアウトでドメインやパンくずリストなどの特定の視覚的な URL 要素にラベルを付けている</title>
+  <image width="100%" y="10%" href="https://developers.google.com/search/docs/images/text-result.png?hl=ja"></image>
+  <line stroke="#ffba00" stroke-width="4px" x1="200" x2="200" y1="120" y2="300"></line>
+  <foreignObject height="50" width="300" x="210" y="260">
+    <p xmlns="http://www.w3.org/1999/xhtml"><a href="https://developers.google.com/search/docs/appearance/visual-elements-gallery?hl=ja#domain">ドメイン</a></p>
+  </foreignObject>
+  <line stroke="#ffba00" stroke-width="4px" x1="330" x2="330" y1="20" y2="110"></line>
+  <foreignObject height="50" width="300" x="340" y="0">
+    <p xmlns="http://www.w3.org/1999/xhtml"><a href="https://developers.google.com/search/docs/appearance/visual-elements-gallery?hl=ja#breadcrumb">パンくずリスト</a></p>
+  </foreignObject>
+</svg>
+<p>
+  Google では URL 中の言葉に基づいて自動的にパンくずリストを学習していますが、技術的には、<a href="https://developers.google.com/search/docs/appearance/structured-data/breadcrumb?hl=ja">構造化データ</a>によって影響を与えることもできます。次の例のように、ユーザーの役に立ちそうな言葉を URL に含めることをおすすめします。</p>
+<p><code dir="ltr" translate="no">https://www.example.com/pets/cats.html</code></p>
+<p>たとえば、次の例のようにランダムな識別子だけが含まれている URL は、あまりユーザーの役に立ちません。</p>
+<p><code dir="ltr" translate="no">https://www.example.com/2/6772756D707920636174</code></p>
+<h3 data-text="類似トピックのページをディレクトリにまとめる" id="group-topically" tabindex="-1">類似トピックのページをディレクトリにまとめる</h3>
+<img alt="ページがグループにまとめられている様子を表すイラスト" class="attempt-right" src="https://developers.google.com/static/search/docs/images/grouping-pages-in-directories.png?hl=ja" width="280" />
+<p>
+  数千以上の URL を含むようなサイトの場合は、サイトの構造が Google によるクロールとインデックス登録の動作に影響を与えます。特にディレクトリ（フォルダ）を使って類似のトピックをまとめていると、各ディレクトリ内の URL が変更される頻度を Google が学習しやすくなります。</p>
+<p>
+  次のような URL について考えましょう。</p>
+<p>
+<code dir="ltr" translate="no">https://www.example.com/policies/return-policy.html</code>
+</p>
+<p>
+  <code dir="ltr" translate="no">https://www.example.com/promotions/new-promos.html</code>
+</p>
+<p>
+  <code dir="ltr" translate="no">policies</code> ディレクトリ内のコンテンツはめったに変更されませんが、<code dir="ltr" translate="no">promotions</code> ディレクトリ内のコンテンツはかなり高い頻度で変更されます。Google はこの情報を学習することで、ディレクトリごとのクロール頻度を変えています。検索を考慮したサイト構造については、<a href="https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure?hl=ja">e コマース サイト向けのガイド</a>をご覧ください。このようなサイトは大規模なことが多いため URL 構造の重要性が高くなります。</p>
+<h3 data-text="重複コンテンツを減らす" id="reduce-duplicate-content" tabindex="-1">重複コンテンツを減らす</h3>
+<p>
+  異なる URL で同じコンテンツが表示される（<a href="https://developers.google.com/search/docs/crawling-indexing/canonicalization?hl=ja">重複コンテンツ</a><i></i>と呼びます）サイトもありますが、検索エンジンでは、コンテンツごとにユーザーに表示する URL（正規<i></i> URL）が 1 つ選ばれます。</p>
+<p>
+  サイトに重複コンテンツがあっても Google のスパムポリシー違反にはなりませんが、ユーザー エクスペリエンスを損ない、重要ではない URL に検索エンジンのクロール リソースを浪費させてしまう可能性があります。ご興味があれば、ページの<a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls?hl=ja">正規バージョンを指定</a>できるかどうか検討してもよいのですが、自分で URL の正規化をしなくても、Google が代わりに正規化を試みます。</p>
+<p>
+  正規化に取り組む際には、各コンテンツにアクセスできる URL が 1 つのみになるようにします。特定のプロモーションに関して同じ情報を掲載したページが 2 つあると、ユーザー エクスペリエンスに混乱が生じます（たとえば、どちらが正しいページなのか、2 つのページに違いがあるのかと迷うことになります）。</p>
+<p>
+  同じ情報のページが複数ある場合は、使用しない URL からその情報に最もふさわしい URL への<a href="https://developers.google.com/search/docs/crawling-indexing/301-redirects?hl=ja">リダイレクト</a>を設定します。リダイレクトを設定できない場合は、<code dir="ltr" translate="no"><a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls?hl=ja">rel="canonical"</a></code> <code dir="ltr" translate="no">link</code> 要素を使ってください。繰り返しますが、それほど気にする必要はありません。一般的には、検索エンジンが正規化してくる場合がほとんどです。</p>
+<h2 data-text="興味深く有益なサイトにする" id="make-your-site-interesting" tabindex="-1">興味深く有益なサイトにする</h2>
+<p>
+  検索結果での存在感を高めるには、魅力的で役立つコンテンツを作成することが、このガイドで説明している他のどの方法よりも有効であると考えられます。魅力的で、役に立つコンテンツといっても、その意味は人によって異なりますが、一般的には以下のような点で共通しています。</p>
+<ul>
+  <li><b>文章が読みやすく、よく整理されている</b>: 文章をよく練り、わかりやすく自然な言葉を使い、誤字脱字や文法的な誤りをなくします。長い文章は段落や章などに分け、全体を見通せるように見出しを付けてください。</li>
+  <li><b><a href="https://developers.google.com/search/docs/essentials/spam-policies?hl=ja#scraped-content">コンテンツに独自性がある</a></b>: 新規のコンテンツを作成する際は、たとえ一部であっても他人のコンテンツをコピーしないでください。ご自身の知識に基づいて、自分で作成してください。誰かが公開したコンテンツの焼き直しはしないでください。</li>
+  <li><b>コンテンツが最新</b>: 公開済みのコンテンツを確認し、必要なら更新し、的外れになったら削除します。</li>
+  <li><b>コンテンツが<a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=ja">有用で信頼性が高くユーザーを第一に考えている</a>:</b> 読者から役に立ち信頼できると思われるようなコンテンツを作ってください。たとえば、専門知識や豊富な経験を持つ情報発信者が書いた記事であれば、記事の専門性を理解してもらえます。</li>
+</ul>
+<h3 data-text="読者の検索キーワードを予測する" id="expect-search-terms" tabindex="-1">読者の検索キーワードを予測する</h3>
+<p>
+  ユーザーがコンテンツを探すときに検索しそうなキーワードを考えてみましょう。そのトピックについてよく知っているユーザーは、よく知らないユーザーとは異なるキーワードを検索クエリで使用するかもしれません。たとえば、「シャルキュトリ」と検索するユーザーもいれば、「チーズボード」と検索するユーザーもいます。こういった検索行動の違いを予測し、読者を意識して執筆することで、検索結果でのパフォーマンスに良い影響を与えることができます。</p>
+<p>とはいっても、すべての検索方法を予測する必要ありません。Google の高度な言語マッチング システムは、ページとさまざまな検索語句との関連性を把握できるため、ページにそのとおりの語句を明示的に使用する必要はありません。</p>
+<h3 data-text="気が散る広告を避ける" id="distracting-ads" tabindex="-1">気が散る広告を避ける</h3>
+<p>
+  広告もインターネットの一部であり、ユーザーに見てもらうことを意図したものですが、あまり気を散らさないような、またコンテンツを読む邪魔にならないようなものにしましょう。たとえば、ウェブサイトを使いづらくするような広告や<a href="https://developers.google.com/search/docs/appearance/avoid-intrusive-interstitials?hl=ja">インタースティシャル ページ</a>（ユーザーが見たいコンテンツにアクセスする前後に表示されるページ）は避けます。</p>
+<h3 data-text="関係のあるリソースにリンクする" id="link-to-relevant-resources" tabindex="-1">関係のあるリソースにリンクする</h3>
+<p>
+  リンクを使用することで、ユーザーや検索エンジンを自分のサイトの他の部分や、他のサイトの関連するページにつなげることができます。Google でも、新たなページの発見のほとんどはリンクを通じて行われています。Google が発見して検索結果に表示できるように、ぜひともリンクの使用を検討してください。またリンクは、執筆内容の裏付けとなる別のコンテンツにユーザーや Google をつなげるという点でも価値があります。</p>
+<img alt="あるウェブページから別の関連リソースにリンクしている様子を表すイラスト" src="https://developers.google.com/static/search/docs/images/link-to-relevant-resources.png?hl=ja" style="display:block;margin:auto;" width="500" />
+<h4 data-text="効果的なリンクテキストを記述する" id="good-link-text" tabindex="-1">効果的なリンクテキストを記述する</h4>
+<p>
+  リンクテキスト<i></i>（アンカー テキスト<i></i>とも呼びます）とは、リンクのテキスト部分であり、表示されるものです。このテキストはユーザーや Google に対して、リンク先のページについての情報を伝えます。<a href="https://developers.google.com/search/docs/crawling-indexing/links-crawlable?hl=ja#write-good-anchor-text">適切なアンカー テキスト</a>があれば、ユーザーと検索エンジンは、リンクされたページにアクセスする前にその内容を簡単に把握できます。<img alt="リンクのテキスト部分を示すイラスト" class="attempt-right" src="https://developers.google.com/static/search/docs/images/what-is-link-text.png?hl=ja" style="display:block;margin:auto;" width="600" />
+</p>
+<h4 data-text="必要に応じてリンクする" id="link-when-you-need-to" tabindex="-1">必要に応じてリンクする</h4>
+<p>
+  ユーザーにも検索エンジンにも、リンクによってトピックに関する背景を補足することができ、それはトピックに関するご自身の知識を示すことにもなります。ただし、他のサイトにあるなどの管理外のページにリンクする際には、リンク先が信用できるものか確認してください。コンテンツが信用できなくてもリンクが必要な場合は、リンクに <a href="https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links?hl=ja"><code dir="ltr" translate="no">nofollow</code> などの注釈</a>を付け、検索エンジンがご自身のサイトをリンク先のサイトと関連付けないようにしましょう。こうすることで、Google 検索でのランキングへの悪影響を防げます。</p>
+<p>
+  フォーラムでの投稿やコメントなどのユーザー作成コンテンツを受け入れている場合は、ユーザーが投稿したリンクに必ず <code dir="ltr" translate="no">nofollow</code> などの注釈が付くように CMS を設定しましょう。この場合のコンテンツ作成者は他人なので、サイトのユーザーのリンク先サイトが無条件に自分のサイトに関連付けられることは望ましくないと思われます。また、スパマーによる悪用を防ぐことにもなります。</p>
+<h2 data-text="Google 検索での見え方に影響を与える" id="control-how-your-site-looks" tabindex="-1">Google 検索での見え方に影響を与える</h2>
+<div class="video-wrapper">
+  <devsite-video video-id="IosyvXjQvlw">
+  </devsite-video>
+</div>
+<p>
+  Google 検索の検索結果ページは通常、サイトにアクセスすべきかどうかの判断材料となる、<a href="https://developers.google.com/search/docs/appearance/visual-elements-gallery?hl=ja">さまざまな視覚的な要素</a>から構成されています。ここでは、視覚的に重要な要素である、タイトルリンク<i></i>とスニペット<i></i>について説明します。</p>
+<h3 data-text="タイトルリンクに影響を与える" id="titles" tabindex="-1">タイトルリンクに影響を与える</h3>
+<p>
+  タイトルリンク<i></i>は検索結果の見出し部分となり、クリックする検索結果を判断する際の参考になります。Google がこのタイトルリンクを生成する際に使用する情報源には、<code dir="ltr" translate="no">&lt;title&gt;</code> 要素（タイトル テキストとも言います）やページ内の見出しに使われている言葉など、いくつかの種類があります。このタイトル テキストは、ブラウザやブックマークのタイトルにも使用されます。</p>
+
+<svg aria-labelledby="svg-title-link" direction="ltr" viewBox="0 0 800 250" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <title id="svg-title-link">Google 検索のテキスト検索結果を示すイラスト。タイトルリンクの部分が枠に囲まれて強調されている</title>
+  <image width="100%" y="0%" href="https://developers.google.com/search/docs/images/blank-title-link.png?hl=ja"></image>
+  <foreignObject height="80" width="600" x="55" y="64">
+    <p style="font: var(--devsite-h2-font)" xmlns="http://www.w3.org/1999/xhtml"><a class="external-link" href="https://wikipedia.org/wiki/Chili_oil" >ラー油を自分で作る方法</a></p>
+  </foreignObject>
+</svg>
+
+<aside class="note"><b>CMS を使用している場合</b>は、タイトルに関して行う必要のある技術的な作業はないので、適切なタイトルを書くことに集中してください。ほとんどの CMS では、タイトルを自動的に HTML の <code dir="ltr" translate="no">&lt;title&gt;</code> 要素に設定します。</aside>
+<img alt="タイトル テキストがウェブページでどのように表示され、HTML でどのように記述されているかを示すイラスト" src="https://developers.google.com/static/search/docs/images/titles-on-page-html.png?hl=ja" style="display:block;margin:auto;" width="700" />
+<p>
+  良いタイトルを書くことで Google 検索のタイトルリンクに影響を与えることができます。良いタイトルとは、そのページに固有で、明確かつ簡潔であり、内容を正確に説明しているタイトルです。たとえば、ウェブサイトや会社の名前のほか、会社の住所などの重要な情報、ユーザーに何を提供するページなのかに関する情報などを含めることができます。<a href="https://developers.google.com/search/docs/appearance/title-link?hl=ja">タイトルリンクに関するドキュメント</a>に、良いタイトルの書き方や検索結果のタイトルリンクに影響を与える方法についてのヒントがあります。</p>
+<h3 data-text="スニペットを制御する" id="snippets" tabindex="-1">スニペットを制御する</h3>
+<p>
+  検索結果のタイトルリンクの下には通常、ターゲット ページの説明があり、ユーザーはこれを参考にしてクリックすべきかどうかを判断できます。これをスニペット<i></i>と呼びます。</p>
+
+<svg aria-labelledby="svg-snippet" direction="ltr" viewBox="0 0 800 300" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <title id="svg-snippet">Google 検索のテキスト検索結果を示すイラスト。スニペット部分が枠に囲まれて強調されている</title>
+  <image width="100%" y="10%" href="https://developers.google.com/search/docs/images/blank-snippet.png?hl=ja"></image>
+    <foreignObject height="65" width="680" x="55" y="140">
+    <p xmlns="http://www.w3.org/1999/xhtml">このガイドをお読みいただくと、卵を調理する方法を 5 分以内で学ぶことができます。半熟片面焼きの目玉焼き、ゆで卵、ポーチドエッグなど、あらゆる方法を取り上げています。</p>
+  </foreignObject>
+</svg>
+
+<p>
+  スニペットは検索結果からリンクされているページの実際の内容から生成されるので、その文言は完全に制御できます。また、メタ ディスクリプション タグ（通常は簡潔で 1～2 文からなるページの説明）の内容が使われることもあります。質の高いメタ ディスクリプションには、そのページに固有で、非常に的確な要点が簡潔に記載されています。その他のヒントについては、<a href="https://developers.google.com/search/docs/appearance/snippet?hl=ja#meta-descriptions">質の高いメタ ディスクリプションの書き方についてのドキュメント</a>をご覧ください。</p>
+<h2 data-text="最適化した画像をサイトに追加する" id="images" tabindex="-1">最適化した画像をサイトに追加する</h2>
+<p>
+  多くの人は視覚的に検索するため、画像がウェブサイトを発見するきっかけとなります。レシピブログの場合、たとえば「フルーツタルト レシピ」を検索し、さまざまなフルーツタルトの写真を見てブログを見つけます。</p>
+<p>
+  サイトに画像を追加する際には、ユーザーと検索エンジンがその画像を見つけて理解できるようにしましょう。</p>
+<h3 data-text="関連するテキストの近くに高画質の画像を追加する" id="add-images-near-text" tabindex="-1">関連するテキストの近くに高画質の画像を追加する</h3>
+<p>
+  高画質であれば、どの画像が探しているものに一番近いかを判断するのに十分な状況や情報をユーザーに提供できます。たとえば、「ヒナギク」の検索結果にエーデルワイス（セイヨウウスユキソウ）がまぎれ込んでいても、高画質であれば見分けられます。</p>
+<p>
+  鮮明な画像を使い、関連するテキストの近くに配置してください。画像の近くにあるテキストは、何に関する画像で、そのページの文脈で何を意味するかを Google が把握するのに役立ちます。</p>
+<p>
+  たとえば、ロンドンの毛糸店を評価しているページであれば、毛糸店の住所、説明、クチコミ情報を記述した部分にその毛糸店の写真を埋め込むことは理にかなっています。こうすることで、Google とユーザーが画像をテキストに関連付けることができ、何に関するページなのかという背景を理解しやすくなります。</p>
+<h3 data-text="わかりやすい代替テキストを画像に追加する" id="add-descriptive-alt-text-to-the-image" tabindex="-1">わかりやすい代替テキストを画像に追加する</h3>
+<p>
+  代替テキストとは、画像とコンテンツの関係を簡潔に説明するものです。何に関する画像なのかや、画像とページとの関係の背景を検索エンジンが理解するのに役立つため、<a href="https://developers.google.com/search/docs/appearance/google-images?hl=ja#descriptive-alt-text">適切な代替テキスト</a>を書くことは極めて重要です。<code dir="ltr" translate="no">img</code> 要素の <code dir="ltr" translate="no">alt</code> 属性を使って HTML に追加できますが、CMS では画像をサイトにアップロードする際にその説明を指定する簡単な方法が用意されている場合があります。<a href="https://developers.google.com/search/docs/appearance/google-images?hl=ja#descriptive-alt-text">適切な代替テキストの書き方</a>と、それを画像に追加する方法を確認してください。</p>
+<h2 data-text="動画を最適化する" id="videos" tabindex="-1">動画を最適化する</h2>
+<p>
+  ウェブサイトが主に個別の動画に関するページを含んだものである場合、Google 検索の動画検索結果からサイトを発見できる場合もあります。画像とテキストに関するベスト プラクティスのほとんどは、次のように動画にも当てはまります。</p>
+<ul>
+  <li>高画質な動画コンテンツを作成し、独立したページに埋め込み、関連するテキストの近くに配置する。</li>
+  <li>動画のタイトルと説明フィールドにわかりやすいテキストを書き込む（動画のタイトルもタイトルであることに変わりないので、ここでもタイトルの書き方に関するベスト プラクティスを適用できます）。</li>
+</ul>
+<p>
+  動画に特化したサイトの場合は、さらに<a href="https://developers.google.com/search/docs/appearance/video?hl=ja">検索エンジン向けに動画を最適化する</a>方法についても確認してください。</p>
+<h2 data-text="ウェブサイトを宣伝する" id="promoting" tabindex="-1">ウェブサイトを宣伝する</h2>
+<p>
+  新しいコンテンツを効果的に宣伝すれば、同じテーマに関心を持っているユーザーに発見されるのが早くなります。検索エンジンからも同様です。それにはさまざまな方法があります。</p>
+<ul>
+  <li>ソーシャル メディアのプロモーション</li>
+  <li>コミュニティ エンゲージメント</li>
+  <li>広告（オフライン、オンライン）</li>
+  <li>クチコミ、その他多数</li>
+</ul>
+<p>
+  <a class="external-link" href="https://www.nielsen.com/insights/2012/global-trust-in-advertising-and-brand-messages-2/" >特に効果的で持続的な方法</a>としては、クチコミがあります。サイトをよく知る人が友達にサイトについて伝え、その友達がサイトにアクセスするというものです。これには時間がかかる可能性があるので、通常はまずコミュニティ エンゲージメントなどの他の方法に時間と労力を投資する必要があります。Google for Creators では、<a class="external-link" href="https://creators.google/en-us/content-creation-guides/audience-engagement/?hl=ja" >読者層を構築し、エンゲージメントを高める方法</a>に関する優れた資料を用意しています。</p>
+<p>
+  会社やサイトのオフラインでのプロモーションに努めることも効果的です。たとえば、会社のサイトがある場合は、その URL を名刺、レターヘッド、ポスターなどに必ず記載します。また、許可を得てニュースレターを定期的に送り、新しいコンテンツについて知らせるのもよいでしょう。</p>
+<p>
+  どんなことでもそうですが、過度な宣伝で逆効果になる可能性があります。たとえば、疎ましく思われたり、検索エンジンから<a href="https://developers.google.com/search/docs/essentials/spam-policies?hl=ja">検索結果の人為的な操作</a>だと認識されたりする可能性があります。</p>
+<h2 data-text="Google が重要でないと考えること" id="focusing" tabindex="-1">Google が重要でないと考えること</h2>
+<p>
+  SEO が変化するにつれ、関連する考え方や方法も（そしてときには誤解も）変化してきました。かつてはベスト プラクティスや最優先事項だと思われていたことが、検索エンジン（とインターネット）の発展とともに、的外れで効果的ではない場合があります。</p>
+<p>
+  皆さんが SEO に関して本当に重要なことに集中できるように、インターネットで特によく見かける目立ったトピックを集めました。ここでお伝えしたいのは、皆さんのビジネス分野に最も適したことを行っていただきたいということです。ここでは具体的なポイントをいくつか説明します。</p>
+<table class="columns fixed responsive">
+  <tbody><tr>
+    <td class="hidden"></td>
+    <td>
+      <dl>
+        <dt>
+          メタ キーワード</dt>
+        <dd>Google 検索は<a href="https://developers.google.com/search/blog/2009/09/google-does-not-use-keywords-meta-tag?hl=ja">キーワード メタタグ</a>を利用しません。</dd>
+        <dt>
+          キーワードの乱用
+        </dt>
+        <dd>同じ言葉を何度も繰り返すことは（多少変化を持たせても）ユーザーをうんざりさせてしまうほか、<a href="https://developers.google.com/search/docs/essentials/spam-policies?hl=ja#keyword-stuffing">キーワードの乱用は Google のスパムに関するポリシーに違反する</a>ことにもなります。</dd>
+        <dt>
+          ドメイン名や URL パスの中のキーワード</dt>
+        <dd>
+          <p>サイト名を選ぶ際には、ビジネスに最もよく合った名前を選んでください。ユーザーはこの名前を使ってあなたのサイトを見つけるので、一般的なマーケティング プラクティスに沿って決めることをおすすめします。ランキングという観点で見ると、ドメイン名（または URL パス）中のキーワードだけでは、<a href="https://developers.google.com/search/docs/appearance/visual-elements-gallery?hl=ja#breadcrumb">パンくずリスト</a>に表示される以上の効果はほとんどありません。</p>
+          <p>
+            ドメイン名の話題が続きますが、TLD（「.com」や「.guru」のようなドメイン名の最後）に意味があるのは、特定の国のユーザーをターゲットにしている場合だけですが、その場合でも通常このシグナルの影響は弱いものです。たとえば、スイスから検索している人にオランダのチーズを売ろうとしている場合は、「.ch」というドメイン名を利用することにも（ビジネスと <a href="https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites?hl=ja#geotargeting">SEO の観点</a>で）多少の意味があります。それ以外の場合、どの TLD が使用されているか（「.com」か「.org」か「.asia」か）が Google 検索で考慮されることはありません。</p>
+        </dd>
+        <dt>
+          コンテンツの最小長と最大長</dt>
+        <dd>上位に表示させるという目的に関しては、コンテンツの長さだけを調節しても無意味です（魔法の文字数も、最小や最大の文字数も存在しませんが、おそらくゼロにすべきではないでしょう）。言葉にバリエーションを持たせていれば（反復にならないように自然な書き方をしていれば）、単純に使用するキーワードが増えるので、Google 検索に表示されるチャンスは多くなります。</dd>
+      </dl>
+    </td>
+    <td>
+      <dl>
+        <dt>
+          サブドメインかサブディレクトリか</dt>
+        <dd>ビジネスの観点からは、ビジネス上意味があればどちらでも構いません。たとえば、サブディレクトリに分割するとサイトの管理が容易になるかもしれませんし、サイトのトピックや業種によってはトピックをサブドメインに分割することに意味があるかもしれません。</dd>
+        <dt>PageRank</dt>
+        <dd>Google の基本的なアルゴリズムの一つである <a href="https://developers.google.com/search/docs/appearance/ranking-systems-guide?hl=ja#link-analysis">PageRank</a> ではリンクを利用していますが、Google 検索ではほかにも多くのものを利用しています。多数のランキング シグナルを利用しており、PageRank はその一つにすぎません。</dd>
+        <dt>
+          重複コンテンツは「ペナルティ」になる</dt>
+        <dd>複数の URL からアクセスできるコンテンツがあっても問題はなく、気にする必要はありません。非効率ですが、手動による対策が必要になることはありません。<a href="https://developers.google.com/search/docs/essentials/spam-policies?hl=ja#scraped-content">ただし、他人のコンテンツをコピーすることは、また別の話です。</a></dd>
+        <dt>
+          見出しの数や順序</dt>
+        <dd>
+          <p>
+            見出しを意味的な順番にすることは、スクリーン リーダーにとっては素晴らしいことですが、Google 検索にとっては順番どおりに使われていなくても問題ありません。ウェブは一般に正しくない HTML で書かれています。そのため、Google 検索が HTML 規格に潜むセマンティックスの意味に依存することはめったにありません。</p>
+          <p>
+            また、ページごとに魔法の見出し数や理想的な見出し数といったものが存在することもありません。ただ、リンクの数が多すぎると感じる場合、実際にそうである可能性が高いと言えます。</p>
+        </dd>
+        <dt>
+          E-E-A-T をランキング要因と考える</dt>
+        <dd>
+          <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=ja#eat">いいえ、そのようなことはありません。</a>
+        </dd>
+      </dl>
+    </td>
+  </tr>
+</tbody></table>
+<h2 data-text="次のステップ" id="next-steps" tabindex="-1">次のステップ</h2>
+<ul>
+  <li><b>Search Console を使ってみる</b>: Search Console をセットアップして、Google 検索でのパフォーマンスをモニタリングし、それを最適化しましょう。<a href="https://developers.google.com/search/docs/monitor-debug/search-console-start?hl=ja">アカウントのセットアップ方法と最初に確認すべきレポートについてのドキュメント</a>をご覧ください。</li>
+  <li><b>サイトの SEO を継続的に維持する</b>: サイト移行の準備、多言語サイトの管理など、<a href="https://developers.google.com/search/docs/fundamentals/get-started?hl=ja">サイトの存在感を長期にわたって維持すること</a>も含め、SEO のタスクとシナリオを詳細に学びましょう。</li>
+  <li><b>Google 検索の検索結果での見え方を改善する</b>: 各ページで<a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja">構造化データ</a>を正しく使用することで、レビューの星やカルーセルなど、Google 検索の検索結果で多数の特別な機能が使えるようになります。ページで使えるようになる<a href="https://developers.google.com/search/docs/appearance/structured-data/search-gallery?hl=ja">検索結果の種類についてのドキュメント</a>をご確認ください。</li>
+</ul>
+<h3 data-text="情報収集と問題解決" id="resources" tabindex="-1">情報収集と問題解決</h3>
+<p>
+  SEO ジャーニーを始めるにあたって、最新の変更点や資料公開の情報を得る方法をご紹介します。</p>
+<table class="columns fixed responsive">
+  <tbody><tr>
+    <td class="hidden"></td>
+    <td>
+      <ul>
+        <li><a href="https://developers.google.com/search/blog?hl=ja">Google 検索セントラルのブログ</a>: Google 検索セントラルのブログで最新情報を確認できます。Google 検索のアップデートや Search Console の新機能に関する情報をお届けします。</li>
+        <li><a class="external-link" href="https://www.linkedin.com/showcase/googlesearchcentral/" >LinkedIn</a> および <a class="external-link" href="https://twitter.com/googlesearchc" >X（旧 Twitter）</a>への Google 検索セントラルに関する投稿:
+          Google のアカウントをフォローすれば、Google 検索の最新情報や、優れたサイトの構築に役立つリソースを入手できます。
+        </li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a class="external-link" href="https://support.google.com/webmasters/community?hl=ja" >Google 検索セントラルのヘルプ フォーラム</a>: ウェブサイトの所有者向けのプロダクト フォーラムで、サイトの SEO に関する問題についての質問を投稿したり、質の高いサイトを作成するためのヒントを確認したりできます。このフォーラムでは、<a class="external-link" href="https://productexperts.withgoogle.com/" >プロダクト エキスパート</a>を含む数多くの経験豊富な参加者が活動しています。Google 社員が参加することもあります。</li>
+        <li><a class="external-link" href="https://www.youtube.com/c/GoogleSearchCentral?hl=ja" >Google 検索セントラルの YouTube チャンネル</a>: ウェブサイト所有者向けに作成された多数の参考になる動画を視聴できます。</li>
+      </ul>
+    </td>
+  </tr>
+</tbody></table>
+
+ 
+    
+ 
+
+  
+  
+  
+  
+
+  
+    <devsite-hats-survey class="nocontent" data-nosnippet
+      hats-id="egUfosvgZ0gb2CML1jd0VMoBx2ec"
+      listnr-id="103417"></devsite-hats-survey>
+  
+</div>
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="Documentation"
+  product-id="103417"
+  bucket="Search Docs"
+  context="DevSite feedback link"
+  version="t-devsite-webserver-20260723-r00-rc00.479195742362430491"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+  
+    disable-product-feedback
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/search/images/google-search-central-logo.svg?hl=ja"
+    
+  
+  
+    project-support-url="https://developers.google.com/search/help?hl=ja"
+  
+  
+  >
+
+  <button>
+  
+    
+    フィードバックを送信
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>特に記載のない限り、このページのコンテンツは<a href="https://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズの表示 4.0 ライセンス</a>により使用許諾されます。コードサンプルは <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 ライセンス</a>により使用許諾されます。詳しくは、<a href="https://developers.google.com/site-policies?hl=ja">Google Developers サイトのポリシー</a>をご覧ください。Java は Oracle および関連会社の登録商標です。</p>
+  <p>最終更新日 2025-12-18 UTC。</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="Documentation"
+  product-id="103417"
+  bucket="Search Docs"
+  context="DevSite feedback link"
+  version="t-devsite-webserver-20260723-r00-rc00.479195742362430491"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  data-nosnippet
+  
+    disable-product-feedback
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/search/images/google-search-central-logo.svg?hl=ja"
+    
+  
+  
+    project-support-url="https://developers.google.com/search/help?hl=ja"
+  
+  
+  >
+
+  <button>
+  
+    ご意見をお聞かせください
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["わかりやすい","easyToUnderstand","thumb-up"],["問題の解決に役立った","solvedMyProblem","thumb-up"],["その他","otherUp","thumb-up"]],[["必要な情報がない","missingTheInformationINeed","thumb-down"],["複雑すぎる / 手順が多すぎる","tooComplicatedTooManySteps","thumb-down"],["最新ではない","outOfDate","thumb-down"],["翻訳に関する問題","translationIssue","thumb-down"],["サンプル / コードに問題がある","samplesCodeIssue","thumb-down"],["その他","otherDown","thumb-down"]],["最終更新日 2025-12-18 UTC。"],[],["SEO improves website visibility in search results by helping search engines understand content and users decide to visit. Key actions include using sitemaps and links for content discovery, ensuring resource accessibility for Google, and creating high-quality, unique, user-focused content. Optimize URLs, titles, descriptions, and images. Utilize `robots.txt` or `noindex` to manage content visibility. Monitor site performance via Google Search Console, canonicalize duplicate content, and use relevant anchor text. Additionally, promote the site through diverse channels while avoiding over-promotion and spam practices.\n"]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+
+<nav class="devsite-footer-promos nocontent"
+     aria-label="プロモーション"
+     data-nosnippet>
+  <ul class="devsite-footer-promos-list">
+    
+    <li class="devsite-footer-promo">
+      <a href="https://www.linkedin.com/showcase/googlesearchcentral/"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+       
+         data-label="linkedin footer promo"
+       
+         aria-label="LinkedIn feed for Google Search Central"
+       
+         data-category="Search docs"
+       >
+        
+        
+        <picture>
+          
+          <img class="devsite-footer-promo-icon"
+                src="https://developers.google.com/static/search/images/li.png?hl=ja"
+                loading="lazy"
+                alt="LinkedIn">
+        </picture>
+        
+        <span class="devsite-footer-promo-label">
+          LinkedIn
+        </span>
+      </a>
+      <div class="devsite-footer-promo-description">LinkedIn でつながる</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="https://www.youtube.com/channel/UCWf2ZlNsCGDS89VBF_awNvA?hl=ja"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+       
+         data-category="Search docs"
+       
+         data-label="youtube footer promo"
+       
+         aria-label="Google Search Central YouTube channel"
+       >
+        
+        
+        <picture>
+          
+          <img class="devsite-footer-promo-icon"
+                src="https://developers.google.com/static/homepage-assets/images/yt.svg?hl=ja"
+                loading="lazy"
+                alt="YouTube">
+        </picture>
+        
+        <span class="devsite-footer-promo-label">
+          YouTube
+        </span>
+      </a>
+      <div class="devsite-footer-promo-description">動画を見る</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="https://feeds.feedburner.com/blogspot/amDG"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+       
+         data-label="blog footer promo"
+       
+         aria-label="RSS feed for the Search Central Blog"
+       
+         data-category="Search docs"
+       >
+        
+        
+        <picture>
+          
+          <img class="devsite-footer-promo-icon"
+                src="https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/rss_feed/default/24px.svg"
+                loading="lazy"
+                alt="ブログ">
+        </picture>
+        
+        <span class="devsite-footer-promo-label">
+          ブログ
+        </span>
+      </a>
+      <div class="devsite-footer-promo-description">RSS フィードに登録する</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="https://pod.link/1512522198"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+       
+         data-label="podcast footer promo"
+       
+         aria-label="Search Off the Record podcast episodes"
+       
+         data-category="Search docs"
+       >
+        
+        
+        <picture>
+          
+          <img class="devsite-footer-promo-icon"
+                src="https://developers.google.com/static/search/images/search-off-the-record-podcast-logo.png?hl=ja"
+                loading="lazy"
+                alt="ポッドキャスト">
+        </picture>
+        
+        <span class="devsite-footer-promo-label">
+          ポッドキャスト
+        </span>
+      </a>
+      <div class="devsite-footer-promo-description">「Google 検索オフレコ」を聴く</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="https://twitter.com/googlesearchc"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+       
+         data-label="twitter footer promo"
+       
+         aria-label="Twitter feed for Google Search Central"
+       
+         data-category="Search docs"
+       >
+        
+        
+        <picture>
+          
+          <img class="devsite-footer-promo-icon"
+                src="https://developers.google.com/static/homepage-assets/images/x.svg?hl=ja"
+                loading="lazy"
+                alt="X（Twitter）">
+        </picture>
+        
+        <span class="devsite-footer-promo-label">
+          X（Twitter）
+        </span>
+      </a>
+      <div class="devsite-footer-promo-description">X（Twitter）でつながる</div>
+    </li>
+    
+  </ul>
+</nav>
+
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="フッターのリンク"
+     data-nosnippet>
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">サポートを利用する</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://support.google.com/webmasters/community?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            ヘルプ フォーラムに移動
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/search/help/office-hours?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            オフィスアワーに質問を投稿する
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/search/help/report-quality-issues?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            スパム、フィッシング、マルウェアを報告する
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/search/help?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            その他のサポート リソース
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">リソース</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/search/docs/fundamentals/get-on-google?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            SEO が必要なケース
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            SEO スターター ガイド
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://status.search.google.com?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            検索システムのステータス
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://support.google.com/webmasters?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Search Console のドキュメント
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/search/case-studies/overview?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+              
+              
+            
+          
+            事例紹介
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">ツール</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://search.google.com/search-console?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Search Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://search.google.com/test/rich-results?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            リッチリザルト テスト
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://pagespeed.web.dev?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            PageSpeed Insights
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://search.google.com/test/amp?hl=ja"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            AMP テスト
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Google Developers のその他のウェブサイト">
+    <a href="https://developers.google.com/?hl=ja"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/v107582df1f8cabe95023057593fcfc98f8386291b244931fb3c357fcf4782855/developers/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com?hl=ja"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home?hl=ja"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com?hl=ja"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com?hl=ja"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//ai.google.dev/?hl=ja"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google AI Link"
+         
+         >
+          Google AI
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developers.google.com/products?hl=ja"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          すべてのプロダクト
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="ユーティリティのリンク">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="https://developers.google.com/terms/site-terms?hl=ja"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          利用規約
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy?hl=ja"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          プライバシー
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+          <devsite-concierge
+  
+  
+    data-info-panel
+  
+  
+    data-ai-panel
+  
+  
+  
+  
+    data-api-explorer-panel
+  >
+</devsite-concierge>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension4&#34;: &#34;Documentation&#34;, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension5&#34;: &#34;ja&#34;, &#34;dimension6&#34;: &#34;ja&#34;, &#34;dimension3&#34;: false, &#34;dimension11&#34;: false}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}, &#34;purpose&#34;: 1}, {&#34;dimensions&#34;: {&#34;dimension4&#34;: &#34;Documentation&#34;, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension5&#34;: &#34;ja&#34;, &#34;dimension6&#34;: &#34;ja&#34;, &#34;dimension3&#34;: false, &#34;dimension11&#34;: false}, &#34;gaid&#34;: &#34;UA-24532603-6&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}, &#34;purpose&#34;: 0}]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}, {&#34;id&#34;: &#34;G-Q04XXL6ZW2&#34;, &#34;purpose&#34;: 0}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-T98GCPGN&#34;, &#34;purpose&#34;: 1}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;ja&#34;, &#34;served&#34;: &#34;ja&#34;}, &#34;pageType&#34;: &#34;lcat&#34;, &#34;projectName&#34;: &#34;Documentation&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="5cQVbX6J5RB2wpQXnCAxabdk1K21Zc">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v107582df1f8cabe95023057593fcfc98f8386291b244931fb3c357fcf4782855/developers/js/app_loader.js', '[1,"ja",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v107582df1f8cabe95023057593fcfc98f8386291b244931fb3c357fcf4782855","https://www.gstatic.com/devrel-devsite/prod/v107582df1f8cabe95023057593fcfc98f8386291b244931fb3c357fcf4782855/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v107582df1f8cabe95023057593fcfc98f8386291b244931fb3c357fcf4782855/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v107582df1f8cabe95023057593fcfc98f8386291b244931fb3c357fcf4782855/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["DevPro__enable_google_payments_buyflow","DevPro__enable_credits_banner","AIStudioInteractionsToggle__interactions_are_default","DevPro__enable_devpro_offers","Cloud__enable_cloud_dlp_service","Concierge__enable_remove_info_panel_tags","MiscFeatureFlags__enable_view_transitions","DevPro__enable_g1_integration","EngEduTelemetry__enable_engedu_telemetry","Profiles__enable_playlist_community_acl","MiscFeatureFlags__enable_explicit_template_dependencies","Experiments__reqs_query_experiments","DevPro__enable_g1_ineligible_redirect","TpcFeatures__enable_unmirrored_page_left_nav","Profiles__enable_auto_apply_credits","Profiles__enable_completequiz_endpoint","MiscFeatureFlags__gdp_dashboard_reskin_enabled","Cloud__enable_cloudx_experiment_ids","CloudShell__cloud_shell_button","DevPro__enable_devsite_captcha","Profiles__enable_page_saving","DevPro__enable_embed_profile_creation","DevPro__enable_free_benefits","Profiles__enable_user_type","Search__enable_ai_search_summaries_restricted","Concierge__enable_key_takeaways_new_ui","MiscFeatureFlags__enable_firebase_utm","Cloud__cache_serialized_dynamic_content","Profiles__enable_recognition_badges","DevPro__enable_code_assist","DevPro__remove_eu_tax_intake_form","DevPro__enable_firebase_workspaces_card","Concierge__enable_devsite_llm_tools","Profiles__require_profile_eligibility_for_signin","Profiles__enable_dashboard_curated_recommendations","Profiles__enable_callout_notifications","MiscFeatureFlags__enable_explain_this_code","Profiles__enable_public_developer_profiles","MiscFeatureFlags__enable_appearance_cookies","MiscFeatureFlags__enable_framebox_badge_methods","DevPro__enable_google_one_card","Analytics__enable_clearcut_logging","Concierge__enable_pushui","Profiles__enable_purchase_prompts","Cloud__enable_cloud_shell_fte_user_flow","SignIn__enable_l1_signup_flow","Search__enable_ai_search_summaries","MiscFeatureFlags__enable_variable_operator_index_yaml","MiscFeatureFlags__fix_lower_breadcrumbs","Cloud__enable_legacy_calculator_redirect","TpcFeatures__proxy_prod_host","Search__enable_page_map","BookNav__enable_tenant_cache_key","Search__enable_ai_search_summaries_for_all","Profiles__enable_stripe_subscription_management","Profiles__enable_developer_profile_benefits_ui_redesign","Profiles__enable_developer_profiles_callout","DevPro__enable_cloud_innovators_plus","Cloud__enable_cloud_shell","Concierge__enable_actions_menu","Profiles__enable_completecodelab_endpoint","DevPro__enable_enterprise","DevPro__enable_payments_first_batch","Profiles__enable_join_program_group_endpoint","MiscFeatureFlags__developers_footer_dark_image","DevPro__enable_developer_subscriptions","Concierge__enable_concierge","Analytics__enable_devpro_interaction_logging","CloudShell__cloud_code_overflow_menu","Search__enable_suggestions_from_borg","MiscFeatureFlags__enable_variable_operator","Profiles__enable_profile_collections","Profiles__enable_complete_playlist_endpoint","Cloud__fast_free_trial","Profiles__enable_developer_profile_pages_as_content","MiscFeatureFlags__remove_cross_domain_tracking_params","Profiles__enable_targeted_hero","Significatio__enable_by_tenant","DevPro__enable_vertex_credit_card","MiscFeatureFlags__developers_footer_image","Concierge__enable_key_takeaways","Concierge__enable_concierge_restricted","Search__enable_ai_eligibility_checks","MiscFeatureFlags__enable_project_variables","Cloud__enable_free_trial_server_call","Profiles__enable_awarding_url","Search__enable_dynamic_content_confidential_banner","DevPro__enable_nvidia_credits_card","Profiles__enable_release_notes_notifications"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com",1,4,null,"https://developerprofiles-pa.clients6.google.com",[1,"developers","Google for Developers","developers.google.com",null,"developers-dot-devsite-v2-prod.appspot.com",null,null,[1,1,[1],null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],[1,null,null,[1,20],"/recommendations/information"],null,null,null,[1,1,1],[1,1,null,1,1,null,null,["/meridian"]],[1,null,null,null,null,null,null,["/admob","/ad-manager/mobile-ads-sdk","/ml-kit"]],null,[null,["/meridian","/youtube/devices/"]],1,null,[1]],null,[null,null,null,null,null,null,"/images/lockup-new.svg","/images/touchicon-180-new.png",null,null,null,null,1,null,null,null,null,null,null,null,null,1,null,null,null,"/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[6,1,14,15,20,22,23,29,32,36],null,[[null,null,null,[3,7,10,2,39,17,4,32,24,11,12,13,34,15,25],null,null,[1,[["docType","Choose a content type",[["Tutorial",null,null,null,null,null,null,null,null,"Tutorial"],["Guide",null,null,null,null,null,null,null,null,"Guide"],["Sample",null,null,null,null,null,null,null,null,"Sample"]]],["product","Choose a product",[["Android",null,null,null,null,null,null,null,null,"Android"],["ARCore",null,null,null,null,null,null,null,null,"ARCore"],["ChromeOS",null,null,null,null,null,null,null,null,"ChromeOS"],["Firebase",null,null,null,null,null,null,null,null,"Firebase"],["Flutter",null,null,null,null,null,null,null,null,"Flutter"],["Assistant",null,null,null,null,null,null,null,null,"Google Assistant"],["GoogleCloud",null,null,null,null,null,null,null,null,"Google Cloud"],["GoogleMapsPlatform",null,null,null,null,null,null,null,null,"Google Maps Platform"],["GooglePay",null,null,null,null,null,null,null,null,"Google Pay & Google Wallet"],["GooglePlay",null,null,null,null,null,null,null,null,"Google Play"],["Tensorflow",null,null,null,null,null,null,null,null,"TensorFlow"]]],["category","Choose a topic",[["AiAndMachineLearning",null,null,null,null,null,null,null,null,"AI and Machine Learning"],["Data",null,null,null,null,null,null,null,null,"Data"],["Enterprise",null,null,null,null,null,null,null,null,"Enterprise"],["Gaming",null,null,null,null,null,null,null,null,"Gaming"],["Mobile",null,null,null,null,null,null,null,null,"Mobile"],["Web",null,null,null,null,null,null,null,null,"Web"]]]]]],[1,1],null,1],[[["UA-24532603-1"],["UA-22084204-5"],null,null,["UA-24532603-5"],["GTM-T98GCPGN"],null,[["G-272J68FCRF"],null,null,[["G-272J68FCRF",2]]],[["UA-24532603-1",2]],null,[["UA-24532603-5",2]],[["GTM-T98GCPGN",2]],1],[[11,8],[4,3],[5,4],[12,9],[14,11],[15,12],[3,2],[13,10],[6,5],[16,13],[1,1]],[[2,2],[1,1]]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,"developers.devsite.google",null,null,null,null,null,[]],null,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",1,1,"https://developerscontentinsights-pa.clients6.google.com","AIzaSyCg-ZUslalsEbXMfIo9ZP8qufZgo3LSBDU","AIzaSyDxT0vkxnY_KeINtA4LSePJO-4MAZPMRsE","https://developers.clients6.google.com",["https://codeassist.google.com","https://code-assist-free-tier.corp.google.com"],null,"AIzaSyBQom12tzI-rybN7Sf-KfeL4nwm-Rf7PmI\n",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

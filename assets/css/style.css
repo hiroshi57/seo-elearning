@@ -570,6 +570,57 @@ tbody tr:nth-child(even) { background: #fafafa; }
   border-radius: 999px;
 }
 
+/* 確認テスト一覧ページ（テストだけ受ける） */
+.test-phase {
+  margin: 28px 0;
+}
+.test-phase__title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 14px;
+}
+.test-phase__title small {
+  font-weight: 500;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+.test-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.test-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+.test-card__no {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.test-card__title {
+  font-weight: 700;
+  flex: 1;
+  line-height: 1.4;
+}
+.test-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .quiz-item__badges {
   display: flex;
   align-items: center;
