@@ -9,3 +9,4 @@ Chapter/
 
 .vercel
 .env*.local
+.tmpwork/
