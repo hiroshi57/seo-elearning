@@ -653,6 +653,8 @@ tbody tr:nth-child(even) { background: #fafafa; }
   font-size: 0.82rem;
   color: #b45309;
   font-weight: 600;
+  /* 「採点する」ボタンと近づきすぎないよう余白を確保 */
+  margin-right: 16px;
 }
 
 .quiz-item__type--multi {
@@ -1178,17 +1180,13 @@ tbody tr:nth-child(even) { background: #fafafa; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 32px;
   margin-top: 28px;
   padding-top: 20px;
+  flex-wrap: wrap;
 }
 
 .wizard-footer__spacer { flex: 1; }
-
-/* 未回答メッセージと採点ボタンの間隔を確保 */
-.quiz-unanswered-note {
-  margin-right: 8px;
-}
 
 /* ==========================================================================
    採点結果ページ
