@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO概要（採点結果） | SEO確認テスト</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📋 SEO 確認テスト</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">テスト一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../index.html" class="breadcrumb-back">← テスト一覧</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約12分</span>
+    <h1 class="wizard-header__title">SEO概要</h1>
+    <p class="wizard-header__topics">SEOとは、検索エンジンの歴史、SEOの目的、企業の課題、SEOでできること</p>
+  </div>
+
+  <div class="result-summary" data-result-summary>
+    <div class="result-summary__icon" data-result-icon>🏆</div>
+    <div class="result-summary__title">確認テスト結果</div>
+    <div class="result-summary__score" data-result-score>--%</div>
+    <div class="result-summary__sub" data-result-sub></div>
+    <div class="result-status" data-result-status></div>
+  </div>
+
+  <div class="result-review">
+    <div class="result-review__head">
+      <div class="result-review__title">回答一覧と解説</div>
+      <div class="result-review__hint">間違えた問題は「関連する教材を見直す」から該当ページを確認できます</div>
+    </div>
+    <div data-result-list></div>
+  </div>
+
+  <div class="result-actions">
+    <button class="btn btn--primary" data-result-retry>↻ テストを再受験</button>
+    <a href="../../index.html" class="btn btn--muted">一覧に戻る</a>
+  </div>
+
+  <script type="application/json" data-quiz-data>
+[{"id":"q1","type":"single","sectionIndex":0,"question":"SEO（検索エンジン最適化）の説明として、最も適切なものはどれか。","options":["検索エンジンとユーザーの双方にコンテンツの価値が伝わりやすい状態を整え、自然検索での見つけやすさを高める取り組み","検索結果の広告枠に入札し、費用を払って上位に表示されやすくする取り組み","対策キーワードを購入した被リンクで補強し、特定キーワードでの1位を確実に取る取り組み","本文中のキーワード出現率（密度）を一定に保ち、アルゴリズムの計算式に合わせて調整する取り組み"],"correct":[0],"explain":"SEOは検索エンジンとユーザー双方に価値が伝わる状態を整える取り組みです。広告枠への入札はリスティング広告、被リンク購入やキーワード密度調整はスパム的・時代遅れの手法で、順位の確約もできません。"},{"id":"q2","type":"single","sectionIndex":0,"question":"検索エンジンがページをユーザーに届けるまでのプロセスの説明として、正しいものはどれか。","options":["クロールとインデックスは同じ工程であり、その後にランキングが一度だけ行われる","クロールでページを発見し、インデックスで内容を解析・登録し、ランキングで検索クエリに応じて順位付けする","インデックス済みのページだけをクロールし、順位はユーザーのクリック数のみで決まる","公開したページは自動的にすべてインデックスされ、順位はドメインの古さで決まる"],"correct":[1],"explain":"処理は「クロール（発見）→インデックス（解析・登録）→ランキング（順位付け）」の順です。クロールとインデックスは別工程で、順位はクリック数やドメインの古さだけで決まるものではありません。"},{"id":"q3","type":"single","sectionIndex":1,"question":"検索エンジンの歴史に関する説明として、最も適切なものはどれか。","options":["ロボット型は精度が低く一時的に使われただけで、現在は再びディレクトリ型が主流に戻っている","ディレクトリ型とロボット型はほぼ同時期に登場し、現在も両者が同程度に使われている","初期は人力でサイトを分類するディレクトリ型が使われたが、Webの急増を背景にロボット型が主流になった","検索エンジンは当初から全文検索のロボット型のみで、人力による分類が行われたことはない"],"correct":[2],"explain":"初期はディレクトリ型（人力分類）が主流でしたが、Webの急激な増加に対応するためロボット型（自動巡回）が主流になりました。現在はロボット型が中心です。"},{"id":"q4","type":"single","sectionIndex":1,"question":"日本におけるGoogleの位置づけに関する説明として、最も適切なものはどれか。","options":["Yahoo! JAPANはMicrosoftのBingを採用しているため、日本ではBing向けの対策が中心になる","日本ではGoogleとYahoo!がそれぞれ独自エンジンで拮抗しており、別々のアルゴリズムで動いている","Yahoo! JAPANは2010年以降Googleの採用をやめ、独自エンジンに戻している","Yahoo! JAPANも検索エンジンにGoogleの技術を採用しており、日本の検索の多くが実質的にGoogleのアルゴリズムで処理されている"],"correct":[3],"explain":"Yahoo! JAPANは2010年からGoogleの検索技術を採用しており、日本の検索の多くが実質的にGoogleのアルゴリズムで処理されています。BingやYahoo!独自エンジンが中心という説明は誤りです。"},{"id":"q5","type":"single","sectionIndex":2,"question":"SEOとリスティング広告の違いに関する説明として、正しいものはどれか。","options":["SEOは成果が出るまで時間がかかるが、上位化後は追加費用なく効果が持続しやすく、中長期の費用対効果に優れる傾向がある","広告は出稿を止めても効果が持続するが、SEOは対策を止めると順位が即座に消える","SEOは即効性が高く、広告は効果が出るまで数カ月かかるのが一般的である","SEOも広告も、表示順位は入札額の高さで決まる点が共通している"],"correct":[0],"explain":"SEOは時間がかかる一方、蓄積されて中長期の費用対効果に優れます。即効性は広告の特徴で、出稿を止めると露出も止まります。入札額で順位が決まるのは広告のみです。"},{"id":"q6","type":"multi","sectionIndex":3,"question":"企業がSEOに取り組む際に直面しやすい課題として、正しいものをすべて選べ。","options":["出稿を停止すると同時に、それまでの効果もすべて消える","費用を支払えば、Googleに掲載順位を確約してもらえる","ガイドラインに反する質の低い施策は、評価を下げるリスクがある","アルゴリズムの変動に応じた継続的なメンテナンスが必要になる","成果が出るまでに一定の時間がかかる"],"correct":[2,3,4],"explain":"時間・継続メンテナンス・スパム的手法のリスクはSEOの課題です。『出稿停止で効果が消える』のは広告の特徴であり、順位を費用で確約することはできません。"},{"id":"q7","type":"single","sectionIndex":4,"question":"SEOで「できないこと」として、最も適切なものはどれか。","options":["ユーザーの検索意図に合わせてコンテンツを継続的に改善すること","特定キーワードでの掲載順位や集客数を確約すること","構造化データを用いてリッチリザルト表示の対象になりうる状態を整えること","内部リンクを整理してクローラーの巡回や回遊性を高めること"],"correct":[1],"explain":"アルゴリズムは非公開かつ変動するため、順位や集客数の『確約』はできません。B・C・DはいずれもSEOで実際に取り組める（できる）ことです。"},{"id":"gq_meta","type":"single","sectionIndex":2,"question":"Google SEOスターターガイドが「Googleが重要でない（ランキングにほぼ影響しない）と考えている」としているものはどれか。","options":["内部リンクでサイト内のページ同士を適切につなぐこと","ページのタイトル（title要素）を内容に合わせて設定すること","keywords（キーワード）メタタグに対策キーワードを列挙すること","ユーザーの検索意図に合った本文コンテンツを用意すること"],"correct":[2],"explain":"Google検索は keywords（キーワード）メタタグをランキングに利用しません。内部リンク・title・検索意図に合うコンテンツはいずれも有効な施策です。（スターターガイド『Googleが重要でないと考えること』）"},{"id":"gq_indextime","type":"single","sectionIndex":0,"question":"公開したばかりのページがGoogle検索結果に表示されるまでの考え方として、ガイドの記述に最も近いものはどれか。","options":["公開すれば通常は数分以内に必ず表示される","サイトマップを送信した瞬間に全ページが反映される","Search Consoleでリクエストすれば即座に上位表示される","クロールとインデックスに数日〜数週間かかることがあり、必ず表示される保証もない"],"correct":[3],"explain":"検索結果への反映にはクロール・インデックスの工程があり、数日〜数週間かかることがあります。そもそもインデックスされる保証もありません。（スターターガイド『検索結果への反映にかかる時間』）"}]
+  </script>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = 7;</script>
+<script src="../../assets/js/result.js"></script>
+</body>
+</html>

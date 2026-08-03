@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GA4（SEO分析）（採点結果） | SEO確認テスト</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../../index.html" class="site-header__title">📋 SEO 確認テスト</a>
+    <nav class="site-header__nav">
+      <a href="../../index.html">テスト一覧</a>
+    </nav>
+  </div>
+</header>
+<div class="course-progress">
+  <div class="course-progress__bar"><div class="course-progress__fill" data-course-progress-fill></div></div>
+  <div class="course-progress__label" data-course-progress-label>0 / 19 章 合格済み</div>
+</div>
+
+<main>
+  <a href="../../index.html" class="breadcrumb-back">← テスト一覧</a>
+
+  <div class="wizard-header">
+    <span class="time-badge">🕒 学習目安 約12分</span>
+    <h1 class="wizard-header__title">GA4（SEO分析）</h1>
+    <p class="wizard-header__topics">分析：自然検索、ランディングページ、連携：Search Console連携</p>
+  </div>
+
+  <div class="result-summary" data-result-summary>
+    <div class="result-summary__icon" data-result-icon>🏆</div>
+    <div class="result-summary__title">確認テスト結果</div>
+    <div class="result-summary__score" data-result-score>--%</div>
+    <div class="result-summary__sub" data-result-sub></div>
+    <div class="result-status" data-result-status></div>
+  </div>
+
+  <div class="result-review">
+    <div class="result-review__head">
+      <div class="result-review__title">回答一覧と解説</div>
+      <div class="result-review__hint">間違えた問題は「関連する教材を見直す」から該当ページを確認できます</div>
+    </div>
+    <div data-result-list></div>
+  </div>
+
+  <div class="result-actions">
+    <button class="btn btn--primary" data-result-retry>↻ テストを再受験</button>
+    <a href="../../index.html" class="btn btn--muted">一覧に戻る</a>
+  </div>
+
+  <script type="application/json" data-quiz-data>
+[{"id":"q1","type":"single","sectionIndex":0,"question":"GA4における「自然検索（Organic Search）」の説明として、最も適切なものはどれか。","options":["検索結果の広告（リスティング）経由のアクセス","検索結果の広告枠を除いた、通常の検索結果（オーガニック）からのアクセス","検索エンジンのURLを直接入力して訪れたアクセス","他サイトのリンクをたどって来た参照（リファラル）流入"],"correct":[1],"explain":"自然検索（Organic Search）は広告枠を除く通常検索からの流入です。広告経由（Paid Search）、直接流入（Direct）、参照流入（Referral）は別チャネルです。"},{"id":"q2","type":"single","sectionIndex":0,"question":"GA4でチャネルごとの流入状況を確認する際に使うレポートとして、最も適切なものはどれか。","options":["「エンゲージメント」の「ページとスクリーン」レポート","「維持率」レポート","「集客」の「トラフィック獲得」レポート","「ユーザー属性」の詳細レポート"],"correct":[2],"explain":"チャネル別の流入は「集客 > トラフィック獲得」レポートで確認します。他のレポートはページ別・維持率・ユーザー属性など別の観点を扱います。"},{"id":"q3","type":"single","sectionIndex":1,"question":"ランディングページの説明として、最も適切なものはどれか。","options":["ユーザーがサイトを離脱する直前に見ていたページ","サイト内で最も滞在時間が長かったページ","サイト内で最もPV数が多いページ","ユーザーがそのセッションで最初にアクセスした（着地した）ページ"],"correct":[3],"explain":"ランディングページはセッションで最初に着地したページです。離脱ページや、滞在時間・PVが最大のページとは異なります。"},{"id":"q4","type":"single","sectionIndex":1,"question":"「自然検索」と「ランディングページ」を組み合わせて分析するメリットとして、最も適切なものはどれか。","options":["どのページが検索から流入を集め、成果につながっているかが具体的に見えてくる","サイトのデザインを自動的に改善できる","広告費を自動的に削減できる","この組み合わせにはSEO上の意味はない"],"correct":[0],"explain":"自然検索×ランディングページで分析することで、検索からの流入とその成果への貢献度を具体的に把握でき、改善ポイントが見えてきます。"},{"id":"q5","type":"single","sectionIndex":2,"question":"GA4とSearch Consoleの連携に関する説明として、正しいものはどれか。","options":["1つのGA4プロパティに、Search Consoleを複数まとめて紐付けられる","連携すると、Search Consoleの検索クエリなどのデータをGA4上でも確認できる","連携すると、GA4の計測がSearch Console側でも自動的に行われる","連携すると、GA4の過去データが16か月に制限される"],"correct":[1],"explain":"連携により、SCの検索クエリデータをGA4上でも参照できます。複数SCの紐付けや、保持期間の制限といった説明は誤りです。"}]
+  </script>
+
+</main>
+
+<script src="../../assets/js/progress.js"></script>
+<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = 5;</script>
+<script src="../../assets/js/result.js"></script>
+</body>
+</html>

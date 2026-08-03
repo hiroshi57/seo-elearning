@@ -68,8 +68,13 @@ function safeJsonForScript(obj) {
    共通レイアウト
    ------------------------------------------------------------------------- */
 
-function pageShell({ title, assetDepth, bodyClass, headerBack, bodyContent, extraScripts }) {
+function pageShell({ title, assetDepth, bodyClass, headerBack, bodyContent, extraScripts, siteTitle, navHtml }) {
   const prefix = "../".repeat(assetDepth);
+  const nav =
+    navHtml !== undefined
+      ? navHtml
+      : `      <a href="${prefix}index.html">コース一覧</a>
+      <a href="${prefix}tests/index.html">確認テスト</a>`;
   return `<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -81,10 +86,9 @@ function pageShell({ title, assetDepth, bodyClass, headerBack, bodyContent, extr
 <body${bodyClass ? ` class="${bodyClass}"` : ""}>
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="${prefix}index.html" class="site-header__title">📘 SEO Eラーニング</a>
+    <a href="${prefix}index.html" class="site-header__title">${escapeHtml(siteTitle || "📘 SEO Eラーニング")}</a>
     <nav class="site-header__nav">
-      <a href="${prefix}index.html">コース一覧</a>
-      <a href="${prefix}tests/index.html">確認テスト</a>
+${nav}
     </nav>
   </div>
 </header>
@@ -262,7 +266,9 @@ ${chData.summary.map((s) => `      <li>${escapeHtml(s)}</li>`).join("\n")}
    確認テスト回答ページ
    ------------------------------------------------------------------------- */
 
-function buildQuizPage(chapter, chData) {
+function buildQuizPage(chapter, chData, opts = {}) {
+  const outRoot = opts.outRoot || ROOT;
+  const testsOnly = !!opts.testsOnly;
   const questionsJson = safeJsonForScript(chData.quiz);
 
   const itemsHtml = chData.quiz
@@ -316,31 +322,39 @@ ${itemsHtml}
   </section>
 
   <div class="wizard-footer">
-    <a href="step-${chData.sections.length + 2}.html" class="btn btn--ghost">← 教材に戻る</a>
+    ${testsOnly
+      ? `<a href="../../index.html" class="btn btn--ghost">← テスト一覧</a>`
+      : `<a href="step-${chData.sections.length + 2}.html" class="btn btn--ghost">← 教材に戻る</a>`}
     <div class="wizard-footer__spacer"></div>
     <div class="quiz-unanswered-note" data-quiz-unanswered-note></div>
     <button class="btn btn--primary" data-quiz-grade disabled>📋 採点する</button>
   </div>
 `;
 
-  const headerBack = `  <a href="../../phases/${chapter.phase}/index.html" class="breadcrumb-back">← ${escapeHtml(chData.title)}</a>`;
+  const headerBack = testsOnly
+    ? `  <a href="../../index.html" class="breadcrumb-back">← テスト一覧</a>`
+    : `  <a href="../../phases/${chapter.phase}/index.html" class="breadcrumb-back">← ${escapeHtml(chData.title)}</a>`;
 
   const html = pageShell({
-    title: `${chData.title}（確認テスト） | SEO Eラーニング`,
+    title: `${chData.title}（確認テスト） | ${testsOnly ? "SEO確認テスト" : "SEO Eラーニング"}`,
     assetDepth: 2,
     headerBack,
     bodyContent: body,
-    extraScripts: `<script src="../../assets/js/quiz.js"></script>`
+    extraScripts: `<script src="../../assets/js/quiz.js"></script>`,
+    siteTitle: testsOnly ? "📋 SEO 確認テスト" : undefined,
+    navHtml: testsOnly ? `      <a href="../../index.html">テスト一覧</a>` : undefined
   });
 
-  writeFile(path.join(ROOT, "chapters", chapter.slug, "quiz.html"), html);
+  writeFile(path.join(outRoot, "chapters", chapter.slug, "quiz.html"), html);
 }
 
 /* -------------------------------------------------------------------------
    採点結果ページ（表示内容はJS側でlocalStorageの直近結果から動的に組み立てる）
    ------------------------------------------------------------------------- */
 
-function buildResultPage(chapter, chData) {
+function buildResultPage(chapter, chData, opts = {}) {
+  const outRoot = opts.outRoot || ROOT;
+  const testsOnly = !!opts.testsOnly;
   const totalSteps = chData.sections.length + 2;
 
   const body = `
@@ -368,8 +382,7 @@ function buildResultPage(chapter, chData) {
 
   <div class="result-actions">
     <button class="btn btn--primary" data-result-retry>↻ テストを再受験</button>
-    <a href="step-1.html" class="btn btn--ghost">📖 教材から見直す</a>
-    <a href="../../phases/${chapter.phase}/index.html" class="btn btn--muted">一覧に戻る</a>
+    ${testsOnly ? "" : `<a href="step-1.html" class="btn btn--ghost">📖 教材から見直す</a>\n    `}<a href="${testsOnly ? "../../index.html" : `../../phases/${chapter.phase}/index.html`}" class="btn btn--muted">一覧に戻る</a>
   </div>
 
   <script type="application/json" data-quiz-data>
@@ -377,17 +390,21 @@ ${safeJsonForScript(chData.quiz)}
   </script>
 `;
 
-  const headerBack = `  <a href="../../phases/${chapter.phase}/index.html" class="breadcrumb-back">← ${escapeHtml(chData.title)}</a>`;
+  const headerBack = testsOnly
+    ? `  <a href="../../index.html" class="breadcrumb-back">← テスト一覧</a>`
+    : `  <a href="../../phases/${chapter.phase}/index.html" class="breadcrumb-back">← ${escapeHtml(chData.title)}</a>`;
 
   const html = pageShell({
-    title: `${chData.title}（採点結果） | SEO Eラーニング`,
+    title: `${chData.title}（採点結果） | ${testsOnly ? "SEO確認テスト" : "SEO Eラーニング"}`,
     assetDepth: 2,
     headerBack,
     bodyContent: body,
-    extraScripts: `<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = ${totalSteps};</script>\n<script src="../../assets/js/result.js"></script>`
+    extraScripts: `<script>window.__SEO_ELEARNING_TOTAL_STEPS__ = ${totalSteps};</script>\n<script src="../../assets/js/result.js"></script>`,
+    siteTitle: testsOnly ? "📋 SEO 確認テスト" : undefined,
+    navHtml: testsOnly ? `      <a href="../../index.html">テスト一覧</a>` : undefined
   });
 
-  writeFile(path.join(ROOT, "chapters", chapter.slug, "result.html"), html);
+  writeFile(path.join(outRoot, "chapters", chapter.slug, "result.html"), html);
 }
 
 /* -------------------------------------------------------------------------
@@ -448,6 +465,76 @@ ${phaseBlocks}
   });
 }
 
+/* -------------------------------------------------------------------------
+   テストだけ版（tests-only/）：単体でVercelにデプロイできるスタンドアロンサイト
+   ------------------------------------------------------------------------- */
+
+function buildTestsOnlySite() {
+  const OUT = path.join(ROOT, "tests-only");
+
+  // 出力先をクリーンにしてから生成（旧ファイルの残留を防ぐ）
+  fs.rmSync(OUT, { recursive: true, force: true });
+  fs.mkdirSync(OUT, { recursive: true });
+
+  // CSS / JS のみコピー（テストページは画像を使わないため軽量に保つ）
+  fs.mkdirSync(path.join(OUT, "assets"), { recursive: true });
+  fs.cpSync(path.join(ROOT, "assets", "css"), path.join(OUT, "assets", "css"), { recursive: true });
+  fs.cpSync(path.join(ROOT, "assets", "js"), path.join(OUT, "assets", "js"), { recursive: true });
+
+  let count = 0;
+  let totalQuiz = 0;
+
+  const phaseBlocks = curriculum.phases
+    .map((phase) => {
+      const chapterList = phase.chapters
+        .map((no) => curriculum.chapters.find((c) => c.no === no))
+        .filter(Boolean);
+      const cards = chapterList
+        .map((ch) => {
+          const chData = loadChapterData(ch.slug);
+          if (!chData) return "";
+          buildQuizPage(ch, chData, { outRoot: OUT, testsOnly: true });
+          buildResultPage(ch, chData, { outRoot: OUT, testsOnly: true });
+          count += 1;
+          totalQuiz += chData.quiz.length;
+          return `
+        <a href="chapters/${ch.slug}/quiz.html" class="test-card" data-chapter-card="${ch.slug}">
+          <div class="test-card__no">第${ch.no}章</div>
+          <div class="test-card__title">${escapeHtml(ch.title)}</div>
+          <div class="test-card__meta"><span class="module-badge module-badge--test">📋 ${chData.quiz.length}問</span><span class="module-item__arrow">→</span></div>
+        </a>`;
+        })
+        .join("\n");
+      return `
+    <section class="test-phase">
+      <h2 class="test-phase__title">${phase.icon || "📘"} ${escapeHtml(phase.title)} <small>${escapeHtml(phase.subtitle || "")}</small></h2>
+      <div class="test-grid">
+${cards}
+      </div>
+    </section>`;
+    })
+    .join("\n");
+
+  const body = `
+  <div class="hero-banner">
+    <h1>📋 SEO 確認テスト</h1>
+    <p>全${curriculum.chapters.length}章・計${totalQuiz}問。受けたい章を選んでテストを開始してください。すべて回答して採点すると、正誤と解説が表示されます（合格基準：正答率80%以上）。</p>
+  </div>
+${phaseBlocks}
+`;
+
+  const html = pageShell({
+    title: "SEO 確認テスト",
+    assetDepth: 0,
+    bodyContent: body,
+    siteTitle: "📋 SEO 確認テスト",
+    navHtml: `      <a href="index.html">テスト一覧</a>`
+  });
+  writeFile(path.join(OUT, "index.html"), html);
+
+  console.log(`テストだけ版: tests-only/ に ${count}章分（計${totalQuiz}問）を生成しました。`);
+}
+
 function main() {
   let builtChapters = 0;
   let skippedChapters = [];
@@ -470,6 +557,8 @@ function main() {
     buildResultPage(chapter, chData);
     builtChapters += 1;
   });
+
+  buildTestsOnlySite();
 
   console.log(`ビルド完了: ${builtChapters}章分のページを生成しました。`);
   console.log(`フェーズトップ: ${curriculum.phases.length}件`);
